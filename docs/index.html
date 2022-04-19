@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="description" content="LaTeX-Skript der Vorlesung Thermodynamik/Statistische Physik" />
+    <meta name="author" content="Mc-Zen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="color_style.css" />
+    <title>Theoretische Physik IV</title>
+
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>
+            Theoretische Physik IV - Thermodynamik/Statistische Physik
+        </h1>
+        <div id="content-wrapper">
+            <p>
+                Hier ist stets die aktuelle Version des LaTeX-Skripts von der Vorlesung Thermodynamik/Statistische Physik (Theoretische Physik IV)
+                im Sommersemester 2022 zu finden. Es wird regelmäßig aktualisiert.
+            </p>
+            <p>
+                Wenn du einen Fehler findest, eine Anmerkung oder einen Vorschlag hast, dann poste bitte ein
+                <a class="alnk" href="https://github.com/Mc-Zen/Thermodynamics/issues">Issue auf GitHub</a>. Ich gebe mir zwar Mühe, mache
+                aber Fehler und würde diese gerne beheben. Gerne auch auf Grammatik/Rechtschreibung
+                aufmerksam machen :)
+            </p>
+            <p>
+                Wer sich mit git auskennt, kann auch das <a class="alnk" href="https://github.com/Mc-Zen/Thermodynamics">Repository</a>
+                klonen und Pull Requests erstellen.
+            </p>
+            <p>
+                Die Versionsnummer hat 3 Zahlen, z.B. 1.3.2. Die letzte Zahl wird immer erhöht, wenn kleine Korrekturen gemacht wurden, die vorletzte, wenn neue
+                Kapitel dazugekommen sind. Die vorderste Zahl erhöhe ich nur bei sehr großen Änderungen.
+            </p>
+            <div class="button-wrapper">
+                <button class="bbutton" onclick="toggle_viewer()">View PDF</button>
+                <a class="bbutton pdf-download-button" href="https://mc-zen.github.io/Thermodynamics/pdf/Theo_III.pdf" download>Download</a>
+            </div>
+
+            <br />
+            <span onclick="updateFileDate()">Zuletzt aktualisiert</span>: <span class="status-label" id="last-updated-date"></span>, Version: <span class="status-label" id="current-version"></span>
+        </div>
+        <div id="viewer-wrapper">
+            <div class="button-wrapper">
+                <button class="bbutton" onclick="toggle_viewer()">Close PDF</button>
+                <a class="bbutton pdf-download-button" href="https://mc-zen.github.io/Thermodynamics/pdf/Theo_III.pdf" download>Download</a>
+            </div>
+            <iframe src="https://docs.google.com/gview?url=https://mc-zen.github.io/Thermodynamics/pdf/Theo_III.pdf&embedded=true" class="pdfviewer" frameborder="0"></iframe>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+html {
+    padding: 0;
+    font-family: Comfortaa, sans-serif;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.6;
+    padding-top: 20px;
+    box-sizing: border-box;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.alnk {
+    padding: 3px;
+    border-radius: 4px;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.bbutton:not(:last-child) {
+    margin-right: 20px;
+}
+
+.bbutton {
+    font-family: Comfortaa, sans-serif;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid gray;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+.status-label {
+    color: gray;
+}
+
+#content-wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+    display: block;
+    padding: 20px;
+    text-align: justify;
+}
+
+#viewer-wrapper {
+    flex-grow: 1;
+    min-height: 500px;
+    /*display: flex;*/
+    flex-direction: column;
+    display: none;
+}
+
+.pdfviewer {
+    width: 100%;
+    min-height: 300px;
+    height: 80%;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+
+@media screen and (max-width: 450px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    #content-wrapper {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    #content-wrapper {
+        padding: 2px;
+    }
+}

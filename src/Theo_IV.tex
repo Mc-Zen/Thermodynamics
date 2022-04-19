@@ -1,0 +1,154 @@
+%
+% -------------------------------------------------------------------
+% Thermodynamics lecture at TU Berlin, read by Prof. Holger Stark
+% -------------------------------------------------------------------
+%
+
+\documentclass[hidelinks, 11pt]{scrbook} 
+
+\usepackage[left=2cm, right=2cm, bottom=1.5cm, top=1.5cm, includeheadfoot]{geometry} 
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage[english,ngerman]{babel}
+\usepackage[font=footnotesize]{caption}
+\usepackage{graphicx} 
+\usepackage{multirow} 
+\usepackage{tabularx} 
+\usepackage{xcolor} 
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{amsfonts} 
+\usepackage{amsxtra} 
+\usepackage{mathtools} 
+\usepackage{tensor}
+\usepackage{enumerate} 
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{longtable}
+\usepackage{cancel}
+\usepackage{isotope}
+\usepackage{lmodern}
+\usepackage{scrhack} 
+\sisetup{locale = DE, separate-uncertainty}  
+\usepackage[immediate]{silence}
+\WarningFilter[temp]{latex}{Command} % filter underline/underbar command warning from sectsty 
+
+% --------------------------
+% spacing
+
+%\renewcommand*{\familydefault}{\sfdefault} sans serif font
+\raggedbottom
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\usepackage[hang]{footmisc}
+\setlength{\footnotemargin}{3mm} % space between number and content of footnote
+\setlength{\skip\footins}{.5cm} % space between body and footnote section
+\setlength{\footnotesep}{0.5cm}  % space between footnotes
+
+% \renewcommand{\arraystretch}{1}
+% \makeatletter
+% \renewcommand\@pnumwidth{2em} % fix toc overfull hbox
+% \makeatother
+
+
+% --------------------------
+% section styles
+
+\newcommand{\example}[1]{\paragraph{#1:}}
+% change title font to serif
+\addtokomafont{title}{\rmfamily}
+
+
+% --------------------------
+% math
+
+\DeclareMathOperator{\grad}{grad} 
+\DeclareMathOperator{\divg}{div} 
+\DeclareMathOperator{\rot}{rot} 
+\DeclareMathOperator{\real}{\mathfrak{R}} 
+\DeclareMathOperator{\imag}{\mathfrak{I}} 
+
+\newcommand{\upupharpoons}{\upharpoonleft\!\upharpoonright}
+\newcommand{\updownharpoons}{\upharpoonleft\!\downharpoonright}
+% pm sign with minus in paretheses
+\newcommand{\varpm}{\mathbin{\vcenter{\hbox{
+  \oalign{\hfil$\scriptstyle+$\hfil\cr\noalign{\kern-.3ex}$\scriptscriptstyle({-})$\cr}
+}}}}
+% mp sign with plus in parentheses
+\newcommand{\varmp}{\mathbin{\vcenter{\hbox{
+  \oalign{$\scriptstyle({+})$\cr\noalign{\kern-.3ex}\hfil$\scriptscriptstyle-$\hfil\cr}
+}}}}
+% differential operator have a non-italic d in German equation typesetting 
+\newcommand*{\diff}{\mathop{}\!\mathrm{d}} 
+\newcommand*{\diffa}[2][]{\mathop{\mathrm{d}^{#1}#2}}
+%\newcommand{\diff}{\text{d}}	 
+\newcommand{\Angstroem}{\text{\normalfont\AA}}   
+\newcommand{\Abbref}[1]{Abb.~\ref{#1}} 
+% Vector: bold non-cursive symbols for vectors instead of arrows 
+\renewcommand{\vec}[1]{\mathbf{#1}} 
+
+\newcommand{\equivalence}{\;\Leftrightarrow\;}
+\newcommand{\implication}{\;\Rightarrow\;}
+
+
+% --------------------------
+% other configurations
+
+% set figure description
+\addto\captionsngerman{
+  \renewcommand{\figurename}{Abb.}
+  \renewcommand{\tablename}{Tab.}
+}
+\graphicspath{{images/}} 
+\usepackage[strict]{changepage}
+
+% for formal definitions
+\usepackage{framed}
+
+% environment derived from framed.sty: see leftbar environment definition
+\definecolor{formalbar}{rgb}{0.1,0.1,.2}
+\definecolor{formalshade}{rgb}{0.95,0.95,1}
+
+% Quote box for important statements
+\newenvironment{formal}{
+  \def\FrameCommand{
+    \hspace{1pt}%
+    {\color{formalbar}\vrule width 2pt}%
+    {\color{formalshade}\vrule width 4pt}%
+    \colorbox{formalshade}%
+  }
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\hspace{-4.55pt}% disable indenting first paragraph
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{-10pt}\vspace{2pt}% 
+}{\vspace{2pt}\end{adjustwidth}\endMakeFramed}
+
+\input{_figures}
+\usepackage{hyperref} % include hyperref as last package!
+
+
+
+\title{\tfigTitel}
+\subtitle{Sommersemester 2022}
+\author{von Kyano Levi\\bei Professor Holger Stark}
+\date{}
+
+% -----------------------------------
+% -----------------------------------
+% -----------------------------------
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+% -----------------------------------
+% -----------------------------------
+
+\mainmatter
+\input{1_Einleitung}
+
+
+\end{document}

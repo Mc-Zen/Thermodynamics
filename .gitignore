@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+*.log
+*.out
+*.aux
+*.gz
+*.toc
+*.syntex
+__latexindent_temp.tex
+
+src/*.pdf
+src/*.auxlock
+
+*.md5
+
+
+*.code-workspace
