@@ -111,7 +111,7 @@ function updateVersion() {
 function setDownloadLinkVersion(version) {
     let downloadlinks = document.getElementsByClassName("pdf-download-button");
     for (let i = 0; i < downloadlinks.length; i++) {
-        downloadlinks[i].download = "Theo_III_v" + version + ".pdf";
+        downloadlinks[i].download = "Theo_IV_v" + version + ".pdf";
     }
 }
 
