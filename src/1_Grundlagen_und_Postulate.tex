@@ -1,0 +1,125 @@
+% !TeX root = Theo_IV.tex
+
+\chapter{Thermodynamik}
+
+\section{Grundlagen und Postulate}
+\subsection{Zugang zur Thermodynamik}
+
+Üblicherweise wird die Thermodynamik induktiv entwickelt. Aus Erfahrungstatsachen, wie Wärme, Temperatur, thermodynamische Maschinen, usw. werden Konzepte und Gesetze, wie die Energieerhaltung und die Entropie usw. abgeleitet.
+
+In dieser Vorlesung wird stattdessen der axiomatische Zugang gewählt.
+Aus Postulaten zur Energie und insbesondere zur Entropie wird die Thermodynamik aufgebaut und hergeleitet.
+Anschließend werden die Konsequenzen dann mit den Erfahrungstatsachen abgeglichen.
+Diese Postulate sind die Essenz der Entwicklung der Theorie und sie helfen, die Struktur der Thermodynamik sichtbar zu machen.
+
+Ähnlich lassen sich auch andere Gebiete der Physik behandeln.
+So können z.B. aus dem Hamiltonschen Prinzip die mechanischen Bewegungsgleichungen und aus den Maxwell-Gleichungen die elektrischen und magnetischen Gesetze hergeleitet werden.
+
+
+\subsection{Was ist Thermodynamik?}
+
+Statt der mikroskopischen Beschreibung mit \num{1e24} Koordinaten (Ort, Impuls, Molekülfreiheitsgrade) werden nur wenige makroskopische thermodynamische Variablen quantifiziert.
+
+Dieser Ansatz ist auch physikalisch rechtfertigbar, denn bei realen Messungen findet automatisch eine intrinsische Mittelung statt.
+Zum einen findet eine zeitliche Mittelung statt, denn die mikroskopische Bewegung findet auf Zeitskalen von \SIrange{1e-15}{1e-12}{\s} statt, während makroskopische Messungen im Allgemeinen nicht kürzer als \SI{1e-7}{\s} sind.
+Es findet also eine Messung in gewissen Maßstäben zeitunabhängiger Kombinationen der über \num{1e24} Koordinaten statt.
+
+Zum anderen kommt es zu einer räumlichen Mittelung, zum Vergleich: mikroskopische Abmessungen liegen bei um die \SI{0.1}{\nm} (Atomradius, Gitterkonstante), während makroskopische Messungen in der Regel bei über \SI{100}{\nm} liegen (Größenordnung der Wellenlänge von sichtbarem Licht).
+Also wird meist über weit mehr als \num{1e9} Atome oder Moleküle gemittelt.
+
+
+Es verbleiben nur wenige Kenngrößen. Mechanische Größen sind zum Beispiel
+\begin{itemize}
+    \item Volumen $V$,
+    \item Druck $P$,
+    \item Oberfläche $F$,
+    \item Oberflächenspannung $\sigma$ und
+    \item hydrodynamische Flussfelder.
+\end{itemize}
+
+In der Elektrodynamik misst man in der Regel unter anderem
+\begin{itemize}
+    \item Ladung $Q$,
+    \item Strom $I$,
+    \item Magnetisierung $\vec M$,
+    \item Magnetfeld $\vec H$,
+    \item Polarisation $\vec P$ und
+    \item das elektrische Feld $\vec E$.
+\end{itemize}
+
+Neu ist jetzt folgendes:
+\begin{formal}
+    Die Thermodynamik behandelt die makroskopischen Folgen derjenigen Koordinaten, die sich herausmitteln $\leftrightarrow$ Wärme.
+\end{formal}
+
+Die Zufuhr von Wärme in ein System führt z.B. zur Anregung von atomarer Bewegung und damit einer Temperatur $T$.
+
+In der Mechanik wird das Energie- bzw. Arbeitsdifferential als
+\begin{align*}
+    \diffa{W} = \vec F\cdot\diffa{\vec r}
+\end{align*}
+definiert. Hier wird diese Definition nun verallgemeinert:
+\begin{align*}
+    \diffa{E} = \underbrace{\text{verallgemeinerte Kraft}\: J}_{\text{intensiv}} \times \diffa{\underbrace{(\text{verallgemeinerter Weg}\: X)}_{\text{extensiv}}}
+\end{align*}
+Dabei sind $(X,J)$ zueinander konjugierte Variablen. Die Einheit des Produkts $X\times J$ muss stets eine Energieeinheit sein.
+
+Bereits bekannte Beispiele sind
+\begin{itemize}
+    \item Druckarbeit $-P\diffa{V}$,
+    \item Oberflächenarbeit $\sigma\diffa{F}$,
+    \item Magnetisierungsarbeit $\mu_0\vec H\cdot\diffa{\vec M}$ und
+    \item Polarisierungsarbeit: $\vec E\cdot\diffa{\vec P}$.
+\end{itemize}
+Im Verlaufe der Vorlesung wird eine neue Arbeit eingeführt, die den Wärmeübertrag und damit Energietransfer auf verborgene atomare Freiheitsgraden oder Moden beschreibt:
+\begin{align*}
+    \text{Energietransfer}=\text{Wärmeübertrag}=\vec T\diffa{S}
+\end{align*}
+mit Temperatur $T$ und Entropie $S$.
+
+
+
+\subsection{Modellsystem, Parameter und Begriffe}
+
+Um ein Grundkonzept zu entwickeln, wird zunächst ein einfaches, idealisiertes System vorausgesetzt, das makroskopisch, homogen und isotrop, elektrisch neutral ist, in dem keine chemischen Reaktionen ablaufen und das keine elektrische, magnetische oder Gravitationsfelder besitzt. Auch Randeffekte werden zunächst vernachlässigt, indem angenommen wird, dass das System unendlich groß ist und damit keine Oberfläche hat.
+
+Für dieses System werden dann Parameter bestimmt, wie das Volumen $V$ und die Stoffmengen der beteiligten chemischen Substanzen.
+
+Zunächst werden einige Definitionen erläutert:
+\begin{enumerate}
+    \item Als Normalbedingungen bzw. Standardbedingungen wird ein Zustand bei \SI{0}{\degreeCelsius} und \SI{1013}{\milli\bar} bezeichnet.
+    \item Stoffmenge (veraltet Molzahl) $\sm$: \SI{1}{\mole} einer Substanz entspricht einer Anzahl von Atomen oder Molekülen, die der Avogadro-Konstante/Loschmidt-Zahl $\avogadro \equiv \SI{6,02214076e23}{\per\mole}$ entspricht\footnote{
+          Die Avogadro-Konstante besitzt die Einheit \si{\per\mole} während die Avogadro-Zahl \num{6,02214076e23} dimensionslos ist.
+
+          Bei der Definition der Loschmidt-Zahl kann es aufgrund der historischen Entwicklung zu einiger Verwirrung kommen. Ursprünglich definierte Josef Loschmidt in seiner Arbeit \anf{Zur Grösse der Luftmoleküle} eine Zahl von in einer Volumeneinheit enthaltenen Luftmolekülen, war aber damals noch nicht sehr präzise mit seiner Definition. Als sogenannte Loschmidt-Konstante $N_\mathrm{L}$ wird heute der Wert \SI{2.686780111e25}{\per\cubic\m} definiert, welcher über das molare Volumen eines idealen Gases $V_{m0} = \SI{22,414}{\liter\per\mole}$ mit der Avogadro-Konstante $\avogadro=$ zusammenhängt: $N_\mathrm{L}=\avogadro/V_{m0}$.\cite{lit:loschmidt_constant,lit:loschmidt}
+
+          Im deutschsprachigen Raum wird gelegentlich der Begriff Loschmidt-Zahl aber auch synonym mit der (dimensionslosen) Avogadro-Zahl verwendet. Um Verwirrungen zu vermeiden, wird im Folgenden ausschließlich von der Avogadro-Konstante gesprochen.}.
+
+          Historisch wurde diese Definition gewählt, weil sie der Zahl der Atome in \SI{12}{\g} vom Isotop \isotope[12]{C} von Kohlenstoff entspricht.
+          Zur Referenz: \SI{1}{\mole} ist auch die Zahl der Moleküle eines idealen Gases unter Normalbedingungen in einem Volumen von $V=\SI{22,413}{\liter}$.
+
+          Die Stoffmenge wird aus einer Teilchenzahl $N_k$ der Molekülsorte $k$ folgendermaßen berechnet:
+          \begin{align*}
+              \sm_k = \frac{N_k}{\avogadro}
+          \end{align*}
+    \item Wir definieren ferner den Stoffmengenanteil (früher Molenanteil) als
+          \begin{align*}
+              x_k  = \frac{\sm_k}{\sum_i \sm_i}
+          \end{align*}
+          und das molare Volumen bzw. Molvolumen als
+          \begin{align*}
+              V_m = \frac{V}{\sum_i \sm_i}.
+          \end{align*}
+          Beide beschreiben Anteile am Gesamtsystem.
+    \item Es wird unterschieden zwischen extensiven Parametern, wie dem Volumen $V$ oder Stoffmengen $\sm_1,\ldots,\sm_r$, die sich beim Zusammenführen mehrerer Teilsysteme additiv verhalten, also mit dem Volumen wachsen,
+          \begin{align*}
+              2\times(V,\sm_1,\ldots,\sm_r) \rightarrow (2V,2\sm_1,\ldots,2\sm_r)
+          \end{align*}
+          und intensiven Parametern wie $x_1,...,x_r,V_m$, die keine Änderung bei wachsendem Volumen erfahren. Dazu gehören auch die Temperatur $T$ und der Druck $P$.
+    \item Als Zustandsgrößen werden Größen bezeichnet, die unabhängig von der Vorgeschichte des Systems sind und einfach seinen Zustand beschreiben. Dazu gehören unter anderem das Volumen, die Stoffmenge, die Temperatur und der Druck.
+\end{enumerate}
+
+
+
+
+\subsection{Postulate zur inneren Energie und 1. Hauptsatz der Thermodynamik}

@@ -1,0 +1,5 @@
+{"rule":"DE_CASE","sentence":"^\\QUrsprünglich definierte Josef Loschmidt in seiner Arbeit Zur Grösse der Luftmoleküle eine Zahl von in einer Volumeneinheit enthaltenen Luftmolekülen, war aber damals noch nicht sehr präzise mit seiner Definition.\\E$"}
+{"rule":"GERMAN_SPELLER_RULE","sentence":"^\\QUrsprünglich definierte Josef Loschmidt in seiner Arbeit Zur Grösse der Luftmoleküle eine Zahl von in einer Volumeneinheit enthaltenen Luftmolekülen, war aber damals noch nicht sehr präzise mit seiner Definition.\\E$"}
+{"rule":"DE_AGREEMENT","sentence":"^\\QUm Verwirrungen zu vermeiden, wird im Folgenden ausschließlich von der Avogadro-Konstante gesprochen.\\E$"}
+{"rule":"DE_SENTENCE_WHITESPACE","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"DOPPELTE_SATZZEICHEN","sentence":"^\\QWas ist Thermodynamik?.\\E$"}

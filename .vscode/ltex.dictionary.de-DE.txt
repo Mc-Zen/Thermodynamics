@@ -5,3 +5,8 @@ herausmitteln
 Magnetisierungsarbeit
 Polarisierungsarbeit
 Loschmidt-Zahl
+Molzahl
+Loschmidt
+Loschmidt-Konstante
+Molenanteil
+Molekülsorte
