@@ -1,0 +1,7 @@
+modellunabhängige
+Hamiltonschen
+Molekülfreiheitsgrade
+herausmitteln
+Magnetisierungsarbeit
+Polarisierungsarbeit
+Loschmidt-Zahl
