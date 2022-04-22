@@ -81,6 +81,7 @@
 }}}}
 % differential operator have a non-italic d in German equation typesetting 
 \newcommand*{\diff}{\mathop{}\!\mathrm{d}} 
+\newcommand*{\udiff}{\mathop{}\!\mathrm{\delta}} 
 \newcommand*{\diffa}[2][]{\mathop{\mathrm{d}^{#1}#2}}
 %\newcommand{\diff}{\text{d}}	 
 \newcommand{\Angstroem}{\text{\normalfont\AA}}   
@@ -118,6 +119,8 @@
 % environment derived from framed.sty: see leftbar environment definition
 \definecolor{formalbar}{rgb}{0.1,0.1,.2}
 \definecolor{formalshade}{rgb}{0.95,0.95,1}
+\definecolor{postulatebar}{rgb}{0.3,0.07,.07}
+\definecolor{postulateshade}{rgb}{1,0.9,0.9}
 
 % Quote box for important statements
 \newenvironment{formal}{
@@ -126,6 +129,20 @@
     {\color{formalbar}\vrule width 2pt}%
     {\color{formalshade}\vrule width 4pt}%
     \colorbox{formalshade}%
+  }
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\hspace{-4.55pt}% disable indenting first paragraph
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{-10pt}\vspace{2pt}% 
+}{\vspace{2pt}\end{adjustwidth}\endMakeFramed}
+
+% Quote box for postulates
+\newenvironment{postulate}{
+  \def\FrameCommand{
+    \hspace{1pt}%
+    {\color{postulatebar}\vrule width 2pt}%
+    {\color{postulateshade}\vrule width 4pt}%
+    \colorbox{postulateshade}%
   }
   \MakeFramed{\advance\hsize-\width\FrameRestore}%
   \noindent\hspace{-4.55pt}% disable indenting first paragraph

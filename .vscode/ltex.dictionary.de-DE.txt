@@ -10,3 +10,10 @@ Loschmidt
 Loschmidt-Konstante
 Molenanteil
 Molekülsorte
+quasistatisch
+Erdogenhypothese
+quasistatische
+Wärmeäquivalent
+quasistatischer
+Semi-
+wegabhängige

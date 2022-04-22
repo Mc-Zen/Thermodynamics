@@ -123,3 +123,132 @@ Zunächst werden einige Definitionen erläutert:
 
 
 \subsection{Postulate zur inneren Energie und 1. Hauptsatz der Thermodynamik}
+
+%Die Geschichte des Energiebegriffs beginnt mit Gottfried W. Leibniz im Jahr 1686. Er erkannte, dass die Wirkung einer mechanischen Bewegung 
+
+\paragraph*{Innere Energie}
+
+Die innere Energie ist zugleich eine Zustandsgröße und eine extensive Größe.
+\begin{formal}
+    Makroskopische Systeme besitzen eine genau definierte, innere Energie $U$ (bezogen auf einen willkürlichen Grundzustand), die erhalten bleibt.
+\end{formal}
+
+Je nach Temperaturbereich wird ein Energienullpunkt festgelegt.
+Für Energien $k_\mathrm{B}T$ im Bereich der Bindungsenergien von Molekülen, können z.B. ruhende Moleküle als Referenz gelten.
+
+
+\paragraph*{Thermodynamisches Gleichgewicht}
+
+Wir machen die Erfahrung, dass Systeme einfache Endzustände mit einer kleinstmöglichen Zahl von makroskopischen Variablen anstreben. Beispielsweise bewirkt die Reibung in einer Flüssigkeit in einem Glas, dass eine turbulente Strömung zur laminaren wird und allmählich ganz zur Ruhe kommt.
+
+Diese Beobachtung führt uns zum ersten Postulat:
+\begin{postulate}
+    \textbf{Postulat I:}
+
+    Es gibt spezielle Zustände eines Systems, sogenannte Gleichgewichtszustände, die makroskopisch vollkommen beschrieben sind durch die Angabe weniger Zustandsgrößen, wie innere Energie $U$, Volumen $V$, Stoffmengen $\sm_1,\sm_2,\ldots$ der chemischen Komponenten usw.
+\end{postulate}
+
+
+In komplexeren Systemen muss beispielsweise noch die Polarisation, Magnetisierung und Oberfläche berücksichtigt werden. Analog zum Volumen werden diese Größen in das System aufgenommen über ein Arbeitsdifferential $\diffa{W} = J\diffa{X}$.
+
+Im makroskopischen Gleichgewichtszustand werden viele mikroskopische Zustände im Messzeitraum angenommen, die mit dem makroskopischen Zustand $(U,V,\sm_1,...,\sm_r)$ vereinbar sind. So können z.B. sehr viele verschiedene Kombinationen aus Teilchenenergien zur gleichen mittleren Energie führen. Normalerweise hat ein System kein \anf{Gedächtnis}, es verhält sich im Prinzip zufällig (Erdogenhypothese).
+
+Es gibt aber auch Zustände, für diese Annahme nicht gilt. Beim metastabilen Gleichgewicht sind nicht alle Zustände in der Messzeit erreichbar und die Vorgeschichte ist relevant. Trotzdem ist der Formalismus der Thermodynamik in Teilbereichen davon oder für kurze Zeitspannen anwendbar.
+
+
+Ein Beispiel dafür %wäre der Übergang von Glas (ungeordnetes System) zu Kristall (geordnet). 
+wäre Glas als ungeordnetes, metastabiles System, das zur Kristallisation tendiert. Andere Beispiele sind Gedächtnislegierungen mit eingefrorenen Spannungen oder radioaktive Substanzen, die ihre Zusammensetzung durch spontanen Zerfall der Atome verändern.
+
+
+\paragraph*{Wände}
+
+Wände, Grenzen oder Ränder isolieren ein System und kontrollieren damit die Werte der Zustandsgrößen, sowie den Energiefluss, wie am folgenden Beispiel ersichtlich:
+
+Betrachte ein System aus zwei Kammern (siehe \Abbref{fig:zwei_kammern_mit_kolben}), die durch einen beweglichen Kolben voneinander getrennt werden. Das gesamte System ist von einer festen Wand umgeben. Die Beschaffenheit des Kolbens oder der Wand kann verschiedener Art sein:
+\begin{itemize}
+    \item Wände können beweglich oder fest sein und kontrollieren so die innere Energie über mechanische Arbeit.
+    \item (Semi-) permeable Wände kontrollieren Stoffmengen $\sm_k$, indem sie beispielsweise nur bestimmte Stoffe hindurchlassen.
+    \item Wärmeleitende Wärme erlauben einen Wärmefluss, während thermisch isolierende Grenzen ein Angleichen der Temperatur verhindern.
+\end{itemize}
+
+\begin{figure}[htb]
+    \centering
+    ??
+    \caption{}
+    \label{fig:zwei_kammern_mit_kolben}
+\end{figure}
+
+Durch Wände werden also thermisch abgeschlossene Systeme ermöglicht, was eine Definition des Wärmebegriffs erlaubt.
+
+
+\paragraph*{Energiemessung}
+
+In einem thermisch isolierten System ändert sich die innere Energie genau mit der mechanischen Arbeit $\Delta W$, die an dem System verrichtet wird,
+\begin{align*}
+    U(B)-U(A) =\Delta W(A\rightarrow B).
+\end{align*}
+Auf diese Weise kann die Änderung der inneren Energie durch die mechanische Energie definiert werden, welche wir bereits kennen und messen bzw. berechnen können.
+
+Zum Beispiel erhöht sich die innere Energie, wenn das System mechanisch komprimiert wird.
+Allerdings könnte einem System, das eine Flüssigkeit enthält, auch Energie durch Quirlen zugeführt werden, wodurch sich die Temperatur erhöht, doch ist dieser Prozess nicht umkehrbar, da durch Quirlen natürlich nicht die Temperatur verringert werden kann.
+
+\begin{formal}
+    Die innere Energie wird nicht direkt gemessen. Stattdessen kann die Änderung der inneren Energie eines Systems beim Übergang vom Zustand $A$ zum Zustand $B$ bestimmt werden, indem der Prozess $A\rightarrow B$ oder $B\rightarrow A$ rein mechanisch bewirkt wird.
+\end{formal}
+
+
+
+\paragraph*{Wärme und Wärmeübertrag}
+
+Ein Prozess $A\rightarrow B$ kann auch nicht rein mechanisch passieren. Dabei nimmt das System sogenannte Wärme auf oder gibt sie ab. Diese Wärme können wir definieren als Differenz der gesamten Änderung der inneren Energie und des Teils der durch mechanische verrichtet wird,
+\begin{align*}
+    \Delta Q(A\rightarrow B) = [U(B)-U(A)] - \Delta W(A\rightarrow B).
+\end{align*}
+
+Dieser Zusammenhang wird durch den 1. Hauptsatz der Thermodynamik zusammengefasst:
+\begin{formal}
+    \textbf{1. Hauptsatz der Thermodynamik (Energieerhaltungssatz):}
+
+    Die innere Energie eines Systems ändert sich mit der zugeführten Wärme und der am System verrichten Arbeit,
+    \begin{align*}
+        \Delta U = \Delta Q + \Delta W.
+    \end{align*}
+\end{formal}
+
+Betrachte als Beispiel eine Volumenänderung, die aufgrund der resultierenden Druckänderung eine Arbeit am System darstellt,\footnote{Diese Änderung muss ausreichend langsam erfolgen, damit es sich um eine quasistatische Prozessführung handelt. Bei einer schnellen Änderung entstehen Turbulenzen und das System befindet nicht über den ganzen Zeitraum im thermodynamische Gleichgewicht.}
+\begin{align*}
+    \udiff W = -P\diff V.
+\end{align*}
+
+Wärme und Arbeit sind anders als die innere Energie allerdings keine Zustandsgrößen, denn verschiedene Kombinationen aus Zuführen von Wärme und Arbeit können auf den gleichen Zustand eines Systems führen. Sie dienen beide nur der Änderung der inneren Energie.
+
+\begin{figure}[htb]
+    \centering
+    ??
+    \caption{<caption>}
+    \label{fig:}
+\end{figure}
+
+
+Bemerkungen:
+\begin{itemize}
+    \item Der Prozess kann quasistatisch erfolgen, also so langsam, dass immer ein Gleichgewicht vorliegt und damit der Druck $P$ homogen ist.
+    \item Der Prozess kann nicht quasistatisch erfolgen, wodurch es zu Turbulenzen kommt und $P=P(\vec r,t)$ ortsabhängig wird. Es wird eine Überschussarbeit verrichtet, die in Wärme dissipiert wird.
+    \item Zusätzlich zum totalen Differential $\diff$ muss auch das unvollständige Differential $\udiff$ eingeführt werden, welches für Größen (wie $Q$ und $W$) angewendet wird, die keine Zustandsfunktionen sind, sondern sogenannte wegabhängige Prozessgrößen.
+    \item Mechanische Arbeit stellt einen Energieübertrag dar.
+    \item Ein quasistatischer Wärmeübertrag stellt nach $\udiff Q=\diff U+P\diff V$ ebenfalls einen Energieübertrag dar.
+\end{itemize}
+
+
+\paragraph*{Wärmeäquivalent}
+
+Das sogenannte Wärmeäquivalent besagt, dass Wärme als Energie quantifizierbar ist. Es ist
+\begin{align*}
+    \Delta Q = cm\Delta T
+\end{align*}
+mit spezifischer Wärmekapazität $c$.
+Die häufig verwendete Einheit Kalorie entspricht der Energie, um \SI{1}{\g} Wasser bei \SI{1013}{\milli\bar} von \SI{14,5}{\degreeCelsius} auf \SI{15,5}{\degreeCelsius} zu erwärmen. Es ist dabei $\SI{1}{cal} = \SI{4,1855}{\joule}$.
+
+
+
+\subsection{Postulate zur Entropie}
