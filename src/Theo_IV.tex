@@ -79,9 +79,12 @@
 \newcommand{\varmp}{\mathbin{\vcenter{\hbox{
   \oalign{$\scriptstyle({+})$\cr\noalign{\kern-.3ex}\hfil$\scriptscriptstyle-$\hfil\cr}
 }}}}
+% d with bar through
+%\newcommand{\dbar}{d\hspace*{-0.08em}\bar{}\hspace*{0.1em}}
+\newcommand{\dbar}{\mkern3mu\mathchar '26 \mkern-11mu d}
 % differential operator have a non-italic d in German equation typesetting 
 \newcommand*{\diff}{\mathop{}\!\mathrm{d}} 
-\newcommand*{\udiff}{\mathop{}\!\mathrm{\delta}} 
+\newcommand*{\udiff}{\mathop{}\!\dbar} 
 \newcommand*{\diffa}[2][]{\mathop{\mathrm{d}^{#1}#2}}
 %\newcommand{\diff}{\text{d}}	 
 \newcommand{\Angstroem}{\text{\normalfont\AA}}   

@@ -27,6 +27,12 @@ Es findet also eine Messung in gewissen Maßstäben zeitunabhängiger Kombinatio
 Zum anderen kommt es zu einer räumlichen Mittelung, zum Vergleich: mikroskopische Abmessungen liegen bei um die \SI{0.1}{\nm} (Atomradius, Gitterkonstante), während makroskopische Messungen in der Regel bei über \SI{100}{\nm} liegen (Größenordnung der Wellenlänge von sichtbarem Licht).
 Also wird meist über weit mehr als \num{1e9} Atome oder Moleküle gemittelt.
 
+\begin{figure}[htbp]
+    \centering
+    \tfigSystemWithManyParticles
+    \caption{System mit vielen Teilchen, z.B. ein Gas.}
+    \label{fig:SystemWithManyParticles}
+\end{figure}
 
 Es verbleiben nur wenige Kenngrößen. Mechanische Größen sind zum Beispiel
 \begin{itemize}
@@ -164,7 +170,7 @@ wäre Glas als ungeordnetes, metastabiles System, das zur Kristallisation tendie
 
 Wände, Grenzen oder Ränder isolieren ein System und kontrollieren damit die Werte der Zustandsgrößen, sowie den Energiefluss, wie am folgenden Beispiel ersichtlich:
 
-Betrachte ein System aus zwei Kammern (siehe \Abbref{fig:zwei_kammern_mit_kolben}), die durch einen beweglichen Kolben voneinander getrennt werden. Das gesamte System ist von einer festen Wand umgeben. Die Beschaffenheit des Kolbens oder der Wand kann verschiedener Art sein:
+Betrachte ein System aus zwei Kammern (siehe \Abbref{fig:TwoChambersSeparatedByPiston}), die durch einen beweglichen Kolben voneinander getrennt werden. Das gesamte System ist von einer festen Wand umgeben. Die Beschaffenheit des Kolbens oder der Wand kann verschiedener Art sein:
 \begin{itemize}
     \item Wände können beweglich oder fest sein und kontrollieren so die innere Energie über mechanische Arbeit.
     \item (Semi-) permeable Wände kontrollieren Stoffmengen $\sm_k$, indem sie beispielsweise nur bestimmte Stoffe hindurchlassen.
@@ -173,9 +179,9 @@ Betrachte ein System aus zwei Kammern (siehe \Abbref{fig:zwei_kammern_mit_kolben
 
 \begin{figure}[htb]
     \centering
-    ??
-    \caption{}
-    \label{fig:zwei_kammern_mit_kolben}
+    \tfigTwoChambersSeparatedByPiston
+    \caption{Zwei Kammern 1 und 2 sind von einer Wand umgeben und durch einen Kolben voneinander getrennt. }
+    \label{fig:TwoChambersSeparatedByPiston}
 \end{figure}
 
 Durch Wände werden also thermisch abgeschlossene Systeme ermöglicht, was eine Definition des Wärmebegriffs erlaubt.
@@ -189,8 +195,23 @@ In einem thermisch isolierten System ändert sich die innere Energie genau mit d
 \end{align*}
 Auf diese Weise kann die Änderung der inneren Energie durch die mechanische Energie definiert werden, welche wir bereits kennen und messen bzw. berechnen können.
 
-Zum Beispiel erhöht sich die innere Energie, wenn das System mechanisch komprimiert wird.
-Allerdings könnte einem System, das eine Flüssigkeit enthält, auch Energie durch Quirlen zugeführt werden, wodurch sich die Temperatur erhöht, doch ist dieser Prozess nicht umkehrbar, da durch Quirlen natürlich nicht die Temperatur verringert werden kann.
+Zum Beispiel erhöht sich die innere Energie, wenn das System mechanisch komprimiert wird (siehe \Abbref{fig:RectangularBoxWithPiston}).
+
+\begin{figure}[htbp]
+    \centering
+    \tfigRectangularBoxWithPiston
+    \caption{Ein System kann mechanisch komprimiert werden, sodass sich die innere Energie erhöht. Es wird Arbeit an dem System verrichtet. Der Prozess ist in diesem Fall umkehrbar. }
+    \label{fig:RectangularBoxWithPiston}
+\end{figure}
+
+Allerdings könnte einem System, das eine Flüssigkeit enthält, auch Energie durch Quirlen zugeführt werden, wie in \Abbref{fig:WaterStiringIceCubes} dargestellt. Dadurch erhöht sich die Temperatur, doch ist dieser Prozess nicht umkehrbar, da durch Quirlen natürlich nicht die Temperatur verringert werden kann.
+
+\begin{figure}[htbp]
+    \centering
+    \tfigWaterStiringIceCubes
+    \caption{Ein Gefäß mit Wasser einer bestimmten Temperatur (Zustand A) kann durch Quirlen erwärmt werden (Zustand B). Allerdings ist dieser Vorgang nicht auf mechanische Weise umkehrbar, denn durch Quirlen kann das Wasser nicht abgekühlt werden. }
+    \label{fig:WaterStiringIceCubes}
+\end{figure}
 
 \begin{formal}
     Die innere Energie wird nicht direkt gemessen. Stattdessen kann die Änderung der inneren Energie eines Systems beim Übergang vom Zustand $A$ zum Zustand $B$ bestimmt werden, indem der Prozess $A\rightarrow B$ oder $B\rightarrow A$ rein mechanisch bewirkt wird.
@@ -215,18 +236,17 @@ Dieser Zusammenhang wird durch den 1. Hauptsatz der Thermodynamik zusammengefass
     \end{align*}
 \end{formal}
 
-Betrachte als Beispiel eine Volumenänderung, die aufgrund der resultierenden Druckänderung eine Arbeit am System darstellt,\footnote{Diese Änderung muss ausreichend langsam erfolgen, damit es sich um eine quasistatische Prozessführung handelt. Bei einer schnellen Änderung entstehen Turbulenzen und das System befindet nicht über den ganzen Zeitraum im thermodynamische Gleichgewicht.}
+Betrachte als Beispiel eine Volumenänderung, die aufgrund der resultierenden Druckänderung eine Arbeit am System darstellt\footnote{Diese Änderung muss ausreichend langsam erfolgen, damit es sich um eine quasistatische Prozessführung handelt. Bei einer schnellen Änderung entstehen Turbulenzen und das System befindet nicht über den ganzen Zeitraum im thermodynamische Gleichgewicht.},
 \begin{align*}
     \udiff W = -P\diff V.
 \end{align*}
-
-Wärme und Arbeit sind anders als die innere Energie allerdings keine Zustandsgrößen, denn verschiedene Kombinationen aus Zuführen von Wärme und Arbeit können auf den gleichen Zustand eines Systems führen. Sie dienen beide nur der Änderung der inneren Energie.
+Wärme und Arbeit sind anders als die innere Energie allerdings keine Zustandsgrößen, denn verschiedene Kombinationen aus Zuführen von Wärme und Arbeit können auf den gleichen Zustand eines Systems führen (\Abbref{fig:WQAreNoStateFunctions}). Sie dienen beide nur der Änderung der inneren Energie.
 
 \begin{figure}[htb]
     \centering
-    ??
-    \caption{<caption>}
-    \label{fig:}
+    \tfigWQAreNoStateFunctions
+    \caption{Die mechanische Arbeit $\Delta W$ und die Wärme $\Delta Q$ sind keine Zustandsfunktionen. Einem System können verschiedene Verhältnisse $\Delta W_1,\Delta Q_1$ und $\Delta W_2,\Delta Q_2$ zugeführt werden, die zur selben inneren Energie $U$ führen, sodass sich das System im gleichen Zustand befindet. }
+    \label{fig:WQAreNoStateFunctions}
 \end{figure}
 
 
@@ -244,7 +264,7 @@ Bemerkungen:
 
 Das sogenannte Wärmeäquivalent besagt, dass Wärme als Energie quantifizierbar ist. Es ist
 \begin{align*}
-    \Delta Q = cm\Delta T
+    \Delta Q = mc\Delta T
 \end{align*}
 mit spezifischer Wärmekapazität $c$.
 Die häufig verwendete Einheit Kalorie entspricht der Energie, um \SI{1}{\g} Wasser bei \SI{1013}{\milli\bar} von \SI{14,5}{\degreeCelsius} auf \SI{15,5}{\degreeCelsius} zu erwärmen. Es ist dabei $\SI{1}{cal} = \SI{4,1855}{\joule}$.
@@ -252,3 +272,5 @@ Die häufig verwendete Einheit Kalorie entspricht der Energie, um \SI{1}{\g} Was
 
 
 \subsection{Postulate zur Entropie}
+
+Aus der Experimentalphysik erinnern wir uns, dass die Entropie $S$ mit der Irreversibilität eines Prozesses zusammenhängt. 
