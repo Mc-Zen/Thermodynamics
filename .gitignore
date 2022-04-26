@@ -6,9 +6,9 @@
 *.log
 *.out
 *.aux
-*.gz
 *.toc
-*.syntex
+*.synctex.gz
+*.synctex(busy)
 __latexindent_temp.tex
 
 src/*.pdf
