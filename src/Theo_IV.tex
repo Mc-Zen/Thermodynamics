@@ -125,6 +125,8 @@
 \definecolor{postulatebar}{rgb}{0.3,0.07,.07}
 \definecolor{postulateshade}{rgb}{1,0.9,0.9}
 
+\newcounter{PostulateCounter}
+\renewcommand{\thePostulateCounter}{\Roman{PostulateCounter}}
 % Quote box for important statements
 \newenvironment{formal}{
   \def\FrameCommand{
@@ -151,7 +153,11 @@
   \noindent\hspace{-4.55pt}% disable indenting first paragraph
   \begin{adjustwidth}{}{7pt}%
   \vspace{-10pt}\vspace{2pt}% 
+  \refstepcounter{PostulateCounter}
+  \textbf{Postulat \Roman{PostulateCounter}:}
+
 }{\vspace{2pt}\end{adjustwidth}\endMakeFramed}
+
 
 \input{_figures}
 \usepackage{hyperref} % include hyperref as last package!
@@ -179,6 +185,7 @@
 \mainmatter
 \input{0_Einleitung}
 \input{1_Grundlagen_und_Postulate}
+\input{2_Folgerungen_und_Gleichgewichtsbedingungen}
 
 
 \raggedright

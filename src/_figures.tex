@@ -150,3 +150,17 @@
         edge[arr,bend right=60] node[midway, anchor=north west] {$\Delta W_2,\Delta Q_2$} node[midway, anchor=south east] {2} (Point B);
     \end{tikzpicture}
 }
+
+% Sketch of fundamental relations between inner energy and entropy.
+\newcommand{\tfigSchemaFundamentalbeziehung}{    
+    \begin{tikzpicture}[scale=1.5]
+        \draw[arr] (0,0) node[anchor=north] {$0$} -- (0,2) node[ylabel] {$U$};
+        \draw[arr] (0,0) -- (3,0) node[xlabel] {$S$};
+        \draw[nice light blue] (0,1) .. controls +(0:1.2) and +(-135:.7) .. (2.5,1.8);
+        \begin{scope}[xshift=4.5cm]
+            \draw[arr] (0,0) node[anchor=north] {$0$} -- (0,2) node[ylabel] {$S$};
+            \draw[arr] (0,0) -- (3,0) node[xlabel] {$U$};
+            \draw[nice light blue] (1,0) .. controls +(90:.8) and +(-165:.7) .. (2.8,1.8);
+        \end{scope}
+    \end{tikzpicture}
+}

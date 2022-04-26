@@ -149,11 +149,9 @@ Wir machen die Erfahrung, dass Systeme einfache Endzustände mit einer kleinstm�
 
 Diese Beobachtung führt uns zum ersten Postulat:
 \begin{postulate}
-    \textbf{Postulat I:}
-
+    \label{post:gleichgewichtszustaende}
     Es gibt spezielle Zustände eines Systems, sogenannte Gleichgewichtszustände, die makroskopisch vollkommen beschrieben sind durch die Angabe weniger Zustandsgrößen, wie innere Energie $U$, Volumen $V$, Stoffmengen $\sm_1,\sm_2,\ldots$ der chemischen Komponenten usw.
 \end{postulate}
-
 
 In komplexeren Systemen muss beispielsweise noch die Polarisation, Magnetisierung und Oberfläche berücksichtigt werden. Analog zum Volumen werden diese Größen in das System aufgenommen über ein Arbeitsdifferential $\diffa{W} = J\diffa{X}$.
 
@@ -273,5 +271,87 @@ Die häufig verwendete Einheit Kalorie entspricht der Energie, um \SI{1}{\g} Was
 
 \subsection{Postulate zur Entropie}
 
-Aus der Experimentalphysik erinnern wir uns, dass die Entropie $S$ mit der Irreversibilität eines Prozesses zusammenhängt. 
+Aus der Experimentalphysik erinnern wir uns, dass die Entropie $S$ mit der Irreversibilität eines Prozesses zusammenhängt. Später werden wir sehen, dass $S=k_\mathrm{B}\ln{\Omega}$ mit Phasenraumvolumen $\Omega$ ist. 
 
+Zuerst betrachten wir ein abgeschlossenenes System mit festgelegten Zwangsbedingungen, beispielsweise zwei Kammern, die durch einen anfangs undurchlässigen, festen und isolierenden Kolben getrennt sind. Diese Eigenschaften des Kolbens stellen die Zwangsbedingungen dar. Es stellt sich die Frage, welchen Gleichgewichtszustand das System beim Entfernen einer oder mehrere dieser Zwangsbedingungen einnimmt. Erfahrungsgemäß wissen wir z.B., dass sich die Temperaturen beider Kammern angleichen, wenn ein Wärmeaustausch erlaubt wird, der Kolben also wärmedurchlässig ist. 
+
+Eine allgemeine Antwort auf diese Frage kann mithilfe des Extremalprinzips gewonnen werden, was uns auf das zweite Postulat führt:
+
+% Das bringt uns zum zweiten Postulat, dem Extremalprinzip zur Entropie:
+\begin{postulate}
+    \label{post:entropie_maximierung}
+    Gegeben sei ein isoliertes System, das durch Zwangsbedingungen unterteilt ist. Dann existiert eine Funktion der extensiven Parameter ($U^{(1)},V^{(1)},\sm_k^{(1)};U^{(2)},V^{(2)},\sm_k^{(2)}; \ldots$), genannt Entropie $S$, die für alle Gleichgewichtszustände wohldefiniert ist und folgende Eigenschaften besitzt: Lässt man die Zwangsbedingung fallen, so nehmen die extensiven Parameter Werte an, welche die Entropie maximieren. Der dann erreichte Endzustand heißt stabiles Gleichgewicht. 
+
+    $S=S(\{U^{(\alpha)},V^{(\alpha)},\sm_k^{(\alpha)}\})$ heißt entropische Fundamentalbeziehung. Sie enthält die gesamte Information über das System. 
+\end{postulate}
+
+
+Es sei bemerkt, dass dafür die Entropie $S$ von den extensiven Variablen abhängen muss. Dieses Postulat erscheint auf den ersten Blick recht willkürlich, wird aber durch seine Konsequenzen gerechtfertigt, welche sich mit den Erfahrungstatsachen decken\footnote{Außerdem hat sich die Anwendung des Extremalprinzips in vielen Bereichen der Physik erfolgreich bewährt (siehe Hamiltonsches Prinzip der kleinsten Wirkung sowie die Minimierung der Lagrange-Dichte bei der Quantenfeldtheorie)}. Diese werden in den folgenden Kapiteln erläutert. 
+
+Es ist außerdem sinnvoll, einige Eigenschaften für die Entropie zu fordern, die im nächsten Postulat zusammengefasst sind:
+\begin{postulate}
+    \label{post:eigenschaften_entropie}
+    Die Entropie eines zusammengesetzen Systems ist gleich der Summe der Entropien der Teilsysteme,
+    \begin{align*}
+        S =\sum_\alpha S^{(\alpha)}, \quad, S^{(\alpha)} = S^{(\alpha)}(U^{(\alpha)},V^{(\alpha)},\sm_1^{(\alpha)},\ldots, \sm_r^{(\alpha)}). 
+    \end{align*}
+    $S$ ist stetig, differenzierbar und eine monoton ansteigende Funktion der inneren Energie $U$. 
+\end{postulate}
+
+%Wir werden später sehen, dass aus dem zweiten Punkt die Temperatur $T$ hergeleitet werden kann. 
+Hieraus folgt, dass $S$ eine extensive Größe ist, denn 
+\begin{align*}
+    S(\lambda U,\lambda V,\lambda\sm_1,\ldots, \lambda\sm_r) = \lambda^1 S(U,V,\sm_1, \ldots,\sm_r). 
+\end{align*}
+Genauer: die Entropie ist eine  homogene Funktion ersten Grades der extensiven Parameter. 
+
+Beispielsweise lässt sich für ein allgemeines System mit vielen Komponenten mit Gesamtstoffmenge $\lambda=\sm=\sum_{k=1}^r\sm_k$,
+\begin{align*}
+    S(U,V,\sm_1, \dots , \sm_r) = N\cdot S\left(\frac{U}{N},\frac{V}{U},\frac{\sm_1}{N}, \dots , \frac{\sm_r}{N}\right)
+\end{align*}
+ein Einkomponentensystem ableiten,
+\begin{align*}
+    S(U,V,N) = N\cdot S(u,v,1) = N\cdot s(u,v)
+\end{align*}
+mit Energie pro Mol $u=U/N$, Molvolumen $v=V/N$ und Entropie pro Mol $s$. Diese Darstellung wird häufig verwendet, da Angaben in Mol ausreichen und die Rechnungen vereinfachen. 
+
+Aus dem Postulat \ref{post:eigenschaften_entropie} folgt ferner, dass für 
+\begin{align*}
+    \left(\frac{\partial S}{\partial U}\right)_{V,\sm_1, \dots ,\sm_r} > 0
+\end{align*}
+die Beziehung $S(U)$ invertierbar ist, 
+\begin{align*}
+    U = U(S,V,\sm_1, \dots,\sm_r). 
+\end{align*}
+Diese neue Beziehung ist als energetische Fundamentalbeziehung bekannt und wir werden sehen, dass aus dem Postulat \ref{post:entropie_maximierung} auch eine Minimierung der Energie folgt. 
+
+
+
+\subsection{Das Nernst-Postulat (3. Hauptsatz)}
+
+
+
+\begin{postulate}
+    \label{post:nernst}
+    Für jeden Variablensatz $V,\sm_1,...,\sm_k$ gibt es einen Punkt, an dem gilt:
+    \begin{align}
+        \label{eq:nernst_postulat}
+        S = 0 \quad \text{bei} \quad T =\left(\frac{\partial U}{\partial S}\right)_{V,\sm,...}=0
+    \end{align}
+    (siehe \Abbref{fig:SchemaFundamentalbeziehung}).
+\end{postulate}
+
+Bemerkungen: 
+\begin{itemize}
+    \item $S$ besitzt einen eindeutigen Nullpunkt, im Gegensatz zu $U$ (wo immer eine Konstante dazuaddiert werden kann). 
+    \item Die Größe $T$ wird im Folgenden als Temperatur interpretiert. 
+\end{itemize}
+
+In der Formulierung nach Planck von 1907 heißt es, dass der Temperaturnullpunkt $T=0$ nicht erreicht wird. 
+
+\begin{figure}[htbp]
+    \centering
+    \tfigSchemaFundamentalbeziehung
+    \caption{Schema zur energetischen (links) und entropischen (rechts) Fundamentalbeziehung. Die Entropie $S$ besitzt im Gegensatz zur inneren Energie einen eindeutigen Nullpunkt.  }
+    \label{fig:SchemaFundamentalbeziehung}
+\end{figure}
