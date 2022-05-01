@@ -164,3 +164,49 @@
         \end{scope}
     \end{tikzpicture}
 }
+
+%
+\newcommand{\tfigDoppelsystemUSfesteWaermeleitendeWand}{
+    \begin{tikzpicture}[scale=1.6]
+        \draw (0,0) rectangle (2,1);
+        \node[align=center] at (.5,.5) {$U^{(1)}$\\$S^{(1)}$};
+        \node[align=center] at (1.5,.5) {$U^{(2)}$\\$S^{(2)}$};
+        \draw[pattern=north east lines] (.95,0) rectangle (1.05,1);
+        \node at (1.4,-.5) {fest, undurchlässig, isolierend $\rightarrow$ wärmeleitend} edge[arr,bend left=10] (1,0);
+    \end{tikzpicture}
+}
+
+%
+\newcommand{\tfigDoppelsystemUVNbeweglicheIsolierendeWand}{
+    \begin{tikzpicture}[scale=1.6]
+        \draw (0,0) rectangle (2,1);
+        \node[align=center] at (.5,.5) {$U^{(1)}$\\$V^{(1)}$\\$N^{(1)}$};
+        \node[align=center] at (1.5,.5) {$U^{(2)}$\\$V^{(2)}$\\$N^{(2)}$};
+        \draw[pattern=north east lines] (.95,0) rectangle (1.05,1);
+        \node at (1.4,-.5) {undurchlässig, fest $\rightarrow$ beweglich, isolierend $\rightarrow$ wärmeleitend} edge[arr,bend left=10] (1,0);
+    \end{tikzpicture}
+}
+
+%
+\newcommand{\tfigFunktionEntropieMaximum}{
+    \begin{tikzpicture}[scale=1.5]
+        \draw[arr] (0,0) -- (0,2) node[ylabel] {$S$};
+        \draw[arr] (0,0) -- (4,0) node[xlabel] {$U^{(1)}$};
+        
+        \path let \n{thermisches GG}={2}, \n{x1}={3},\n{x2}={3.5},\n{y1}={-.3*(\n{x1}-\n{thermisches GG})^2+1.5},\n{y2}={-.3*(\n{x2}-\n{thermisches GG})^2+1.5} in        
+        coordinate (P1) at (\n{x1},\n{y1})
+        coordinate (P2) at (\n{x2},\n{y2});
+        \node[point] at (P1) {};
+        \node[point] at (P2) {};
+        \draw let \n{thermisches GG}={2} in plot[domain=.2:3.8] (\x,{-.3*(\x-\n{thermisches GG})^2+1.5});
+        \draw[dashed] let \n{thermisches GG}={2},\p1=(P1),\p2=(P2) in 
+        (\n{thermisches GG},1.5) -- +(0,-1.5) node[below,align=center] {thermisches\\Gleichgewicht}
+        (0,\y1) -- (P1) -- (\x1,0) (0,\y2) -- (P2) -- (\x2,0);
+        \draw[decorate, decoration = {brace}] let \p1=(P1),\p2=(P2) in
+        (0,\y2)  --(0,\y1) node[midway,left]{$\Delta S$};
+        \draw[decorate, decoration = {brace}] let \p1=(P1),\p2=(P2) in
+        (\x2,0)  --(\x1,0) node[midway,below]{$\Delta U^{(1)}$};
+        
+        \draw[arr] ([shift={(.1,.1)}]P2)to[bend right=3] ([shift={(.1,.1)}]P1);
+    \end{tikzpicture}
+}

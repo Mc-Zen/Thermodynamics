@@ -84,3 +84,91 @@ Zuletzt soll noch einige Aussagen zu $\udiff Q$ zusammengefasst werden:
     Nur für Gleichheit ist dieser Prozess reversibel. 
 \end{itemize}
 
+
+
+
+
+
+
+
+
+
+\subsection{Thermisches Gleichgewicht}
+
+Nun soll es darum gehen, den Inhalt der Postulate \ref{post:entropie_maximierung} und \ref{post:eigenschaften_entropie} auszuwerten. 
+Es wird folgen, dass sich die $T$ so verhält, wie man es von einer Temperatur erwartet. 
+
+\paragraph*{Temperatur}
+
+Wir starten wieder mit einem Modellsystem, das insgesamt abgeschlossen ist und aus zwei Untersystemen $(1)$ und $(2)$ besteht, wie in \Abbref{fig:DoppelsystemUSfesteWaermeleitendeWand} darstellt. 
+Die beiden Untersysteme sind durch eine feste Wand getrennt, die zuerst isoliert ist und dann wärmeleitend wird. Die beiden Systeme werden also in thermischen Kontakt gebracht und tauschen Wärme aus. 
+
+\begin{figure}[htbp]
+    \centering
+    \tfigDoppelsystemUSfesteWaermeleitendeWand
+    \caption{Abgeschlossenes System aus zwei Untersystemen, die durch eine feste und materieundurchlässige Wand getrennt sind. Die Wand ist zunächst isolierend und wird dann wärmeleitend.}
+    \label{fig:DoppelsystemUSfesteWaermeleitendeWand}
+\end{figure}
+
+Wir würden dabei erwarten, dass sich die Temperaturen angleichen, $T^{(1)}=T^{(2)}$. 
+
+Nach den Postulaten muss für ein abgeschlossenes System $U^{(1)}+U^{(2)} = \mathrm{const}$ bzw. $\diff U^{(1)} = -\diff U^{(2)}$ sein. Das Postulat \ref{post:entropie_maximierung} besagt jetzt, dass sich $U^{(1)}$ und $U^{(2)}$ so einstellen, dass $S$ ein Maximum annimmt, $\diff S=0$. Damit auch das Postulat \ref{post:eigenschaften_entropie} erfüllt ist, muss gelten, dass
+\begin{align*}
+    S=S^{(1)}\left(U^{(1)},V^{(1)},N^{(1)}_k\right) + S^{(2)}\left(U^{(2)},V^{(2)},N^{(2)}_k\right). 
+\end{align*}
+Es ist also 
+\begin{align*}
+    \diff S = \frac{\partial S^{(1)}}{\partial U^{(1)}}\diff U^{(1)}+ \frac{\partial S^{(2)}}{\partial U^{(2)}}\diff U^{(2)} = \frac{1}{T^{(1)}}\diff U^{(1)} + \frac{1}{T^{(2)}}\diff U^{(2)},
+\end{align*}
+da die Volumina und Stoffmengen konstant sind und wegen $\diff U^{(1)} = -\diff U^{(2)}$ ist 
+\begin{align*}
+    \diff S = \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\diff U^{(1)} \overset{!}{=} 0. 
+\end{align*}
+Im thermischen Gleichgewicht gilt folglich 
+\begin{align}
+    \label{eq:thermisches_gg_temperatur}
+    T^{(1)} = T^{(2)},
+\end{align}
+wie erwartet. Aus dem Postulat \ref{post:eigenschaften_entropie} folgt auch, dass die Temperatur positiv ist, denn $S$ soll eine monoton ansteigende Funktion von $U$ sein, sodass $\partial S/\partial U > 0$. 
+
+Diese Definition der Temperatur als Inverse der Ableitung der Entropie nach der inneren Energie mag zwar ein wenig abstrakt erscheinen, doch gibt es auch andere gleichbedeutende Definitionen der Temperatur, die aber nicht weniger abstrakt sind\footnote{Ein anderer Ansatz wäre, als nullten Hauptsatz die Transitiviät der Temperatur zu postulieren\cite{lit:nolting1}, 
+\begin{align*}
+    T^{(1)} = T^{(2)} \quad \text{und}\quad T^{(1)} = T^{(3)} \implication T^{(2)} = T^{(3)}.
+\end{align*} 
+Eine weitere Formulierung, in der $1/T$ als integrierender Faktor festgelegt wird (sodass $\diff S=\udiff Q/T$), wurde von Kelvin und Caradathory vorgeschlagen. 
+Beide Varianten sind in dem hier gewählten Zugang bereits in den Postulaten \ref{post:entropie_maximierung} und \ref{post:eigenschaften_entropie} enthalten. 
+}.
+
+Es existiert also eine absolute Temperaturskala. Eine solche ist die Kelvin-Skala, die so definiert ist, dass der Tripelpunkt, also die Koexistenz von Eis, flüssigem Wasser und Wasserdampf, bei \SI{271,16}{\kelvin} liegt. 
+
+Wir haben gesehen, dass die Entropie ein Maximum annimmt. Daraus kann man schließen, dass die zweite Ableitung der Entropie dort kleiner als $0$ ist. 
+
+\paragraph*{Wärmefluss}
+
+Wir wissen intuitiv, dass die Wärme von Bereichen hoher Temperatur zu Bereichen niedrigerer Temperatur fließt. Startet man bei einem Anfangszustand mit $T^{(2)}> T^{(1)}$ und hebt dann die Zwangsbedingung auf, kommt es zu einem (quasistatischen) Wärmefluss. 
+Wegen dem Postulat \ref{post:entropie_maximierung} ist 
+\begin{align*}
+    \Delta S= \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\Delta U^{(1)} > 0. 
+\end{align*}
+Da aber 
+\begin{align*}
+    T^{(2)}> T^{(1)} \equivalence \frac{1}{T^{(1)}}-\frac{1}{T^{(2)}} < 0
+\end{align*}
+ist, muss $\Delta U^{(1)} <0$ sein. Der Wärmefluss findet erwartungsgemäß vom System höherer zum System tieferer Temperatur statt, bis sich beide Temperaturen angeglichen haben. Dann ist das Maximum der Entropie erreicht (siehe \Abbref{fig:FunktionEntropieMaximum}). 
+
+\begin{figure}[htbp]
+    \centering
+    \tfigFunktionEntropieMaximum
+    \caption{Entropie über innere Energie: beim thermodynamischen Gleichgewicht nimmt die Entropie ihr Maximum an. Die Änderung $\Delta U^{(1)}$ ist negativ für $\Delta S>0$. }
+    \label{fig:FunktionEntropieMaximum}
+\end{figure}
+
+\subsection{Mechanisches Gleichgewicht}
+
+
+\begin{figure}[htbp]
+    \centering
+    \tfigDoppelsystemUVNbeweglicheIsolierendeWand
+    \caption{Abgeschlossenes System aus zwei Untersystemen, die durch materieundurchlässige Wand getrennt sind. Die Wand ist zunächst fest und isolierend und wird dann beweglich und wärmeleitend.}
+    \label{fig:DoppelsystemUVNbeweglicheIsolierendeWand}
+\end{figure}
