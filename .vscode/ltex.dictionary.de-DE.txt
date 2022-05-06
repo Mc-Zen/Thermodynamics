@@ -17,3 +17,13 @@ Wärmeäquivalent
 quasistatischer
 Semi-
 wegabhängige
+quasistatischen
+Materiefluss
+materieundurchlässige
+Caradathory
+materieundurchlässiger
+materiedurchlässig
+Entropiedarstellung
+Gibbs-Duhem-Beziehung
+Extremalprinzips
+Nernst-Postulat

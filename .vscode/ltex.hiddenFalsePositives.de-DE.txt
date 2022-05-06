@@ -3,3 +3,5 @@
 {"rule":"DE_AGREEMENT","sentence":"^\\QUm Verwirrungen zu vermeiden, wird im Folgenden ausschließlich von der Avogadro-Konstante gesprochen.\\E$"}
 {"rule":"DE_SENTENCE_WHITESPACE","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
 {"rule":"DOPPELTE_SATZZEICHEN","sentence":"^\\QWas ist Thermodynamik?.\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QDann ist das Maximum der Entropie erreicht (siehe ).\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QAnalog zu den vorigen Beispielen wird ein abgeschlossenes System mit zwei Untersystemen betrachtet (siehe ).\\E$"}

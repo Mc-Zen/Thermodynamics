@@ -165,7 +165,7 @@
     \end{tikzpicture}
 }
 
-%
+% System with two subsystems separated by an impermeable and fixed but thermally conductive wall. 
 \newcommand{\tfigDoppelsystemUSfesteWaermeleitendeWand}{
     \begin{tikzpicture}[scale=1.6]
         \draw (0,0) rectangle (2,1);
@@ -176,18 +176,18 @@
     \end{tikzpicture}
 }
 
-%
-\newcommand{\tfigDoppelsystemUVNbeweglicheIsolierendeWand}{
+% System with two subsystems separated by an impermeable but movable and thermally conductive wall. 
+\newcommand{\tfigDoppelsystemUVNbeweglicheWaermeleitendeWand}{
     \begin{tikzpicture}[scale=1.6]
         \draw (0,0) rectangle (2,1);
-        \node[align=center] at (.5,.5) {$U^{(1)}$\\$V^{(1)}$\\$N^{(1)}$};
-        \node[align=center] at (1.5,.5) {$U^{(2)}$\\$V^{(2)}$\\$N^{(2)}$};
+        \node[align=center] at (.5,.5) {$U^{(1)}$\\$V^{(1)}$\\$\sm^{(1)}$};
+        \node[align=center] at (1.5,.5) {$U^{(2)}$\\$V^{(2)}$\\$\sm^{(2)}$};
         \draw[pattern=north east lines] (.95,0) rectangle (1.05,1);
         \node at (1.4,-.5) {undurchlässig, fest $\rightarrow$ beweglich, isolierend $\rightarrow$ wärmeleitend} edge[arr,bend left=10] (1,0);
     \end{tikzpicture}
 }
 
-%
+% Function U(S) with maximum. 
 \newcommand{\tfigFunktionEntropieMaximum}{
     \begin{tikzpicture}[scale=1.5]
         \draw[arr] (0,0) -- (0,2) node[ylabel] {$S$};
@@ -208,5 +208,17 @@
         (\x2,0)  --(\x1,0) node[midway,below]{$\Delta U^{(1)}$};
         
         \draw[arr] ([shift={(.1,.1)}]P2)to[bend right=3] ([shift={(.1,.1)}]P1);
+    \end{tikzpicture}
+}
+
+
+% System with two subsystems separated by a fixed but semipermeable and thermally conductive wall. 
+\newcommand{\tfigDoppelsystemUVNbeweglicheIsolierendeWand}{
+    \begin{tikzpicture}[scale=1.6]
+        \draw (0,0) rectangle (2,1);
+        \node[align=center] at (.5,.5) {$U^{(1)}$\\$\sm_1^{(1)}$\\$S^{(1)}$};
+        \node[align=center] at (1.5,.5) {$U^{(2)}$\\$\sm_1^{(2)}$\\$S^{(2)}$};
+        \draw[pattern=north east lines] (.95,0) rectangle (1.05,1);
+        \node at (1.4,-.5) {fest, materieundurchlässig $\rightarrow$ durchlässig für Molekülsorte 1, isolierend $\rightarrow$ wärmeleitend} edge[arr,bend left=10] (1,0);
     \end{tikzpicture}
 }
