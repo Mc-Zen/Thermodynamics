@@ -2,32 +2,32 @@
 
 \section{Folgerungen und Gleichgewichtsbedingungen}
 
-In diesem Kapitel soll die Entwicklung der thermodynamischen Theorie sowie die Auswertung des zweiten Postulates erfolgen. 
+In diesem Kapitel soll die Entwicklung der thermodynamischen Theorie sowie die Auswertung des zweiten Postulates erfolgen.
 
 \subsection{Konjugierte Variablen (Energiedarstellung)}
 
-Zunächst wollen wir die innere Energie in der differentiellen Form aufschreiben: 
+Zunächst wollen wir die innere Energie in der differentiellen Form aufschreiben:
 \begin{align*}
     \diff U = \left(\frac{\partial U}{\partial S}\right)_{V,\sm_1,\ldots,\sm_r} \diff S + \left(\frac{\partial U}{\partial V}\right)_{S,\sm_1,\ldots,\sm_r} \diff V + \sum_{j = 1}^r \left(\frac{\partial U}{\partial \sm_j}\right)_{S,V,\sm_1,\ldots,\sm_{j - 1},\sm_{j + 1},\ldots,\sm_r} \diff \sm_j
 \end{align*}
-Die Faktoren vor den einzelnen Differentialen müssen nun gedeutet werden, indem sie als Größen definiert werden, die jeweils konjugiert zu der Größe aus dem Differential sind. 
+Die Faktoren vor den einzelnen Differentialen müssen nun gedeutet werden, indem sie als Größen definiert werden, die jeweils konjugiert zu der Größe aus dem Differential sind.
 
-Wir erhalten die Temperatur 
+Wir erhalten die Temperatur
 \begin{align}
     \label{eq:def_temperatur}
     T \equiv \left(\frac{\partial U}{\partial S}\right)_{V,\sm_1,\ldots,\sm_r} \geq 0
 \end{align}
-als konjugierte Größe zu $S$, den Druck 
+als konjugierte Größe zu $S$, den Druck
 \begin{align}
     \label{eq:def_druck}
-    P \equiv -\left(\frac{\partial U}{\partial V}\right)_{S,\sm_1,\ldots,\sm_r} 
+    P \equiv -\left(\frac{\partial U}{\partial V}\right)_{S,\sm_1,\ldots,\sm_r}
 \end{align}
 als konjugierte Größe zu $V$ und die chemischen Potentiale
 \begin{align}
     \label{eq:def_chemische_potentiale}
     \mu_j \equiv \sum_{j = 1}^r \left(\frac{\partial U}{\partial \sm_j}\right)_{S,V,\sm_1,\ldots,\sm_{j - 1},\sm_{j + 1},\ldots,\sm_r},
 \end{align}
-die jeweils zu $\sm_j$ konjugiert sind. 
+die jeweils zu $\sm_j$ konjugiert sind.
 
 Die innere Energie lässt sich also in differentieller Form folgendermaßen schreiben:
 \begin{align}
@@ -37,51 +37,51 @@ Die innere Energie lässt sich also in differentieller Form folgendermaßen schr
 
 Bemerkungen:
 \begin{itemize}
-    \item Die Größen $U, S,V,\sm_k$ sind extensiv, während die dazu konjugierten Variablen $T,P,\mu_k$ intensive Größen sind. 
-    \item $J\diff X$ mit intensiver Variable $J$ und extensiver Variable $X$ muss die Einheit einer Energie haben. Folglich ist $[\mu_j] = [U]$ und $[S]=[U/T]$. 
+    \item Die Größen $U, S,V,\sm_k$ sind extensiv, während die dazu konjugierten Variablen $T,P,\mu_k$ intensive Größen sind.
+    \item $J\diff X$ mit intensiver Variable $J$ und extensiver Variable $X$ muss die Einheit einer Energie haben. Folglich ist $[\mu_j] = [U]$ und $[S]=[U/T]$.
 \end{itemize}
 
-Es soll nun eine erste Interpretation der Terme in \eqref{eq:innere_energie_differentielle_form} gemacht werden. 
+Es soll nun eine erste Interpretation der Terme in \eqref{eq:innere_energie_differentielle_form} gemacht werden.
 
-Zur Vereinfachung setzen wir zunächst alle Terme $\diff \sm_k=0$. 
-Der erste Term ist 
+Zur Vereinfachung setzen wir zunächst alle Terme $\diff \sm_k=0$.
+Der erste Term ist
 \begin{align*}
     T\diff S = \diff U+ P\diff V = \udiff Q,
 \end{align*}
-entspricht also der quasistatischen Wärmezufuhr $\udiff Q$. 
+entspricht also der quasistatischen Wärmezufuhr $\udiff Q$.
 
 Der zweite Term $-P\diff V$ entspricht der bereits eingeführten quasistatischen mechanischen Arbeit $\udiff W_\mathrm{mech}=-P\diff V$.
 
 
 Die Deutung als Temperatur wird später weiter ausgeführt (siehe Kapitel \ref{sec:thermisches_gleichgewicht})
 
-Zuletzt können wir die Terme 
+Zuletzt können wir die Terme
 \begin{align*}
     \udiff W_ \mathrm{C} = \sum_{i = 1}^r \mu_i\diff \sm_i
 \end{align*}
-als quasistatische chemische Arbeit festlegen. Sie beschreibt die Energiezunahme beim Hinzufügen von Materie zu dem System (siehe auch Kapitel \ref{sec:gleichgewicht_bei_materiefluss}). 
+als quasistatische chemische Arbeit festlegen. Sie beschreibt die Energiezunahme beim Hinzufügen von Materie zu dem System (siehe auch Kapitel \ref{sec:gleichgewicht_bei_materiefluss}).
 
 Insgesamt kann die innere Energie also geschrieben werden als
 \begin{align}
     \label{eq:erster_HS_TD}
     \diff U = \udiff Q + \udiff W_\mathrm{mech} + \udiff W_\mathrm{C}.
 \end{align}
-Das ist der erste Hauptsatz der Thermodynamik. 
-Dabei ist zu beachten, dass ... unvollständige Differentiale sind. 
+Das ist der erste Hauptsatz der Thermodynamik.
+Dabei ist zu beachten, dass ... unvollständige Differentiale sind.
 
 Zuletzt soll noch einige Aussagen zu $\udiff Q$ zusammengefasst werden:
 \begin{itemize}
-    \item Für quasistatische Prozesse gilt $\udiff Q=T\diff S$ und damit insbesondere $\udiff Q>0\implication T\diff S>0$. Eine Zufuhr von Wärme führt also zu einem Zuwachs der Entropie. 
-    \item Durch Umstellen erhält man 
-    \begin{align*}
-        \diff S = \frac{1}{T}\udiff Q.
-    \end{align*}
-    Diese Gleichung kann so gedeutet werden, dass durch einen sogenannten integrierenden Faktor \textendash{} hier $1/T$ \textendash{} aus einem unvollständigen Differential ein vollständiges wird. 
-    \item Nicht quasistatische Prozesse sind solche, bei denen sich das System im Nicht-Gleichgewicht entwickelt. So ist beim abgeschlossenen System z.B. $\udiff Q=0$ und folglich nach dem zweiten Postulat $\diff S >0$. Es handelt sich also um einen irreversiblen Prozess. Für ein nicht abgeschlossenes System kann $\udiff Q\neq 0$ sein, sodass 
-    \begin{align*}
-        \diff S\geq \frac{\udiff Q}{T}. 
-    \end{align*}
-    Nur für Gleichheit ist dieser Prozess reversibel. 
+    \item Für quasistatische Prozesse gilt $\udiff Q=T\diff S$ und damit insbesondere $\udiff Q>0\implication T\diff S>0$. Eine Zufuhr von Wärme führt also zu einem Zuwachs der Entropie.
+    \item Durch Umstellen erhält man
+          \begin{align*}
+              \diff S = \frac{1}{T}\udiff Q.
+          \end{align*}
+          Diese Gleichung kann so gedeutet werden, dass durch einen sogenannten integrierenden Faktor \textendash{} hier $1/T$ \textendash{} aus einem unvollständigen Differential ein vollständiges wird.
+    \item Nicht quasistatische Prozesse sind solche, bei denen sich das System im Nicht-Gleichgewicht entwickelt. So ist beim abgeschlossenen System z.B. $\udiff Q=0$ und folglich nach dem zweiten Postulat $\diff S >0$. Es handelt sich also um einen irreversiblen Prozess. Für ein nicht abgeschlossenes System kann $\udiff Q\neq 0$ sein, sodass
+          \begin{align*}
+              \diff S\geq \frac{\udiff Q}{T}.
+          \end{align*}
+          Nur für Gleichheit ist dieser Prozess reversibel.
 \end{itemize}
 
 
@@ -95,13 +95,13 @@ Zuletzt soll noch einige Aussagen zu $\udiff Q$ zusammengefasst werden:
 
 \subsection{Thermisches Gleichgewicht\label{sec:thermisches_gleichgewicht}}
 
-Nun soll es darum gehen, den Inhalt der Postulate \ref{post:entropie_maximierung} und \ref{post:eigenschaften_entropie} auszuwerten. 
-Es wird folgen, dass sich $T$ so verhält, wie man es von einer Temperatur erwartet. 
+Nun soll es darum gehen, den Inhalt der Postulate \ref{post:entropie_maximierung} und \ref{post:eigenschaften_entropie} auszuwerten.
+Es wird folgen, dass sich $T$ so verhält, wie man es von einer Temperatur erwartet.
 
 \paragraph*{Temperatur}
 
-Wir starten wieder mit einem Modellsystem, das insgesamt abgeschlossen ist und aus zwei Untersystemen $(1)$ und $(2)$ besteht, wie in \Abbref{fig:DoppelsystemUSfesteWaermeleitendeWand} darstellt. 
-Die beiden Untersysteme sind durch eine feste Wand getrennt, die zuerst isoliert ist und dann wärmeleitend wird. Die beiden Systeme werden also in thermischen Kontakt gebracht und tauschen Wärme aus. 
+Wir starten wieder mit einem Modellsystem, das insgesamt abgeschlossen ist und aus zwei Untersystemen $(1)$ und $(2)$ besteht, wie in \Abbref{fig:DoppelsystemUSfesteWaermeleitendeWand} darstellt.
+Die beiden Untersysteme sind durch eine feste Wand getrennt, die zuerst isoliert ist und dann wärmeleitend wird. Die beiden Systeme werden also in thermischen Kontakt gebracht und tauschen Wärme aus.
 
 \begin{figure}[htbp]
     \centering
@@ -110,60 +110,62 @@ Die beiden Untersysteme sind durch eine feste Wand getrennt, die zuerst isoliert
     \label{fig:DoppelsystemUSfesteWaermeleitendeWand}
 \end{figure}
 
-Wir würden dabei erwarten, dass sich die Temperaturen angleichen, $T^{(1)}=T^{(2)}$. 
+Wir würden dabei erwarten, dass sich die Temperaturen angleichen, $T^{(1)}=T^{(2)}$.
 
 Nach den Postulaten muss für ein abgeschlossenes System $U^{(1)}+U^{(2)} = \mathrm{const}$ bzw. $\diff U^{(1)} = -\diff U^{(2)}$ sein. Das Postulat \ref{post:entropie_maximierung} besagt jetzt, dass sich $U^{(1)}$ und $U^{(2)}$ so einstellen, dass $S$ ein Maximum annimmt, $\diff S=0$. Damit auch das Postulat \ref{post:eigenschaften_entropie} erfüllt ist, muss gelten, dass
 \begin{align*}
-    S=S^{(1)}\left(U^{(1)},V^{(1)},\sm^{(1)}_k\right) + S^{(2)}\left(U^{(2)},V^{(2)},\sm^{(2)}_k\right). 
+    S=S^{(1)}\left(U^{(1)},V^{(1)},\sm^{(1)}_k\right) + S^{(2)}\left(U^{(2)},V^{(2)},\sm^{(2)}_k\right).
 \end{align*}
-Es ist also 
+Es ist also
 \begin{align*}
     \diff S = \frac{\partial S^{(1)}}{\partial U^{(1)}}\diff U^{(1)}+ \frac{\partial S^{(2)}}{\partial U^{(2)}}\diff U^{(2)} = \frac{1}{T^{(1)}}\diff U^{(1)} + \frac{1}{T^{(2)}}\diff U^{(2)},
 \end{align*}
-da die Volumina und Stoffmengen konstant sind und wegen $\diff U^{(1)} = -\diff U^{(2)}$ ist 
+da die Volumina und Stoffmengen konstant sind und wegen $\diff U^{(1)} = -\diff U^{(2)}$ ist
 \begin{align*}
-    \diff S = \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\diff U^{(1)} \overset{!}{=} 0. 
+    \diff S = \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\diff U^{(1)} \overset{!}{=} 0.
 \end{align*}
-Im thermischen Gleichgewicht gilt folglich 
+Im thermischen Gleichgewicht gilt folglich
 \begin{align}
     \label{eq:thermisches_gg_temperatur}
     T^{(1)} = T^{(2)},
 \end{align}
-wie erwartet. Aus dem Postulat \ref{post:eigenschaften_entropie} folgt auch, dass die Temperatur positiv ist, denn $S$ soll eine monoton ansteigende Funktion von $U$ sein, sodass $\partial S/\partial U > 0$. 
+wie erwartet. Aus dem Postulat \ref{post:eigenschaften_entropie} folgt auch, dass die Temperatur positiv ist, denn $S$ soll eine monoton ansteigende Funktion von $U$ sein, sodass $\partial S/\partial U > 0$.
 
-Diese Definition der Temperatur als Inverse der Ableitung der Entropie nach der inneren Energie mag zwar ein wenig abstrakt erscheinen, doch gibt es auch andere gleichbedeutende Definitionen der Temperatur, die aber nicht weniger abstrakt sind\footnote{Ein anderer Ansatz wäre, als nullten Hauptsatz die Transitivität der Temperatur zu postulieren \cite{lit:nolting1}, 
-\begin{align*}
-    T^{(1)} = T^{(2)} \quad \text{und}\quad T^{(1)} = T^{(3)} \implication T^{(2)} = T^{(3)}.
-\end{align*} 
-Eine weitere Formulierung, in der $1/T$ als integrierender Faktor festgelegt wird (sodass $\diff S=\udiff Q/T$), wurde von Kelvin und Caradathory vorgeschlagen. 
-Beide Varianten sind in dem hier gewählten Zugang bereits in den Postulaten \ref{post:entropie_maximierung} und \ref{post:eigenschaften_entropie} enthalten. 
+Diese Definition der Temperatur als Inverse der Ableitung der Entropie nach der inneren Energie mag zwar ein wenig abstrakt erscheinen, doch gibt es auch andere gleichbedeutende Definitionen der Temperatur, die aber nicht weniger abstrakt sind\footnote{Ein anderer Ansatz wäre, als nullten Hauptsatz die Transitivität der Temperatur zu postulieren \cite{lit:nolting1},
+    \begin{align*}
+        T^{(1)} = T^{(2)} \quad \text{und}\quad T^{(1)} = T^{(3)} \implication T^{(2)} = T^{(3)}.
+    \end{align*}
+    Eine weitere Formulierung, in der $1/T$ als integrierender Faktor festgelegt wird (sodass $\diff S=\udiff Q/T$), wurde von Kelvin und Caradathory vorgeschlagen.
+    Beide Varianten sind in dem hier gewählten Zugang bereits in den Postulaten \ref{post:entropie_maximierung} und \ref{post:eigenschaften_entropie} enthalten.
 }.
 
-Es existiert also eine absolute Temperaturskala. Eine solche ist die Kelvin-Skala, die so definiert ist, dass der Tripelpunkt, also die Koexistenz von Eis, flüssigem Wasser und Wasserdampf, bei \SI{271,16}{\kelvin} liegt. 
+\begin{formal}
+    Es existiert also eine absolute Temperaturskala. Eine solche ist die Kelvin-Skala, die so definiert ist, dass der Tripelpunkt, also die Koexistenz von Eis, flüssigem Wasser und Wasserdampf, bei \SI{271,16}{\kelvin} liegt.
+\end{formal}
 
-Wir haben gesehen, dass die Entropie ein Maximum annimmt. Daraus kann man schließen, dass die zweite Ableitung der Entropie dort kleiner als $0$ ist. 
+Wir haben gesehen, dass die Entropie ein Maximum annimmt. Daraus kann man schließen, dass die zweite Ableitung der Entropie dort kleiner als $0$ ist.
 
 \paragraph*{Wärmefluss}
 
-Wir wissen intuitiv, dass die Wärme von Bereichen hoher Temperatur zu Bereichen niedrigerer Temperatur fließt. Startet man bei einem Anfangszustand mit $T^{(2)}> T^{(1)}$ und hebt dann die Zwangsbedingung auf, kommt es zu einem (quasistatischen) Wärmefluss. 
-Wegen des Postulats \ref{post:entropie_maximierung} ist 
+Wir wissen intuitiv, dass die Wärme von Bereichen hoher Temperatur zu Bereichen niedrigerer Temperatur fließt. Startet man bei einem Anfangszustand mit $T^{(2)}> T^{(1)}$ und hebt dann die Zwangsbedingung auf, kommt es zu einem (quasistatischen) Wärmefluss.
+Wegen des Postulats \ref{post:entropie_maximierung} ist
 \begin{align*}
-    \Delta S= \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\Delta U^{(1)} > 0. 
+    \Delta S= \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\Delta U^{(1)} > 0.
 \end{align*}
-Da aber 
+Da aber
 \begin{align*}
     T^{(2)}> T^{(1)} \equivalence \frac{1}{T^{(1)}}-\frac{1}{T^{(2)}} < 0
 \end{align*}
-ist, muss $\Delta U^{(1)} <0$ sein. 
+ist, muss $\Delta U^{(1)} <0$ sein.
 \begin{formal}
-    Der Wärmefluss findet erwartungsgemäß vom System höherer zum System tieferer Temperatur statt, bis sich beide Temperaturen angeglichen haben. 
+    Der Wärmefluss findet erwartungsgemäß vom System höherer zum System tieferer Temperatur statt, bis sich beide Temperaturen angeglichen haben.
 \end{formal}
-Dann ist das Maximum der Entropie erreicht (siehe \Abbref{fig:FunktionEntropieMaximum}). 
+Dann ist das Maximum der Entropie erreicht (siehe \Abbref{fig:FunktionEntropieMaximum}).
 
 \begin{figure}[htbp]
     \centering
     \tfigFunktionEntropieMaximum
-    \caption{Entropie über innere Energie: beim thermodynamischen Gleichgewicht nimmt die Entropie ihr Maximum an. Die Änderung $\Delta U^{(1)}$ ist negativ für $\Delta S>0$. }
+    \caption{Entropie über innere Energie: Beim thermodynamischen Gleichgewicht nimmt die Entropie ihr Maximum an. Die Änderung $\Delta U^{(1)}$ ist negativ für $\Delta S>0$. }
     \label{fig:FunktionEntropieMaximum}
 \end{figure}
 
@@ -181,32 +183,32 @@ Dann ist das Maximum der Entropie erreicht (siehe \Abbref{fig:FunktionEntropieMa
 \end{figure}
 
 
-Als Nächstes soll ein insgesamt abgeschlossenes System aus zwei Untersystemen behandelt werden, bei dem ein materieundurchlässiger Kolben zuerst fest und isolierend, dann aber beweglich und wärmeleitend ist (siehe \Abbref{fig:DoppelsystemUVNbeweglicheWaermeleitendeWand}). Da es sich um ein abgeschlossenes System konstanten Gesamtvolumens handelt, ist 
+Als Nächstes soll ein insgesamt abgeschlossenes System aus zwei Untersystemen behandelt werden, bei dem ein materieundurchlässiger Kolben zuerst fest und isolierend, dann aber beweglich und wärmeleitend ist (siehe \Abbref{fig:DoppelsystemUVNbeweglicheWaermeleitendeWand}). Da es sich um ein abgeschlossenes System konstanten Gesamtvolumens handelt, ist
 \begin{align*}
-    U^{(1)} + U^{(2)} &= \mathrm{const} \\
-    V^{(1)} + V^{(2)} &= \mathrm{const}.
+    U^{(1)} + U^{(2)} & = \mathrm{const}  \\
+    V^{(1)} + V^{(2)} & = \mathrm{const}.
 \end{align*}
-Nach den Postulaten \ref{post:entropie_maximierung} und \ref{post:eigenschaften_entropie} ist 
+Nach den Postulaten \ref{post:entropie_maximierung} und \ref{post:eigenschaften_entropie} ist
 \begin{align*}
-    \diff S &= \frac{\partial S^{(1)}}{\partial U^{(1)}}\diff U^{(1)} + \frac{\partial S^{(1)}}{\partial V^{(1)}}\diff V^{(1)}+\frac{\partial S^{(2)}}{\partial U^{(2)}}\diff U^{(2)} + \frac{\partial S^{(2)}}{\partial V^{(2)}}\diff V^{(2)} \\
-    &= \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\diff U^{(1)} + \left(\frac{P^{(1)}}{T^{(1)}}-\frac{P^{(2)}}{T^{(2)}}\right) \diff V^{(1)} = 0.
+    \diff S & = \frac{\partial S^{(1)}}{\partial U^{(1)}}\diff U^{(1)} + \frac{\partial S^{(1)}}{\partial V^{(1)}}\diff V^{(1)}+\frac{\partial S^{(2)}}{\partial U^{(2)}}\diff U^{(2)} + \frac{\partial S^{(2)}}{\partial V^{(2)}}\diff V^{(2)} \\
+            & = \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\diff U^{(1)} + \left(\frac{P^{(1)}}{T^{(1)}}-\frac{P^{(2)}}{T^{(2)}}\right) \diff V^{(1)} = 0.
 \end{align*}
-Im mechanischen Gleichgewicht gilt also 
+Im mechanischen Gleichgewicht gilt also
 \begin{align*}
     \frac{1}{T^{(1)}} = \frac{1}{T^{(2)}} , \quad \frac{P^{(1)}}{T^{(1)}}=\frac{P^{(2)}}{T^{(2)}},
 \end{align*}
-bzw. 
+bzw.
 \begin{align*}
-    T^{(1)} = T^{(2)}, \quad P^{(1)} = P^{(2)}. 
+    T^{(1)} = T^{(2)}, \quad P^{(1)} = P^{(2)}.
 \end{align*}
-Die hier diskutierten Gleichgewichtsbedingungen mögen trivial erscheinen, doch geht es hier vorrangig um das Testen des Formalismus und dann die anschließende Anwendung auf komplexere Systeme. 
+Die hier diskutierten Gleichgewichtsbedingungen mögen trivial erscheinen, doch geht es hier vorrangig um das Testen des Formalismus und dann die anschließende Anwendung auf komplexere Systeme.
 
 
 \subsection{Gleichgewicht bei Materiefluss\label{sec:gleichgewicht_bei_materiefluss}}
 
 \paragraph*{Chemisches Potential}
 
-Analog zu den vorigen Beispielen wird ein abgeschlossenes System mit zwei Untersystemen betrachtet (siehe \Abbref{fig:DoppelsystemUVNbeweglicheIsolierendeWand}). Diesmal ist die Wand zwar fest, aber wärmeleitend und durchlässig für eine Molekülsorte. 
+Analog zu den vorigen Beispielen wird ein abgeschlossenes System mit zwei Untersystemen betrachtet (siehe \Abbref{fig:DoppelsystemUVNbeweglicheIsolierendeWand}). Diesmal ist die Wand zwar fest, aber wärmeleitend und durchlässig für eine Molekülsorte.
 
 \begin{figure}[htbp]
     \centering
@@ -217,71 +219,138 @@ Analog zu den vorigen Beispielen wird ein abgeschlossenes System mit zwei Unters
 
 Es gilt
 \begin{align*}
-    U^{(1)} + U^{(2)} &= \mathrm{const} \\ 
-    \sm_1^{(1)} + \sm_1^{(2)} &= \mathrm{const}
+    U^{(1)} + U^{(2)}         & = \mathrm{const} \\
+    \sm_1^{(1)} + \sm_1^{(2)} & = \mathrm{const}
 \end{align*}
 und damit
 \begin{align*}
-    \diff S &= \frac{1}{T^{(1)}}\diff U^{(1)} - \frac{\mu_1^{(1)}}{T^{(1)}}\diff \sm^{(1)}+\frac{1}{T^{(2)}}\diff U^{(2)} - \frac{\mu_1^{(2)}}{T^{(2)}}\diff \sm^{(2)} \\
-    &= \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\diff U^{(1)} + \left(\frac{\mu_1^{(1)}}{T^{(1)}}-\frac{\mu_1^{(2)}}{T^{(2)}}\right) \diff \sm^{(1)} = 0. 
+    \diff S & = \frac{1}{T^{(1)}}\diff U^{(1)} - \frac{\mu_1^{(1)}}{T^{(1)}}\diff \sm^{(1)}+\frac{1}{T^{(2)}}\diff U^{(2)} - \frac{\mu_1^{(2)}}{T^{(2)}}\diff \sm^{(2)}   \\
+            & = \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\diff U^{(1)} + \left(\frac{\mu_1^{(1)}}{T^{(1)}}-\frac{\mu_1^{(2)}}{T^{(2)}}\right) \diff \sm^{(1)} = 0.
 \end{align*}
 Im Gleichgewicht gleichen sich also neben den Temperaturen die chemischen Potential durch Teilchenaustausch an,
 \begin{align*}
     T^{(1)} = T^{(2)}, \quad \mu_1^{(1)} = \mu_1^{(2)}.
 \end{align*}
-Es findet jedoch kein Teilchenfluss statt, wenn bereits $\mu_1^{(1)} = \mu_1^{(2)}$. 
+Es findet jedoch kein Teilchenfluss statt, wenn bereits $\mu_1^{(1)} = \mu_1^{(2)}$.
 
 \paragraph*{Materiefluss}
 
 Beginnt man bei einem Anfangszustand mit $\mu_1^{(1)} > \mu_1^{(2)}$ und $T^{(1)} = T^{(2)}$ und hebt dann die Zwangsbedingung auf (Wand wird materiedurchlässig), so kommt es zum quasistatischen Materiefluss,
 \begin{align*}
-    \Delta S = \frac{\mu_1^{(2)} - \mu_1^{(1)}}{T} \Delta \sm_1^{(1)}. 
+    \Delta S = \frac{\mu_1^{(2)} - \mu_1^{(1)}}{T} \Delta \sm_1^{(1)}.
 \end{align*}
-Da nach dem Postulat \ref{post:entropie_maximierung} die Änderung der Entropie nur positiv sein kann und $(\mu_1^{(2)} - \mu_1^{(1)})/T$ nach unserer Festlegung negativ ist, so ist auch $\Delta \sm_1^{(1)}<0$. 
+Da nach dem Postulat \ref{post:entropie_maximierung} die Änderung der Entropie nur positiv sein kann und $(\mu_1^{(2)} - \mu_1^{(1)})/T$ nach unserer Festlegung negativ ist, so ist auch $\Delta \sm_1^{(1)}<0$.
 
 \begin{formal}
-    Ein Materiefluss findet von Gebieten hohen zu Gebieten tiefen chemischen Potentials statt, bis $\mu_1^{(1)} = \mu_1^{(2)}$. 
+    Ein Materiefluss findet von Gebieten hohen zu Gebieten tiefen chemischen Potentials statt, bis $\mu_1^{(1)} = \mu_1^{(2)}$.
 \end{formal}
 
-Das chemische Potential $\mu$ ist zentral bei Phasenumwandlungen und chemischen Reaktionen (siehe später) und spielt damit eine führende Rolle in der theoretischen Chemie. 
+Das chemische Potential $\mu$ ist zentral bei Phasenumwandlungen und chemischen Reaktionen (siehe später) und spielt damit eine führende Rolle in der theoretischen Chemie.
 
 
 
 \subsection{Folgerungen aus der Homogenität der Fundamentalbeziehung}
 
+Allein aus der Forderung, dass die Fundamentalbeziehung homogen ist, lassen sich einige formale Schlüsse folgern, die in diesem Kapitel erläutert werden sollen. Die erste Schlussfolgerung ist die Euler-Gleichung.
+
 \paragraph*{Die Euler-Gleichung}
 
-Die innere Energie $U$ ist eine extensive Größe und damit eine homogene Funktion ersten Grades, 
+Die innere Energie $U$ ist eine extensive Größe und damit eine homogene Funktion ersten Grades (Größen wie Volumen und Stoffmengen werden verallgemeinert als $X_k$ geschrieben, um eine kompaktere Notation zu ermöglichen),
 \begin{align*}
-    U(\lambda S,\lambda X_1,\ldots,\lambda X_t) = \lambda U(S,X_1,\ldots,X_t) \\ 
+    U(\lambda S,\lambda X_1,\ldots,\lambda X_t) = \lambda U(S,X_1,\ldots,X_t).
 \end{align*}
+Ableiten nach $\lambda$ liefert
 \begin{align*}
-    \frac{\partial U}{\partial\lambda} &= \frac{\partial U}{\partial\lambda S}(\lambda S,\lambda X_1,\ldots,\lambda X_t) \frac{\partial\lambda S}{\partial\lambda} + \frac{\partial U}{\partial\lambda X_1}(\lambda S,\lambda X_1,\ldots,\lambda X_t) \frac{\partial\lambda X_1}{\partial\lambda} + \ldots \\
-    &= TS+P_1X_1+\ldots +P_t X_t
+    \frac{\partial U}{\partial\lambda} & = \frac{\partial U}{\partial\lambda S}(\lambda S,\lambda X_1,\ldots,\lambda X_t) \frac{\partial\lambda S}{\partial\lambda} + \frac{\partial U}{\partial\lambda X_1}(\lambda S,\lambda X_1,\ldots,\lambda X_t) \frac{\partial\lambda X_1}{\partial\lambda} + \ldots \\
+                                       & = T(\lambda S,\lambda X_1,\ldots,\lambda X_t)S + P_1 (\lambda S,\lambda X_1,\ldots,\lambda X_t) X_1 + \ldots                                                                                                                                                       \\
+                                       & = \lambda TS + \lambda P_1X_1 + \ldots
 \end{align*}
 Lässt man nun $\lambda$ gegen 1 gehen, so erhält man die Euler-Gleichung in Energiedarstellung:
 \begin{align}
     \label{eq:euler_gleichung_energiedarstellung}
-    U = TS + \sum_{j=1}^t P_j X_j
+    \boxed{U = TS + \sum_{j=1}^t P_j X_j}
 \end{align}
 Analog lässt sich die Entropiedarstellung der Euler-Gleichung herleiten:
 \begin{align}
     \label{eq:euler_gleichung_entropiedarstellung}
-    S = \sum_{j=0}^t F_j X_j
+    \boxed{S = \sum_{j=0}^t F_j X_j}
 \end{align}
-Für ein einfaches System nimmt sie zum Beispiel die Form 
+Für ein einfaches System nimmt sie zum Beispiel die Form (Energiedarstellung)
 \begin{align*}
-    U=TS-PV + \mu_1 \sm_1+\ldots + \mu_r \sm_r 
+    U=TS-PV + \mu_1 \sm_1+\ldots + \mu_r \sm_r
 \end{align*}
-bzw. 
+bzw. (Entropiedarstellung)
 \begin{align*}
     S=\frac{1}{T}U + \frac{P}{T}V - \sum_{k=1}^r \frac{\mu_k}{T}\sm_k
 \end{align*}
-an. 
+an.
 
 
 \paragraph*{Gibbs-Duhem-Beziehung}
 
+Bis jetzt haben wir globale Betrachtungen gemacht, die hauptsächlich extensive Variablen behandeln. Nun soll eine differentielle Behandlung folgen, die auch die intensiven Größen berücksichtigt.
+
+Aus der energetischen Fundamentalbeziehung erhält man durch Differenzieren nach den Parametern $(t+1)$ Gleichungen in $(t+1)$ Variablen.
 \begin{align*}
-    \frac{\partial U}{\partial S}
+    \frac{\partial U}{\partial S} = T = T(S,X_1,\ldots ,X_t), \quad
+    \frac{\partial U}{\partial X_k} =P_k = P_k(S,X_1,\ldots ,X_t)
+\end{align*}
+Die durch diesen Prozess gewonnenen Größen $T,P_1,\ldots,P_t$ sind intensiv, also homogen vom Grad $0$, z.B.
+\begin{align*}
+    T(S,X_1,\ldots ,X_t)=T(\lambda S,\lambda X_1,\ldots ,\lambda X_t).
+\end{align*}
+Für $\lambda=1/X_t$ ist dann
+\begin{align*}
+    T = T\left(\frac{S}{X_t},\frac{X_1}{X_t},\ldots ,1\right), \quad P_k=P_k\left(\frac{S}{X_t},\frac{X_1}{X_t},\ldots ,1\right).
+\end{align*}
+Dieses Gleichungssystem aus $(t+1)$ Gleichungen enthält jetzt nur noch $t$ Variablen, sodass eine Zustandsgleichung bei der Beziehung zwischen den insgesamt $(t+1)$ intensiven Variablen redundant ist.
+
+Betrachte als Beispiel ein Einkomponentensystem mit $X_t=\sm$, molarer Entropie $s=S/\sm$ und molarem Volumen $v=V/\sm$. Temperatur, Druck und chemisches Potential hängen jeweils nur von der molaren Entropie und dem molaren Volumen ab,
+\begin{align*}
+    T=T(s,v), \quad P=P(s,v), \quad \mu=\mu(s,v).
+\end{align*}
+Man kann jetzt zwei dieser Zusammenhänge invertieren (z.B. $s=s(T,P)$ und $v=v(T,P)$) und in den dritten einsetzen ($\mu=\mu(T,P)$). Diese letzte Gleichung ist damit redundant für die Beschreibung des Systems.
+
+Durch Differenzieren der Euler-Gleichung erhalten wir
+\begin{align}
+    U                    & =TS+ \sum_j P_jX_j                                                 \nonumber \\
+    \label{eq:differential_innere_energie1}
+    \implication \diff U & = T\diff S + S\diff T + \sum_j P_j\diff X_j + \sum_j X_j\diff P_j.
+\end{align}
+Andererseits kennen wir aus der Energiedarstellung bereits das Differential der inneren Energie (siehe Gleichung ??) als
+\begin{align}
+    \label{eq:differential_innere_energie2}
+    \diff U = T\diff S + \sum_j P_j \diff X_j.
+\end{align}
+Durch Vergleich von \eqref{eq:differential_innere_energie1} und \eqref{eq:differential_innere_energie2} folgt eine differentielle Beziehung zwischen den intensiven Variablen,
+\begin{align}
+    \label{eq:gibbs_duhem}
+    \boxed{
+        S\diff T + \sum X_j \diff P_j = 0,
+    }
+\end{align}
+was als Gibbs-Duhem-Beziehung bekannt ist.
+
+Im Einkomponentensystem heißt das, dass
+\begin{align*}
+    S\diff T - V\diff P + \sm \diff \mu = 0.
+\end{align*}
+Teilen durch $\sm$ liefert
+\begin{align*}
+    \diff \mu = -s \diff T + v\diff P
+\end{align*}
+und Integrieren führt auf das chemische Potential $\mu=\mu(T,P)$.
+
+Wir haben also gesehen, dass stets eine intensive Variable von den anderen abhängt. Das gibt Anlass zu der nachfolgenden Definition:
+\begin{formal}
+    Die Zahl der unabhängigen intensiven Variablen wird als Zahl der thermodynamischen Freiheitsgrade definiert.
+\end{formal}
+
+Die Gibbs-Duhem-Beziehung kann auch in der Entropiedarstellung formuliert werden,
+\begin{align*}
+    \boxed{\sum_{j=0}^t X_j \diff F_j = 0}
+\end{align*}
+und für ein einfaches System ist dann
+\begin{align*}
+    U\diff\left(\frac{1}{T}\right) + V\diff\left(\frac{P}{T}\right)-\sum_{k=1}^r \sm_k\diff\left(\frac{\mu_k}{T}\right)
 \end{align*}
