@@ -162,7 +162,7 @@
 
 
 % Quote box for postulates
-\newenvironment{postulate}{
+\newenvironment{postulate}[1][\unskip]{
   \def\FrameCommand{
     \hspace{1pt}%
     {\color{postulatebar}\vrule width 2pt}%
@@ -174,7 +174,7 @@
   \begin{adjustwidth}{}{7pt}%
   \vspace{-10pt}\vspace{2pt}% 
   \refstepcounter{PostulateCounter}
-  \textbf{Postulat \Roman{PostulateCounter}:}
+  \textbf{Postulat \Roman{PostulateCounter} \ifx#1\unskip #1\else (#1)\fi:}
 
 }{\vspace{2pt}\end{adjustwidth}\endMakeFramed}
 
@@ -206,6 +206,8 @@
 \input{0_Einleitung}
 \input{1_Grundlagen_und_Postulate}
 \input{2_Folgerungen_und_Gleichgewichtsbedingungen}
+\input{3_Antwortkoeffizienten}
+\input{4_Mikroskopische_Erklärung_der_Entropie}
 
 
 \raggedright

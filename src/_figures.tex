@@ -222,3 +222,19 @@
         \node at (1.4,-.5) {fest, materieundurchlässig $\rightarrow$ durchlässig für Molekülsorte 1, isolierend $\rightarrow$ wärmeleitend} edge[arr,bend left=10] (1,0);
     \end{tikzpicture}
 }
+
+
+% Degeneracy function g(n,N) for N >> 1 (gaussian approximation)
+\newcommand{\tfigDegeneracyFunctionGauss}{
+    \begin{tikzpicture}[scale=4]
+        \draw[arr] (-.7,0) -- (.7,0) node[xlabel] {$\frac{n}{N}$};
+        %\draw[arr] (0,0) -- (0,1) node[ylabel] {$g(n,N)$};
+        
+        \draw let \n{N}={10} in plot[domain=-.5:.5,smooth,yscale=.003] (\x,{sqrt(2/(3.14159*\n{N}))*2^\n{N}*exp(-2*(\x*\n{N})^2/\n{N})}) 
+        coordinate (P) at ({sqrt(1/(2*\n{N}))},{.003*sqrt(2/(3.14159*\n{N}))*2^\n{N}/exp(1)});
+        \draw (-.5,.02) -- +(0,-.04) node[below] {$-\frac{1}{2}$}(.5,.02) -- +(0,-.04) node[below] {$\frac{1}{2}$};
+        \draw[dashed] let \p1=(P) in (-\x1,0) -- (-\x1,\y1) -- (\x1,\y1) -- (\x1,0); 
+        
+        \draw[decoration={brace},decorate] let \p1=(P) in (\x1,-.02) -- +(-\x1,0) node[midway, below,yshift=-.04cm] {$\frac{n_n}{N}$};
+    \end{tikzpicture}
+}
