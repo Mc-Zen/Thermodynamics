@@ -48,9 +48,9 @@ Wir wählen ohne Beschränkung der Allgemeinheit $N$ gerade. Wir führen zwei ne
         N  & = N_\uparrow + N_\downarrow \\
         2n & = N_\uparrow-N_\downarrow
     \end{aligned}
-    \right.
+    \right. \:.
 \end{align*}
-$N$ ist wie gehabt die Gesamtzahl der Spins und wir nennen $2n$ den \textit{Spinüberschuss}. Das letztere bestimmt allein das makroskopische Gesamtmoment
+$N$ ist wie gehabt die Gesamtzahl der Spins und wir nennen $2n$ den \textit{Spinüberschuss}. Der letztere bestimmt allein das makroskopische Gesamtmoment
 \begin{align*}
     M=2n\cdot m.
 \end{align*}
@@ -59,17 +59,22 @@ $n$ liegt im Wertebereich $n\in\{-\frac{1}{2}N,-\frac{1}{2}N+1,\dots,\frac{1}{2}
 Wir wollen nun untersuchen, wie viele Zustände auf den gleichen Spinüberschuss $n$ führen \textendash{} das entspricht genau der Entartungsfunktion $g(n,N)$. Die exakte Lösung liefert die Kombinatorik:
 \begin{align}
     \label{eq:entartungsfunktion_exakt}
-    g(n,N) = \frac{N!}{N_\uparrow!\cdot N_\downarrow!} = \frac{N!}{\left(\frac{1}{2}N+n\right)!\cdot \left( \frac{1}{2}N-n \right)!}
+    g(n,N) = \frac{N!}{N_\uparrow!\cdot N_\downarrow!} = \frac{N!}{\left(\frac{1}{2}N+n\right)!\cdot \left( \frac{1}{2}N-n \right)!}.
 \end{align}
+
+Summiert man über alle Zustände, so findet man für die Normierung 
+\begin{align*}
+    \sum_{n=-\frac{N}{2}}^{\frac{N}{2}}g(n,N) = 2^N. 
+\end{align*}
 
 
 \paragraph*{Eigenschaften der Entartungsfunktion für große Systeme}
 
 Für die Thermodynamik und statistische Physik sind vor allem Systeme mit $N\gg 1$ relevant. Dann ist im Allgemeinen $|n|\ll N$ und $g\gg 1$. Mithilfe eines Tricks kann die Entartungsfunktion, wie in Gleichung \eqref{eq:entartungsfunktion_exakt} beschrieben genähert werden, was eine wesentlich bessere Handhabung ermöglicht.
 
-Wir nehmen den natürlichen Logarithmus von \eqref{eq:entartungsfunktion_exakt}
+Wir nehmen zunächst den natürlichen Logarithmus von \eqref{eq:entartungsfunktion_exakt}
 \begin{align*}
-    \ln g(n,N) = \ln \left( \frac{N!}{\left(\frac{1}{2}N+n\right)!\cdot \left( \frac{1}{2}N-n \right)!} \right)
+    \ln g(n,N) = \ln \left( \frac{N!}{\left(\frac{1}{2}N+n\right)!\cdot \left( \frac{1}{2}N-n \right)!} \right) = \ln N! - \ln\left( \frac{N}{2}+n \right)!- \ln\left( \frac{N}{2}-n \right)!
 \end{align*}
 und wenden die Stirling-Näherung für große Argumente $N$
 \begin{align*}
@@ -78,7 +83,7 @@ und wenden die Stirling-Näherung für große Argumente $N$
 an:
 \begin{align*}
     \ln g(n,N) & \approx \frac{1}{2}\ln\frac{2}{N\pi}+N\ln 2-\frac{2n^2}{N} \\
-    g(n,N)     & \approx \sqrt{\frac{2}{N\pi }}2^N e^{-\frac{2n^2}{N}}
+    g(n,N)     & \approx \sqrt{\frac{2}{N\pi }}2^N e^{-\frac{2n^2}{N}}.
 \end{align*}
 Der Vorfaktor entspricht $g(0,N)$, sodass
 \begin{align}
@@ -89,12 +94,12 @@ Die Funktion ist gerade eine Gaußverteilung mit der Normierung
 \begin{align*}
     \int_{-\infty}^{\infty} g(n,N)\diff n=2^N
 \end{align*}
-($n/N$ ist aufgrund der großen $N$ praktisch kontinuierlich und eine Integration bis unendlich statt bis $\pm 1/2$ trägt nur einen verschwindend geringen Fehler bei). Außerdem ist die Breite (für einen Abfall auf $g(0,N)/e$) $n_n$ durch $\sqrt{N/2}$ und die relative Breite ist durch
+($n/N$ ist aufgrund der großen $N$ praktisch kontinuierlich und eine Integration bis unendlich statt bis $\pm 1/2$ trägt nur einen verschwindend geringen Fehler bei). Außerdem ist die Breite (für einen Abfall auf $g(0,N)/e$) $n_n$ durch $\sqrt{N/2}$ gegeben und die relative Breite durch
 \begin{align}
     \label{eq:relative_breite}
-    \frac{n_n}{N} = \frac{1}{\sqrt{2N}}
+    \frac{n_n}{N} = \frac{1}{\sqrt{2N}}.
 \end{align}
-gegeben. In \Abbref{fig:DegeneracyFunctionGauss} ist die Entartungsfunktion $g(n,N)$ relativ (über $n/N$) aufgetragen. 
+In \Abbref{fig:DegeneracyFunctionGauss} ist die Entartungsfunktion $g(n,N)$ relativ (über $n/N$) aufgetragen.
 
 \begin{figure}[htbp]
     \centering
@@ -105,35 +110,36 @@ gegeben. In \Abbref{fig:DegeneracyFunctionGauss} ist die Entartungsfunktion $g(n
 
 Für $N=10^{22}$ ist die relative Halbwertsbreite bereits sehr schmal ($n_n/N\approx 10^{-11}$), sodass sich ein sehr scharfer Peak um $n=0$ (bzw. $M=0$) ausbildet. Insgesamt kann man für große Systeme sagen:
 \begin{itemize}
-    \item Spins sind gleichverteilt. 
-    \item Es wird ein eindeutiger Zustand mit $n=0$ bzw. $M=0$ angenommen mit kaum wahrnehmbaren Fluktuationen. 
-    \item Das System hat wohldefinierte physikalischen Eigenschaften. 
+    \item Spins sind gleichverteilt.
+    \item Es wird ein eindeutiger Zustand mit $n=0$ bzw. $M=0$ angenommen mit kaum wahrnehmbaren Fluktuationen.
+    \item Das System hat wohldefinierte physikalischen Eigenschaften.
 \end{itemize}
-Dies gilt insbesondere im thermodynamischen Grenzwert $N\rightarrow\infty$. 
+Dies gilt insbesondere im thermodynamischen Grenzwert $N\rightarrow\infty$.
 
 
 Die Tatsache, dass sich aus dem Aufaddieren vieler Teilzustände eine Gaußsche Normalverteilung ergibt, ist auch Gegenstand des zentralen Grenzwertsatzes der Statistik:
 \begin{formal}
     \textbf{Zentraler Grenzwertsatz:}
 
-    Bei der Summation sehr vieler unabhängiger Zufallsvariablen ergibt sich eine Normalverteilung (Gauß-Funktion). 
+    Bei der Summation sehr vieler unabhängiger Zufallsvariablen ergibt sich eine Normalverteilung (Gauß-Funktion).
 \end{formal}
 
 
 \paragraph*{Energie im Magnetfeld}
 
-Ein Einzelspin hat die Energie $U=-mB$, ein System aus $N$ Spins also 
+Ein Einzelspin hat die Energie $U=-mB$, ein System aus $N$ Spins also
 \begin{align*}
-    U(n)=-MB = -2nmB \equivalence n = -\frac{U}{2mB}
+    U(n)=-MB = -2nmB \equivalence n = -\frac{U}{2mB}. 
 \end{align*}
-
-?? Niveau-Abstand
-
-Aus \eqref{eq:entartungsfunktion_naeherung} folgt, dass die Entartungsfunktion für $U$ 
+Dabei ist der Abstand zwischen zwei Niveaus äquidistant,
 \begin{align*}
-    g(U,N) = g(0,N) e^{-\frac{U^2}{2m^2B^2N}}, \quad g(0,N) = \sqrt{\frac{2}{N\pi }} 2^N
+    \Delta U = U(n) - U(n+1) = 2mB.
 \end{align*}
-ist. 
+Aus \eqref{eq:entartungsfunktion_naeherung} folgt, dass die Entartungsfunktion für $U$
+\begin{align*}
+    g(U,N) = g(0,N) e^{-\frac{U^2}{2m^2B^2N}} \quad \mathrm{mit}\quad g(0,N) = \sqrt{\frac{2}{N\pi }} 2^N
+\end{align*}
+ist.
 
 
 \subsection{Grundannahmen: Thermodynamik und statistische Mechanik}
@@ -142,25 +148,75 @@ ist.
 
 Wir definieren zunächst einen makroskopischen Gleichgewichtszustand:
 \begin{formal}
-    Ein makroskopischer Gleichgewichtszustand entspricht vielen mikroskopischen (Quanten-) Zuständen, die alle mit seinen Kenngrößen (z.B. Energie, Teilchenzahl, Volumen, Magnetisierung usw.) verträglich sind. Diese nennen wir auch zugängliche Zustände. 
+    Ein makroskopischer Gleichgewichtszustand entspricht vielen mikroskopischen (Quanten-) Zuständen, die alle mit seinen Kenngrößen (z.B. Energie, Teilchenzahl, Volumen, Magnetisierung usw.) verträglich sind. Diese nennen wir auch zugängliche Zustände.
 \end{formal}
 
-Bei dem zuvor betrachtetem Spinsystem legt beispielsweise $g(U,N)$ die Zahl der zugänglichen Zustände bei festem $N$ und $U\propto M \propto 2n$ fest. Die letzteren sind dabei die makroskopischen Kenngrößen. 
+Bei dem zuvor betrachtetem Spinsystem legt beispielsweise $g(U,N)$ die Zahl der zugänglichen Zustände bei festem $N$ und $U\propto M \propto 2n$ fest. Die letzteren sind dabei die makroskopischen Kenngrößen.
 
-Wie aber sind diese mikroskopischen Zustände selbst besetzt. In der statistischen Mechanik verwendet man als Grundannahme die Ergodenhypothese, die besagt, dass alle diese Zustände gleich wahrscheinlich sind:
+Wie aber sind diese mikroskopischen Zustände selbst besetzt? In der statistischen Mechanik verwendet man als Grundannahme die Ergodenhypothese, die besagt, dass alle diese Zustände gleich wahrscheinlich sind:
 \begin{postulate}[Erdogenhypothese]
-    Ein abgeschlossenes System wird (in der Messzeit) in jedem ihm zugänglichen mikroskopischen Zustand mit gleicher Wahrscheinlichkeit angetroffen. 
+    Ein abgeschlossenes System wird (in der Messzeit) in jedem ihm zugänglichen mikroskopischen Zustand mit gleicher Wahrscheinlichkeit angetroffen.
 \end{postulate}
 
-Es gibt auch nicht-ergodische Systeme, für die zugängliche mikroskopische Zustände in der Messzeit nicht angenommen werden oder ungleiche Besetzungswahrscheinlichkeiten besitzen. 
-
+Es gibt auch nicht-ergodische Systeme, für die zugängliche mikroskopische Zustände in der Messzeit nicht angenommen werden oder ungleiche Besetzungswahrscheinlichkeiten besitzen.
 Für ergodische Systeme gilt jedoch, dass das Zeitmittel äquivalent zum Scharmittel ist:
 \begin{formal}
-    Zeitlich versetzte Messungen der durchlaufenen mikroskopischen Zustände (\textit{zeitliches Nacheinander}) werden in der statischen Mechanik durch ein Ensemble von Kopien des Einzelsystems ersetzt (\textit{räumliches Nebeneinander}). 
+    Zeitlich versetzte Messungen der durchlaufenen mikroskopischen Zustände (\textit{zeitliches Nacheinander}) werden in der statischen Mechanik durch ein Ensemble von Kopien des Einzelsystems ersetzt (\textit{räumliches Nebeneinander}).
 
-    Jedes Ensemblemitglied befindet sich genau in einem mikroskopischen Zustand. Für $g$ Zustände gibt es also $g$ Ensemblemitglieder. 
+    Jedes Ensemblemitglied befindet sich genau in einem mikroskopischen Zustand. Für $g$ Zustände gibt es also $g$ Ensemblemitglieder.
 \end{formal}
 
 
 \paragraph*{Wahrscheinlichkeit}
+
+Für ergodische Systeme mit $g$ erreichbaren Zustände ist die Wahrscheinlichkeit eines einzelnen Zustands $s$ sehr leicht zu bestimmen,
+\begin{align*}
+    P(s) = \frac{1}{g}
+\end{align*}
+und es gilt die Normierung
+\begin{align*}
+    \sum_{s=1}^g P(s) = 1.
+\end{align*}
+Das entspricht genau der Ergodenhypothese.
+Der Zeitmittelwert als Ensemblemittelwert der physikalischen Messgröße $X(s)$ ist
+\begin{align*}
+    \left\langle X\right\rangle = \sum_s P(s)X(s) = \sum_s \frac{X(s)}{g}.
+\end{align*}
+
+\paragraph*{Beispiel: Ensemble eines Spinsystems}
+
+Für $N=4$ und einen Spinüberschuss $2n=0$, also auch $U=0$ und $M=0$ ist die Entartungsfunktion durch
+\begin{align*}
+    g(n=0,N=4) = \frac{4!}{2!\cdot 2!} = 6
+\end{align*}
+gegeben. Das Ensemble besteht aus den möglichen Mikrozuständen
+\begin{align*}
+    \left\{ \uparrow\uparrow\downarrow\downarrow,\uparrow\downarrow\uparrow\downarrow,\uparrow\downarrow\downarrow\uparrow,\downarrow\uparrow\uparrow\downarrow,\downarrow\uparrow\downarrow\uparrow,\downarrow\downarrow\uparrow\uparrow \right\}.
+\end{align*}
+
+
+
+\subsection{Spinsysteme im thermischen Kontakt}
+
+Wir betrachten nun zwei Spinsysteme mit den Kenngrößen $N_1,U_1\propto n_1$ bzw. $N_2,U_2\propto n_2$, die in thermischen Kontakt gebracht werden, also Energie austauschen können. Das Gesamtsystem ist insgesamt thermisch isoliert, sodass $U=U_1+U_2=\mathrm{const}$.
+Wir wollen untersuchen, welche Aufteilung in $U_1$ und $U_2$ die wahrscheinlichste ist und welche Eigenschaften das gekoppelte System aufweist.
+
+
+\paragraph*{Wahrscheinlichste Konfiguration}
+
+Wir definieren zunächst einige Größen, die das Gesamtsystem beschreiben, nachdem beide Untersysteme in Kontakt gebracht wurden,
+\begin{align*}
+    N    & = N_1+N_2                                 \\
+    n    & = n_1+n_2                                 \\
+    U(n) & =U_1(n_1)+U_2(n_2) = -2mB(n_1+n_2)=-2mnB.
+\end{align*}
+Vorher sind $n_1$ und $n_2$ fest und es gibt $g_1(n_1,N_1)\cdot g_2(n_2,N_2)$ erreichbare Zustände. Nach dem Zusammenbringen ist $n=n_1+n_2$ fest und $n_1$ bzw. $n_2$ sind variabel. Die Anzahl der möglichen Zustände ist allerdings sehr viel größer. Die Entartungsfunktion ist jetzt durch
+\begin{align*}
+    g(n,N) = \sum_{n_1=-\frac{N_1}{2}}^{\frac{N_1}{2}} g_1(n_1,N_1)g_2(n-n_1,N_2)
+\end{align*}
+gegeben, während die Wahrscheinlichkeit für einen bestimmten Spinüberschuss $n_1$
+\begin{align*}
+    P_n(n_1) = \frac{g_1(n_1,N_1)g_2(n-n_1,N_2)}{g(n,N)}
+\end{align*}
+beträgt.
 
