@@ -6,28 +6,28 @@ In diesem Kapitel soll die Entwicklung der thermodynamischen Theorie sowie die A
 
 \subsection{Konjugierte Variablen (Energiedarstellung)}
 
-Zunächst wollen wir die innere Energie in der differentiellen Form aufschreiben:
+Zunächst wollen wir die innere Energie $U$ in der differentiellen Form aufschreiben:
 \begin{align*}
     \diff U = \left(\frac{\partial U}{\partial S}\right)_{V,\sm_1,\ldots,\sm_r} \diff S + \left(\frac{\partial U}{\partial V}\right)_{S,\sm_1,\ldots,\sm_r} \diff V + \sum_{j = 1}^r \left(\frac{\partial U}{\partial \sm_j}\right)_{S,V,\sm_1,\ldots,\sm_{j - 1},\sm_{j + 1},\ldots,\sm_r} \diff \sm_j.
 \end{align*}
-Die Faktoren vor den einzelnen Differentialen müssen nun gedeutet werden, indem sie als Größen definiert werden, die jeweils konjugiert zu der Größe aus dem Differential sind.
+Die Faktoren vor den einzelnen Differentialen deuten wir nun, indem wir sie als Größen definieren, welche jeweils zur Differentialgröße konjugiert sind.
 
-Wir erhalten die Temperatur
+Wir erhalten somit die Temperatur $T$
 \begin{align}
     \label{eq:def_temperatur}
     T \equiv \left(\frac{\partial U}{\partial S}\right)_{V,\sm_1,\ldots,\sm_r} \geq 0
 \end{align}
-als konjugierte Größe zu $S$, den Druck
+als konjugierte Größe zur Entropie $S$, den Druck $P$
 \begin{align}
     \label{eq:def_druck}
     P \equiv -\left(\frac{\partial U}{\partial V}\right)_{S,\sm_1,\ldots,\sm_r}
 \end{align}
-als konjugierte Größe zu $V$ und die chemischen Potentiale
+als konjugierte Größe zum Volumen $V$ und die chemischen Potentiale $\mu_j$
 \begin{align}
     \label{eq:def_chemische_potentiale}
     \mu_j \equiv \sum_{j = 1}^r \left(\frac{\partial U}{\partial \sm_j}\right)_{S,V,\sm_1,\ldots,\sm_{j - 1},\sm_{j + 1},\ldots,\sm_r},
 \end{align}
-die jeweils zu $\sm_j$ konjugiert sind.
+welche jeweils zu $\sm_j$ konjugiert sind.
 
 Die innere Energie lässt sich also in differentieller Form folgendermaßen schreiben:
 \begin{align}
@@ -35,14 +35,13 @@ Die innere Energie lässt sich also in differentieller Form folgendermaßen schr
     \diff U = T\diff S - P \diff V + \mu_1 \diff \sm_1 + \cdots + \mu_r \diff \sm_r.
 \end{align}
 
-Bemerkungen:
+Einige Bemerkungen:
 \begin{itemize}
     \item Die Größen $U, S,V,\sm_k$ sind extensiv, während die dazu konjugierten Variablen $T,P,\mu_k$ intensive Größen sind.
     \item $J\diff X$ mit intensiver Variable $J$ und extensiver Variable $X$ muss die Einheit einer Energie haben. Folglich ist $[\mu_j] = [U]$ und $[S]=[U/T]$.
 \end{itemize}
 
 Es soll nun eine erste Interpretation der Terme in \eqref{eq:innere_energie_differentielle_form} gemacht werden.
-
 Zur Vereinfachung setzen wir zunächst alle Terme $\diff \sm_k=0$.
 Der erste Term ist
 \begin{align*}
@@ -59,17 +58,17 @@ Zuletzt können wir die Terme
 \begin{align*}
     \udiff W_ \mathrm{C} = \sum_{i = 1}^r \mu_i\diff \sm_i
 \end{align*}
-als quasistatische chemische Arbeit festlegen. Sie beschreibt die Energiezunahme beim Hinzufügen von Materie zu dem System (siehe auch Kapitel \ref{sec:gleichgewicht_bei_materiefluss}).
+als quasistatische chemische Arbeit festlegen. Sie beschreibt die Energiezunahme bei Hinzufügen von Materie zu einem System (siehe auch Kapitel \ref{sec:gleichgewicht_bei_materiefluss}).
 
 Insgesamt kann die innere Energie also geschrieben werden als
 \begin{align}
     \label{eq:erster_HS_TD}
     \diff U = \udiff Q + \udiff W_\mathrm{mech} + \udiff W_\mathrm{C}.
 \end{align}
-Das ist der erste Hauptsatz der Thermodynamik.
+Dies entspricht dem ersten Hauptsatz der Thermodynamik.
 Dabei ist zu beachten, dass die Prozessgrößen ($Q$,$W_{mech}$ und $W_c$) unvollständige Differentiale bilden. Letztere sollen im nächsten Kapitel näher erläutert werden.
 
-Zuletzt soll noch einige Aussagen zur Wärmezufuhr $\udiff Q$ zusammengefasst werden:
+Zuletzt wollen wir noch einige Aussagen zur Wärmezufuhr $\udiff Q$ zusammenfassen:
 \begin{itemize}
     \item Für quasistatische Prozesse gilt $\udiff Q=T\diff S$ und damit insbesondere $\udiff Q>0\implication T\diff S>0$. Eine Zufuhr von Wärme führt also zu einem Zuwachs der Entropie.
     \item Durch Umstellen erhält man
@@ -77,24 +76,25 @@ Zuletzt soll noch einige Aussagen zur Wärmezufuhr $\udiff Q$ zusammengefasst we
               \diff S = \frac{1}{T}\udiff Q.
           \end{align*}
           Da das unvollständige Differential $\udiff Q$ mittels des Faktors $1/T$ das vollständige Differential $\diff S$ charakterisiert, nennt man diesen Faktor einen integrierenden Faktor.
-    \item Betrachten wir die Wärmezufuhr für nicht quasistatische Prozesse, so heißt das, dass das System keine Gleichgewichtszustände durchläuft, sondern sich im Nichtgleichgewicht entwickelt. Für ein abgeschlossenes System liegt keine Wärmezufuhr vor. Mit $\udiff Q=0$ folgt nach Postulat \ref{post:entropie_maximierung} $\diff S >0$. Die Entropie nimmt für sogenannte irreversible Prozesse zu.\footnote{Irreversibel heißt hier, dass das System nicht mehr spontan in den Ausgangszustand übergeht, also die Entropie nicht abnimmt.} In nicht abgeschlossenen Systemen, also in Systemen, in denen eine Wärmezufuhr stattfinden kann, nimmt die Entropie für irreversible Prozesse entsprechend zu.
+    \item Betrachten wir die Wärmezufuhr für nicht quasistatische Prozesse, so heißt das, dass das System keine Gleichgewichtszustände durchläuft, sondern sich im Nichtgleichgewicht entwickelt. Für ein abgeschlossenes System liegt keine Wärmezufuhr vor. Mit $\udiff Q=0$ folgt nach Postulat \ref{post:entropie_maximierung} $\diff S >0$. Die Entropie nimmt für sogenannte irreversible Prozesse zu.\footnote{Irreversibel heißt hier, dass das System nicht mehr spontan in den Ausgangszustand übergeht, also die Entropie nicht abnimmt.} In nicht abgeschlossenen Systemen, also in Systemen, in denen eine Wärmezufuhr stattfinden kann, nimmt die Entropie für irreversible Prozesse entsprechend
           \begin{align*}
               \diff S\geq \frac{\udiff Q}{T}
           \end{align*}
+          zu.
           Gleichheit gilt dabei ausschließlich für reversible Prozesse. Es sei angemerkt, dass damit ferner folgt, dass die Entropiezunahme auch auf Anteile zurückzuführen ist, die nicht mit der Wärmezufuhr $\udiff Q$ zusammenhängen.
 \end{itemize}
 
 \subsection{Unvollständige Differentiale}
 
-Wir wollen nun näher auf die mehrfach erwähnten unvollständigen Differentiale zurückkommen und eine mathematische Definition nachliefern. Ausgehend von einer Funktion $f(x_1,\ldots,x_r)$ bilden wir das Differential
+Wir wollen nun näher auf die mehrfach erwähnten \emph{unvollständigen Differentiale} zurückkommen und eine mathematische Definition nachliefern. Ausgehend von einer Funktion $f(x_1,\ldots,x_r)$ bilden wir das Differential
 \begin{align*}
     \diff f = \sum_{i=1}^r \frac{\partial f}{\partial x_i} \diff x_i.
 \end{align*}
-Für die zweiten Ableitungen gilt für die gemischten Differentiale mit dem Satz von Schwarz Vertauschbarkeit der Form:
+Für die zweiten Ableitungen gilt für die gemischten Differentiale mit dem \emph{Satz von Schwarz} Vertauschbarkeit der Form:
 \begin{align*}
     \frac{\partial ^2 f}{\partial x_i \partial x_j} = \frac{\partial ^2 f}{\partial x_j \partial x_i}.
 \end{align*}
-Wir konstruieren eine Darstellung $\phi$, auch Pfaffsche oder 1-Form genannt
+Wir konstruieren eine Darstellung $\phi$, auch \emph{Pfaffsche} oder \emph{1-Form} genannt
 \begin{align*}
     \phi (x_1,\ldots,x_r)=\sum _{i=1}^r \phi_i(x_1,\ldots,x_r)\diff x_i
 \end{align*}
@@ -102,7 +102,7 @@ mit dem Differential
 \begin{align*}
     \diff f = \phi = \sum_i \phi_i \diff x_i \quad\text{ mit }\quad \phi_i = \frac{\partial f}{\partial x_i}.
 \end{align*}
-Für einfach zusammenhängende Definitionsbereiche\footnote{Es sei angemerkt, dass für nicht zusammenhängende Gebiete die Integrabilitätsbedingung jedoch nur eine notwendige Bedingung ist.} ist die Erfüllung des Satzes von Schwarz in Form folgender Integrabilitätsbedingung
+Für einfach zusammenhängende Definitionsbereiche\footnote{Es sei angemerkt, dass für nicht zusammenhängende Gebiete die Integrabilitätsbedingung nur eine notwendige, keine hinreichende Bedingung ist.} ist die Erfüllung des Satzes von Schwarz in Form folgender \emph{Integrabilitätsbedingung}
 \begin{align*}
     \frac{\partial \phi_i}{\partial x_j}=\left[\frac{\partial^2f}{\partial x_j\partial x_i}=\frac{\partial^2f}{\partial x_i\partial x_j}\right]=\frac{\partial \phi_j}{\partial x_i}
 \end{align*}
@@ -112,12 +112,12 @@ Wir wollen daran erinnern, dass uns diese Integrabilitätsbedingung bereits aus 
     \vec{K}=-\nabla U \equivalence \rot\vec{K}=0 \equivalence \epsilon_{ijk}\partial_jK_k.
 \end{align*}
 Der letzte Ausdruck ist äquivalent zu unserer Integrabilitätsbedingung.
-Erfüllt das Differential diese Bedingung nicht, ist es unvollständig und wird mittels der Notation $\udiff$ gekennzeichnet.
+Erfüllt das Differential diese Bedingung nicht, ist es unvollständig und wird mittels der Notation "$\udiff$" gekennzeichnet.
 Wir wollen dies am Beispiel der Variablen $S$ und $V$ illustrieren:
 \begin{align*}
     \phi = \udiff Q = T\diff S+0 \diff V\equiv \phi_1\diff S+\phi_2 \diff V.
 \end{align*}
-Wir identifizieren die zwei Funktionen $\phi_1$ und $\phi_2$ und prüfen die Integrabilitätsbedingung
+Wir identifizieren die zwei Funktionen $\phi_1$ und $\phi_2$, prüfen die Integrabilitätsbedingung
 \begin{align*}
     \frac{\partial \phi_1}{\partial V} = \frac{\partial T}{\partial V}\neq \frac{\partial \phi_2}{\partial S}=\frac{\partial0}{\partial S}=0
 \end{align*}
@@ -134,13 +134,13 @@ welches von den intensiven Variablen $T$,$P$ und $\mu_j$ mit ihren respektiven Z
     P     & =P(S,V,\sm_1,\ldots,\sm_r)     \\
     \mu_j & =\mu_j(S,V,\sm_1,\ldots,\sm_r)
 \end{align*}
-abhängen. Die Kenntnis dieser Zustandsgleichungen ist äquivalent zur Kenntnis der einzelnen Zustandsfunktion $U(S,V,\sm_1,\ldots,\sm_r)$, da wir die innere Energie über Aufintegration des Differentials erhalten.
+abhängt. Die Kenntnis dieser Zustandsgleichungen ist äquivalent zur Kenntnis der einzelnen Zustandsfunktion $U(S,V,\sm_1,\ldots,\sm_r)$, da wir die innere Energie über Aufintegration des Differentials erhalten.
 
-Kommen wir erneut auf die Definition der extensiven und intensiven Größen zurück. Eine extensive Variable, wie z.B. die innere Energie, ist eine homogene Funktion ersten Grades, d.h. es gilt folgender Zusammenhang
+Kommen wir erneut auf die Definition der \emph{extensiven} und \emph{intensiven} Größen zurück. Eine extensive Variable, wie z.B. die innere Energie, ist eine homogene Funktion ersten Grades, d.h. es gilt folgender Zusammenhang:
 \begin{align*}
     U(\lambda S,\lambda V,\lambda \sm_1,\ldots,\lambda \sm_r) = \lambda U(S,V,\sm_1,\ldots,\sm_r).
 \end{align*}
-In anderen Worten, die Variable skaliert mit der Größe des Systems.
+In anderen Worten, "die Variable skaliert mit der Größe des Systems".
 Für intensive Variablen, wie z.B. die Temperatur, gilt jedoch
 \begin{align*}
     T(\lambda S,\lambda V,\lambda \sm_1,\ldots,\lambda \sm_r)=T(S,V,\sm_1,\ldots,\sm_r),
@@ -151,7 +151,7 @@ denn mit der Extensivität von $U$ folgt
 \end{align*}
 Es handelt sich dabei, wie auch beim Druck und beim chemischen Potential, um eine homogene Funktion nullten Grades, die sich bei Skalierung des Systems nicht ändert.
 
-Wir wollen uns nun zwei Verallgemeinerungen anschauen, in entropischer und energetischer Darstellung.
+Wir wollen nun zum nächsten thematischen Abschnitt übergehen und uns zwei Verallgemeinerungen anschauen, in entropischer und energetischer Darstellung.
 Die Energiedarstellung kann wie folgt geschrieben werden:
 \begin{align*}
     U(S,V,\sm_1,\ldots,\sm_r) \rightarrow U(S,X_1,X_2,\ldots,X_t).
@@ -163,11 +163,11 @@ Wir benutzen also verallgemeinerte energetisch extensive Parameter, um die Funda
     \label{eq:energetische_fundamentalgleichung}
     \rightarrow \diff U                                                        & = T\diff S + \sum_{j=1}^tP_j\diff X_j.
 \end{align}
-Diese Abstraktion ermöglicht die Beschreibung ganz anderer Systeme, für welche weiterhin das eingeführte Energie- bzw. Arbeitsdifferential $\diff U = P_j\diff X_j$ gilt.
-Dabei bezeichnen $X_j$ die verallgemeinerten Volumina oder Wege und $P_j$ Drücke oder Kräfte.
-Anmerkung: Den Druck erhalten wir folglich nur über eine Energiefunktion, welche von S abhängt.
+Diese Abstraktion ermöglicht die Beschreibung viel allgemeinerer Systeme, für welche weiterhin das eingeführte Energie- bzw. Arbeitsdifferential $\diff U = P_j\diff X_j$ gilt.
+Dabei bezeichnen $X_j$ die verallgemeinerten Volumina oder Wege und $P_j$ die Drücke oder Kräfte.
+Es sei angemerkt, dass wir den Druck folglich nur über eine Energiefunktion, welche von S abhängt, erhalten können.
 
-Betrachtet man ein einkomponentiges System, so liegt die Einführung neuer Größen, wie der molaren inneren Energie $u$ nahe, welche wir nun einführen wollen:
+Betrachtet man ein einkomponentiges System, so liegt die Einführung neuer Größen, wie der \emph{molaren inneren Energie} $u$, nahe. Wir führen diese im Folgenden ein:
 \begin{align*}
     u=\frac{U}{\sm}=u(\frac{S}{\sm},\frac{V}{\sm},\frac{\sm}{\sm})\equiv u(s,v).
 \end{align*}
@@ -178,13 +178,13 @@ Wir wollen nun das Differential dieser Größe berechnen. Formal schreiben wir
 \end{align*}
 mit
 \begin{align*}
-    (\frac{\partial u}{\partial s})_v=(\frac{\partial u}{\partial s})_{V,\sm}=(\frac{\partial U}{\partial S})_{V,N} & =T    \\
+    (\frac{\partial u}{\partial s})_v=(\frac{\partial u}{\partial s})_{V,\sm}&=(\frac{\partial U}{\partial S})_{V,N} =T    \\
     (\frac{\partial u}{\partial v})_s                                                                             & = -P.
 \end{align*}
 
-Das Konstanthalten des Molvolumens ist dabei äquivalent zum Konstanthalten des Volumens und der Stoffmenge (Molzahl). Die partielle Ableitung nach $s$ kann ferner nach $S$ umgeschrieben werden, womit wir auf die Temperatur $T$ kommen.
+Das Konstanthalten des Molvolumens ist dabei äquivalent zum Konstanthalten des Volumens und der Molzahl (Stoffmenge). Die partielle Ableitung nach $s$ kann ferner nach $S$ umgeschrieben werden, womit wir die Temperatur $T$ erhalten.
 Analog betrachten wir die partielle Ableitung nach $v$ und erhalten den negativen Druck $P$.
-Insgesamt erhalten wir das Differential
+Insgesamt folgt das Differential
 \begin{align*}
     \diff u = T\diff s -P\diff v.
 \end{align*}

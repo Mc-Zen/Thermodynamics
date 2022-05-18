@@ -1,0 +1,217 @@
+% !TeX root = Theo_IV.tex
+\section{Antwortkoeffizienten \& Beispielsysteme}
+Im Folgenden wollen wir uns mit der Anwendung des bislang erarbeiteten Formalismus der Wärmelehre beschäftigen. Dazu erarbeiten wir uns die Herleitungen verschiedener Antwortkoeffizienten, wie der spezifischen Wärme, beleuchten die sogenannten Maxwellbeziehungen und beschreiben das einkomponentige ideale Gas.  
+\subsection{Antwortkoeffizienten: spezifische Wärme \& andere Ableitungen}
+Die zu Grunde liegende Frage, welche die Beschäftigung mit sogenannten \emph{Antwortkoeffizienten} motiviert, ist die Frage nach der Reaktivität eines Systems auf äußere Einflüsse. Dem entstammt auch die Benennung dieser - im Folgenden genauer erörterten - Materialkonstanten als Antwortkoeffizienten. 
+Ein prominentes Beispiel einer solchen Materialkonstante ist die spezifische Wärme, die wir uns ebenfalls im Laufe dieses Unterkapitels näher anschauen wollen.
+
+
+Ausgangspunkt unserer Betrachtungen bilden die Temperatur $T$ und der Druck $P$ in Energiedarstellung (also als Funktionen von Entropie $S$ und Volumen $V$). Wobei wir annehmen, dass wir mit konstanten Molzahlen (Stoffmengen) arbeiten.  Die möglichen Wege im Zustandsraum können wir mit den genannten Größen wie folgt charakterisieren: 
+
+
+Der Begriff \emph{Isochore} bezeichnet Zustandsänderungen bei gleichbleibenden Volumina. Damit folgt für die Größen eine Abhängigkeit: 
+\begin{align*}
+    V=V_0=\text{konstant}\quad\rightarrow\quad T=T(S,V_0) \quad\text{und}\quad P=(S,V_0) \quad\rightarrow\quad T=T(P)|_{V_0}.
+\end{align*}
+Wobei die Entropie $S$ durch Umkehren einer der Zustandsfunktionen und Einsetzen in die andere eliminiert wurde.
+
+
+Analog gehen wir bei der Betrachtung der \emph{Isentrope} vor, welche Zustandsänderungen bezeichnen, bei denen die Entropie gleichbleibt: 
+\begin{align*}
+    S=S_0=\text{konstant}\quad\rightarrow\quad T=T(S_0,V) \quad\text{und}\quad P=(S_0,V) \quad\rightarrow\quad T=T(P)|_{S_0}.
+\end{align*}
+Wir motivieren letztere Betrachtung durch den Verweis darauf, dass sie bei der Beschreibung der Schallgeschwindigkeit essentiell ist. Dies ist dadurch bedingt, dass die dort ablaufenden Kompressionsprozesse derartig schnell verlaufen, dass keine Wärmezu- oder abfuhr stattfinden kann und diese somit isentropisch sind. (??hier wieder adiabatische und isentrope Prozesse äquivalent benutzt)
+Wir wollen uns auch weiterhin auf die Zustandsvariablen Temperatur und Druck konzentrieren, wobei wir im Allgemeinen kontrollierbare, bzw. im Experiment kontrollierte, Zustandsvariablen - wie diese - nun auch als \emph{Koordinaten} bezeichnen werden. Es sei darauf verwiesen, dass die Entropie $S$ keine solche direkt kontrollierbare Größe ist.
+
+Durch Invertierung der energetischem Zustandsfunktionen erhalten wir die neuen Zustandsfunktionen 
+\begin{align*}
+    \boxed{S=S(T,P) \quad\&\quad V=V(T,P)}\:.
+\end{align*} 
+Erneut wollen wir mögliche Wege im Zustandsraum bei gleichbleibenden Parametern betrachten.
+Zum einen können wir die Temperatur festhalten - wir sprechen dann von \emph{Isothermen}, für welche 
+\begin{align*}
+    T=T_0=\text{konstant}\quad\rightarrow\quad S=S(T_0,P) \quad\text{und}\quad V=(T_0,P) \quad\rightarrow\quad S=S(V)|_{T_0}.
+\end{align*} gilt.
+Zum anderen können wir den Druck konstant halten - hier sprechen wir von \emph{Isobaren}, für welche wiederum
+\begin{align*}
+    P=P_0=\text{konstant}\quad\rightarrow\quad S=S(T,P_0) \quad\text{und}\quad V=(T,P_0) \quad\rightarrow\quad S=S(V)|_{P_0}.
+\end{align*} folgt.
+
+Wir fragen uns nun, wie Änderungen der Größen $T$ und $P$ auf das Volumen $V$ wirken. Dazu schreiben wir  
+\begin{align*}
+    \diff V (T,P)= \left( \frac{\partial V}{\partial T}\right)_P \diff T+\left( \frac{\partial V}{\partial P}\right)_T \diff P
+\end{align*} 
+und erhalten die relative Volumenänderung 
+\begin{align*}
+    \boxed{\frac{\diff V}{V}=\frac{1}{V}\left( \frac{\partial V}{\partial T}\right)_P\diff T+\frac{1}{V}\left( \frac{\partial V}{\partial P}\right)_T\diff P \equiv \alpha(T,P)\diff T-\kappa(T,P)\diff P}\:.
+\end{align*} 
+Zum einen haben wir den neuen Koeffizienten
+\begin{align*}
+    \boxed{\alpha=\frac{1}{V}\left( \frac{\partial V}{\partial T}\right)_P}
+\end{align*}
+als den \emph{thermischen Ausdehnungskeffizienten} identifiziert, welcher das Maß der Systemausdehnung mit der Temperatur bei konstantem Druck beschreibt. Zum anderen identifizieren wir die \emph{isotherme Kompressibilität}
+\begin{align*}
+    \boxed{\kappa=\frac{1}{V}\left( \frac{\partial V}{\partial P}\right)_T}\:,
+\end{align*} 
+welche die Reaktion des Systems auf entsprechende Drücke und bei konstanter Entropie\footnote{Hier betrachten wir die Entropie und nicht die Temperatur, da sich letztere bei den schnellablaufenden Prozessen unvermeidlich verändert. Nichtsdestotrotz bleibt ein Wärmeaustusch aus, die Entropie ist also konstant.} charakterisiert.
+
+
+Nun wollen wir die Materialkonstanten herleiten, welche bei Prozessen mit Entropieänderung relevant sind.
+Dazu betrachten wir das entropische Differential 
+\begin{align*}
+    \diff S (T,P)= \left( \frac{\partial S}{\partial T}\right)_P \diff T+\left( \frac{\partial S}{\partial P}\right)_T \diff P
+\end{align*} 
+und erhalten darüber den quasistatischen Wärmefluß pro Mol 
+\begin{align*}
+    \frac{T}{N}\diff S=\frac{\udiff Q}{N}=\frac{T}{N}\left( \frac{\partial S}{\partial T}\right)_P \diff T+\frac{T}{N}\left( \frac{\partial S}{\partial P}\right)_T \diff P\equiv c_p(T,P)\diff T+\ldots.
+\end{align*}
+Wieder identifizieren wir einen neuen Koeffizienten (der nicht ausgeschriebene zweite Term führt hier auf keinen besonderen Koeffizienten): Die \emph{molare spezifische Wärme} bei konstantem Druck 
+\begin{align*}
+    \boxed{c_p=\frac{T}{N} \left( \frac{\partial S}{\partial T} \right)_P= \frac{1}{N} \left( \frac{\udiff Q}{\diff T} \right)_P }\:.(??anführungszeichen)
+\end{align*}
+
+Die insgesamt zugeführte Wärme lässt sich darüber nun leicht durch Aufintegration der Form
+\begin{align*}
+    Q(T)=\int_{T_0}^{T} \udiff Q = \int_{T_0}^{T}T' \diff S = \int_{T_0}^{T}Nc_p\diff T'
+\end{align*} 
+bestimmen. 
+Es existiert eine weitere Herleitung der spezifischen Wärme, welche kurz skizziert werden soll. Ausgangspunkt bildet das uns inzwischen gut bekannte unvollständige Differential 
+\begin{align*}
+    \udiff Q=\diff U +P\diff V= \diff(U+PV)|_{P=\text{konstant}}.
+\end{align*}
+Den letzten Ausdruck erhalten wir unter der Voraussetzung, dass der Druck $P$ konstant ist. Schreiben wir die innere Energie als Funktion der altbekannten extensiven Größen, wird ersichtlich, dass die innere Energie hier letztlich von den intensiven Größen $T$ und $P$ abhängt:
+\begin{align*}
+    U=U(S(T,P),V(T,P))=U(T,P).
+\end{align*}
+Es sei darauf hingewiesen, dass es sich bei letzterer Formulierung nicht um eine energetische Fundamentalbeziehung handelt, denn die Abhängigkeiten von $S$ und $V$ fehlen.
+
+
+Wir führen nun das neue thermodynamische Potential der \emph{Enthalpie} 
+\begin{align*}
+    \boxed{H=U+PV=H(T,P)}
+\end{align*} 
+ein - wir werden zu einem späteren Zeitpunkt genauer darauf zurückkommen - und schreiben die spezifische Wärme mittels der neuen Größe als 
+\begin{align*}
+    c_p=\frac{1}{N}\left( \frac{\partial H}{\partial T}\right)_P.
+\end{align*} 
+Eine kleine Randnotiz für den Leser: Die Inhalte, die wir hier erarbeiten, sind in der Regel mathematisch einfach. Entscheidend sind die überlegten Festlegungen und Betrachtungen konstanter Größen und der daraus folgenden Zusammenhänge.
+
+
+Wir ändern nun die zu betrachtenden Koordinaten und konzentrieren uns auf Systeme mit kontrollierbarer Temperatur $T$ und kontrollierbarem Volumen $V$.
+Analog zu vorigem Vorgehen schreiben wir die Zustandsfunktionen 
+\begin{align*}
+    S=S(T,V)\quad\&\quad P=P(T,V)
+\end{align*} 
+in Abhängigkeit der gewählten Koordinaten und schreiben den sich daraus ergebenden Ausdruck für den molaren quasistatischen Wärmefluß 
+\begin{align*}
+    \frac{T}{N}\diff S= \frac{\udiff Q}{N}=\frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_V \diff T +\frac{T}{N}\left(\frac{\partial S}{\partial V}\right)_T \diff V\equiv c_v(T,V)\diff T+\ldots.
+\end{align*}
+Erneut erhalten wir damit einen Ausdruck für die molare spezifische Wärme, diesmal bei konstantem Volumen: 
+\begin{align*}
+    \boxed{c_v=\frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_V="\frac{1}{N}\left(\frac{\udiff Q}{\diff T}\right)_V"}\:.(??anführungszeichen)
+\end{align*}
+Dank der Konstanz des Volumens können wir die Relation $\udiff Q=\diff U$ nutzen und für die spezifische Wärme alternativ 
+\begin{align*}
+    \boxed{c_v=\frac{1}{N}\left(\frac{\partial U}{\partial T}\right)_V}
+\end{align*} 
+schreiben.
+
+Wir wollen zum Abschluß dieses Unterkapitels die beiden definierten Größen $c_p$ und $c_v$ für die spezifische Wärme noch in Relation setzen. Dazu machen wir folgende Überlegung: Betrachten wir eine Erwärmung bei konstantem Druck $P$ mit $c_p$,
+so wird zusätzlich zur Temperaturerhöhung auch mechanische Arbeit zur Ausdehnung des Volumens verrichtet. Mit unseren Definitionen der spezifischen Wärmen folgt daraus \textbf{$c_p >c_v$}.
+
+
+Wir greifen nun auf die bereits eingeführte Integrabilitätsbedingung zurück und erörtern am Beispiel der inneren Energie die Relationen zwischen den zweiten Ableitungen, welche wir auch als \emph{Maxwellbeziehungen} bezeichnen.
+Fangen wir wieder beim bekannten vollständigen Energiedifferential 
+\begin{align*}
+    \diff U = T\diff S-P\diff V+\mu \diff N 
+\end{align*}
+an. Mit Hilfe der Integrabilitätsbedingung 
+\begin{align*}
+    \frac{\partial^2U}{\partial V\partial S}=\frac{\partial^2U}{\partial S\partial V}
+\end{align*}
+gelangen wir zu folgenden Relationen: 
+\begin{align*}
+    \left(\frac{\partial T}{\partial V}\right)_{S,N}=-\left(\frac{\partial P}{\partial S}\right)_{V,N}=-T\left(\frac{\partial P}{\udiff Q}\right)_{V,N}.(??anführungszeichen)
+\end{align*} 
+Dabei charakterisiert der erste Term die Temperaturänderung bei isentropischer \footnote{Isentropische Prozesse sind eine Form der adiabatischen Prozesse und bezeichnen thermodynamische Zustandsänderungen, bei denen die Entropie gleich bleibt, also auch ein Wärmeaustausch mit der Umgebung ausbleibt. Unter den allgemeineren, adiabatischen Zustandsänderungen versteht man Prozesse, welche ohne Wärmeaustausch mit der Umgebung ablaufen. Diese sind jedoch nicht zwangsläufig isentropisch.} Volumenänderung. Der rechte, bzw. letzte, Term definiert die Druckänderung bei isochorem Wärmezufluß. An dieser Stelle wollen wir bereits den Ausblick erwähnen, dass alle bildbaren zweiten Ableitungen der Größen eines betrachteten Systems mittels eines Minimalsatzes dreier Antwortkoeffizienten dargestellt werden können.
+
+Für einfache Einkomponentensysteme können wir bereits eine Relation für die bisher eingeführten Antwortkoeffizienten formulieren: 
+\begin{align*}
+    \boxed{c_p=c_v+\frac{TV\alpha^2}{N\kappa_T}}\:.
+\end{align*}
+Besonders nützlich ist, dass die Koeffizienten experimentell sehr gut zugänglich sind. Die genaue Herleitung der Relation soll später erfolgen. 
+
+\subsection{Beispiel: Das einkomponentige ideale Gas} 
+Wir wollen das bisher Erarbeitete nun im Rahmen des Modells der \emph{idealen Gase} anwenden. Ideal heißt in diesem Kontext, dass wir die Annahme machen, Moleküle verhalten sich wie Punktteilchen ohne - mit Ausnahme von Stößen - miteinander zu wechselwirken. Die Realisierung eines solchen idealen Gases erfolgt durch ausreichende Verdünnung eines tatsächlichen Gases.
+Welche Zustandsgleichungen gelten nun für dieses ideale Gas?
+Die prominenteste Gleichung dürfte die \emph{ideale Gasgleichung} sein 
+\begin{align*}
+    \boxed{PV=NRT}\:.
+\end{align*}
+Dabei bezeichnet $R$ die \emph{universelle Gaskonstante} und ist das Produkt der \emph{Avogadrokonstante} (welche die Anzahl der Teilchen in einem Mol angibt) und der \emph{Boltzmann-Konstante} (deren Bedeutung wir später noch erörtern werden): 
+\begin{align*}
+    R=Lk_B=8,3\frac{\text{J}}{\text{mol K}}\quad\text{mit}\quad L=6\cdot10^{23}\text{mol}^{-1} \quad\text{und}\quad k_B=1,38\cdot10^{-23}\text{J$\cdot$K}^{-1}
+\end{align*}
+Im Allgemeinen gelten das \emph{Boyle-Mariottsche Gesetz},
+\begin{align*}
+    PV=\text{konstant},
+\end{align*}
+als auch das \emph{Gay-Lussacsche Gesetz}, 
+\begin{align*}
+    PV\thicksim T,
+\end{align*}
+welche beide bekannte Ergebnisse experimenteller Untersuchungen sind.
+Ferner gibt es die \emph{kalorische Zustandsgleichung}: 
+\begin{align*}
+    \boxed{U=\frac{f}{2}NRT\thicksim T}\:.
+\end{align*} 
+$f$ bezeichnet dabei die Zahl der Freiheitsgrade. Die innere Energie ist also für einfache \footnote{Die Kennzeichnung als „einfaches“ Gas wird im Laufe der nächsten Kapitel näher erläutert. Wir wollen bereits vorgreifen und darauf verweisen, dass damit Zustände mit höheren Quantenzahlen beschrieben werden, welche sich entsprechend „klassisch(er)(??)“ verhalten.} ideale Gase proportional zur Temperatur des Systems. 
+Die Gleichung ist ein direktes Ergebnis der statistischen Mechanik und ferner des dort genutzten \emph{Gleichverteilungssatzes}, welcher besagt, dass ein System pro Freiheitsgrad eine molare innere Energie von $RT/2$ annimmt.
+Wir wollen dies am Beispiel eines Atomes illustrieren, welches drei Freiheitsgrade für die Translation im dreidimensionalen Raum besitzt. Für diatomare Moleküle kommen noch weitere Freiheitsgrade hinzu: Zwei für Rotationen entlang der Achsen senkrecht zur Molekülachse und zwei für Schwingungen, bzw. für die gespeicherte potentielle Energie und die vorliegende kinetische Energie des Moleküls.
+Die, das Molekül beschreibende, Hamiltonfunktion sieht wie folgt aus: 
+\begin{align*}
+    H=\frac{p_x^2+p_y^2+p_z^2}{2M}+\frac{p_{\phi}^2+p_{\psi}^2}{2\Theta}+\frac{\mu^2}{2m}+\frac{1}{2}m\omega^2d^2.
+\end{align*}
+Der erste Summand beschreibt die Translation, der zweite die Rotation und die letzten beiden die Schwingung.
+Der Freiheitsgrad $f$ entspricht hier auch der Zahl der quadratischen Einzelterme der Hamiltonfunktion.
+
+An dieser Stelle machen wir einen kleinen Exkurs in die Quantenmechanik:
+Nicht alle Freiheitsgrade sind zu einem beliebigen Zeitpunkt in einem System angeregt. Begründen können wir dies mit Hilfe der Quantelung der Energieeigenwerte in der Quantenmechanik.
+Für Oszillatoren nehmen die Energieeigenwerte beispielsweise die Werte $E=(n+1/2)\hbar\omega$ mit $n=0,1,2,\ldots$ an, für Rotatoren $E=J(J+1)\hbar^2\cdot(2\Theta)^{-1}$ mit $J=0,1,2,\ldots$. 
+Bedingt durch diese Quantelungen ist das klassische, kontinuierliche Verhalten von physikalischen Systemen erst bei höheren Temperaturen beobachtbar, nämlich dann, wenn hohe Quantenzahlen vorliegen. Für Oszillatoren und Rotatoren liegen die Größenordnungen bei $k_BT\gg\hbar\omega $, respektive $k_BT\gg\hbar^2/\Theta$. 
+Das dadurch eintretende „Auftauen“ der Freiheitsgrade kann ab entsprechenden Schwellenwerten festgestellt werden. Für unsere zwei Beispiele liegen die Auftaubereiche für Wasserstoff bei über $1000$K für Oszillationen und bei $200$K für Rotationen.
+Anfangs dominieren also translatorische Prozesse, während mit Zunahme der Temperatur langsam auch der Rotationsbereich „auftaut“. 
+Diese Freiheitsgradverteilungen in Abhängigkeit der Temperatur werden wir später mittels der Beschreibung des wärmeabhängigen Verlaufs der spezifischen Wärme illustrieren.
+
+Wir wollen zunächst das Gelernte nutzen, um sowohl das chemische Potential, als auch die Entropie aufzuschreiben. Aus den zwei eingeführten Zustandsgleichungen folgt 
+\begin{align}
+    \label{eq:entropischeZustandsgleichungenIdealeGase}
+    \boxed{\frac{P}{T}=\frac{R}{v} \quad\text{und}\quad \frac{1}{T}=\frac{f}{2}\frac{R}{u}}
+\end{align} 
+in der Entropiedarstellung(??).
+Das chemische Potential bestimmen wir wie folgt über die \emph{Gibbs-Duhem-Gleichung} 
+\begin{align*}
+    \diff \left(\frac{\mu}{T}\right)&=u\diff\left(\frac{1}{T}\right)+v\diff \left(\frac{P}{T}\right)\\
+    &=-\frac{f}{2}\frac{R}{u}\diff u-\frac{R}{v}\diff v\\
+    &=\frac{\partial \frac{\mu}{T}}{\partial u}\diff u+\frac{\partial \frac{\mu}{T}}{\partial v}\diff v
+\end{align*}  
+und anschließender Integration 
+\begin{align*}
+    \frac{\mu}{T}-\left(\frac{\mu}{T}\right)_0=-\frac{f}{2}R\ln\frac{u}{u_0}-R\ln\frac{v}{v_0}.
+\end{align*}
+Wir können dabei $\mu_0$ und $v_0$ als dem Referenzzustand zugehörige Größen auffassen.
+Die Integrationskonstante $(\mu/T)_0$ bildet dabei das chemische Potential des Referenzzustandes.
+Mit Hilfe der Eulergleichung lässt sich die Entropie $S$ nun als Funktion von innerer Energie $U$, Volumen $V$ und Stoffmenge $N$ bestimmen. Wir wollen jedoch einen alternativen Weg einschlagen und die molare Entropie mittels des Differentials 
+\begin{align*}
+    \diff s&=\frac{1}{T}\diff u+\frac{P}{T}\diff v\\
+    &=\frac{f}{2}\frac{R}{u}\diff u+\frac{R}{v}\diff v    
+\end{align*} 
+bestimmen.
+Dabei haben wir im letzten Schritt die kürzlich hergeleiteten Beziehungen \eqref{eq:entropischeZustandsgleichungenIdealeGase} genutzt.
+Wir integrieren und erhalten analog zu voriger Vorgehensweise für die beiden nicht gemischten Terme: 
+\begin{align*}
+    \boxed{s=s_0+\frac{f}{2}R\ln\frac{u}{u_0}+R\ln\frac{v}{v_0}}\:.
+\end{align*}
+Noch ist die Entropie jedoch nicht vollständig, da die unbestimmte Integrationskonstante $s_0$ vorliegt. Wir wissen jedoch, dass die Entropie - bedingt durch den absoluten Temperaturnullpunkt - ebenfalls einen absoluten Nullpunkt bei $T=0$ haben muss. 
+Die statistische Mechanik berücksichtigt diesen Zusammenhang und liefert eine Vervollständigung des Entropieausdrucks für monoatomare ideale Gase in Form der \emph{Sackur-Tetrode-Formel}, welche jedoch hier nicht weiter ausgeführt werden soll.
+
