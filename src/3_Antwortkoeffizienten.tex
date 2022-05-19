@@ -1,7 +1,7 @@
 % !TeX root = Theo_IV.tex
-\chapter{Antwortkoeffizienten \& Beispielsysteme}
+\chapter{Antwortkoeffizienten und Beispielsysteme}
 Im Folgenden wollen wir uns mit der Anwendung des bislang erarbeiteten Formalismus der Wärmelehre beschäftigen. Dazu erarbeiten wir uns die Herleitungen verschiedener Antwortkoeffizienten, wie der spezifischen Wärme, beleuchten die sogenannten Maxwellbeziehungen und beschreiben das einkomponentige ideale Gas.
-\section{Antwortkoeffizienten: spezifische Wärme \& andere Ableitungen}
+\section{Antwortkoeffizienten: spezifische Wärme und andere Ableitungen}
 Die zugrunde liegende Frage, welche die Beschäftigung mit sogenannten \emph{Antwortkoeffizienten} motiviert, ist die Frage nach der Reaktivität eines Systems auf äußere Einflüsse. Dem entstammt auch die Benennung dieser \textendash{} im Folgenden genauer erörterten \textendash{} Materialkonstanten als Antwortkoeffizienten.
 Ein prominentes Beispiel einer solchen Materialkonstante ist die spezifische Wärme, die wir uns ebenfalls im Laufe dieses Unterkapitels näher anschauen wollen.
 
@@ -27,7 +27,7 @@ Wir wollen uns auch weiterhin auf die Zustandsvariablen Temperatur und Druck kon
 
 Durch Invertierung der energetischem Zustandsfunktionen erhalten wir die neuen Zustandsfunktionen
 \begin{align*}
-    \boxed{S=S(T,P) \quad\&\quad V=V(T,P)}\:.
+    \boxed{S=S(T,P) \quad\mathrm{und}\quad V=V(T,P)}\:.
 \end{align*}
 Erneut wollen wir mögliche Wege im Zustandsraum bei gleichbleibenden Parametern betrachten.
 
@@ -111,11 +111,11 @@ Eine kleine Randnotiz für den Leser: Die Inhalte, die wir hier erarbeiten, sind
 Wir ändern nun die zu betrachtenden Koordinaten und konzentrieren uns auf Systeme mit kontrollierbarer Temperatur $T$ und kontrollierbarem Volumen $V$.
 Analog zu vorigem Vorgehen schreiben wir die Zustandsfunktionen
 \begin{align*}
-    S=S(T,V)\quad\&\quad P=P(T,V)
+    S=S(T,V)\quad\mathrm{und}\quad P=P(T,V)
 \end{align*}
 in Abhängigkeit der gewählten Koordinaten und schreiben den sich daraus ergebenden Ausdruck für den molaren quasistatischen Wärmefluss
 \begin{align*}
-    \frac{T}{N}\diff S= \frac{\udiff Q}{N}=\frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_V \diff T +\frac{T}{N}\left(\frac{\partial S}{\partial V}\right)_T \diff V\equiv c_v(T,V)\diff T+\ldots.
+    \frac{T}{N}\diff S= \frac{\udiff Q}{N}=\frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_V \diff T +\frac{T}{N}\left(\frac{\partial S}{\partial V}\right)_T \diff V\equiv c_v(T,V)\diff T+\ldots
 \end{align*}
 Erneut erhalten wir damit einen Ausdruck für die molare spezifische Wärme, diesmal bei konstantem Volumen:
 \begin{align*}
@@ -144,7 +144,7 @@ gelangen wir zu folgenden Relationen:
 \begin{align*}
     \left(\frac{\partial T}{\partial V}\right)_{S,N}=-\left(\frac{\partial P}{\partial S}\right)_{V,N}=-T\left(\frac{\partial P}{\udiff Q}\right)_{V,N}.(??anführungszeichen)
 \end{align*}
-Dabei charakterisiert der erste Term die Temperaturänderung bei isentropischer \footnote{Isentropische Prozesse sind eine Form der adiabatischen Prozesse und bezeichnen thermodynamische Zustandsänderungen, bei denen die Entropie gleich bleibt, also auch ein Wärmeaustausch mit der Umgebung ausbleibt. Unter den allgemeineren, adiabatischen Zustandsänderungen versteht man Prozesse, welche ohne Wärmeaustausch mit der Umgebung ablaufen. Diese sind jedoch nicht zwangsläufig isentropisch.} Volumenänderung. Der rechte, bzw. letzte, Term definiert die Druckänderung bei isochorem Wärmezufluss. An dieser Stelle wollen wir bereits den Ausblick erwähnen, dass alle bildbaren zweiten Ableitungen der Größen eines betrachteten Systems mittels eines Minimalsatzes dreier Antwortkoeffizienten dargestellt werden können.
+Dabei charakterisiert der erste Term die Temperaturänderung bei isentropischer\footnote{Isentropische Prozesse sind eine Form der adiabatischen Prozesse und bezeichnen thermodynamische Zustandsänderungen, bei denen die Entropie gleich bleibt, also auch ein Wärmeaustausch mit der Umgebung ausbleibt. Unter den allgemeineren, adiabatischen Zustandsänderungen versteht man Prozesse, welche ohne Wärmeaustausch mit der Umgebung ablaufen. Diese sind jedoch nicht zwangsläufig isentropisch.} Volumenänderung. Der rechte, bzw. letzte, Term definiert die Druckänderung bei isochorem Wärmezufluss. An dieser Stelle wollen wir bereits den Ausblick erwähnen, dass alle bildbaren zweiten Ableitungen der Größen eines betrachteten Systems mittels eines Minimalsatzes dreier Antwortkoeffizienten dargestellt werden können.
 
 Für einfache Einkomponentensysteme können wir bereits eine Relation für die bisher eingeführten Antwortkoeffizienten formulieren:
 \begin{align*}
@@ -161,9 +161,10 @@ Die prominenteste Gleichung dürfte die \emph{ideale Gasgleichung} sein
 \end{align*}
 Dabei bezeichnet $R$ die \emph{universelle Gaskonstante} und ist das Produkt der \emph{Avogadrokonstante} (welche die Anzahl der Teilchen in einem Mol angibt) und der \emph{Boltzmann-Konstante} (deren Bedeutung wir später noch erörtern werden):
 \begin{align*}
-    R=Lk_B=\SI{8,3}{\joule\per\mole\per\kelvin}\quad\text{mit}\quad L=\SI{6e23}{\per\mole}\quad\text{und}\quad k_\mathrm{B}=\SI{1,38064852e23}{\joule\per\kelvin}
+    R=\avogadro k_B=\SI{ 8,314 462 618 153 24}{\joule\per\mole\per\kelvin}
 \end{align*}
-Im Allgemeinen gelten das \emph{Boyle-Mariottsche Gesetz},
+mit $\avogadro=\SI{6,02214076e23}{\per\mole}$ und $k_\mathrm{B}=\SI{1,38064852e23}{\joule\per\kelvin}$. 
+Im Allgemeinen gilt sowohl das \emph{Boyle-Mariottsche Gesetz},
 \begin{align*}
     PV=\mathrm{const},
 \end{align*}
@@ -176,10 +177,7 @@ Ferner gibt es die \emph{kalorische Zustandsgleichung}:
 \begin{align*}
     \boxed{U=\frac{f}{2}NRT\propto T}\:.
 \end{align*}
-\begin{align*}
-    \boxed{U=\frac{f}{2}NRT\propto T.}
-\end{align*}
-$f$ bezeichnet dabei die Zahl der Freiheitsgrade. Die innere Energie ist also für einfache \footnote{Die Kennzeichnung als „einfaches“ Gas wird im Laufe der nächsten Kapitel näher erläutert. Wir wollen bereits vorgreifen und darauf verweisen, dass damit Zustände mit höheren Quantenzahlen beschrieben werden, welche sich entsprechend „klassisch(er)(??)“ verhalten.} ideale Gase proportional zur Temperatur des Systems.
+$f$ bezeichnet dabei die Zahl der Freiheitsgrade. Die innere Energie ist also für einfache\footnote{Die Kennzeichnung als \anf{einfaches} Gas wird im Laufe der nächsten Kapitel näher erläutert. Wir wollen bereits vorgreifen und darauf verweisen, dass damit Zustände mit höheren Quantenzahlen beschrieben werden, welche sich entsprechend „klassisch(er)(??)“ verhalten.} ideale Gase proportional zur Temperatur des Systems.
 Die Gleichung ist ein direktes Ergebnis der statistischen Mechanik und ferner des dort genutzten \emph{Gleichverteilungssatzes}.
 \begin{formal}
     Der \textbf{Gleichverteilungssatz} der statistischen Mechanik besagt, dass ein System pro Freiheitsgrad $f$ eine molare innere Energie $u=RT/2$ annimmt.
@@ -196,7 +194,7 @@ An dieser Stelle machen wir einen kleinen Exkurs in die Quantenmechanik:
 Nicht alle Freiheitsgrade sind zu einem beliebigen Zeitpunkt in einem System angeregt. Begründen können wir dies mithilfe der Quantelung der Energieeigenwerte in der Quantenmechanik.
 Für Oszillatoren nehmen die Energieeigenwerte beispielsweise die Werte $E=(n+1/2)\hbar\omega$ mit $n=0,1,2,\ldots$ an, für Rotatoren $E=J(J+1)\hbar^2\cdot(2\Theta)^{-1}$ mit $J=0,1,2,\ldots$.
 Bedingt durch diese Quantelungen ist das klassische, kontinuierliche Verhalten von physikalischen Systemen erst bei höheren Temperaturen beobachtbar, nämlich dann, wenn hohe Quantenzahlen vorliegen. Für Oszillatoren und Rotatoren liegen die Größenordnungen bei $k_\mathrm{B}T\gg\hbar\omega $, respektive $k_\mathrm{B}T\gg\hbar^2/\Theta$.
-Das dadurch eintretende „Auftauen“ der Freiheitsgrade kann ab entsprechenden Schwellenwerten festgestellt werden. Für unsere zwei Beispiele liegen die Auftaubereiche für Wasserstoff bei über \SI{1000}{\kelvin} für Oszillationen und bei \SI{200}{\kelvin} für Rotationen.
+Das dadurch eintretende \anf{Auftauen} der Freiheitsgrade kann ab entsprechenden Schwellenwerten festgestellt werden. Für unsere zwei Beispiele liegen die Auftaubereiche für Wasserstoff bei über \SI{1000}{\kelvin} für Oszillationen und bei \SI{200}{\kelvin} für Rotationen.
 Anfangs dominieren also translatorische Prozesse, während mit Zunahme der Temperatur langsam auch der Rotationsbereich \anf{auftaut}.
 Diese Freiheitsgradverteilungen in Abhängigkeit der Temperatur werden wir später mittels der Beschreibung des wärmeabhängigen Verlaufs der spezifischen Wärme illustrieren.
 
