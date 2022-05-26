@@ -156,12 +156,15 @@ Die Energiedarstellung kann wie folgt geschrieben werden:
 \begin{align*}
     U(S,V,\sm_1,\ldots,\sm_r) \rightarrow U(S,X_1,X_2,\ldots,X_t).
 \end{align*}
-Wir benutzen also verallgemeinerte energetisch extensive Parameter, um die Fundamentalgleichung zu schreiben. Dabei erhalten wir die verallgemeinerten Ableitungen und das Energiedifferential
+Wir benutzen also verallgemeinerte energetisch extensive Parameter, um die Fundamentalgleichung zu schreiben. Dabei erhalten wir die verallgemeinerten Ableitungen 
+\begin{align*}
+    \left(\frac{\partial U}{\partial S}\right)_{X_1,\ldots,X_t}                & \equiv T = T(S,X_1,\ldots,X_t)             \\
+    \left(\frac{\partial U}{\partial X_j}\right)_{S,\ldots,X_{k\neq j},\ldots} & \equiv P_j = P_j(S,X_1,\ldots,X_t)         \\
+\end{align*}
+und das Energiedifferential
 \begin{align}
-    \left(\frac{\partial U}{\partial S}\right)_{X_1,\ldots,X_t}                & \equiv T = T(S,X_1,\ldots,X_t)           \nonumber  \\
-    \left(\frac{\partial U}{\partial X_j}\right)_{S,\ldots,X_{k\neq j},\ldots} & \equiv P_j = P_j(S,X_1,\ldots,X_t)        \nonumber \\
     \label{eq:energetische_fundamentalgleichung}
-    \rightarrow \diff U                                                        & = T\diff S + \sum_{j=1}^tP_j\diff X_j.
+    \diff U  & = T\diff S + \sum_{j=1}^tP_j\diff X_j.
 \end{align}
 Diese Abstraktion ermöglicht die Beschreibung viel allgemeinerer Systeme, für welche weiterhin das eingeführte Energie- bzw. Arbeitsdifferential $\diff U = P_j\diff X_j$ gilt.
 Dabei bezeichnen $X_j$ die verallgemeinerten Volumina oder Wege und $P_j$ die Drücke oder Kräfte.
@@ -169,19 +172,21 @@ Es sei angemerkt, dass wir den Druck folglich nur über eine Energiefunktion, we
 
 Betrachtet man ein einkomponentiges System, so liegt die Einführung neuer Größen, wie der \emph{molaren inneren Energie} $u$, nahe. Wir führen diese im Folgenden ein:
 \begin{align*}
-    u=\frac{U}{\sm}=u(\frac{S}{\sm},\frac{V}{\sm},\frac{\sm}{\sm})\equiv u(s,v).
+    u=\frac{U}{\sm}=u\left(\frac{S}{\sm},\frac{V}{\sm},\frac{\sm}{\sm}\right)\equiv u(s,v).
 \end{align*}
 Sie hängt folglich von der molaren Entropie $s$ und dem Molvolumen $v$ ab.
 Wir wollen nun das Differential dieser Größe berechnen. Formal schreiben wir
 \begin{align*}
-    \diff u = (\frac{\partial u}{\partial s})_v \diff s + (\frac{\partial u}{\partial v})_s\diff v
+    \diff u = \left(\frac{\partial u}{\partial s}\right)_v \diff s + \left(\frac{\partial u}{\partial v}\right)_s\diff v
 \end{align*}
 mit
 \begin{align*}
-    (\frac{\partial u}{\partial s})_v=(\frac{\partial u}{\partial s})_{V,\sm}&=(\frac{\partial U}{\partial S})_{V,N} =T    \\
-    (\frac{\partial u}{\partial v})_s                                                                             & = -P.
+    \left( \frac{\partial u}{\partial s} \right)_v=\left( \frac{\partial u}{\partial s} \right)_{V,\sm}&=\left( \frac{\partial U}{\partial S} \right)_{V,N} =T                                                             
 \end{align*}
-
+und 
+\begin{align*}
+    \left(\frac{\partial u}{\partial v}\right)_s   & = -P.       
+\end{align*}
 Das Konstanthalten des Molvolumens ist dabei äquivalent zum Konstanthalten des Volumens und der Molzahl (Stoffmenge). Die partielle Ableitung nach $s$ kann ferner nach $S$ umgeschrieben werden, womit wir die Temperatur $T$ erhalten.
 Analog betrachten wir die partielle Ableitung nach $v$ und erhalten den negativen Druck $P$.
 Insgesamt folgt das Differential
@@ -197,7 +202,7 @@ Analog zur Energiedarstellung betrachten wir nun eine verallgemeinerte Entropied
 \end{align*}
 Dabei benutzen wir wieder verallgemeinerte, diesmal entropische, extensive Parameter, um die entropische Fundamentalgleichung aufzuschreiben. Analog zur vorigen energetischen Beschreibung erhalten wir das Differential der Form
 \begin{align*}
-    \diff S = \sum_{j=0}^tF_j\diff X_j ,\quad\text{ mit } \quad F_j\equiv(\frac{\partial S}{\partial X_j})_{\ldots X_{k\neq j}}
+    \diff S = \sum_{j=0}^tF_j\diff X_j ,\quad\text{ mit } \quad F_j\equiv\left( \frac{\partial S}{\partial X_j} \right)_{\ldots X_{k\neq j}}
 \end{align*}
 mit den entropischen, intensiven Parametern
 \begin{align*}
@@ -467,5 +472,5 @@ Die Gibbs-Duhem-Beziehung kann auch in der Entropiedarstellung formuliert werden
 \end{align*}
 und für ein einfaches System ist dann
 \begin{align*}
-    U\diff\left(\frac{1}{T}\right) + V\diff\left(\frac{P}{T}\right)-\sum_{k=1}^r \sm_k\diff\left(\frac{\mu_k}{T}\right)
+    U\diff\left(\frac{1}{T}\right) + V\diff\left(\frac{P}{T}\right)-\sum_{k=1}^r \sm_k\diff\left(\frac{\mu_k}{T}\right)=0.
 \end{align*}

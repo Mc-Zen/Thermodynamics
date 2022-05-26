@@ -12,17 +12,19 @@ Ausgangspunkt unserer Betrachtungen bilden die Temperatur $T$ und der Druck $P$ 
 \paragraph*{Isochore}
 Der Begriff \emph{Isochore} bezeichnet Zustandsänderungen bei gleichbleibenden Volumina. Damit folgt für die Größen die Abhängigkeit:
 \begin{align*}
-    V=V_0=\mathrm{const}\quad\rightarrow\quad T=T(S,V_0) \quad\text{und}\quad P=(S,V_0) \quad\rightarrow\quad T=T(P)|_{V_0}.
+    V=V_0=\mathrm{const}.
 \end{align*}
-Wobei die Entropie $S$ durch Umkehren einer der Zustandsfunktionen und Einsetzen in die andere eliminiert wurde.
+Die Größen $T$ und $P$ sind damit nur noch Funktionen von $S$ und damit ist $T=T(P)_{V_0}$ bzw. $P=P(T)_{V_0}$ (dazu wird die Entropie $S$ durch Umkehren einer der Zustandsfunktionen $T$ und $P$ und Einsetzen in die andere eliminiert).
 
 
 \paragraph*{Isentrope}
 Analog gehen wir bei der Betrachtung der \emph{Isentrope} vor, welche Zustandsänderungen bezeichnen, bei denen die Entropie gleich bleibt:
 \begin{align*}
-    S=S_0=\mathrm{const}\quad\rightarrow\quad T=T(S_0,V) \quad\text{und}\quad P=(S_0,V) \quad\rightarrow\quad T=T(P)|_{S_0}.
+    S=S_0=\mathrm{const}%\quad\rightarrow\quad T=T(S_0,V) \quad\text{und}\quad P=(S_0,V) \quad\rightarrow\quad T=T(P)|_{S_0}.
 \end{align*}
-Wir motivieren letztere Betrachtung durch den Verweis darauf, dass sie bei der Beschreibung der Schallgeschwindigkeit essentiell ist. Dies ist dadurch bedingt, dass die dort ablaufenden Kompressionsprozesse derartig schnell verlaufen, dass keine Wärmezufuhr oder -abfuhr stattfinden kann und diese somit isentropisch sind (??hier wieder adiabatische und isentrope Prozesse äquivalent benutzt).
+Wir motivieren diese Betrachtung durch den Verweis darauf, dass sie bei der Beschreibung der Schallausbreitung essentiell ist. Dies ist dadurch bedingt, dass die dort ablaufenden Kompressionsprozesse derartig schnell verlaufen, dass keine Wärmezufuhr oder -abfuhr stattfinden kann und diese somit isentropisch sind. Unter den allgemeineren, \emph{adiabatischen} Zustandsänderungen versteht man Prozesse, welche ohne Wärmeaustausch mit der Umgebung ablaufen. Isentrope Prozesse sind adiabatisch, der Umkehrschluss gilt jedoch nicht. 
+
+
 Wir wollen uns auch weiterhin auf die Zustandsvariablen Temperatur und Druck konzentrieren, wobei wir im Allgemeinen kontrollierbare, bzw. im Experiment kontrollierte, Zustandsvariablen \textendash{} wie diese \textendash{} nun auch als \emph{Koordinaten} bezeichnen werden. Es sei darauf verwiesen, dass die Entropie $S$ keine solche direkt kontrollierbare Größe ist.
 
 Durch Invertierung der energetischem Zustandsfunktionen erhalten wir die neuen Zustandsfunktionen
@@ -35,7 +37,7 @@ Erneut wollen wir mögliche Wege im Zustandsraum bei gleichbleibenden Parametern
 \paragraph*{Isotherme}
 Zum einen können wir die Temperatur festhalten \textendash{} wir sprechen dann von \emph{Isothermen}, für welche
 \begin{align*}
-    T=T_0=\mathrm{const}\quad\rightarrow\quad S=S(T_0,P) \quad\text{und}\quad V=(T_0,P) \quad\rightarrow\quad S=S(V)|_{T_0}
+    T=T_0=\mathrm{const}%\quad\rightarrow\quad S=S(T_0,P) \quad\text{und}\quad V=(T_0,P) \quad\rightarrow\quad S=S(V)|_{T_0}
 \end{align*}
 gilt.
 
@@ -44,7 +46,7 @@ gilt.
 \paragraph*{Isobare}
 Zum anderen können wir den Druck konstant halten \textendash{} hier sprechen wir von \emph{Isobaren}, für welche wiederum
 \begin{align*}
-    P=P_0=\mathrm{const}\quad\rightarrow\quad S=S(T,P_0) \quad\text{und}\quad V=(T,P_0) \quad\rightarrow\quad S=S(V)|_{P_0}
+    P=P_0=\mathrm{const}%\quad\rightarrow\quad S=S(T,P_0) \quad\text{und}\quad V=(T,P_0) \quad\rightarrow\quad S=S(V)|_{P_0}
 \end{align*}
 folgt.
 
@@ -54,7 +56,7 @@ Wir fragen uns nun, wie Änderungen der Größen $T$ und $P$ auf das Volumen $V$
 \end{align*}
 und erhalten die \emph{relative Volumenänderung}
 \begin{align*}
-    \boxed{\frac{\diff V}{V}=\frac{1}{V}\left( \frac{\partial V}{\partial T}\right)_P\diff T+\frac{1}{V}\left( \frac{\partial V}{\partial P}\right)_T\diff P \equiv \alpha(T,P)\diff T-\kappa(T,P)\diff P}\:.
+    \frac{\diff V}{V}=\frac{1}{V}\left( \frac{\partial V}{\partial T}\right)_P\diff T+\frac{1}{V}\left( \frac{\partial V}{\partial P}\right)_T\diff P \equiv \alpha(T,P)\diff T-\kappa(T,P)\diff P.
 \end{align*}
 Zum einen haben wir den neuen Koeffizienten
 \begin{align*}
@@ -74,15 +76,16 @@ Dazu betrachten wir das entropische Differential
 \end{align*}
 und erhalten darüber den \emph{quasistatischen Wärmefluss pro Mol}
 \begin{align*}
-    \frac{T}{N}\diff S=\frac{\udiff Q}{N}=\frac{T}{N}\left( \frac{\partial S}{\partial T}\right)_P \diff T+\frac{T}{N}\left( \frac{\partial S}{\partial P}\right)_T \diff P\equiv c_p(T,P)\diff T+\ldots.
+    \frac{T}{\sm}\diff S=\frac{\udiff Q}{\sm}=\frac{T}{\sm}\left( \frac{\partial S}{\partial T}\right)_P \diff T+\frac{T}{\sm}\left( \frac{\partial S}{\partial P}\right)_T \diff P\equiv c_p(T,P)\diff T+\ldots.
 \end{align*}
 Wieder identifizieren wir einen neuen Koeffizienten (der nicht ausgeschriebene zweite Term führt hier auf keinen besonderen Koeffizienten): Die \emph{molare spezifische Wärme} bei konstantem Druck
 \begin{align*}
-    \boxed{c_p=\frac{T}{N} \left( \frac{\partial S}{\partial T} \right)_P= \frac{1}{N} \left( \frac{\udiff Q}{\diff T} \right)_P }\:.(??anführungszeichen)
+    \boxed{c_p=\frac{T}{\sm} \left( \frac{\partial S}{\partial T} \right)_P= \frac{1}{\sm} \left( \frac{\udiff Q}{\diff T} \right)_P }\:,
 \end{align*}
+obwohl $\udiff Q$ eigentlich ein unvollständiges Differential ist, sodass der letzte Term nur beschränkt gültig ist. 
 Die insgesamt zugeführte Wärme lässt sich darüber nun leicht durch Aufintegration der Form
 \begin{align*}
-    Q(T)=\int_{T_0}^{T} \udiff Q = \int_{T_0}^{T}T' \diff S = \int_{T_0}^{T}Nc_p\diff T'
+    Q(T)=\int_{T_0}^{T} \udiff Q = \int_{T_0}^{T}T' \diff S = \int_{T_0}^{T}\sm c_p\diff T'
 \end{align*}
 bestimmen.
 
@@ -103,7 +106,7 @@ Wir führen nun das neue \emph{thermodynamische Potential} der \emph{Enthalpie}
 \end{align*}
 ein \textendash{} wir werden zu einem späteren Zeitpunkt genauer darauf zurückkommen \textendash{} und schreiben die spezifische Wärme mittels der neuen Größe als
 \begin{align*}
-    c_p=\frac{1}{N}\left( \frac{\partial H}{\partial T}\right)_P.
+    c_p=\frac{1}{\sm}\left( \frac{\partial H}{\partial T}\right)_P.
 \end{align*}
 Eine kleine Randnotiz für den Leser: Die Inhalte, die wir hier erarbeiten, sind in der Regel mathematisch einfach. Entscheidend sind die Überlegungen zur Festlegung und Betrachtung konstanter Größen und der daraus folgenden Zusammenhänge.
 
@@ -115,15 +118,16 @@ Analog zu vorigem Vorgehen schreiben wir die Zustandsfunktionen
 \end{align*}
 in Abhängigkeit der gewählten Koordinaten und schreiben den sich daraus ergebenden Ausdruck für den molaren quasistatischen Wärmefluss
 \begin{align*}
-    \frac{T}{N}\diff S= \frac{\udiff Q}{N}=\frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_V \diff T +\frac{T}{N}\left(\frac{\partial S}{\partial V}\right)_T \diff V\equiv c_v(T,V)\diff T+\ldots
+    \frac{T}{\sm}\diff S= \frac{\udiff Q}{\sm}=\frac{T}{\sm}\left(\frac{\partial S}{\partial T}\right)_V \diff T +\frac{T}{\sm}\left(\frac{\partial S}{\partial V}\right)_T \diff V\equiv c_v(T,V)\diff T+\ldots
 \end{align*}
 Erneut erhalten wir damit einen Ausdruck für die molare spezifische Wärme, diesmal bei konstantem Volumen:
 \begin{align*}
-    \boxed{c_v=\frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_V="\frac{1}{N}\left(\frac{\udiff Q}{\diff T}\right)_V"}\:.(??anführungszeichen)
+    \boxed{c_v=\frac{T}{\sm}\left(\frac{\partial S}{\partial T}\right)_V=\frac{1}{\sm}\left(\frac{\udiff Q}{\diff T}\right)_V}\:,
 \end{align*}
+obwohl $\udiff Q$ eigentlich wieder ein unvollständiges Differential ist. 
 Dank der Konstanz des Volumens können wir die Relation $\udiff Q=\diff U$ nutzen und für die spezifische Wärme alternativ
 \begin{align*}
-    \boxed{c_v=\frac{1}{N}\left(\frac{\partial U}{\partial T}\right)_V}
+    \boxed{c_v=\frac{1}{\sm}\left(\frac{\partial U}{\partial T}\right)_V}
 \end{align*}
 schreiben.
 
@@ -134,7 +138,7 @@ so wird zusätzlich zur Temperaturerhöhung auch mechanische Arbeit zur Ausdehnu
 Wir greifen nun auf die bereits eingeführte Integrabilitätsbedingung zurück und erörtern am Beispiel der inneren Energie die Relationen zwischen den zweiten Ableitungen, welche wir auch als \emph{Maxwellbeziehungen} bezeichnen.
 Fangen wir wieder beim bekannten vollständigen Energiedifferential
 \begin{align*}
-    \diff U = T\diff S-P\diff V+\mu \diff N
+    \diff U = T\diff S-P\diff V+\mu \diff \sm 
 \end{align*}
 an. Mithilfe der Integrabilitätsbedingung
 \begin{align*}
@@ -142,13 +146,14 @@ an. Mithilfe der Integrabilitätsbedingung
 \end{align*}
 gelangen wir zu folgenden Relationen:
 \begin{align*}
-    \left(\frac{\partial T}{\partial V}\right)_{S,N}=-\left(\frac{\partial P}{\partial S}\right)_{V,N}=-T\left(\frac{\partial P}{\udiff Q}\right)_{V,N}.(??anführungszeichen)
+    \left(\frac{\partial T}{\partial V}\right)_{S,\sm }=-\left(\frac{\partial P}{\partial S}\right)_{V,\sm }=-T\left(\frac{\partial P}{\udiff Q}\right)_{V,\sm }
 \end{align*}
-Dabei charakterisiert der erste Term die Temperaturänderung bei isentropischer\footnote{Isentropische Prozesse sind eine Form der adiabatischen Prozesse und bezeichnen thermodynamische Zustandsänderungen, bei denen die Entropie gleich bleibt, also auch ein Wärmeaustausch mit der Umgebung ausbleibt. Unter den allgemeineren, adiabatischen Zustandsänderungen versteht man Prozesse, welche ohne Wärmeaustausch mit der Umgebung ablaufen. Diese sind jedoch nicht zwangsläufig isentropisch.} Volumenänderung. Der rechte, bzw. letzte, Term definiert die Druckänderung bei isochorem Wärmezufluss. An dieser Stelle wollen wir bereits den Ausblick erwähnen, dass alle bildbaren zweiten Ableitungen der Größen eines betrachteten Systems mittels eines Minimalsatzes dreier Antwortkoeffizienten dargestellt werden können.
+(natürlich ist $\udiff Q$ erneut ein unvollständiges Differential). 
+Dabei charakterisiert der erste Term die Temperaturänderung bei isentropischer Volumenänderung. Der letzte Term definiert die Druckänderung bei isochorem Wärmezufluss. An dieser Stelle wollen wir bereits den Ausblick erwähnen, dass alle bildbaren zweiten Ableitungen der Größen eines betrachteten Systems mittels eines Minimalsatzes dreier Antwortkoeffizienten dargestellt werden können.
 
 Für einfache Einkomponentensysteme können wir bereits eine Relation für die bisher eingeführten Antwortkoeffizienten formulieren:
 \begin{align*}
-    \boxed{c_p=c_v+\frac{TV\alpha^2}{N\kappa_T}}\:.
+    \boxed{c_p=c_v+\frac{TV\alpha^2}{\sm \kappa_T}}\:.
 \end{align*}
 Besonders nützlich ist, dass die Koeffizienten experimentell sehr gut zugänglich sind. Die genaue Herleitung der Relation soll später erfolgen.
 
@@ -157,7 +162,7 @@ Wir wollen das bisher Erarbeitete nun im Rahmen des Modells der \emph{idealen Ga
 Welche Zustandsgleichungen gelten nun für dieses ideale Gas?
 Die prominenteste Gleichung dürfte die \emph{ideale Gasgleichung} sein
 \begin{align*}
-    \boxed{PV=NRT}\:.
+    \boxed{PV=\sm RT}\:.
 \end{align*}
 Dabei bezeichnet $R$ die \emph{universelle Gaskonstante} und ist das Produkt der \emph{Avogadrokonstante} (welche die Anzahl der Teilchen in einem Mol angibt) und der \emph{Boltzmann-Konstante} (deren Bedeutung wir später noch erörtern werden):
 \begin{align*}
@@ -175,9 +180,9 @@ als auch das \emph{Gay-Lussacsche Gesetz},
 welche beide bekannte Ergebnisse experimenteller Untersuchungen sind.
 Ferner gibt es die \emph{kalorische Zustandsgleichung}:
 \begin{align*}
-    \boxed{U=\frac{f}{2}NRT\propto T}\:.
+    \boxed{U=\frac{f}{2}\sm RT\propto T}\:.
 \end{align*}
-$f$ bezeichnet dabei die Zahl der Freiheitsgrade. Die innere Energie ist also für einfache\footnote{Die Kennzeichnung als \anf{einfaches} Gas wird im Laufe der nächsten Kapitel näher erläutert. Wir wollen bereits vorgreifen und darauf verweisen, dass damit Zustände mit höheren Quantenzahlen beschrieben werden, welche sich entsprechend „klassisch(er)(??)“ verhalten.} ideale Gase proportional zur Temperatur des Systems.
+$f$ bezeichnet dabei die Zahl der Freiheitsgrade. Die innere Energie ist also für einfache\footnote{Die Kennzeichnung als \anf{einfaches} Gas wird im Laufe der nächsten Kapitel näher erläutert. Wir wollen bereits vorgreifen und darauf verweisen, dass damit Zustände mit höheren Quantenzahlen beschrieben werden, welche sich entsprechend \anf{klassisch} verhalten.} ideale Gase proportional zur Temperatur des Systems.
 Die Gleichung ist ein direktes Ergebnis der statistischen Mechanik und ferner des dort genutzten \emph{Gleichverteilungssatzes}.
 \begin{formal}
     Der \textbf{Gleichverteilungssatz} der statistischen Mechanik besagt, dass ein System pro Freiheitsgrad $f$ eine molare innere Energie $u=RT/2$ annimmt.
@@ -203,7 +208,7 @@ Wir wollen zunächst das Gelernte nutzen, um sowohl das chemische Potential, als
     \label{eq:entropischeZustandsgleichungenIdealeGase}
     \boxed{\frac{P}{T}=\frac{R}{v} \quad\text{und}\quad \frac{1}{T}=\frac{f}{2}\frac{R}{u}}
 \end{align}
-in der Entropiedarstellung(??).
+in der Entropiedarstellung.%(??).
 Das chemische Potential bestimmen wir wie folgt über die \emph{Gibbs-Duhem-Gleichung}
 \begin{align*}
     \diff \left(\frac{\mu}{T}\right) & =u\diff\left(\frac{1}{T}\right)+v\diff \left(\frac{P}{T}\right)                                    \\
@@ -216,7 +221,7 @@ und anschließender Integration
 \end{align*}
 Wir können dabei $\mu_0$ und $v_0$ als dem Referenzzustand zugehörige Größen auffassen.
 Die Integrationskonstante $(\mu/T)_0$ bildet dabei das chemische Potential des Referenzzustandes.
-Mithilfe der Eulergleichung lässt sich die Entropie $S$ nun als Funktion von innerer Energie $U$, Volumen $V$ und Stoffmenge $N$ bestimmen. Wir wollen jedoch einen alternativen Weg einschlagen und die molare Entropie mittels des Differentials
+Mithilfe der Eulergleichung lässt sich die Entropie $S$ nun als Funktion von innerer Energie $U$, Volumen $V$ und Stoffmenge $\sm$ bestimmen. Wir wollen jedoch einen alternativen Weg einschlagen und die molare Entropie mittels des Differentials
 \begin{align*}
     \diff s & =\frac{1}{T}\diff u+\frac{P}{T}\diff v            \\
             & =\frac{f}{2}\frac{R}{u}\diff u+\frac{R}{v}\diff v
@@ -239,10 +244,10 @@ und den thermischen Ausdehnungskoeffizienten
 \begin{align*}
     \alpha=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P=\frac{1}{T},
 \end{align*}
-wobei wir uns die ideale Gasgleichung $PV=NRT$ zunutze gemacht haben, um die partiellen Ableitungen auszuschreiben.
+wobei wir uns die ideale Gasgleichung $PV=\sm RT$ zunutze gemacht haben, um die partiellen Ableitungen auszuschreiben.
 Aus der Maxwell-Relation folgt für die spezifischen Wärmekoeffizienten
 \begin{align*}
-    c_p=c_v+\frac{TV\alpha^2}{N\kappa_T}.
+    c_p=c_v+\frac{TV\alpha^2}{\sm \kappa_T}.
 \end{align*}
 Setzen wir die eben formulierten Koeffizienten ein, erhalten wir für das ideale Gas die Relation
 \begin{align*}
@@ -250,7 +255,7 @@ Setzen wir die eben formulierten Koeffizienten ein, erhalten wir für das ideale
 \end{align*}
 Dabei bezeichnet der Koeffizient
 \begin{align*}
-    c_v=\frac{1}{N}\left(\frac{\partial U}{\partial T}\right)_V=\frac{f}{2}R
+    c_v=\frac{1}{\sm }\left(\frac{\partial U}{\partial T}\right)_V=\frac{f}{2}R
 \end{align*}
 den spezifischen Wärme-Antwortkoeffizienten des idealen Gases bei konstantem Volumen und
 \begin{align*}
@@ -283,18 +288,18 @@ Die drei vorgestellten Ausdrücke charakterisieren alle eine äquivalente Quanti
 Für $\gamma = 1$, also für Systeme großer Freiheitsgrade bzw. Dimensionen, erhalten wir den Grenzfall der bekannten idealen Gasgleichung.
 Analog können die Quantifizierungen
 \begin{itemize}
-    \item isochorer Prozesse: $\frac{P}{T}=\mathrm{const}$,
-    \item isobarer Prozesse: $\frac{V}{T}=\mathrm{const}$ und
+    \item isochorer Prozesse: ${P}/{T}=\mathrm{const}$,
+    \item isobarer Prozesse: ${V}/{T}=\mathrm{const}$ und
     \item isothermer Prozesse $PV=konstant$
 \end{itemize}
 hergeleitet werden.
 
 Wir wollen uns nun überlegen, ob wir auch einen alternativen Zugang zur Beschreibung der inneren Energie finden können, welcher nicht der statistischen Mechanik und ihrer Beziehung
 \begin{align*}
-    U=\frac{f}{2}NRT
+    U=\frac{f}{2}\sm RT
 \end{align*}
 entspringt, sondern phänomenologischer Natur ist.
-Dabei steht uns die messbare Relation $PV=NRT$ der idealen Gasgleichung zur Verfügung.
+Dabei steht uns die messbare Relation $PV=\sm RT$ der idealen Gasgleichung zur Verfügung.
 In der Experimentalphysik begegnet uns der \emph{Gay-Lussacsche Überstromversuch}. Dieser isoliert ein zu untersuchendes Gas in einer Hälfte eines zweigeteilten Kastens. Im nächsten Schritt öffnen wir einen begrenzten Bereich der Trennwand und ermöglichen dadurch die freie Expansion des Gases in die zweite Hälfte. Nun beobachten wir, dass die Temperatur des Systems konstant bleibt.
 Aufgrund der Isolation des Systems bleibt dessen innere Energie erhalten und es gilt:
 \begin{align*}
@@ -311,7 +316,7 @@ und führt uns somit zu der Einsicht
 \begin{formal}
     Die innere Energie eines abgeschlossenen Systems eines allgemeinen idealen Gases ist ausschließlich von dessen Temperatur abhängig.
 \end{formal}
-Damit folgt auch, dass die spezifische Wärme $c_v$ - wie erwartet \textendash{} (ausschließlich??) temperaturabhängig ist\footnote{Wir erinnern an dieser Stelle an den gemachten Vorgriff bezüglich der \anf{Auftaubereiche} der Freiheitsgrade, welche im quantenmechanischen Formalismus verankert sind},
+Damit folgt auch, dass die spezifische Wärme $c_v$ - wie erwartet \textendash{} ausschließlich temperaturabhängig ist\footnote{Wir erinnern an dieser Stelle an den gemachten Vorgriff bezüglich der \anf{Auftaubereiche} der Freiheitsgrade, welche im quantenmechanischen Formalismus verankert sind},
 \begin{align*}
     c_v=\left(\frac{\partial u}{\partial T}\right)_v=c_v(T),
 \end{align*}
@@ -349,11 +354,11 @@ Wir beobachten ferner, dass für Festkörper ein zu $T^3$ proportionaler Verlauf
 
 Wir wollen uns nun erweiterte Systeme vorstellen, in denen eine Mischung einfacher idealer Gase vorliegen. Es stellt sich uns die Frage, wie die Fundamentalgleichungen aussehen, die dieses neue System beschreiben. Für die innere Energie,
 \begin{align*}
-    \boxed{U=\left(\sum_j\frac{f_j}{2}N_j\right)RT}\:,
+    \boxed{U=\left(\sum_j\frac{f_j}{2}\sm _j\right)RT}\:,
 \end{align*}
 ist die Herleitung naheliegend, da wir die neuen, unterschiedlichen Freiheitsgrade und Stoffmengen in die altbekannte Fundamentalgleichung einsetzen können und über die hinzukommenden Terme nur summieren müssen (dies ist uns deshalb erlaubt, da wir für ideale Gase davon ausgehen, dass keine Wechselwirkungen zwischen den Gasmolekülen vorliegen). Auch die entropische Fundamentalgleichung ergibt sich als Summation über die Einzelentropien der unterschiedlichen Gase:
 \begin{align*}
-    \boxed{S=\sum_jN_js_j=\sum_jN_j\left(s_{j0}+\frac{f_j}{2}R\ln\frac{T}{T_0}+R\ln\frac{V}{N_jv_0}\right)}
+    \boxed{S=\sum_j\sm _js_j=\sum_j\sm _j\left(s_{j0}+\frac{f_j}{2}R\ln\frac{T}{T_0}+R\ln\frac{V}{\sm _jv_0}\right)}
 \end{align*}
 (wieder charakterisieren die Größen $T_0,v_0,s_{j0}$ den Referenzzustand).
 Dies ist eine Konsequenz des additiven Charakters der Entropie und wird durch das \emph{Gibbs'sche Theorem} beschrieben:
@@ -364,31 +369,34 @@ Dies ist eine Konsequenz des additiven Charakters der Entropie und wird durch da
     Das \textbf{Gibbs'sche Theorem} besagt, dass sich die Gesamtentropie eines Systems gemischter idealer Gase als die Summe der Einzelentropien der Gase schreiben lässt.
 \end{formal}
 Veranschaulichen können wir es, indem wir uns einen sogenannten \emph{Mischapparat} vorstellen, welcher zwei unterschiedliche Gase und semipermeable Membranen, die für je eine Gassorte durchlässig sind, bei gleichem Druck $P=P_1=P_2$ und gleicher Temperatur $T=T_1=T_2$ beinhaltet. Wir stellen uns vor, dass die Ausgangssituation der Abb [Grafik] entspricht \textendash{} Membran (1) ist für das erste Gas durchlässig, Membran (2) für das zweite, sodass beide Gase noch in getrennten Kammern vorliegen. Nun kann der Kolben gemeinsam mit
-Membran (2) quasistatisch(??) bewegt werden, bis die Gase \textendash{} immer noch je im selben Volumen enthalten \textendash{} vollständig miteinander vermischt sind. Es ist ersichtlich, dass dieser Vorgang ohne weitere Prozesse abläuft, Volumina $V_1,V_2$, Stoffmengen $N_1,N_2$, Druck $P_1,P_2$und Temperatur $T_1,T_2$ also durchweg konstant bleiben und letztlich auch die innere Energie $U$ erhalten wird. Folglich ist auch die Gesamtentropie $S$ vor und nach der Mischung hier gleich groß.
+Membran (2) quasistatisch%(??) 
+bewegt werden, bis die Gase \textendash{} immer noch je im selben Volumen enthalten \textendash{} vollständig miteinander vermischt sind. Es ist ersichtlich, dass dieser Vorgang ohne weitere Prozesse abläuft, Volumina $V_1,V_2$, Stoffmengen $\sm _1,\sm _2$, Druck $P_1,P_2$und Temperatur $T_1,T_2$ also durchweg konstant bleiben und letztlich auch die innere Energie $U$ erhalten wird. Folglich ist auch die Gesamtentropie $S$ vor und nach der Mischung hier gleich groß.
 Hinweis: Wir wollen noch einmal darauf verweisen, dass \emph{Mischentropien} sehr wohl existieren, d.h., dass Mischprozesse einen Zuwachs der Entropie verursachen können. Dies setzt jedoch einen anderen Versuchsaufbau voraus, für welchen beispielsweise keine Erhaltung der Volumina $V_1,V_2$ gilt. Das simpelste Beispiel wird durch eine Kammer beschrieben, welche durch eine Trennwand geteilt wird. Links und rechts der Trennwand befinden sich bei gleicher Temperatur $T$ und Druck,
 \begin{align*}
-    P\propto\frac{N_1}{V_1}=\frac{N_2}{V_2}=\frac{N}{V}=\frac{N_1+N_2}{V_1+V_2},
+    P\propto\frac{\sm _1}{V_1}=\frac{\sm _2}{V_2}=\frac{\sm }{V}=\frac{\sm _1+\sm _2}{V_1+V_2},
 \end{align*}
 zwei unterschiedliche Gase. Wird die Trennwand nun gemäß Abb[Grafik] entfernt, so unterscheiden sich die anfangs eingenommenen Volumina der Gase, $V_1$, respektive $V_2$, von dem zuletzt eingenommenen Gesamtvolumen $V_1+V_2$.
 Wir wollen die Entropie des Endzustandes beschreiben und mit der Entropie vor Mischung in Relation setzen. Dazu schreiben wir zuerst die Zustandsgleichung
 \begin{align*}
-    S=\sum_jN_js_j=\sum_jN_j\left(s_{j0}+\frac{f_j}{2}R\ln\frac{T}{T_0}+R\ln\frac{V}{N_jv_0}\right)
+    S=\sum_j\sm _js_j=\sum_j\sm _j\left(s_{j0}+\frac{f_j}{2}R\ln\frac{T}{T_0}+R\ln\frac{V}{\sm _jv_0}\right)
 \end{align*}
 auf. Wir wollen nun den letzten Term wie folgt umschreiben:
 \begin{align*}
-    \ln\frac{V}{N_jv_0}=\ln\frac{V}{Nv_0}-\ln\frac{N_j}{N}\quad\text{mit}\quad\frac{N_j}{N}=x_j\quad\text{und}\quad N=\sum_jN_j.
+    \ln\frac{V}{\sm _jv_0}=\ln\frac{V}{\sm v_0}-\ln\frac{\sm _j}{\sm }\quad\text{mit}\quad\frac{\sm _j}{\sm }=x_j\quad\text{und}\quad \sm =\sum_j\sm _j.
 \end{align*}
 Nach Einsetzen erhalten wir
 \begin{align*}
     \boxed{
         \begin{aligned}
-            S & =\sum_jN_j\left(s_{j0}+\frac{f_j}{2}R\ln\frac{T}{T_0}+R\ln\frac{V}{Nv_0}\right)-NR\sum_jx_j\ln x_j                 \\
-              & =\sum_jS_j(\text{Einzelgase bei $T$ und }P\propto \frac{N_j}{v_j}=\frac{N}{V})+\text{Mischungsentropie $S_m(>0!)$}
+            S & =\sum_j\sm _j\left(s_{j0}+\frac{f_j}{2}R\ln\frac{T}{T_0}+R\ln\frac{V}{\sm v_0}\right)-\sm R\sum_jx_j\ln x_j                 \\
+              & =\sum_jS_j(\text{Einzelgase bei $T$ und }P\propto \frac{\sm _j}{v_j}=\frac{\sm }{V})+\text{Mischungsentropie $S_m(>0)$}
         \end{aligned}
     }\:.
 \end{align*}
 Dies entspricht der Entropie des Systems vor Mischung und einem zusätzlichen positiven Term für die Mischungsentropie $S_m$.
 \paragraph*{Gibbs'sches Paradoxon}
 Wir haben bislang jedoch noch eine Anwendung des Theorems übersehen, die zum Widerspruch führt und auch als \emph{Gibbs'sches Paradoxon} bekannt ist.
-Betrachten wir einmal den Grenzfall gleicher Gaskomponenten \textendash{} wir werden feststellen müssen, dass dies beim beschriebenen Mischprozess zu einer unsinnigen Entropiezunahme führt. Schließlich können wir uns vorstellen, die Trennwand zu einem beliebigen Zeitpunkt wieder einzusetzen und damit die Anfangsbedingungen wieder hergestellt zu haben \textendash{} für die natürlich die anfängliche Entropie vorherrscht. Vertrauen wir der Herleitung des positiven Mischterms der Entropie bedingungslos, so haben wir gerade einen simplen Prozess der Entropieverringerung beschrieben, welcher sich äußerst unphysikalisch anfühlt. Die Quantenmechanik hilft uns hier glücklicherweise das Paradoxon begründet aufzulösen: Die Systeme vor und nach der Trennung unterscheiden sich physikalisch nicht (natürlich setzen wir erneut gleiche Anfangstemperaturen und Drücke voraus). Alle Gasmoleküle werden als zueinander identisch angesehen, sodass keine zusätzlichen Systemkonfigurationen bei Mischung vorliegen, weshalb auch der Entropie-Mischterm plausiblerweise in diesem Fall null bleibt.
+Betrachten wir einmal den Grenzfall gleicher Gaskomponenten \textendash{} wir werden feststellen müssen, dass dies beim beschriebenen Mischprozess zu einer unsinnigen Entropiezunahme führt. Schließlich können wir uns vorstellen, die Trennwand zu einem beliebigen Zeitpunkt wieder einzusetzen und damit die Anfangsbedingungen wieder hergestellt zu haben \textendash{} für die natürlich die anfängliche Entropie vorherrscht. Vertrauen wir der Herleitung des positiven Mischterms der Entropie bedingungslos, so haben wir gerade einen simplen Prozess der Entropieverringerung beschrieben, welcher sich äußerst unphysikalisch anfühlt. 
+
+Die Quantenmechanik hilft uns hier glücklicherweise das Paradoxon begründet aufzulösen: Die Systeme vor und nach der Trennung unterscheiden sich physikalisch nicht (natürlich setzen wir erneut gleiche Anfangstemperaturen und Drücke voraus). Alle Gasmoleküle werden als zueinander identisch angesehen, sodass keine zusätzlichen Systemkonfigurationen bei Mischung vorliegen, weshalb auch der Entropie-Mischterm plausiblerweise in diesem Fall null bleibt.
 
