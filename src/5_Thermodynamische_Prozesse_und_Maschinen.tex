@@ -1,0 +1,105 @@
+% !TeX root = Theo_IV.tex
+
+\chapter{Thermodynamische Prozesse und Machinen}
+Im Laufe dieses Kapitels wollen wir uns mit diversen thermodynamischen Prozessen und Maschinen auseinandersetzen. Ein Beispiel für letztere sind Wärmekraft- und Carnot-Maschinen, welche insbesondere deshalb für uns interessant sind, da ihre Beschreibung historisch die Entwicklung des Entropiebegriffes begründet hat.
+Die Realisierung thermodynamischer Maschinen fußt auf zwei wesentlichen Prinzipien: Der Energieerhaltung (und allen damit verbundenen Gesetzen der Mechanik) und der monotonen Entropiezunahme ($\Delta S \geq 0$) in abgeschlossenen Systemen.
+
+Wir wollen zunächst mit der Charakterisierung einiger thermodynamischer Prozesse anfangen.
+
+
+\section{Quasistatische Prozesse}
+Die quasistatischen Prozesse sind uns mittlerweile sehr gut bekannt. Sie beschreiben Prozessführungen, welche zu jedem Zeitpunkt Gleichgewichtszustände des Systems beschreiben.
+\paragraph*{Der thermodynamische Konfigurationsraum}
+Wir wollen zur Veranschaulichung und Charakterisierung allgemeiner Prozessführungen den sogenannten thermodynamischen Konfigurationsraum einführen. Dieser wird durch die extensiven Variablen eines betrachteten Systems aufgespannt und in Abb. [Abb][Ref] dargestellt.
+Die Menge aller Gleichgewichtszustände eines quasistatischen Prozesses liegen in einem solchen Konfigurationsraum auf einer Hyperfläche $S=S(U,V,X_j$), die der Beziehung 
+\begin{align*}
+    \left(\frac{\partial S}{\partial U}\right)_{V,X_j}=\frac{1}{T}>0
+\end{align*}
+(welche aus Postulat \ref{post:eigenschaften_entropie} folgt) unterliegt.  
+Wir können auch zusammengesetzte, abgeschlossene Systeme leicht im Konfigurationsraum darstellen, da sich die extensiven Größen eines Teilsystemes aus der Additivität und der Kenntnis der Größen des anderen Teilsystemes ergeben. Formal ist die Beschreibung der Hyperfläche durch $S=S(U^{(1)},X_j^{(1)},U^{(2)},X_j^{(2)})$ in diesem Fall also zu 
+\begin{align*}
+    S&=S(U^{(1)},X_j^{(1)},U=U^{(1)}+U^{(2)},X_j=X_j^{(1)}+X_j^{(2)})\\
+    &=S(U^{(1)},X_j^{(1)},U,X_j)
+\end{align*}
+äquivalent.
+Nichtgleichgewichtszustände hingegen haben, bedingt durch ihre Dynamik, viel mehr Dimensionen und spannen einen bedeutend größeren Raum auf. Dieser beinhaltet z.B. Inhomogenitäten, Turbulenzen, Flussfelder und viele mehr. 
+
+\paragraph*{Reale und quasistatische Prozesse}
+Wir wissen, dass es sich bei der quasistatischen Prozessführung um eine Idealisierung handelt, welche reale Elemente - wie Geschwindigkeiten, Flüsse, Raten und weitere - vernachlässigt. 
+Nichtsdestotrotz ist diese Idealisierung für uns insofern nützlich, als das die Thermodynamik sehr genaue (Vor-)Aussagen nur über eben solche Prozessführungen erlaubt.
+Für die Abbildung realer Prozesse - i.d.R. liegen hier wie in Abb. [Abb] [Ref] illustriert ein Anfangszustand A und ein Endzustand Z auf der Hyperfläche vor, welche über einen beliebigen Weg im Konfigurationsraum (über Nichtgleichgewichtszustände) miteinander verbunden sind - müssen wir die Diskrepanz zur Idealisierung jedoch berücksichtigen. 
+Eine mögliche Annäherung, welche den Übergang von Idealisierung zu Realität überbrückt - die \emph{quasi-stationären Prozesse} - ist die Darstellung realer Prozesse als dichte Abfolge von Gleichgewichtszuständen über Nichtgleichgewichtszustände. Anschaulich gesprochen entspricht dies einer Abfolge von Zuständen auf einer Hyperfläche $S$ im Konfigurationsraum, welche über Wege - welche nicht auf der Hyperfläche liegen - miteinander verbunden sind. Auch dies haben wir in Abb. [Abb2 neben Abb1][Ref] illustriert.    
+\begin{formal}
+     \textbf{Reale Prozesse} entwickeln sich i.d.R. ausgehend von einem Punkt $A$ auf der Hyperfläche $S$ über Nichtgleichgewichtszustände des Konfigurationsraumes (außerhalb von $S$) zu einem Endzustand $Z$, welcher wiederum als Gleichgewichtszustand in $S$ liegt.\\
+     \textbf{Quasi-stationäre Prozesse} entwickeln sich über eine dichte Abfolge von Gleichgewichtszuständen in $S$, welche über Nichtgleichgewichtszustände miteinander verbunden sind.
+ \end{formal}
+
+\paragraph*{Zeitkonstanten}
+Eine weitere naheliegende Frage ist die Frage nach 55
+An dieser Stelle könnte man natürlich danach fragen, wie langsam überhaupt quasistatisch ist. 
+Wir wollen dies anhand eines Beispiels erörtern. 
+Quasistatisch bedeutet, dass die Zeiten $\Delta t$ zwischen aufeinanderfolgenden Gleichgewichtszuständen klein gegenüber der charakteristischen Relaxationszeit $\tau$ bei einer Störung des Gleichgewichts ist. 
+
+Betrachte dazu als Beispiel die adiabatische Kompression eines Gases in einer Kammer der Länge $l$. Die Kompression erfolgt durch einen Kolben an dem einen Ende. Hier ist die charakteristische Relaxationszeit z.B. die Zeit, die eine Turbulenz oder Verwirbelung am Kolben braucht, um die Kammer zu durchlaufen. Mit einer Schallgeschwindigkeit $c$ ergibt sich damit $\tau =l/c$. Mit Luft als Medium und eine Länge von \SI{1}{\m} ist $\tau=\SI{0.003}{\s}$. 
+
+Für quasistatische Prozesse gilt also 
+
+
+
+\section{Reversible und irreversible Prozesse}
+
+
+\paragraph*{Definition und Bemerkungen }
+Wir betrachten ein abgeschlossenes, zusammengesetztes System, welches durch die Lockerung einer Zwangsbedingung von Zustand A
+in den Zustand B übergeht. Dem 2. Entropiepostulat zufolge ist die Entropie des Zustandes B größer, als die Entropie des Zustandes A.
+Folglich ist der umgekehrte, spontane Übergang von B nach A verboten und wir bezeichnen den Zustandsübergang von A nach B als irreversibel.
+Defkasten irreversible Prozesse
+Reversible Prozesse hingegen, sind umkehrbare Prozesse, d.h. die Entropieänderung von A nach B ist null.
+Reversible Prozesse sind ferner immer quasistatisch, der Rückschluß gilt im Gegenzug nicht immer.
+NB einfügen
+Es stellt sich die Frage, wie für irreversible Prozesse dennoch ein Zustandsübergang von B nach A stattfinden kann.
+Die Realisierung erfolgt durch eine Ankopplung an ein zweites System, welches Wärme vom ersten System aufnehmen kann, sodass dessen Entropie sinkt. 
+Ein Beispiel dafür ist das offene System der Erde, in welchem Sonnenenergie in Form von Ordnung und Leben (Entropieabnahme) und abgestrahlter Wärme vorliegt.
+
+Ein Beispielhafter Versuch für reversible Prozesse ist eine quasistatische, adiabatische Expansion gegen äußeren Druck eines Gases. Die Volumenzunahme /Energieabnahme
+Ein zweiter Versuch besteht aus dem Rausziehen einer Abfolge von sehr eng stehenden Trennwänden in einem Kasten. Entsprechend beschreibt der Vorgang einen quasistatischen Prozess, welcher jedoch irreversibel ist, da in jedem Schritt eine Entropieänderung vorliegt.
+Ein dritter Versuch, das Herausziehen einer einzelnen Trennwand gemäß Abb., beschreibt einen nicht quasistatischen und irreversiblen Prozess.
+
+Im optimalsten Fall sind die von uns betrachteten Prozesse reversibel.
+Wir führen die idealisierte reversible Arbeitsquelle RAQ ein, welche vollkommen wärmeisoliert ist und ausreichend kurze Relaxationszeiten hat, sodass sie immer quasistatische Prozesse durchläuft.
+Die vorliegenden Entropieänderungen [F] sind entsprechend gleich null.
+quelle senke für arbeit
+
+Analog definieren wir eine reversible Wärmequelle RWQ, welche ... quasistatische wärmequelle/senke
+Wir führen ein Wärmereservoir ein, welches eine so große RWQ ist, dass eine Wärmezufuhr dessen Temperatur nicht mehr merklich erhöht.
+Formal folgt für das große Wärmereservoir [F]
+
+Wieder analog führen wir Volumenreservoire ein, welche sehr große RAQs sind, sodass der Druck immer konstant bleibt
+[...VL erneut schauen]
+
+------
+Betrachte ein abgeschlossenes zusammengesetzes System. 
+
+Ist ein Prozess reversibel, so ist er auch quasistatisch. Allerdings sind nicht alle quasistatischen Prozesse reversibel. 
+
+Immer wenn Gleichgewichtszustände verlassen werden \textendash{} also bei nicht-quasistatischer Prozessführung \textendash{} laufen irreversible Porzesse ab. 
+
+
+Um von einem Zustand $B$ mit höherer Entropie $S(B)$ in einen Zustand $A$ mit niedrigerer Energie $S(A)<S(B)$ zurück zu gelangen, muss an ein zweites System angekoppelt werden, an welches Wärme abgegeben werden kann\footnote{oder Arbeit aufgenommen, aber meistens wird Wärme abgegeben. }. Insgesamt ist 
+\begin{align*}
+    \Delta S_\mathrm{ges} = \Delta  S^{(2)}- (S(B)-S(A)) \geq 0. 
+\end{align*}
+Während die Entropie in dem einen System abnimmt, nimmt sie im zweiten zu. 
+
+
+Beispielsweise ist die Erde insgesamt ein offenes System ... 
+
+
+Ein Beispiel für einen reversiblen Prozess ist die quasistatische und adiabatische Expansion 
+
+Betrachte als zweites Beispiel eine Kammer mit einer Abfolge von eng beinander liegenden Trennwänden, die nacheinander herausgezogen werden. Da die Volumenänderung stets nur gering ist, ist der Prozess näherungsweise quasistatisch. Dennoch nimmt insgesamt das Volumen zu (ohne dass sich die Energie verringert) und damit auch die Entropie. 
+
+
+
+\paragraph*{Reversible Quellen und Reservoire}
+\section{Prozesse maximaler Arbeit}
