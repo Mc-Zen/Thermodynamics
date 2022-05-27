@@ -5,7 +5,7 @@
 \chapter{Grundlagen und Postulate}
 \section{Zugang zur Thermodynamik}
 
-Üblicherweise wird die Thermodynamik induktiv entwickelt. Aus Erfahrungstatsachen, wie Wärme, Temperatur, thermodynamische Maschinen, usw. werden Konzepte und Gesetze, wie die Energieerhaltung und die Entropie usw. abgeleitet.
+Üblicherweise wird die Thermodynamik induktiv entwickelt. Aus Erfahrungstatsachen wie Wärme, Temperatur und Abläufen von thermodynamischen Maschinen werden Konzepte und Gesetze wie die Energieerhaltung und die Entropie abgeleitet.
 
 In dieser Vorlesung wird stattdessen der axiomatische Zugang gewählt.
 Aus Postulaten zur Energie und insbesondere zur Entropie wird die Thermodynamik aufgebaut und hergeleitet.
@@ -13,24 +13,24 @@ Anschließend werden die Konsequenzen dann mit den Erfahrungstatsachen abgeglich
 Diese Postulate sind die Essenz der Entwicklung der Theorie und sie helfen, die Struktur der Thermodynamik sichtbar zu machen.
 
 Ähnlich lassen sich auch andere Gebiete der Physik behandeln.
-So können z.B. aus dem Hamiltonschen Prinzip die mechanischen Bewegungsgleichungen und aus den Maxwell-Gleichungen die elektrischen und magnetischen Gesetze hergeleitet werden.
+So können z.~B. aus dem Hamiltonschen Prinzip die mechanischen Bewegungsgleichungen und aus den Maxwell-Gleichungen die elektrischen und magnetischen Gesetze hergeleitet werden.
 
 
 \section{Was ist Thermodynamik?}
 
-Statt der mikroskopischen Beschreibung mit \num{1e24} Koordinaten (Ort, Impuls, Molekülfreiheitsgrade) werden nur wenige makroskopische thermodynamische Variablen quantifiziert.
+Statt der mikroskopischen Beschreibung mit $10^{24}$ Koordinaten (Ort, Impuls, Molekülfreiheitsgrade) werden nur wenige makroskopische thermodynamische Variablen herangezogen, um ein System handhabbar zu beschreiben.
 
 Dieser Ansatz ist auch physikalisch rechtfertigbar, denn bei realen Messungen findet automatisch eine intrinsische Mittelung statt.
-Zum einen findet eine zeitliche Mittelung statt, denn die mikroskopische Bewegung findet auf Zeitskalen von \SIrange{1e-15}{1e-12}{\s} statt, während makroskopische Messungen im Allgemeinen nicht kürzer als \SI{1e-7}{\s} sind.
+Zum einen findet eine zeitliche Mittelung statt, denn die mikroskopische Bewegung findet auf Zeitskalen von $10^{-15}\,\si{\s}$ bis $10^{-12}\,\si{\s}$ statt, während makroskopische Messungen im Allgemeinen nicht kürzer als $10^{-7}\,\si{\s}$ sind.
 Es findet also eine Messung in gewissen Maßstäben zeitunabhängiger Kombinationen der über \num{1e24} Koordinaten statt.
 
-Zum anderen kommt es zu einer räumlichen Mittelung, zum Vergleich: mikroskopische Abmessungen liegen bei um die \SI{0.1}{\nm} (Atomradius, Gitterkonstante), während makroskopische Messungen in der Regel bei über \SI{100}{\nm} liegen (Größenordnung der Wellenlänge von sichtbarem Licht).
-Also wird meist über weit mehr als \num{1e9} Atome oder Moleküle gemittelt.
+Zum anderen kommt es zu einer räumlichen Mittelung \textendash{} zum Vergleich: mikroskopische Abmessungen liegen bei $\approx\SI{0.1}{\nm}$ (Atomradius, Gitterkonstante), während makroskopische Messungen in der Regel bei über \SI{100}{\nm} liegen (Größenordnung der Wellenlänge von sichtbarem Licht).
+Also wird meist über weit mehr als $10^{9}$ Atome oder Moleküle gemittelt.
 
 \begin{figure}[htbp]
     \centering
     \tfigSystemWithManyParticles
-    \caption{System mit vielen Teilchen, z.B. ein Gas.}
+    \caption{System mit vielen Teilchen, z.~B. ein Gas.}
     \label{fig:SystemWithManyParticles}
 \end{figure}
 
@@ -55,20 +55,20 @@ In der Elektrodynamik misst man in der Regel unter anderem
 
 Neu ist jetzt folgendes:
 \begin{formal}
-    Die Thermodynamik behandelt die makroskopischen Folgen derjenigen Koordinaten, die sich herausmitteln $\leftrightarrow$ Wärme.
+    Die Thermodynamik behandelt die makroskopischen Folgen (z.~B. die Wärme) derjenigen Koordinaten, die sich herausmitteln (z.~B. die einzelnen Teilchengeschwindigkeiten).% $\leftrightarrow$ Wärme.
 \end{formal}
 
-Die Zufuhr von Wärme in ein System führt z.B. zur Anregung von atomarer Bewegung und damit einer Temperatur $T$.
+Die Zufuhr von Wärme in ein System führt z.~B. zur Anregung von atomarer Bewegung und damit einer Temperatur $T$.
 
 In der Mechanik wird das Energie- bzw. Arbeitsdifferential als
 \begin{align*}
     \diffa{W} = \vec F\cdot\diffa{\vec r}
 \end{align*}
-definiert. Hier wird diese Definition nun verallgemeinert:
+definiert. Hier wird diese Definition nun zu einem Produkt einer \emph{intensiven} Größe und dem Differential einer \emph{extensiven} Größe verallgemeinert:
 \begin{align*}
     \diffa{E} = \underbrace{\text{verallgemeinerte Kraft}\: J}_{\text{intensiv}} \times \diffa{\underbrace{(\text{verallgemeinerter Weg}\: X)}_{\text{extensiv}}}.
 \end{align*}
-Dabei sind $(X,J)$ zueinander konjugierte Variablen. Die Einheit des Produkts $X\times J$ muss stets eine Energieeinheit sein.
+Dabei sind $(X,J)$ sogenannte zueinander \emph{konjugierte Variablen}. Die Einheit des Produkts $X\times J$ muss stets eine Energieeinheit sein. Wir werden im Verlauf des Kapitels den Unterschied zwischen intensiven und extensiven Größen erläutern. 
 
 Bereits bekannte Beispiele sind
 \begin{itemize}
@@ -77,9 +77,9 @@ Bereits bekannte Beispiele sind
     \item Magnetisierungsarbeit $\mu_0\vec H\cdot\diffa{\vec M}$ und
     \item Polarisierungsarbeit: $\vec E\cdot\diffa{\vec P}$.
 \end{itemize}
-Im Verlaufe der Vorlesung wird eine neue Arbeit eingeführt, die den Wärmeübertrag und damit Energietransfer auf verborgene atomare Freiheitsgraden oder Moden beschreibt:
+Im Verlaufe der Vorlesung wird eine neue Arbeit eingeführt, die den Wärmeübertrag und damit Energietransfer auf verborgene atomare Freiheitsgrade oder Moden beschreibt:
 \begin{align*}
-    \text{Energietransfer}=\text{Wärmeübertrag}=\vec T\diffa{S}
+    \text{Energietransfer}=\text{Wärmeübertrag}=T\diffa{S}
 \end{align*}
 mit Temperatur $T$ und Entropie $S$.
 
@@ -87,14 +87,14 @@ mit Temperatur $T$ und Entropie $S$.
 
 \section{Modellsystem, Parameter und Begriffe}
 
-Um ein Grundkonzept zu entwickeln, wird zunächst ein einfaches, idealisiertes System vorausgesetzt, das makroskopisch, homogen und isotrop, elektrisch neutral ist, in dem keine chemischen Reaktionen ablaufen und das keine elektrische, magnetische oder Gravitationsfelder besitzt. Auch Randeffekte werden zunächst vernachlässigt, indem angenommen wird, dass das System unendlich groß ist und damit keine Oberfläche hat.
+Um ein Grundkonzept zu entwickeln, wird zunächst ein einfaches, idealisiertes System vorausgesetzt, das makroskopisch homogen und isotrop sowie elektrisch neutral ist, in dem keine chemischen Reaktionen ablaufen und das keine elektrische, magnetische oder gravitative Felder besitzt. Auch Randeffekte werden zunächst vernachlässigt, indem angenommen wird, dass das System unendlich groß ist und damit keine Oberfläche hat.
 
-Für dieses System werden dann Parameter bestimmt, wie das Volumen $V$ und die Stoffmengen der beteiligten chemischen Substanzen.
+Für dieses System werden dann Parameter wie das Volumen $V$ und die Stoffmengen der beteiligten chemischen Substanzen bestimmt.
 
 Zunächst werden einige Definitionen erläutert:
 \begin{enumerate}
-    \item Als Normalbedingungen bzw. Standardbedingungen wird ein Zustand bei \SI{0}{\degreeCelsius} und \SI{1013}{\milli\bar} bezeichnet.
-    \item Stoffmenge (veraltet Molzahl) $\sm$: \SI{1}{\mole} einer Substanz entspricht einer Anzahl von Atomen oder Molekülen, die der Avogadro-Konstante/Loschmidt-Zahl $\avogadro \equiv \SI{6,02214076e23}{\per\mole}$ entspricht\footnote{
+    \item Als \emph{Normalbedingungen} bzw. \emph{Standardbedingungen} wird ein Zustand bei \SI{0}{\degreeCelsius} und \SI{1013}{\milli\bar} bezeichnet.
+    \item \emph{Stoffmenge} (veraltet auch Molzahl) $\sm$: \SI{1}{\mole} einer Substanz entspricht einer Anzahl von Atomen oder Molekülen, die der Avogadro-Konstante/Loschmidt-Zahl $\avogadro \equiv \SI{6,02214076e23}{\per\mole}$ entspricht\footnote{
           Die Avogadro-Konstante besitzt die Einheit \si{\per\mole} während die Avogadro-Zahl \num{6,02214076e23} dimensionslos ist.
 
           Bei der Definition der Loschmidt-Zahl kann es aufgrund der historischen Entwicklung zu einiger Verwirrung kommen. Ursprünglich definierte Josef Loschmidt in seiner Arbeit \anf{Zur Grösse der Luftmoleküle} eine Zahl von in einer Volumeneinheit enthaltenen Luftmolekülen, war aber damals noch nicht sehr präzise mit seiner Definition. Als sogenannte Loschmidt-Konstante $N_\mathrm{L}$ wird heute der Wert \SI{2.686780111e25}{\per\cubic\m} definiert, welcher über das molare Volumen eines idealen Gases $V_{m0} = \SI{22,414}{\liter\per\mole}$ mit der Avogadro-Konstante $\avogadro=$ zusammenhängt: $N_\mathrm{L}=\avogadro/V_{m0}$.\cite{lit:loschmidt_constant,lit:loschmidt}
@@ -108,11 +108,11 @@ Zunächst werden einige Definitionen erläutert:
           \begin{align*}
               \sm_k = \frac{N_k}{\avogadro}.
           \end{align*}
-    \item Wir definieren ferner den Stoffmengenanteil (früher Molenanteil) als
+    \item Wir definieren ferner den \emph{Stoffmengenanteil} (früher Molenanteil genannt) als
           \begin{align*}
               x_k  = \frac{\sm_k}{\sum_i \sm_i}
           \end{align*}
-          und das molare Volumen bzw. Molvolumen als
+          und das \emph{molare Volumen} bzw. \emph{Molvolumen} als
           \begin{align*}
               V_m = \frac{V}{\sum_i \sm_i}.
           \end{align*}
@@ -121,8 +121,8 @@ Zunächst werden einige Definitionen erläutert:
           \begin{align*}
               2\times(V,\sm_1,\ldots,\sm_r) \rightarrow (2V,2\sm_1,\ldots,2\sm_r)
           \end{align*}
-          und intensiven Parametern wie $x_1,...,x_r,V_m$, die keine Änderung bei wachsendem Volumen erfahren. Dazu gehören auch die Temperatur $T$ und der Druck $P$.
-    \item Als Zustandsgrößen werden Größen bezeichnet, die unabhängig von der Vorgeschichte des Systems sind und einfach seinen Zustand beschreiben. Dazu gehören unter anderem das Volumen, die Stoffmenge, die Temperatur und der Druck.
+          und intensiven Parametern wie $x_1,\dots,x_r,V_m$, die keine Änderung bei wachsendem Volumen erfahren. Dazu gehören auch die Temperatur $T$ und der Druck $P$.
+    \item Als \emph{Zustandsgrößen} werden Größen bezeichnet, die unabhängig von der Vorgeschichte des Systems sind und einfach seinen Zustand beschreiben. Dazu gehören unter anderem das Volumen, die Stoffmenge, die Temperatur und der Druck.
 \end{enumerate}
 
 
@@ -134,45 +134,46 @@ Zunächst werden einige Definitionen erläutert:
 
 \paragraph*{Innere Energie}
 
-Die innere Energie ist zugleich eine Zustandsgröße und eine extensive Größe.
+Die \emph{innere Energie} ist zugleich eine Zustandsgröße und eine extensive Größe.
 \begin{formal}
-    Makroskopische Systeme besitzen eine genau definierte, innere Energie $U$ (bezogen auf einen willkürlichen Grundzustand), die erhalten bleibt.
+    Makroskopische Systeme besitzen eine genau definierte \formalemph{innere Energie} $U$ (bezogen auf einen willkürlichen Grundzustand), die erhalten bleibt.
 \end{formal}
 
 Je nach Temperaturbereich wird ein Energienullpunkt festgelegt.
-Für Energien $k_\mathrm{B}T$ im Bereich der Bindungsenergien von Molekülen, können z.B. ruhende Moleküle als Referenz gelten.
+Für Energien $k_\mathrm{B}T$ im Bereich der Bindungsenergien von Molekülen können z.~B. ruhende Moleküle als Referenz gelten.
 
 
 \paragraph*{Thermodynamisches Gleichgewicht}
 
-Wir machen die Erfahrung, dass Systeme einfache Endzustände mit einer kleinstmöglichen Zahl von makroskopischen Variablen anstreben. Beispielsweise bewirkt die Reibung in einer Flüssigkeit in einem Glas, dass eine turbulente Strömung zur laminaren wird und allmählich ganz zur Ruhe kommt.
+Wir machen die Erfahrung, dass Systeme einfache Endzustände mit einer kleinstmöglichen Zahl von makroskopischen Variablen anstreben. Beispielsweise bewirkt die Reibung in einer Flüssigkeit in einem Glas, dass eine turbulente Strömung zur laminaren Strömung wird und allmählich ganz zur Ruhe kommt.
 
 Diese Beobachtung führt uns zum ersten Postulat:
 \begin{postulate}
     \label{post:gleichgewichtszustaende}
-    Es gibt spezielle Zustände eines Systems, sogenannte Gleichgewichtszustände, die makroskopisch vollkommen beschrieben sind durch die Angabe weniger Zustandsgrößen, wie innere Energie $U$, Volumen $V$, Stoffmengen $\sm_1,\sm_2,\ldots$ der chemischen Komponenten usw.
+    Es gibt spezielle Zustände eines Systems, sogenannte \emph{Gleichgewichtszustände}, die makroskopisch vollkommen durch die Angabe weniger Zustandsgrößen beschrieben sind. 
+    Solche Zustandsgrößen sind beispielsweise die innere Energie $U$, das Volumen $V$ und die Stoffmengen $\sm_1,\sm_2,\ldots$ der chemischen Komponenten.
 \end{postulate}
 
-In komplexeren Systemen muss beispielsweise noch die Polarisation, Magnetisierung und Oberfläche berücksichtigt werden. Analog zum Volumen werden diese Größen in das System aufgenommen über ein Arbeitsdifferential $\diffa{W} = J\diffa{X}$.
+In komplexeren Systemen muss z.~B. noch die Polarisation, die Magnetisierung und die Oberfläche berücksichtigt werden. Analog zum Volumen werden diese Größen über ein Arbeitsdifferential $\diffa{W} = J\diffa{X}$ in das System aufgenommen.
 
-Im makroskopischen Gleichgewichtszustand werden viele mikroskopische Zustände im Messzeitraum angenommen, die mit dem makroskopischen Zustand $(U,V,\sm_1,...,\sm_r)$ vereinbar sind. So können z.B. sehr viele verschiedene Kombinationen aus Teilchenenergien zur gleichen mittleren Energie führen. Normalerweise hat ein System kein \anf{Gedächtnis}, es verhält sich im Prinzip zufällig (Erdogenhypothese).
+Im makroskopischen Gleichgewichtszustand werden viele mikroskopische Zustände im Messzeitraum angenommen, die mit dem makroskopischen Zustand $(U,V,\sm_1,...,\sm_r)$ vereinbar sind. So können z.~B. sehr viele verschiedene Kombinationen aus Teilchenenergien zur gleichen mittleren Energie führen. Normalerweise hat ein System kein \anf{Gedächtnis}, es verhält sich im Prinzip zufällig. Dies wird durch die Erdogenhypothese beschrieben und später präzisiert.
 
-Es gibt aber auch Zustände, für diese Annahme nicht gilt. Beim metastabilen Gleichgewicht sind nicht alle Zustände in der Messzeit erreichbar und die Vorgeschichte ist relevant. Trotzdem ist der Formalismus der Thermodynamik in Teilbereichen davon oder für kurze Zeitspannen anwendbar.
+Es gibt aber auch Zustände, für die diese Annahme nicht gilt. Beim \emph{metastabilen Gleichgewicht} sind nicht alle Zustände in der Messzeit erreichbar und die Vorgeschichte ist relevant. Trotzdem ist der Formalismus der Thermodynamik in Teilbereichen davon oder für kurze Zeitspannen anwendbar.
 
 
 Ein Beispiel dafür %wäre der Übergang von Glas (ungeordnetes System) zu Kristall (geordnet). 
-wäre Glas als ungeordnetes, metastabiles System, das zur Kristallisation tendiert. Andere Beispiele sind Gedächtnislegierungen mit eingefrorenen Spannungen oder radioaktive Substanzen, die ihre Zusammensetzung durch spontanen Zerfall der Atome verändern.
+wäre Glas als ungeordnetes, metastabiles System, das eigentlich zur Kristallisation tendiert, es aber nicht tut. Andere Beispiele sind Gedächtnislegierungen mit eingefrorenen Spannungen oder radioaktive Substanzen, die ihre Zusammensetzung durch spontanen Zerfall der Atome verändern.
 
 
 \paragraph*{Wände}
 
-Wände, Grenzen oder Ränder isolieren ein System und kontrollieren damit die Werte der Zustandsgrößen, sowie den Energiefluss, wie am folgenden Beispiel ersichtlich.
+Wände, Grenzen oder Ränder isolieren ein System und kontrollieren damit die Werte der Zustandsgrößen sowie den Energiefluss, wie am folgenden Beispiel ersichtlich.
 
 Betrachte ein System aus zwei Kammern (siehe \Abbref{fig:TwoChambersSeparatedByPiston}), die durch einen beweglichen Kolben voneinander getrennt werden. Das gesamte System ist von einer festen Wand umgeben. Die Beschaffenheit des Kolbens oder der Wand kann verschiedener Art sein:
 \begin{itemize}
     \item Wände können beweglich oder fest sein und kontrollieren so die innere Energie über mechanische Arbeit.
-    \item (Semi-) permeable Wände kontrollieren Stoffmengen $\sm_k$, indem sie beispielsweise nur bestimmte Stoffe hindurchlassen.
-    \item Wärmeleitende Wärme erlauben einen Wärmefluss, während thermisch isolierende Grenzen ein Angleichen der Temperatur verhindern.
+    \item (Semi-) permeable Wände kontrollieren die Stoffmengen $\sm_k$, indem sie beispielsweise nur bestimmte Stoffe hindurchlassen.
+    \item Wärmeleitende Wände erlauben einen Wärmefluss, während thermisch isolierende Grenzen ein Angleichen der Temperatur verhindern. Durch Wände werden also thermisch abgeschlossene Systeme ermöglicht, was eine Definition des Wärmebegriffs erlaubt.
 \end{itemize}
 
 \begin{figure}[htb]
@@ -182,7 +183,7 @@ Betrachte ein System aus zwei Kammern (siehe \Abbref{fig:TwoChambersSeparatedByP
     \label{fig:TwoChambersSeparatedByPiston}
 \end{figure}
 
-Durch Wände werden also thermisch abgeschlossene Systeme ermöglicht, was eine Definition des Wärmebegriffs erlaubt.
+
 
 
 \paragraph*{Energiemessung}
@@ -192,7 +193,6 @@ In einem thermisch isolierten System ändert sich die innere Energie genau mit d
     U(B)-U(A) =\Delta W(A\rightarrow B).
 \end{align*}
 Auf diese Weise kann die Änderung der inneren Energie durch die mechanische Energie definiert werden, welche wir bereits kennen und messen bzw. berechnen können.
-
 Zum Beispiel erhöht sich die innere Energie, wenn das System mechanisch komprimiert wird (siehe \Abbref{fig:RectangularBoxWithPiston}).
 
 \begin{figure}[htbp]
@@ -202,7 +202,7 @@ Zum Beispiel erhöht sich die innere Energie, wenn das System mechanisch komprim
     \label{fig:RectangularBoxWithPiston}
 \end{figure}
 
-Allerdings könnte einem System, das eine Flüssigkeit enthält, auch Energie durch Quirlen zugeführt werden, wie in \Abbref{fig:WaterStiringIceCubes} dargestellt. Dadurch erhöht sich die Temperatur, doch ist dieser Prozess nicht umkehrbar, da durch Quirlen natürlich nicht die Temperatur verringert werden kann.
+Allerdings könnte einem System, das eine Flüssigkeit enthält, auch Energie durch Quirlen zugeführt werden, wie in \Abbref{fig:WaterStiringIceCubes} dargestellt, wodurch sich die Temperatur erhöht. Dieser Prozess ist jedoch nicht umkehrbar, da die Temperatur durch Quirlen natürlich nicht wieder verringert werden kann.
 
 \begin{figure}[htbp]
     \centering
@@ -219,11 +219,10 @@ Allerdings könnte einem System, das eine Flüssigkeit enthält, auch Energie du
 
 \paragraph*{Wärme und Wärmeübertrag}
 
-Ein Prozess $A\rightarrow B$ kann auch nicht rein mechanisch passieren. Dabei nimmt das System sogenannte Wärme auf oder gibt sie ab. Diese Wärme können wir definieren als Differenz der gesamten Änderung der inneren Energie und des Teils der durch mechanische verrichtet wird,
+Ein Prozess $A\rightarrow B$ muss nicht rein mechanisch ablaufen. Dabei nimmt das System sogenannte \emph{Wärme} auf oder gibt sie ab. Diese Wärme können wir definieren als Differenz der gesamten Änderung der inneren Energie und jenes Teils, der durch mechanische Arbeit verrichtet wird,
 \begin{align*}
     \Delta Q(A\rightarrow B) = [U(B)-U(A)] - \Delta W(A\rightarrow B).
 \end{align*}
-
 Dieser Zusammenhang wird durch den 1. Hauptsatz der Thermodynamik zusammengefasst:
 \begin{formal}
     \textbf{1. Hauptsatz der Thermodynamik (Energieerhaltungssatz):}
@@ -234,11 +233,11 @@ Dieser Zusammenhang wird durch den 1. Hauptsatz der Thermodynamik zusammengefass
     \end{align*}
 \end{formal}
 
-Betrachte als Beispiel eine Volumenänderung, die aufgrund der resultierenden Druckänderung eine Arbeit am System darstellt\footnote{Diese Änderung muss ausreichend langsam erfolgen, damit es sich um eine quasistatische Prozessführung handelt. Bei einer schnellen Änderung entstehen Turbulenzen und das System befindet nicht über den ganzen Zeitraum im thermodynamische Gleichgewicht.},
+Betrachte als Beispiel eine Volumenänderung, die aufgrund der resultierenden Druckänderung eine Arbeit am System darstellt\footnote{Diese Änderung muss ausreichend langsam erfolgen, damit es sich um eine quasistatische Prozessführung handelt. Bei einer schnellen Änderung entstehen Turbulenzen und das System befindet nicht über den ganzen Zeitraum im thermodynamischen Gleichgewicht.},
 \begin{align*}
     \udiff W = -P\diff V.
 \end{align*}
-Wärme und Arbeit sind anders als die innere Energie allerdings keine Zustandsgrößen, denn verschiedene Kombinationen aus Zuführen von Wärme und Arbeit können auf den gleichen Zustand eines Systems führen (\Abbref{fig:WQAreNoStateFunctions}). Sie dienen beide nur der Änderung der inneren Energie.
+Anders als die innere Energie sind Wärme und Arbeit allerdings keine Zustandsgrößen, denn verschiedene Kombinationen von Wärme- und Arbeitszufuhr können auf den gleichen Zustand eines Systems führen (\Abbref{fig:WQAreNoStateFunctions}). Sie dienen beide nur der Änderung der inneren Energie.
 
 \begin{figure}[htb]
     \centering
@@ -250,9 +249,9 @@ Wärme und Arbeit sind anders als die innere Energie allerdings keine Zustandsgr
 
 Bemerkungen:
 \begin{itemize}
-    \item Der Prozess kann quasistatisch erfolgen, also so langsam, dass immer ein Gleichgewicht vorliegt und damit der Druck $P$ homogen ist.
-    \item Der Prozess kann nicht quasistatisch erfolgen, wodurch es zu Turbulenzen kommt und $P=P(\vec r,t)$ ortsabhängig wird. Es wird eine Überschussarbeit verrichtet, die in Wärme dissipiert wird.
-    \item Zusätzlich zum totalen Differential $\diff$ muss auch das unvollständige Differential $\udiff$ eingeführt werden, welches für Größen (wie $Q$ und $W$) angewendet wird, die keine Zustandsfunktionen sind, sondern sogenannte wegabhängige Prozessgrößen.
+    \item Der Prozess kann \emph{quasistatisch} erfolgen, also so langsam, dass immer ein Gleichgewicht vorliegt und damit der Druck $P$ homogen ist.
+    \item Der Prozess kann \emph{nicht-quasistatisch} erfolgen, wodurch es zu Turbulenzen kommt und $P=P(\vec r,t)$ ortsabhängig wird. Es wird eine Überschussarbeit verrichtet, die in Wärme dissipiert wird.
+    \item Zusätzlich zum totalen Differential $\diff$ muss auch das \emph{unvollständige Differential} $\udiff$ eingeführt werden, welches für Größen (wie $Q$ und $W$) angewendet wird, die keine Zustandsfunktionen sind, sondern sogenannte wegabhängige \emph{Prozessgrößen}.
     \item Mechanische Arbeit stellt einen Energieübertrag dar.
     \item Ein quasistatischer Wärmeübertrag stellt nach $\udiff Q=\diff U+P\diff V$ ebenfalls einen Energieübertrag dar.
 \end{itemize}
@@ -260,7 +259,7 @@ Bemerkungen:
 
 \paragraph*{Wärmeäquivalent}
 
-Das sogenannte Wärmeäquivalent besagt, dass Wärme als Energie quantifizierbar ist. Es gilt
+Das sogenannte \emph{Wärmeäquivalent} besagt, dass Wärme als Energie quantifizierbar ist. Es gilt
 \begin{align*}
     \Delta Q = mc\Delta T
 \end{align*}
@@ -273,29 +272,29 @@ Die häufig verwendete Einheit Kalorie entspricht der Energie, um \SI{1}{\g} Was
 
 Aus der Experimentalphysik erinnern wir uns, dass die Entropie $S$ mit der Irreversibilität eines Prozesses zusammenhängt. Später werden wir sehen, dass $S=k_\mathrm{B}\ln{\Omega}$ mit Phasenraumvolumen $\Omega$ ist.
 
-Zuerst betrachten wir ein abgeschlossenes System mit festgelegten Zwangsbedingungen, beispielsweise zwei Kammern, die durch einen anfangs undurchlässigen, festen und isolierenden Kolben getrennt sind. Diese Eigenschaften des Kolbens stellen die Zwangsbedingungen dar. Es stellt sich die Frage, welchen Gleichgewichtszustand das System beim Entfernen einer oder mehrere dieser Zwangsbedingungen einnimmt. Erfahrungsgemäß wissen wir z.B., dass sich die Temperaturen beider Kammern angleichen, wenn ein Wärmeaustausch erlaubt wird, der Kolben also wärmedurchlässig ist.
+Zuerst betrachten wir ein abgeschlossenes System mit festgelegten Zwangsbedingungen, beispielsweise zwei Kammern, die durch einen anfangs undurchlässigen, festen und wärmeisolierenden Kolben getrennt sind. Diese Eigenschaften des Kolbens stellen die Zwangsbedingungen dar. Es stellt sich die Frage, welchen Gleichgewichtszustand das System beim Entfernen einer oder mehrerer dieser Zwangsbedingungen einnimmt. Erfahrungsgemäß wissen wir z.~B., dass sich die Temperaturen beider Kammern angleichen, wenn ein Wärmeaustausch erlaubt wird, der Kolben also wärmedurchlässig ist.
 
 Eine allgemeine Antwort auf diese Frage kann mithilfe des Extremalprinzips gewonnen werden, was uns auf das zweite Postulat führt:
 
 % Das bringt uns zum zweiten Postulat, dem Extremalprinzip zur Entropie:
 \begin{postulate}
     \label{post:entropie_maximierung}
-    Gegeben sei ein isoliertes System, das durch Zwangsbedingungen unterteilt ist. Dann existiert eine Funktion der extensiven Parameter ($U^{(1)},V^{(1)},\sm_k^{(1)};U^{(2)},V^{(2)},\sm_k^{(2)}; \ldots$), genannt Entropie $S$, die für alle Gleichgewichtszustände wohldefiniert ist und folgende Eigenschaften besitzt: Lässt man die Zwangsbedingung fallen, so nehmen die extensiven Parameter Werte an, welche die Entropie maximieren. Der dann erreichte Endzustand heißt stabiles Gleichgewicht.
+    Gegeben sei ein isoliertes System, das durch Zwangsbedingungen unterteilt ist. Dann existiert eine Funktion der extensiven Parameter ($U^{(1)},V^{(1)},\sm_k^{(1)};U^{(2)},V^{(2)},\sm_k^{(2)}; \ldots$), genannt \emph{Entropie} $S$, die für alle Gleichgewichtszustände wohldefiniert ist und folgende Eigenschaften besitzt: Lässt man die Zwangsbedingung fallen, so nehmen die extensiven Parameter Werte an, welche die Entropie maximieren. Der dann erreichte Endzustand heißt \emph{stabiles Gleichgewicht}.
 
-    $S=S(\{U^{(\alpha)},V^{(\alpha)},\sm_k^{(\alpha)}\})$ heißt entropische Fundamentalbeziehung. Sie enthält die gesamte Information über das System.
+    $S=S(\{U^{(\alpha)},V^{(\alpha)},\sm_k^{(\alpha)}\})$ heißt \emph{entropische Fundamentalbeziehung}. Sie enthält die gesamte Information über das System.
 \end{postulate}
 
 
-Es sei bemerkt, dass dafür die Entropie $S$ von den extensiven Variablen abhängen muss. Dieses Postulat erscheint auf den ersten Blick recht willkürlich, wird aber durch seine Konsequenzen gerechtfertigt, welche sich mit den Erfahrungstatsachen decken\footnote{Außerdem hat sich die Anwendung des Extremalprinzips in vielen Bereichen der Physik erfolgreich bewährt (siehe Hamiltonsches Prinzip der kleinsten Wirkung sowie die Minimierung der Lagrange-Dichte bei der Quantenfeldtheorie)}. Diese werden in den folgenden Kapiteln erläutert.
+Es sei bemerkt, dass dafür die Entropie $S$ von den extensiven Variablen abhängen muss. Dieses Postulat erscheint auf den ersten Blick recht willkürlich, wird aber durch seine Konsequenzen gerechtfertigt, welche sich mit den Erfahrungstatsachen decken\footnote{Außerdem hat sich die Anwendung des Extremalprinzips in vielen Bereichen der Physik erfolgreich bewährt (siehe das Hamiltonsche Prinzip der kleinsten Wirkung sowie die Minimierung der Lagrange-Dichte bei der Quantenfeldtheorie).}. Diese werden in den folgenden Kapiteln erläutert.
 
 Es ist außerdem sinnvoll, einige Eigenschaften für die Entropie zu fordern, die im nächsten Postulat zusammengefasst sind:
 \begin{postulate}
     \label{post:eigenschaften_entropie}
     Die Entropie eines zusammengesetzten Systems ist gleich der Summe der Entropien der Teilsysteme,
     \begin{align*}
-        S =\sum_\alpha S^{(\alpha)}, \quad, S^{(\alpha)} = S^{(\alpha)}(U^{(\alpha)},V^{(\alpha)},\sm_1^{(\alpha)},\ldots, \sm_r^{(\alpha)}).
+        S =\sum_\alpha S^{(\alpha)}, \quad S^{(\alpha)} = S^{(\alpha)}(U^{(\alpha)},V^{(\alpha)},\sm_1^{(\alpha)},\ldots, \sm_r^{(\alpha)}).
     \end{align*}
-    $S$ ist stetig, differenzierbar und eine monoton ansteigende Funktion der inneren Energie $U$.
+    $S$ ist stetig, differenzierbar und eine streng monoton ansteigende Funktion der inneren Energie $U$.
 \end{postulate}
 
 %Wir werden später sehen, dass aus dem zweiten Punkt die Temperatur $T$ hergeleitet werden kann. 
@@ -305,13 +304,13 @@ Hieraus folgt, dass $S$ eine extensive Größe ist, denn
 \end{align*}
 Genauer: die Entropie ist eine  homogene Funktion ersten Grades der extensiven Parameter.
 
-Beispielsweise lässt sich für ein allgemeines System mit vielen Komponenten mit Gesamtstoffmenge $\lambda=\sm=\sum_{k=1}^r\sm_k$,
+Beispielsweise lässt sich für ein allgemeines System mit vielen Komponenten und einer Gesamtstoffmenge $\lambda=\sm=\sum_{k=1}^r\sm_k$,
 \begin{align*}
     S(U,V,\sm_1, \dots , \sm_r) = N\cdot S\left(\frac{U}{N},\frac{V}{U},\frac{\sm_1}{N}, \dots , \frac{\sm_r}{N}\right)
 \end{align*}
 ein Einkomponentensystem ableiten,
 \begin{align*}
-    S(U,V,N) = N\cdot S(u,v,1) = N\cdot s(u,v)
+    S(U,V,N) = N\cdot S(u,v,1) = N\cdot s(u,v),
 \end{align*}
 mit Energie pro Mol $u=U/N$, Molvolumen $v=V/N$ und Entropie pro Mol $s$. Diese Darstellung wird häufig verwendet, da Angaben in Mol ausreichen und die Rechnungen vereinfachen.
 
@@ -323,7 +322,7 @@ die Beziehung $S(U)$ invertierbar ist,
 \begin{align*}
     U = U(S,V,\sm_1, \dots,\sm_r).
 \end{align*}
-Diese neue Beziehung ist als energetische Fundamentalbeziehung bekannt und wir werden sehen, dass aus dem Postulat \ref{post:entropie_maximierung} auch eine Minimierung der Energie folgt.
+Diese neue Beziehung ist als \emph{energetische Fundamentalbeziehung} bekannt und wir werden sehen, dass aus dem Postulat \ref{post:entropie_maximierung} auch eine Minimierung der Energie folgt.
 
 
 
@@ -338,21 +337,22 @@ Diese neue Beziehung ist als energetische Fundamentalbeziehung bekannt und wir w
         \label{eq:nernst_postulat}
         S = 0 \quad \text{bei} \quad T =\left(\frac{\partial U}{\partial S}\right)_{V,\sm,...}=0
     \end{align}
-    (siehe \Abbref{fig:SchemaFundamentalbeziehung}).
+    (siehe \Abbref{fig:SchemaFundamentalbeziehung}). Dieser Nullpunkt wird in der Realität jedoch nicht erreicht. 
 \end{postulate}
 
-Bemerkungen:
-\begin{itemize}
-    \item $S$ besitzt einen eindeutigen Nullpunkt, im Gegensatz zu $U$ (wo immer eine Konstante dazuaddiert werden kann).
-    \item Die Größe $T$ wird im Folgenden als Temperatur interpretiert.
-    \item Aus dem Postulat \ref{post:eigenschaften_entropie} folgt, dass die Temperatur immer größer oder gleich null ist. Zudem lässt Postulat \ref{post:nernst} schließen, dass es eine absolute Temperaturskala (die Kelvinskala) gibt.
-\end{itemize}
-
-In der Formulierung nach Planck von 1907 heißt es, dass der Temperaturnullpunkt $T=0$ nicht erreicht wird.
-
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \tfigSchemaFundamentalbeziehung
     \caption{Schema zur energetischen (links) und entropischen (rechts) Fundamentalbeziehung. Die Entropie $S$ besitzt im Gegensatz zur inneren Energie einen eindeutigen Nullpunkt.  }
     \label{fig:SchemaFundamentalbeziehung}
 \end{figure}
+
+Bemerkungen:
+\begin{itemize}
+    \item Die Entropie $S$ besitzt einen eindeutigen Nullpunkt, im Gegensatz zu der inneren Energie $U$ (zu der immer eine Konstante addiert werden kann).
+    \item Die Größe $T$ wird im Folgenden als Temperatur interpretiert.
+    \item Aus dem Postulat \ref{post:eigenschaften_entropie} folgt, dass die Temperatur immer größer oder gleich null ist. Zudem lässt Postulat \ref{post:nernst} schließen, dass es eine absolute Temperaturskala (die Kelvinskala) gibt.
+    In der Formulierung nach Planck von 1907 heißt es, dass der Temperaturnullpunkt $T=0$ nicht erreicht wird.
+\end{itemize}
+
+

@@ -97,9 +97,11 @@
 % Rectangular box with piston
 \newcommand{\tfigRectangularBoxWithPiston}{
     \begin{tikzpicture}[scale=1.6]
-        \draw[line width=3pt] (1,0) -- (1,1);
+        \draw[line width=2.4pt] (1,0) -- (1,1);
         \draw[line width=2pt] (1,.5) -- +(.8,0);
-        \draw[draw=black!70!white,line width=3pt] (1.2,0) -- (0,0) -- (0,1) -- (1.2,1);
+        \draw[rarr] (1.9,.5) -- +(.7,0) node[midway, above] {$\Delta W$};
+        \node at (.5,.5) {$U\uparrow$};
+        \draw[draw=black!70!white] (1.2,0) -- (0,0) -- (0,1) -- (1.2,1);
     \end{tikzpicture}
 }
 
