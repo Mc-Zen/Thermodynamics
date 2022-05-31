@@ -49,6 +49,10 @@
     rmidarrow/.style={postaction=decorate,decoration={markings, mark=at position #1 with {\arrowreversed{arrow tip}}} },
     rmidarrow/.default=.5,
     distance marker/.style={|<->|,>={arrow tip}},
+    %
+    % Thermodynamics stuff
+    piston bar/.style={line width=2pt},
+    piston/.style={line width=8pt}
 }
 \tikzstyle{every node}=[font=\footnotesize]
 
@@ -279,5 +283,70 @@
         \draw[nice green] (.2,.5) -- (.2,0) node[near start, right] {$\frac{\delta_n}{N_1}=10^{-11}$}
         node[below,black] {$\frac{\hat{n}_1}{N_1}$};
         \draw (.5pt,.5) -- (-.5pt,.5) node[left] {$(g_1g_2)_\mathrm{max}$};
+    \end{tikzpicture}
+}
+
+
+\newcommand{\tfigPlaceholder}{
+    \begin{tikzpicture}
+        \filldraw[fill=formalshade] (0,0) rectangle (3,3) ;
+        \node[black] at (1.5,1.5){\textbf{?}};
+    \end{tikzpicture}
+}
+
+% Degeneracy function for large systems -> delta function
+\newcommand{\tfigProcessReversibleQuasistationary}{
+    \begin{tikzpicture}[scale=1.7]
+        \draw[piston] (0,0) -- (0,1);
+        \draw[piston bar] (0,.5) -- (1.2,.5);
+        \draw[arr] (.1,.7) -- +(.4,0);
+        \draw[pattern=north east lines,even odd rule] (-1.4,1.2) rectangle (1.4,-.2) node[pos=0,anchor=south west] {$\Delta S=0$} (-1.2,0) rectangle (1.2,1);
+        \pgfmathsetseed{16}
+        \foreach \n in {1,...,20}{
+            \fill (.02-1.2+rnd*.96,.02+rnd*.96) circle[radius=.5pt];
+        }
+    \end{tikzpicture}
+}
+            
+\newcommand{\tfigProcessIrreversibleQuasistationary}{
+    \begin{tikzpicture}[scale=1.7]
+        \foreach \x in {0,.1,...,.6}{
+            \draw[line width=3pt] (\x,0) -- +(0,1);
+            \draw[arr] (\x,1.2) -- +(0,.4);
+        }
+        \node at (.8,.5) {\ldots};
+        \draw[pattern=north east lines,even odd rule] (-1.4,1.2) rectangle (1.4,-.2) node[pos=0,anchor=south west] {$\Delta S>0$} (-1.2,0) rectangle (1.2,1);
+        \pgfmathsetseed{30}
+        \foreach \n in {1,...,20}{
+            \fill (.02-1.2+rnd*.96,.04+rnd*.90) circle[radius=.5pt];
+        }
+    \end{tikzpicture}
+}
+
+\newcommand{\tfigProcessIrreversibleNonquasistationary}{
+    \begin{tikzpicture}[scale=1.7]
+        \draw[line width=3pt] (0,0) -- +(0,1);
+        \draw[arr] (0,1.2) -- +(0,.4);
+        
+        \draw[pattern=north east lines,even odd rule] (-1.4,1.2) rectangle (1.4,-.2) node[pos=0,anchor=south west] {$\Delta S>0$} (-1.2,0) rectangle (1.2,1);
+        \pgfmathsetseed{29}
+        \foreach \n in {1,...,20}{
+            \fill (.02-1.2+rnd*.96,.02+rnd*.96) circle[radius=.5pt];
+        }
+    \end{tikzpicture}
+}
+\newcommand{\tfigTheoremMaximizedWork}{
+    \begin{tikzpicture}
+        [
+            system node/.style={rectangle,draw,inner sep=10pt}
+        ]
+        \node[system node, fill=red!20!white] (RWQ) at (3,1) {RWQ};
+        \node[system node, fill=black!10!white] (RAQ) at (3,-1) {RAQ};
+        \node[point] (P) at (0,0) {};
+        \draw[arr] (P) .. controls +(0:.7) and +(180:.7) .. (RAQ.west) node[pos=.7,anchor=north east] {$\Delta W^\mathrm{RAQ}$};
+        \draw[arr] (P) .. controls +(0:.7) and +(180:.7) .. (RWQ.west) node[pos=.7,anchor=south east] {$\Delta Q^\mathrm{RWQ}$};
+        edge[arr] (RWQ) 
+        edge[arr] (RAQ);
+        \node[system node,align=center] at (-3,0) {\textbf{TS}\\\\$\Delta S_{AB}^\mathrm{TS}$} edge[arr] node[midway, above] {$-\Delta U_{AB}^\mathrm{TS}$} (P);
     \end{tikzpicture}
 }
