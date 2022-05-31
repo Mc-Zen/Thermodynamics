@@ -1,22 +1,21 @@
 % !TeX root = Theo_IV.tex
 
 \chapter{Thermodynamische Prozesse und Machinen}
-Im Laufe dieses Kapitels wollen wir uns mit diversen thermodynamischen Prozessen und Maschinen auseinandersetzen. Ein Beispiel für letztere sind Wärmekraft- und Carnot-Maschinen, welche insbesondere deshalb für uns interessant sind, da ihre Beschreibung historisch die Entwicklung des Entropiebegriffes begründet hat.
-Die Realisierung thermodynamischer Maschinen fußt auf zwei wesentlichen Prinzipien: Der Energieerhaltung (und allen damit verbundenen Gesetzen der Mechanik) und der monotonen Entropiezunahme ($\Delta S \geq 0$) in abgeschlossenen Systemen.
-
-Wir wollen zunächst mit der Charakterisierung einiger thermodynamischer Prozesse anfangen.
+Im Laufe dieses Kapitels wollen wir uns mit unterschiedlichen thermodynamischen Prozessen und Maschinen auseinandersetzen. Ein Beispiel für letztere sind Wärmekraft- und Carnot-Maschinen, welche deshalb für uns interessant sind, weil die Entwicklung des Entropiebegriffes historisch durch ihre Beschreibung begründet wurde.
+Die Realisierung thermodynamischer Maschinen baut auf zwei wesentlichen Prinzipien auf: Der Energieerhaltung (und allen damit verbundenen Gesetzen der Mechanik) und der Monotonie der Entropiezunahme ($\Delta S \geq 0$) in abgeschlossenen Systemen.
+Wir wollen zunächst mit einigen Charakterisierungen thermodynamischer Prozesse anfangen.
 
 
 \section{Quasistatische Prozesse}
-Die quasistatischen Prozesse sind uns mittlerweile sehr gut bekannt. Sie beschreiben Prozessführungen, welche zu jedem Zeitpunkt Gleichgewichtszustände des Systems beschreiben.
+Die quasistatischen Prozesse sind uns mittlerweile sehr gut bekannt. Sie bilden Prozessführungen, welche zu jedem Zeitpunkt Gleichgewichtszustände des Systems beschreiben.
 \paragraph*{Der thermodynamische Konfigurationsraum}
-Wir wollen zur Veranschaulichung und Charakterisierung allgemeiner Prozessführungen den sogenannten thermodynamischen Konfigurationsraum einführen. Dieser wird durch die extensiven Variablen eines betrachteten Systems aufgespannt und in Abb. [Abb][Ref] dargestellt.
-Die Menge aller Gleichgewichtszustände eines quasistatischen Prozesses liegen in einem solchen Konfigurationsraum auf einer Hyperfläche $S=S(U,V,X_j$), die der Beziehung 
+Wir wollen zur Veranschaulichung und Charakterisierung allgemeiner Prozesse den sogenannten thermodynamischen Konfigurationsraum einführen. Dieser wird durch die extensiven Variablen eines betrachteten Systems aufgespannt und ist exemplarisch in Abb. [Abb][Ref] dargestellt.
+Die Menge aller Gleichgewichtszustände eines quasistatischen Prozesses liegen im Konfigurationsraum auf einer Hyperfläche $S=S(U,V,X_j$), die der Beziehung 
 \begin{align*}
     \left(\frac{\partial S}{\partial U}\right)_{V,X_j}=\frac{1}{T}>0
 \end{align*}
 (welche aus Postulat \ref{post:eigenschaften_entropie} folgt) unterliegt.  
-Wir können auch zusammengesetzte, abgeschlossene Systeme leicht im Konfigurationsraum darstellen, da sich die extensiven Größen eines Teilsystemes aus der Additivität und der Kenntnis der Größen des anderen Teilsystemes ergeben. Formal ist die Beschreibung der Hyperfläche durch $S=S(U^{(1)},X_j^{(1)},U^{(2)},X_j^{(2)})$ in diesem Fall also zu 
+Wir können auch zusammengesetzte, abgeschlossene Systeme leicht im Konfigurationsraum darstellen, da sich die extensiven Größen eines Teilsystemes aus der Additivität und der Kenntnis der Größen des anderen Teilsystems ergeben. Formal ist die Beschreibung der Hyperfläche durch $S=S(U^{(1)},X_j^{(1)},U^{(2)},X_j^{(2)})$ in diesem Fall also zu 
 \begin{align*}
     S&=S(U^{(1)},X_j^{(1)},U=U^{(1)}+U^{(2)},X_j=X_j^{(1)}+X_j^{(2)})\\
     &=S(U^{(1)},X_j^{(1)},U,X_j)
@@ -26,81 +25,172 @@ Nichtgleichgewichtszustände hingegen haben, bedingt durch ihre Dynamik, viel me
 
 \paragraph*{Reale und quasistatische Prozesse}
 Wir wissen, dass es sich bei der quasistatischen Prozessführung um eine Idealisierung handelt, welche reale Elemente - wie Geschwindigkeiten, Flüsse, Raten und weitere - vernachlässigt. 
-Nichtsdestotrotz ist diese Idealisierung für uns insofern nützlich, als das die Thermodynamik sehr genaue (Vor-)Aussagen nur über eben solche Prozessführungen erlaubt.
-Für die Abbildung realer Prozesse - i.d.R. liegen hier wie in Abb. [Abb] [Ref] illustriert ein Anfangszustand A und ein Endzustand Z auf der Hyperfläche vor, welche über einen beliebigen Weg im Konfigurationsraum (über Nichtgleichgewichtszustände) miteinander verbunden sind - müssen wir die Diskrepanz zur Idealisierung jedoch berücksichtigen. 
-Eine mögliche Annäherung, welche den Übergang von Idealisierung zu Realität überbrückt - die \emph{quasi-stationären Prozesse} - ist die Darstellung realer Prozesse als dichte Abfolge von Gleichgewichtszuständen über Nichtgleichgewichtszustände. Anschaulich gesprochen entspricht dies einer Abfolge von Zuständen auf einer Hyperfläche $S$ im Konfigurationsraum, welche über Wege - welche nicht auf der Hyperfläche liegen - miteinander verbunden sind. Auch dies haben wir in Abb. [Abb2 neben Abb1][Ref] illustriert.    
+Nichtsdestotrotz ist diese Idealisierung für uns nützlich, da die Thermodynamik sehr genaue (Vor-)Aussagen über nur eben solche Prozessführungen erlaubt.
+Für die Abbildung realer Prozesse müssen wir die Diskrepanz zur Idealisierung jedoch berücksichtigen. (I.~d.~R. liegen für reale Prozesse wie in Abb. [Abb] [Ref] illustriert ein Anfangszustand $A$ und ein Endzustand $Z$ auf der Hyperfläche vor, welche über einen beliebigen Weg im Konfigurationsraum (über Nichtgleichgewichtszustände) miteinander verbunden sind).  
+Eine mögliche Annäherung, welche den Übergang von Idealisierung zu Realität überbrückt, ist die Darstellung realer Prozesse als dichte Abfolge von Gleichgewichtszuständen über Nichtgleichgewichtszustände. Anschaulich gesprochen entspricht dies einer Abfolge von Zuständen auf einer Hyperfläche $S$ im Konfigurationsraum, die über Wege - welche nicht auf der Hyperfläche selbst liegen - miteinander verbunden sind. Auch dies haben wir in Abb. [Abb2 neben Abb1][Ref] illustriert.    
 \begin{formal}
-     \formalemph{Reale Prozesse} entwickeln sich i.d.R. ausgehend von einem Punkt $A$ auf der Hyperfläche $S$ über Nichtgleichgewichtszustände des Konfigurationsraumes (außerhalb von $S$) zu einem Endzustand $Z$, welcher wiederum als Gleichgewichtszustand in $S$ liegt.
-     
-     \formalemph{Quasi-stationäre Prozesse} entwickeln sich über eine dichte Abfolge von Gleichgewichtszuständen in $S$, welche über Nichtgleichgewichtszustände miteinander verbunden sind.
+     \formalemph{Reale Prozesse} entwickeln sich i.~d.~R. ausgehend von einem Punkt $A$ auf der Hyperfläche $S$ über Nichtgleichgewichtszustände des Konfigurationsraumes (außerhalb von $S$) zu einem Endzustand $Z$, welcher wiederum als Gleichgewichtszustand in $S$ liegt.
+
+     \formalemph{Quasistatische (auch quasistationäre) Prozesse} entwickeln sich über eine dichte Abfolge von Gleichgewichtszuständen in $S$, welche über Nichtgleichgewichtszustände verbunden sind.
  \end{formal}
 
 \paragraph*{Zeitkonstanten}
-Eine weitere naheliegende Frage ist die Frage nach 55
-An dieser Stelle könnte man natürlich danach fragen, wie langsam überhaupt quasistatisch ist. 
-Wir wollen dies anhand eines Beispiels erörtern. 
-Quasistatisch bedeutet, dass die Zeiten $\Delta t$ zwischen aufeinanderfolgenden Gleichgewichtszuständen klein gegenüber der charakteristischen Relaxationszeit $\tau$ bei einer Störung des Gleichgewichts ist. 
+Nach Erläuterung dieser Näherung stellt sich uns die Frage, durch welche quantitative Größe quasistatische Prozesse von nicht-quasistatischen Prozessen unterschieden werden können.
+Wir wollen dies anhand eines Beispiels erörtern.
 
-Betrachte dazu als Beispiel die adiabatische Kompression eines Gases in einer Kammer der Länge $l$. Die Kompression erfolgt durch einen Kolben an dem einen Ende. Hier ist die charakteristische Relaxationszeit z.~B. die Zeit, die eine Turbulenz oder Verwirbelung am Kolben braucht, um die Kammer zu durchlaufen. Mit einer Schallgeschwindigkeit $c$ ergibt sich damit $\tau =l/c$. Mit Luft als Medium und eine Länge von \SI{1}{\m} ist $\tau=\SI{0.003}{\s}$. 
+\begin{figure}[htbp]
+    \centering
+    \tfigPlaceholder
+    \caption{<caption>}
+    \label{fig:}
+\end{figure}
 
-Für quasistatische Prozesse gilt also 
-
-
+In [Abb] haben wir eine adiabatische Gaskompression mittels eines Kolbens in einer Kammer abgebildet. Drücken wir den Kolben schnell genug ein, so entstehen Verwirbelungen des Gases, für welche wir die folgende Vereinfachung treffen: Sie breiten sich vom Kolben über die gesamte Kammerlänge $l$ bis zur gegenüberliegenden Kammerwand mit Schallgeschwindigkeit $c$ aus. Damit folgt für die \anf{Lebensdauer} dieser Störung $\tau =l/c$. (Um ein Gefühl für die Größenordnung zu gewinnen, können wir eine Kammerlänge $l=\SI{1}{\m}$ einsetzen und erhalten $\tau=\SI{0.003}{\s}$.) Wollen wir den Kolben also quasistatisch eindrücken, so muss für die Laufzeit $\Delta t \gg\tau$ gelten.
+\begin{formal}
+    \formalemph{Quasistatische Prozesse} werden über die Beziehung $\Delta t \gg\tau$ charakterisiert: Ihre Prozesszeiten $\Delta t$, welche zwischen Gleichgewichtszuständen liegen, müssen wesentlich größer als die charakteristischen Relaxationszeiten $\tau$ der Systemstörungen sein.
+    Es gilt $\Delta S\geq\Delta Q_{\mathrm{mess}}/T$.
+\end{formal}  
 
 \section{Reversible und irreversible Prozesse}
 
+\paragraph*{Definitionen und Bemerkungen }
+Wir wollen im Folgenden eine genaue Unterscheidung reversibler und irreversibler Prozesse geben. 
+Dazu betrachten wir ein abgeschlossenes, zusammengesetztes System, welches durch die Lockerung einer Zwangsbedingung von Zustand $A$
+in Zustand $B$ übergeht. Dem Postulat \ref{post:eigenschaften_entropie} zufolge ist die Entropie des Endzustandes größer als die Entropie des Anfangszustandes.
+Folglich ist der umgekehrte, spontane Übergang von $B$ nach $A$ verboten und wir bezeichnen den Zustandsübergang von $A$ nach $B$ als irreversibel. Nicht-quasistatische Prozesse sind im Folgeschluss immer irreversibel, der Umkehrschluss gilt nicht.
+Reversible Prozesse hingegen sind umkehrbare Prozesse, d.~h. die mit ihnen verknüpfte Entropieänderung ist gleich null.
+Sie sind quasistatisch, wobei der Umkehrschluss im Gegenzug wieder nicht immer gilt. %[Grafik??]
+\begin{formal}
+    Ein \formalemph{reversibler Prozess} ist ein quasistatischer Prozess, welcher keine Entropieänderung verursacht ($\Delta S=0$) und damit auch umkehrbar ist. 
+    Ein \formalemph{irreversibler Prozess} ist ein Prozess, welcher bedingt durch eine Entropiezunahme ($\Delta S>0$) in abgeschlossenen Systemen nicht umkehrbar ist. Nicht-quasistatische Prozesse sind immer irreversibel, aber auch quasistatische Prozesse können reversibel sein.
+\end{formal}
+Wir wollen die eingeführten Begriffe anhand einiger Beispielprozesse veranschaulichen:
+Ausgangspunkt bildet in allen Fällen ein \emph{thermisch isolierter} Kasten, in dessen linken Hälfte sich ein Gas befindet. Damit sind alle Ausgangszustände identisch.
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{.32\textwidth}
+        \centering
+        \tfigProcessReversibleQuasistationary        
+        \caption{}
+        \label{fig:ProcessReversibleQuasistationary}
+    \end{subfigure}
+    \begin{subfigure}[b]{.32\textwidth}
+        \centering
+        \tfigProcessIrreversibleQuasistationary           
+        \caption{}
+        \label{fig:ProcessIrreversibleQuasistationary}
+    \end{subfigure}
+    \begin{subfigure}[b]{.32\textwidth}
+        \centering     
+        \tfigProcessIrreversibleNonquasistationary
+        \caption{}
+        \label{fig:ProcessIrreversibleNonquasistationary}
+    \end{subfigure}
+    \caption{Vergleich unterschiedlicher Prozessführungen}
+    \label{fig:ProcessReversibleIrreversibleQuasistationary}
+\end{figure}
+\paragraph*{Reversibel und quasistatisch}
+Im ersten Aufbau, \Abbref{fig:ProcessReversibleQuasistationary}, wird der Kasten durch einen Kolben geteilt, welcher frei beweglich ist. Es läuft eine quasistatische, adiabatische Gasexpansion ab, welche den Kolben verschiebt. Die Verrichtung dieser mechanischen Arbeit führt zur Verringerung der inneren Energie und damit auch der Temperatur des Systems. Die Entropie hat sich insgesamt jedoch nicht verändert.
+\paragraph*{Irreversibel und quasistatisch}
+Im zweiten Aufbau, \Abbref{fig:ProcessIrreversibleQuasistationary}, wird der Kasten durch viele dicht beieinander liegende, entfernbare Trennwände geteilt. Wir können durch sukzessives Entfernen der Wände eine quasistatische Prozessführung anleiten, jedoch ist diese mit einer Entropiezunahme verbunden - der Prozess ist irreversibel.
+\paragraph*{Irreversibel und nicht-quasistatisch}
+Im dritten Aufbau, \Abbref{fig:ProcessIrreversibleNonquasistationary}, wird der Kasten durch eine einzige entfernbare Trennwand geteilt. Ziehen wir diese heraus, so findet eine nicht-quasistatische Zustandsänderung statt. Zwar gelangen wir zum selben Endzustand wie beim vorigen Experiment, jedoch laufen wir aufgrund der entstehenden Strömungen keinen Weg innerhalb der definierten Hyperfläche $S$ im Konfigurationsraum ab. Auch hier handelt es sich folglich um einen irreversiblen Prozess, welcher mit einer zu \ref{fig:ProcessIrreversibleQuasistationary} identischen Entropiezunahme verknüpft ist.
 
-\paragraph*{Definition und Bemerkungen }
-Wir betrachten ein abgeschlossenes, zusammengesetztes System, welches durch die Lockerung einer Zwangsbedingung von Zustand A
-in den Zustand B übergeht. Dem 2. Entropiepostulat zufolge ist die Entropie des Zustandes B größer, als die Entropie des Zustandes A.
-Folglich ist der umgekehrte, spontane Übergang von B nach A verboten und wir bezeichnen den Zustandsübergang von A nach B als irreversibel.
-Defkasten irreversible Prozesse
-Reversible Prozesse hingegen, sind umkehrbare Prozesse, d.~h. die Entropieänderung von A nach B ist null.
-Reversible Prozesse sind ferner immer quasistatisch, der Rückschluß gilt im Gegenzug nicht immer.
-NB einfügen
-Es stellt sich die Frage, wie für irreversible Prozesse dennoch ein Zustandsübergang von B nach A stattfinden kann.
-Die Realisierung erfolgt durch eine Ankopplung an ein zweites System, welches Wärme vom ersten System aufnehmen kann, sodass dessen Entropie sinkt. 
-Ein Beispiel dafür ist das offene System der Erde, in welchem Sonnenenergie in Form von Ordnung und Leben (Entropieabnahme) und abgestrahlter Wärme vorliegt.
-
-Ein Beispielhafter Versuch für reversible Prozesse ist eine quasistatische, adiabatische Expansion gegen äußeren Druck eines Gases. Die Volumenzunahme /Energieabnahme
-Ein zweiter Versuch besteht aus dem Rausziehen einer Abfolge von sehr eng stehenden Trennwänden in einem Kasten. Entsprechend beschreibt der Vorgang einen quasistatischen Prozess, welcher jedoch irreversibel ist, da in jedem Schritt eine Entropieänderung vorliegt.
-Ein dritter Versuch, das Herausziehen einer einzelnen Trennwand gemäß Abb., beschreibt einen nicht quasistatischen und irreversiblen Prozess.
-
-Im optimalsten Fall sind die von uns betrachteten Prozesse reversibel.
-Wir führen die idealisierte reversible Arbeitsquelle RAQ ein, welche vollkommen wärmeisoliert ist und ausreichend kurze Relaxationszeiten hat, sodass sie immer quasistatische Prozesse durchläuft.
-Die vorliegenden Entropieänderungen [F] sind entsprechend gleich null.
-quelle senke für arbeit
-
-Analog definieren wir eine reversible Wärmequelle RWQ, welche ... quasistatische wärmequelle/senke
-Wir führen ein Wärmereservoir ein, welches eine so große RWQ ist, dass eine Wärmezufuhr dessen Temperatur nicht mehr merklich erhöht.
-Formal folgt für das große Wärmereservoir [F]
-
-Wieder analog führen wir Volumenreservoire ein, welche sehr große RAQs sind, sodass der Druck immer konstant bleibt
-[...VL erneut schauen]
-
-------
-Betrachte ein abgeschlossenes zusammengesetzes System. 
-
-Ist ein Prozess reversibel, so ist er auch quasistatisch. Allerdings sind nicht alle quasistatischen Prozesse reversibel. 
-
-Immer wenn Gleichgewichtszustände verlassen werden \textendash{} also bei nicht-quasistatischer Prozessführung \textendash{} laufen irreversible Porzesse ab. 
-
-
-Um von einem Zustand $B$ mit höherer Entropie $S(B)$ in einen Zustand $A$ mit niedrigerer Energie $S(A)<S(B)$ zurück zu gelangen, muss an ein zweites System angekoppelt werden, an welches Wärme abgegeben werden kann\footnote{oder Arbeit aufgenommen, aber meistens wird Wärme abgegeben. }. Insgesamt ist 
-\begin{align*}
-    \Delta S_\mathrm{ges} = \Delta  S^{(2)}- (S(B)-S(A)) \geq 0. 
-\end{align*}
-Während die Entropie in dem einen System abnimmt, nimmt sie im zweiten zu. 
-
-
-Beispielsweise ist die Erde insgesamt ein offenes System ... 
-
-
-Ein Beispiel für einen reversiblen Prozess ist die quasistatische und adiabatische Expansion 
-
-Betrachte als zweites Beispiel eine Kammer mit einer Abfolge von eng beinander liegenden Trennwänden, die nacheinander herausgezogen werden. Da die Volumenänderung stets nur gering ist, ist der Prozess näherungsweise quasistatisch. Dennoch nimmt insgesamt das Volumen zu (ohne dass sich die Energie verringert) und damit auch die Entropie. 
-
-
+Es sei angemerkt, dass wir irreversible Prozesse durch die Ankopplung eines weiteren Systemes (also in offenen Systemen) realisieren können. Dazu muss die Entropie in Form eines Wärmeflusses vom Teilsystem abgegeben und vom angekoppelten System aufgenommen werden. 
+Ein Beispiel einer derartigen offenen Systemkopplung ist die Erde. Sie beherbergt Prozesse, welche mit einer Entropieabnahme (geordneten Lebensformen) verbunden sind. Jedoch wird zugleich Entropie in Form von Wärme an ihre Umgebung abgegeben.
 
 \paragraph*{Reversible Quellen und Reservoire}
-\section{Prozesse maximaler Arbeit}
+Wir wollen einige weitere nützliche idealisierte Bausteine einführen, die uns später bei der Beschreibung kontrollierter Systemparameter, der Charakterisierung neuer thermodynamischer Potentiale sowie der Erarbeitung der Ensembletheorie der statistischen Mechanik helfen werden.
+%ggf Tabelle anlegen (links bild, rechts text, vice versa, vice versa) 
+\begin{itemize}
+    \item \textbf{Reversible Arbeitsquelle (RAQ):} Ein idealisiertes System, mit welchem (mechanische) Arbeit reversibel ($\Delta S=\Delta Q/T=0$) ausgetauscht werden kann, nennt man eine \emph{reversible Arbeitsquelle}, kurz \emph{RAQ}. Eine derartige Arbeitsquelle/-senke ist also vollständig wärmeisoliert und hat eine konstante Entropie $S^{\mathrm{RAQ}}=\mathrm{const}$. Ein Beispiel für eine RAQ ist ein mechanisches System ohne Reibung.
+    \item \textbf{Reversible Wärmequelle (RWQ):} Ein idealisiertes System, mit welchem Wärme reversibel ausgetauscht werden kann, nennt man eine \emph{reversible Wärmequelle}, kurz \emph{RWQ}. Eine derartige Wärmequelle/-senke ist von starren Wänden umgeben (keine mechanische Arbeit kann daran verrichtet werden). Für die Änderung ihrer inneren Energie gilt: $\diff U^{\mathrm{RWQ}}=\udiff Q^{\mathrm{RWQ}}=T\diff S=c(T)\diff T$.
+    \item \textbf{Volumenreservoir:} Eine sehr große RAQ, deren Druck $P$ unabhängig von Volumen- und innerer Energieänderung konstant bleibt, bezeichnen wir als \emph{Volumenreservoir}.\footnote{Mathematisch beschreiben wir mit $(\partial P/\partial U)_{V,N_i}=(\partial P/\partial V)_{U,N_i}=0$ eine homogene Funktion $-1$-ten Grades ($\partial P/\partial \lambda U=\lambda ^{-1}\partial P/\partial U$), welche für unendlich groß-dimensionierte Systeme ($\lambda\rightarrow \infty$) somit gegen 0 strebt.}
+    \item \textbf{Wärmereservoir:} Eine sehr große RWQ, deren Temperatur $T$ unabhängig von Änderungen der inneren Energie konstant bleibt, bezeichnen wir als \emph{Wärmereservoir}.\footnote{Analog zum Volumenreservoir beschreibt $(\partial T/\partial U)_{V,N_i}=0$ eine homogene Funktion $-1$-ten Grades.}
+\end{itemize}
+Ein Beispiel für ein Wärme- und Volumenreservoir ist die Atmosphäre (in bestimmten änderungsfreien Zeitabschnitten). Bedingt durch ihre Größenordnung wirken sich lokale Temperatur- und Druckänderungen auf der Erde nicht messbar auf sie aus.
+\subsection{Prozesse maximaler Arbeit}
+Welche Arbeitsleistung kann nun maximal von einem System verrichtet werden, wenn es von einem Zustand in einen anderen übergeht? 
+Um diese Frage zu beantworten nutzen wir die eingeführten, reversiblen Quellen und betrachten Arbeit- und Wärmefluss separat. 
+
+\paragraph*{Das Theorem maximaler Arbeit}
+\begin{figure}[htbp]
+    \centering
+    \tfigTheoremMaximizedWork
+    \caption{Kopplung eines Teilsystems mit Wärme- und Arbeitsquelle}
+    \label{fig:MaximaleArbeit}
+\end{figure}
+In \Abbref{fig:MaximaleArbeit} veranschaulichen wir die (insgesamt abgeschlossene) Kopplung des Teilsystems TS mit einer RWQ und einer RAQ. Die Änderung der inneren Energie des Teilsystems beim Zustandsübergang ($\Delta U^{\mathrm{TS}}_{AB}=U^{\mathrm{TS}}_{B}-U^{\mathrm{TS}}_{A}$) wird in Form von Wärme ($\Delta Q^{\mathrm{RWQ}}$) an die RWQ und in Form von Arbeit ($\Delta W^{\mathrm{RAQ}}$) reversibel an die RAQ abgegeben. (Positive Änderungsterme kennzeichnen hier Größenzunahmen.) Wir fassen das Ganze entsprechend dem ersten Hauptsatz der Thermodynamik (\ref{hs:erster}) zusammen:
+\begin{align}
+    \label{eq:maximaleArbeit}
+    -\Delta U^{\mathrm{TS}}_{AB}=\Delta Q^{\mathrm{RWQ}}+\Delta W^{\mathrm{RAQ}}
+\end{align}
+Für reversible und irreversible Prozesse des Systems ergeben sich folgende Größenbilanzen:
+\renewcommand*{\arraystretch}{1.3}
+\arrayrulecolor{formalshade!90!black}
+\begin{table}[b]
+    \centering
+    \caption{Entropiebilanz eines abgeschlossenen gekoppelten Systems}
+    \begin{tabularx}{.5\textwidth}{|l|X|l|}
+        \hline
+        \rowcolor{formalshade!98!blue}
+        &Reversibel &Irreversibel\\
+        \hline
+        \rowcolor{formalshade}
+        Gesamtsystem&$\Delta S^\mathrm{Ges}=0$&$\Delta S^\mathrm{Ges}>0$\\
+        \rowcolor{formalshade!80!white}
+        Teilsystem TS&$\Delta S^{\mathrm{TS}}_{\mathrm{AB}}$&$\Delta S^{\mathrm{TS}}_{\mathrm{AB}}$\\
+        \rowcolor{formalshade}
+        RAQ&$0$&$0$\\
+        \rowcolor{formalshade!80!white}
+        RWQ&$-\Delta S^{\mathrm{TS}}_\mathrm{AB}$&$-\Delta S^{\mathrm{TS}}_\mathrm{AB}+\Delta S^\mathrm{Ges}$\\
+        \hline
+    \end{tabularx} 
+    \label{tab:Entropiebilanz}
+\end{table}
+\begin{itemize}
+    \item \textbf{Entropie (der RWQ):} Bei reversiblen Prozessen innerhalb eines abgeschlossenen Systems ist die Gesamtentropie erhalten ($\Delta S^\mathrm{Ges}=0$). Die Entropieänderung des Teilsystems entspricht $\Delta S^{\mathrm{TS}}_{\mathrm{AB}}$. Da die RAQ per Definition keine Entropieänderung erfährt, schließen wir daraus, dass $\Delta S^\mathrm{RWQ}=-\Delta S^{\mathrm{TS}}_\mathrm{AB}$ ist.
+    
+    Für irreversible Prozesse verhalten sich das Teilsystem und die RAQ gleich. (Wir gehen hier von irreversiblen Prozessen aus, die den selben Anfangs- und Endzustand, $A$ und $B$, wie die dazu verglichenen reversiblen Prozesse haben.)
+    Die Gesamtentropie nimmt in diesem Fall jedoch mit $\Delta S^\mathrm{Ges}>0$ zu, sodass für die RWQ $\Delta S^\mathrm{RWQ}=-\Delta S^{\mathrm{TS}}_\mathrm{AB}+\Delta S^\mathrm{Ges}$ folgt.
+    (Der Vergleich ist in Tabelle \ref{tab:Entropiebilanz} noch einmal zusammengefasst.) 
+
+    Die Entropiezunahme der RWQ ist folglich für reversible Prozesse kleiner als für irreversible:
+    \begin{align*}
+        \boxed{\Delta S^\mathrm{RWQ}_\mathrm{rev}<\Delta S^\mathrm{RWQ}_\mathrm{irr}}\:.
+    \end{align*}
+    
+    \item \textbf{Wärme (der RWQ):} Bekanntermaßen gilt für die RWQ 
+    \begin{align*}
+        \Delta U^\mathrm{RWQ}=\Delta Q^\mathrm{RWQ}=\int_{\Delta S^\mathrm{RWQ}}T^\mathrm{RWQ}\diff S^\mathrm{RWQ},
+    \end{align*}
+    womit für die Wärmeaufnahmen 
+    \begin{align*}
+        \boxed{\Delta Q_\mathrm{rev}^\mathrm{RWQ}<\Delta Q_\mathrm{irr}^\mathrm{RWQ}}
+    \end{align*}
+    folgt. Die Wärmezunahme der RWQ ist (analog zur Entropiezunahme) für reversible Prozesse kleiner als für irreversible Prozesse.
+    \item \textbf{Arbeit (der RAQ):} Über Umstellen von \ref{eq:maximaleArbeit},
+    \begin{align*}
+        \Delta W^\mathrm{RAQ}=-\Delta U_\mathrm{AB}^\mathrm{TS}-\Delta Q^\mathrm{RWQ},
+    \end{align*}
+    schließen wir somit auch darauf, dass die Arbeitsaufnahme für reversible Prozesse größer ist als für irreversible:
+    \begin{align*}
+        \boxed{\Delta W^\mathrm{RAQ}_\mathrm{rev}>\Delta W^\mathrm{RAQ}_\mathrm{irr}}\:.
+    \end{align*}
+\end{itemize} 
+\begin{formal}
+    \formalemph{Theorem maximaler Arbeit:} Der Arbeitsübertrag auf die RAQ ist für reversible Zustandsänderungen maximal, der Wärmefluss in die RWQ zugleich minimal. 
+\end{formal}
+Die mechanische Energieausbeute eines Prozesses lässt sich wie erwartet über die Minimierung von Wärmeverlusten maximieren. Idealisierte, reversible Prozesse gleicher Anfangs- und Endzustände realer Prozesse liefern dabei deren gültige Schranken. Bei irreversiblen Prozessen dissipiert ein Teil der möglichen Arbeitsleistung in Form von Wärme (beispielsweise über Reibung).
+
+Eine \emph{Wärmepumpe} ist eine Maschine, welche Arbeit verrichtet ($\Delta W^\mathrm{RAQ}<0$) um Wärme der RWQ ins System zu pumpen ($\Delta Q^\mathrm{RWQ}<0$).
+Für die Wärme- und Entropiebilanz folgt damit:
+\begin{align*}
+    \boxed{
+    \begin{aligned}
+            -\Delta Q^\mathrm{RWQ}_\mathrm{rev}>-\Delta Q^\mathrm{RWQ}_\mathrm{irr}\\
+            -\Delta W^\mathrm{RAQ}_\mathrm{rev}<-\Delta W^\mathrm{RAQ}_\mathrm{irr}
+    \end{aligned}
+    }\:.
+\end{align*}
+Für reversible Prozesse ist die Wärmeaufnahme aus der RWQ also maximal und die Arbeit der RAQ minimal.
