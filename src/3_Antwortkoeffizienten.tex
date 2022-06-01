@@ -348,7 +348,14 @@ Wir wollen nun ein konkretes Beispiel für den Verlauf der spezifischen Wärme $
 \begin{align*}
     u=\frac{f}{2}RT\quad\text{mit}\quad f=7\quad\rightarrow\quad c_v=\frac{f}{2}R=\frac{7}{2}R,
 \end{align*}
-sodass der spezifische Wärmeverlauf in Abhängigkeit der Temperatur $T$ wie folgt aussieht: [Grafik].
+sodass der spezifische Wärmeverlauf in Abhängigkeit der Temperatur $T$ wie folgt aussieht:
+\begin{figure}[htbp]
+    \centering
+    \tfigThawingOfDegreesOfFreedom
+    \caption{Temperaturabhängigkeit der spezifischen Wärme eines idealen Gases zweiatomiger Moleküle}
+    \label{fig:ThawingOfDegreesOfFreedom}
+\end{figure}
+
 Die angekündigten, von der Besetzbarkeit der Zustände abhängigen, Auftaubereiche der Freiheitsgrade schlagen sich wie erwartet hier in der spezifischen Wärme nieder.
 Wir beobachten ferner, dass für Festkörper ein zu $T^3$ proportionaler Verlauf vorliegt, welcher durch die Anschauung von Phononen und ihren Schwingungen plausibilisiert werden kann \textendash{} darauf wollen wir im Rahmen der statistischen Mechanik erneut zu sprechen kommen.
 
@@ -368,14 +375,42 @@ Dies ist eine Konsequenz des additiven Charakters der Entropie und wird durch da
 \begin{formal}
     Das \formalemph{Gibbs'sche Theorem} besagt, dass sich die Gesamtentropie eines Systems gemischter idealer Gase als die Summe der Einzelentropien der Gase schreiben lässt.
 \end{formal}
-Veranschaulichen können wir es, indem wir uns einen sogenannten \emph{Mischapparat} vorstellen, welcher zwei unterschiedliche Gase und semipermeable Membranen, die für je eine Gassorte durchlässig sind, bei gleichem Druck $P=P_1=P_2$ und gleicher Temperatur $T=T_1=T_2$ beinhaltet. Wir stellen uns vor, dass die Ausgangssituation der Abb [Grafik] entspricht \textendash{} Membran (1) ist für das erste Gas durchlässig, Membran (2) für das zweite, sodass beide Gase noch in getrennten Kammern vorliegen. Nun kann der Kolben gemeinsam mit
-Membran (2) quasistatisch%(??) 
-bewegt werden, bis die Gase \textendash{} immer noch je im selben Volumen enthalten \textendash{} vollständig miteinander vermischt sind. Es ist ersichtlich, dass dieser Vorgang ohne weitere Prozesse abläuft, Volumina $V_1,V_2$, Stoffmengen $\sm _1,\sm _2$, Druck $P_1,P_2$und Temperatur $T_1,T_2$ also durchweg konstant bleiben und letztlich auch die innere Energie $U$ erhalten wird. Folglich ist auch die Gesamtentropie $S$ vor und nach der Mischung hier gleich groß.
-Hinweis: Wir wollen noch einmal darauf verweisen, dass \emph{Mischentropien} sehr wohl existieren, d.~h., dass Mischprozesse einen Zuwachs der Entropie verursachen können. Dies setzt jedoch einen anderen Versuchsaufbau voraus, für welchen beispielsweise keine Erhaltung der Volumina $V_1,V_2$ gilt. Das simpelste Beispiel wird durch eine Kammer beschrieben, welche durch eine Trennwand geteilt wird. Links und rechts der Trennwand befinden sich bei gleicher Temperatur $T$ und Druck,
+Veranschaulichen können wir es, indem wir uns einen sogenannten \emph{Mischapparat} vorstellen, welcher zwei unterschiedliche Gase und semipermeable Membranen, die für je eine Gassorte durchlässig sind, bei gleichem Druck $P=P_1=P_2$ und gleicher Temperatur $T=T_1=T_2$ beinhaltet. 
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{.45\textwidth}
+        \centering
+        \tfigMixingMachineOne        
+        \caption{}
+        \label{fig:MixingMachineOne}
+    \end{subfigure}
+    \begin{subfigure}[b]{.45\textwidth}
+        \centering
+        \tfigMixingMachineTwo           
+        \caption{}
+        \label{fig:MixingMachineTwo}
+    \end{subfigure}
+    \caption{Dartstellung eines Mischapparates}
+    \label{fig:ProcessReversibleIrreversibleQuasistationary}
+\end{figure}
+Wir stellen uns vor, dass die Ausgangssituation der \Abbref{fig:MixingMachineOne} entspricht \textendash{} Membran (1) ist nur für das erste Gas durchlässig, Membran (2) nur für das zweite, sodass beide Gase noch in getrennten Kammern vorliegen. Nun kann der Kolben gemeinsam mit
+Membran (1) quasistatisch%(??) 
+bewegt werden, bis die Gase \textendash{} immer noch je im selben Volumen enthalten \textendash{} vollständig miteinander vermischt sind (\Abbref{fig:MixingMachineTwo}). Es ist ersichtlich, dass dieser Vorgang ohne weitere Prozesse abläuft, Volumina $V_1,V_2$, Stoffmengen $\sm _1,\sm _2$, Druck $P_1,P_2$und Temperatur $T_1,T_2$ also durchweg konstant bleiben und letztlich auch die innere Energie $U$ erhalten wird. Folglich ist auch die Gesamtentropie $S$ vor und nach der Mischung hier gleich groß.
+
+Wir wollen darauf verweisen, dass \emph{Mischentropien} sehr wohl existieren, d.~h., dass Mischprozesse einen Zuwachs der Entropie verursachen können. Dies setzt jedoch einen anderen Versuchsaufbau voraus, für welchen beispielsweise keine Erhaltung der Volumina $V_1,V_2$ gilt. 
+\begin{figure}[htbp]
+    \centering
+    \tfigMixTwoGases
+    \caption{<caption>}
+    \label{fig:MixTwoGases}
+\end{figure}
+
+Das simpelste Beispiel wird durch eine Kammer beschrieben, welche durch eine Trennwand geteilt wird. Links und rechts der Trennwand befinden sich bei gleicher Temperatur $T$ und Druck,
 \begin{align*}
     P\propto\frac{\sm _1}{V_1}=\frac{\sm _2}{V_2}=\frac{\sm }{V}=\frac{\sm _1+\sm _2}{V_1+V_2},
 \end{align*}
-zwei unterschiedliche Gase. Wird die Trennwand nun gemäß Abb[Grafik] entfernt, so unterscheiden sich die anfangs eingenommenen Volumina der Gase, $V_1$, respektive $V_2$, von dem zuletzt eingenommenen Gesamtvolumen $V_1+V_2$.
+zwei unterschiedliche Gase. Wird die Trennwand nun gemäß \Abbref{fig:MixTwoGases} entfernt, so unterscheiden sich die anfangs eingenommenen Volumina der Gase, $V_1$, respektive $V_2$, von dem zuletzt eingenommenen Gesamtvolumen $V_1+V_2$.
 Wir wollen die Entropie des Endzustandes beschreiben und mit der Entropie vor Mischung in Relation setzen. Dazu schreiben wir zuerst die Zustandsgleichung
 \begin{align*}
     S=\sum_j\sm _js_j=\sum_j\sm _j\left(s_{j0}+\frac{f_j}{2}R\ln\frac{T}{T_0}+R\ln\frac{V}{\sm _jv_0}\right)
@@ -389,14 +424,47 @@ Nach Einsetzen erhalten wir
     \boxed{
         \begin{aligned}
             S & =\sum_j\sm _j\left(s_{j0}+\frac{f_j}{2}R\ln\frac{T}{T_0}+R\ln\frac{V}{\sm v_0}\right)-\sm R\sum_jx_j\ln x_j                 \\
-              & =\sum_jS_j(\text{Einzelgase bei $T$ und }P\propto \frac{\sm _j}{v_j}=\frac{\sm }{V})+\text{Mischungsentropie $S_m(>0)$}
+              & =\sum_jS_j+S_m
         \end{aligned}
     }\:.
 \end{align*}
-Dies entspricht der Entropie des Systems vor Mischung und einem zusätzlichen positiven Term für die Mischungsentropie $S_m$.
+Dies entspricht der Entropie des Systems vor Mischung (die Einzelgase bei Temperatur $T$ und Druck $P \propto n_j/v_j=n/V$) und einem zusätzlichen positiven Term für die Mischungsentropie $S_m$.
 \paragraph*{Gibbs'sches Paradoxon}
 Wir haben bislang jedoch noch eine Anwendung des Theorems übersehen, die zum Widerspruch führt und auch als \emph{Gibbs'sches Paradoxon} bekannt ist.
 Betrachten wir einmal den Grenzfall gleicher Gaskomponenten \textendash{} wir werden feststellen müssen, dass dies beim beschriebenen Mischprozess zu einer unsinnigen Entropiezunahme führt. Schließlich können wir uns vorstellen, die Trennwand zu einem beliebigen Zeitpunkt wieder einzusetzen und damit die Anfangsbedingungen wieder hergestellt zu haben \textendash{} für die natürlich die anfängliche Entropie vorherrscht. Vertrauen wir der Herleitung des positiven Mischterms der Entropie bedingungslos, so haben wir gerade einen simplen Prozess der Entropieverringerung beschrieben, welcher sich äußerst unphysikalisch anfühlt. 
 
 Die Quantenmechanik hilft uns hier glücklicherweise das Paradoxon begründet aufzulösen: Die Systeme vor und nach der Trennung unterscheiden sich physikalisch nicht (natürlich setzen wir erneut gleiche Anfangstemperaturen und Drücke voraus). Alle Gasmoleküle werden als zueinander identisch angesehen, sodass keine zusätzlichen Systemkonfigurationen bei Mischung vorliegen, weshalb auch der Entropie-Mischterm plausiblerweise in diesem Fall null bleibt.
 
+\section{Das Van-der-Waals-Gas}
+Wir wollen uns jetzt ausgehend von den idealen Gasen den realen Gasen und der Van-der-Waals-Gleichung zuwenden.
+
+Die Wechselwirkungen der Atome und Moleküle idealer Gase sind aufgrund ihrer großen mittleren Abstände verschwindend gering und werden deshalb nicht betrachtet.
+Anders verhält es sich bei realen Gasen. Tragen wir das Wechselwirkungspotential in Abhängigkeit der Abstände wie in [Abb??] auf, so erkennen wir in unmittelbarer Radiusgrößenordnung starke Abstoßungen; bei größeren Abständen hingegen Anziehung (auch Kohäsion genannt). 
+
+Für reale Gase beobachten wir zwei wesentliche Effekte: Zum einen die sogenannte Volumenreduktion, welche das effektiv vom Gas einnehmbare Volumen, $v_\mathrm{eff}=v-b$, beschreibt ($v$ bezeichnet das Behältervolumen und $b$ das Eigenvolumen eines Moles der Gasmoleküle).
+Zum anderen liegt eine Druckkorrektur, $P=P_\mathrm{kin}-a/v^2$, vor. Der erste Term beschreibt den kinetischen Druck, der der thermischen Bewegung entspringt, der zweite die intermolekulare Anziehung, welche den Druck auf die Behälterwand reduziert. 
+Da letztere Anziehung von den Molekülwechselwirkungen abhängt, ist sie proportional zur Molekülpaaranzahl ($\propto N^2/V^2$).
+
+Wir setzen die für das reale Gas diskutierten Größen in die ideale Gasgleichung ein:
+\begin{align*}
+    P_\mathrm{kin} v_\mathrm{eff}=RT\\
+    (P+\frac{a}{v^2})(v-b)=RT
+\end{align*}
+und erhalten die sogenannte \emph{Van-der-Waals-Gleichung},
+\begin{align*}
+    \boxed{ P=\frac{RT}{v-b}-\frac{a}{v^2}}\:.
+\end{align*}
+(In der statistischen Mechanik lässt sich diese Gleichung ebenfalls herleiten.)
+Da $a$ und $b$ empirische Konstanten sind, liefert die Gleichung keine strenge quantitative Beschreibung realer Gase.
+Sie erlaubt jedoch eine qualitative Beschreibung ihrer Eigenschaften und der gas-flüssig Phasenübergänge.
+
+Bevor wir zum nächsten Unterkapitel übergehen, wollen wir (ohne Beweis) noch zwei interessante Zusammenhänge für reale Gase vorstellen.
+Zum einen gilt für die Ableitung der inneren molaren Energie nach dem molaren Volumen unter konstanter Temperatur: 
+\begin{align*}
+    \left( \frac{\partial u}{\partial v} \right)_T =\frac{a}{v^2}>0.
+\end{align*}
+Wird das Volumen verringert, so nehmen die Wechselwirkungen zwischen den Molekülen und damit die innere Energie zu.
+Ferner folgt aus dieser Beziehung überraschenderweise, dass die spezifische Wärme volumenunabhängig ist, $c_v=c_v(T)$, denn es gilt
+\begin{align*}
+    \frac{\partial c_v}{\partial v}=\frac{\partial}{\partial v}\frac{\partial u}{\partial T}=\frac{\partial}{\partial T}\frac{a}{v^2}=0.
+\end{align*} 
