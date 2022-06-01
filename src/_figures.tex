@@ -286,7 +286,7 @@
     \end{tikzpicture}
 }
 
-
+% Placeholder
 \newcommand{\tfigPlaceholder}{
     \begin{tikzpicture}
         \filldraw[fill=formalshade] (0,0) rectangle (3,3) ;
@@ -294,7 +294,7 @@
     \end{tikzpicture}
 }
 
-% Degeneracy function for large systems -> delta function
+% Reversible vs. irreversible Processes and quasistationary vs. non-stationary 
 \newcommand{\tfigProcessReversibleQuasistationary}{
     \begin{tikzpicture}[scale=1.7]
         \draw[piston] (0,0) -- (0,1);
@@ -335,6 +335,7 @@
         }
     \end{tikzpicture}
 }
+% Maximized work in a coupled system
 \newcommand{\tfigTheoremMaximizedWork}{
     \begin{tikzpicture}
         [
@@ -348,5 +349,105 @@
         edge[arr] (RWQ) 
         edge[arr] (RAQ);
         \node[system node,align=center] at (-3,0) {\textbf{TS}\\\\$\Delta S_{AB}^\mathrm{TS}$} edge[arr] node[midway, above] {$-\Delta U_{AB}^\mathrm{TS}$} (P);
+    \end{tikzpicture}
+}
+
+% Mixing od two gases 
+\newcommand{\tfigMixTwoGases}{
+    \begin{tikzpicture}[scale=1.6]
+        \draw (-1,0) rectangle (1,1);
+        \node[align=center] at (-.5,.5) {$N_1,V_1$\\$T,P$};
+        \node[align=center] at (.5,.5) {$N_2,V_2$\\$T,P$};
+        \draw[pattern=north east lines] (-.05,0) rectangle (.05,1);
+        \pgfmathsetseed{228}
+        \foreach \n in {1,...,10}{
+            \fill[nice light blue] (.02-1+rnd*0.96,.02+rnd*0.96) circle[radius=.5pt];
+            \fill[nice green] (.02+rnd*0.96,.02+rnd*0.96) circle[radius=.5pt];
+        }
+    
+        \draw[arr] (1.5,.5) -- +(1.5,0) node[midway, above] {Mischung} node[midway, below]{$S_m>0$}; 
+        
+        \begin{scope}[xshift=4.5cm]
+            \draw (-1,0) rectangle (1,1);
+            \pgfmathsetseed{223}
+            \foreach \n in {1,...,10}{
+                \fill[nice light blue] (.02-1+rnd*1.96,.04+rnd*0.92) circle[radius=.5pt];
+                \fill[nice green] (.02-1+rnd*1.96,.04+rnd*0.92) circle[radius=.5pt];
+            }
+        \end{scope}
+    \end{tikzpicture}
+}
+% Thawing of degrees of freedom: translation, rotation, vibration
+\newcommand{\tfigThawingOfDegreesOfFreedom}{
+    \begin{tikzpicture}
+        \draw[arr] (0,0) -- (0,4.5) node[ylabel] {$c_v/R$};
+        \draw[arr] (0,0) -- (9,0) node[xlabel] {$T$};
+    
+        \draw (0,3/2) -- +(-2pt,0) node[left] {$\frac32$};
+        \draw (0,5/2) -- +(-2pt,0) node[left]{$\frac52$};
+        \draw (0,7/2) -- +(-2pt,0) node[left] {$\frac72$};
+        \draw[decoration={brace}, decorate] (-.5,0) -- (-.5,3/2) node[midway, left,xshift=-2mm] {flüssig/fest};
+        \draw[decoration={brace}, decorate] (-.5,3/2) -- (-.5,7/2) node[midway, left,xshift=-2mm] {gasförmig};
+        \draw[dashed] (0,3/2) -- +(8.5,0);
+        \draw[dashed] (0,5/2) -- +(8.5,0);
+        \draw[dashed] (0,7/2) -- +(8.5,0);
+    
+        \draw (0,0) .. controls +(10:1) and +(-135:1) .. (2,3/4) .. controls +(45:.5) and +(-180:.5) .. (3,3/2) -- (4,3/2) node[midway, above] {Translation}  .. controls +(0:.5) and +(-180:.5) .. (5,5/2) -- (6,5/2) node[midway, above] {Rotation} .. controls +(0:.5) and +(-180:.5) .. (7,7/2) -- +(1.5,0) node[midway, above] {Schwingung};
+    \end{tikzpicture}
+}
+% Adiabatic gas-compression 
+\newcommand{\tfigAdiabaticGasCompression}{
+    \begin{tikzpicture}[scale=1.7]
+        \draw[piston] (.4,0) -- (.4,1);
+        \draw[piston bar] (.4,.5) -- (1.2,.5);
+        \draw[arr] (.3,.5) -- (0,.5);
+        \draw[pattern=north east lines,even odd rule] (-1.4,1.2) rectangle (1.4,-.2)  (-1.2,0) rectangle (1.2,1);
+        \pgfmathsetseed{13}
+        \foreach \n in {1,...,28}{
+            \fill (-1.15+rnd*1.4,.02+rnd*.96) circle[radius=.5pt];
+        }
+    \end{tikzpicture}
+}
+% Mixing-Machine (First state)
+\newcommand{\tfigMixingMachineOne}{
+    \begin{tikzpicture}[scale=1.7]
+        \draw[piston] (1.12,0) -- (1.12,1);
+        %\draw[piston bar] (0,.5) -- (1.2,.5);
+        \draw[arr] (1,.5) -- (.7,.5);
+        \draw[arr] (-.15,.5) -- (-.45,.5);
+        \draw[pattern=north west lines,even odd rule] (0,-0) rectangle (0.1,.99);
+        \node at (.3,.85){(2)} ;
+        \draw[black](.2,.85)-- (.1,.8);
+        \node at (-.3,.85){(1)} ;
+        \draw[black](-.2,.85)-- (-.1,.8);
+        \draw[pattern=north east lines,even odd rule] (-.1,-0) rectangle (0,.99);
+        \draw[pattern=north east lines,even odd rule] (-1.4,1.2) rectangle (1.4,-.2)  (-1.2,0) rectangle (1.2,1);
+        \pgfmathsetseed{9}
+        \foreach \n in {1,...,20}{
+            \fill[nice green] (-1.05+rnd*.97,.02+rnd*.95) circle[radius=.5pt];
+        }
+        \pgfmathsetseed{20}
+        \foreach \n in {1,...,20}{
+            \fill[nice light blue] (.05+rnd*.87,.02+rnd*.96) circle[radius=.5pt];
+        }
+    \end{tikzpicture}
+}
+% Mixing-Machine (Second state)
+\newcommand{\tfigMixingMachineTwo}{
+    \begin{tikzpicture}[scale=1.7]
+        \draw[piston] (0.18,0) -- (0.18,1);
+        \draw[piston bar] (0.19,.5) -- (1.2,.5);
+        %\draw[arr] (.3,.5) -- (0,.5);
+        \draw[pattern=north west lines,even odd rule] (0,-0) rectangle (0.1,.99);
+        \draw[pattern=north east lines,even odd rule] (-1.2,-0) rectangle (-1.09,.99);
+        \draw[pattern=north east lines,even odd rule] (-1.4,1.2) rectangle (1.4,-.2)  (-1.2,0) rectangle (1.2,1);
+        \pgfmathsetseed{29}
+        \foreach \n in {1,...,20}{
+            \fill[nice green] (-1.05+rnd*.87,.02+rnd*.96) circle[radius=.5pt];
+        }
+        \pgfmathsetseed{2}
+        \foreach \n in {1,...,20}{
+            \fill[nice light blue] (-1.05+rnd*.87,.02+rnd*.96) circle[radius=.5pt];
+        }
     \end{tikzpicture}
 }
