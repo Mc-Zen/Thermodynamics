@@ -194,3 +194,118 @@ Für die Wärme- und Entropiebilanz folgt damit:
     }\:.
 \end{align*}
 Für reversible Prozesse ist die Wärmeaufnahme aus der RWQ also maximal und die Arbeit der RAQ minimal.
+
+
+
+
+
+\subsection{Reversible und irreversible Prozesse}
+
+
+\paragraph*{Definition und Bemerkungen }
+
+Betrachte ein abgeschlossenes zusammengesetzes System. 
+
+Ist ein Prozess reversibel, so ist er auch quasistatisch. Allerdings sind nicht alle quasistatischen Prozesse reversibel. 
+
+Immer wenn Gleichgewichtszustände verlassen werden \textendash{} also bei nicht-quasistatischer Prozessführung \textendash{} laufen irreversible Prozesse ab. 
+
+
+Um von einem Zustand $B$ mit höherer Entropie $S(B)$ in einen Zustand $A$ mit niedrigerer Energie $S(A)<S(B)$ zurück zu gelangen, muss an ein zweites System angekoppelt werden, an welches Wärme abgegeben werden kann\footnote{oder Arbeit aufgenommen, aber meistens wird Wärme abgegeben. }. Insgesamt ist 
+\begin{align*}
+    \Delta S_\mathrm{ges} = \Delta  S^{(2)}- (S(B)-S(A)) \geq 0. 
+\end{align*}
+Während die Entropie in dem einen System abnimmt, nimmt sie im zweiten zu. 
+
+
+Beispielsweise ist die Erde insgesamt ein offenes System ... 
+
+
+Ein Beispiel für einen reversiblen Prozess ist die quasistatische und adiabatische Expansion 
+... 
+
+Betrachte als zweites Beispiel eine Kammer mit einer Abfolge von eng beinander liegenden Trennwänden, die nacheinander herausgezogen werden. Da die Volumenänderung stets nur gering ist, ist der Prozess näherungsweise quasistatisch. Dennoch nimmt insgesamt das Volumen zu (ohne dass sich die Energie verringert) und damit auch die Entropie. 
+
+
+... 
+
+
+\paragraph*{Reversible Quellen und Reservoire}
+
+
+\section{Prozesse maximaler Arbeit}
+
+\paragraph*{Theorem maximaler Arbeit}
+
+... 
+
+\paragraph*{Spezialfall}
+
+Für ein Teilsystem TS, das die Wärme $\Delta Q^{\mathrm{RWQ}}$ zugeführt bekommt ... 
+
+Im reversiblen Ablauf ändert sich die Entropie mit 
+\begin{align*}
+    \Delta S^{\mathrm{TS}} = \int \diff S^\mathrm{TS} = -\int \diff S^\mathrm{RWQ} = - \int \frac{\udiff Q^\mathrm{RWQ}}{T} = \int \frac{\udiff Q^\mathrm{TS}_\mathrm{rev}}{T} 
+\end{align*}
+ohne das Teilsystem ... ist dann 
+\begin{align}
+    \label{eq:2.HS_teil1}
+    \diff S = \frac{\udiff Q_\mathrm{rev}}{T},
+\end{align}
+was dem ersten Teil des zweiten Hauptsatzes der Thermodynamik entspricht. 
+
+Im irreversiblen Ablauf ist dagegen 
+\begin{align*}
+    \Delta S^{\mathrm{TS}} = \int \diff S^\mathrm{TS} = -\int \diff S^\mathrm{RWQ} +\Delta S = - \int \frac{\udiff Q^\mathrm{RWQ}}{T^\mathrm{RWQ}} + \Delta S = \int \frac{\udiff Q^\mathrm{TS}_\mathrm{irr}}{T^\mathrm{RWQ}} +\Delta S
+\end{align*}
+mit $\Delta S>0$. Insgesamt ist dann 
+\begin{align}
+    \label{eq:2.HS_teil2}
+    \diff S > \frac{\udiff Q_\mathrm{irr}}{T},
+\end{align}
+was dem zweiten Teil des zweiten Hauptsatzes der Thermodynamik entspricht. 
+
+
+Kombiniert man die Gleichungen \eqref{eq:2.HS_teil1} und \eqref{eq:2.HS_teil2} und verwendet, dass $\udiff Q=\diff U-\udiff W_\mathrm{mech}-\udiff W_\mathrm{chem}$, so erhält man die Grundrelation der Thermodynamik:
+\begin{align}
+    \label{eq:grundrelation_der_TD}
+    \boxed{T\diff S\geq \diff U-\udiff W_\mathrm{mech}-\udiff W_\mathrm{chem}}\:.
+\end{align}
+
+
+
+\section{Wirkungsgrad von Maschinen}
+
+Eine thermodynamische Maschine besteht i.d.R. aus einem Teilsystem TS (später auch Hilfssystem genannt), das an zwei reversible Wärmereservoire angekoppelt wird \textendash{} ein heißes (h) und ein kaltes (k) \textendash{} sowie an eine reversible Arbeitsquelle RAQ. TS könnte z.B. ein Kolben sein.  
+
+Insgesamt ist das System idealerweise nach außen hin abgeschlossen, $\diff U=0$. Ferner soll sich der Zustand des Teilsystems TS nach einem vollständigen Arbeitszyklus nicht geändert haben. 
+
+Nach dem ersten Hauptsatz gilt ($\diff U=0$)
+\begin{align}
+    \label{eq:maschine_HS1}
+    \udiff Q_\mathrm{h} +\udiff Q_\mathrm{k} + \udiff W^\mathrm{RAQ} = 0
+\end{align}
+und nach dem zweiten für einen reversiblen Ablauf 
+\begin{align}
+    \label{eq:maschine_HS2}
+    \diff S_\mathrm{h} + \diff S_\mathrm{k} = 0 \equivalence \frac{\udiff Q_\mathrm{h}}{T_\mathrm{h}} + \frac{\udiff Q_\mathrm{k}}{T_\mathrm{k}} = 0. 
+\end{align}
+Dabei ist natürlich $\udiff Q_\mathrm{h}=-\udiff Q_\mathrm{TS}$ u.s.w. 
+
+\paragraph*{Thermodynamische Maschine}
+
+Bei einer thermodynamischen Maschine wird allgemein Wärme $\udiff Q_\mathrm{h}$ aus einer Energiequelle (z.B. ein Ofen oder Dampfkessel) mit hoher Temperatur $T_\mathrm{h}$ über das Teilsystem (z.B. ein Kolben) in Form von Arbeit $\udiff W^\mathrm{RAQ}$ an die Maschinerie und in Form von Wärme $\udiff Q_\mathrm{k}$ an ein Kühlsystem mit niedrigerer Temperatur abgegeben. 
+
+Nach Gleichung \eqref{eq:maschine_HS2} gilt 
+\begin{align*}
+    \udiff Q_\mathrm{k} = -\frac{T_\mathrm{k}}{T_\mathrm{h}} \udiff Q_\mathrm{h}
+\end{align*}
+und nach Gleichung \eqref{eq:maschine_HS1}
+...
+Der Wirkungsgrad $\eta$ beschreibt das Verhältnis der Energie die in mechanische Arbeit umgesetzt wird:
+... 
+
+
+
+
+\section{Der Carnot-Zyklus}
