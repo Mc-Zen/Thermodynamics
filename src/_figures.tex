@@ -335,22 +335,6 @@
         }
     \end{tikzpicture}
 }
-% Maximized work in a coupled system
-\newcommand{\tfigTheoremMaximizedWork}{
-    \begin{tikzpicture}
-        [
-            system node/.style={rectangle,draw,inner sep=10pt}
-        ]
-        \node[system node, fill=red!20!white] (RWQ) at (3,1) {RWQ};
-        \node[system node, fill=black!10!white] (RAQ) at (3,-1) {RAQ};
-        \node[point] (P) at (0,0) {};
-        \draw[arr] (P) .. controls +(0:.7) and +(180:.7) .. (RAQ.west) node[pos=.7,anchor=north east] {$\Delta W^\mathrm{RAQ}$};
-        \draw[arr] (P) .. controls +(0:.7) and +(180:.7) .. (RWQ.west) node[pos=.7,anchor=south east] {$\Delta Q^\mathrm{RWQ}$};
-        edge[arr] (RWQ) 
-        edge[arr] (RAQ);
-        \node[system node,align=center] at (-3,0) {\textbf{TS}\\\\$\Delta S_{AB}^\mathrm{TS}$} edge[arr] node[midway, above] {$-\Delta U_{AB}^\mathrm{TS}$} (P);
-    \end{tikzpicture}
-}
 
 % Mixing od two gases 
 \newcommand{\tfigMixTwoGases}{
@@ -377,6 +361,7 @@
         \end{scope}
     \end{tikzpicture}
 }
+
 % Thawing of degrees of freedom: translation, rotation, vibration
 \newcommand{\tfigThawingOfDegreesOfFreedom}{
     \begin{tikzpicture}
@@ -395,6 +380,7 @@
         \draw (0,0) .. controls +(10:1) and +(-135:1) .. (2,3/4) .. controls +(45:.5) and +(-180:.5) .. (3,3/2) -- (4,3/2) node[midway, above] {Translation}  .. controls +(0:.5) and +(-180:.5) .. (5,5/2) -- (6,5/2) node[midway, above] {Rotation} .. controls +(0:.5) and +(-180:.5) .. (7,7/2) -- +(1.5,0) node[midway, above] {Schwingung};
     \end{tikzpicture}
 }
+
 % Adiabatic gas-compression 
 \newcommand{\tfigAdiabaticGasCompression}{
     \begin{tikzpicture}[scale=1.7]
@@ -408,6 +394,7 @@
         }
     \end{tikzpicture}
 }
+
 % Mixing-Machine (First state)
 \newcommand{\tfigMixingMachineOne}{
     \begin{tikzpicture}[scale=1.7]
@@ -432,6 +419,7 @@
         }
     \end{tikzpicture}
 }
+
 % Mixing-Machine (Second state)
 \newcommand{\tfigMixingMachineTwo}{
     \begin{tikzpicture}[scale=1.7]
@@ -449,5 +437,56 @@
         \foreach \n in {1,...,20}{
             \fill[nice light blue] (-1.05+rnd*.87,.02+rnd*.96) circle[radius=.5pt];
         }
+    \end{tikzpicture}
+}
+
+% Maximized work in a coupled system
+\newcommand{\tfigTheoremMaximizedWork}{
+    \begin{tikzpicture}
+        [
+            system node/.style={rectangle,draw,inner sep=10pt}
+        ]
+        \node[system node, fill=red!20!white] (RWQ) at (3,1) {RWQ};
+        \node[system node, fill=black!10!white] (RAQ) at (3,-1) {RAQ};
+        \node[point] (P) at (0,0) {};
+        \draw[arr] (P) .. controls +(0:.7) and +(180:.7) .. (RAQ.west) node[pos=.7,anchor=north east] {$\Delta W^\mathrm{RAQ}$};
+        \draw[arr] (P) .. controls +(0:.7) and +(180:.7) .. (RWQ.west) node[pos=.7,anchor=south east] {$\Delta Q^\mathrm{RWQ}$};
+        edge[arr] (RWQ) 
+        edge[arr] (RAQ);
+        \node[system node,align=center] at (-3,0) {\textbf{TS}\\\\$\Delta S_{AB}^\mathrm{TS}$} edge[arr] node[midway, above] {$-\Delta U_{AB}^\mathrm{TS}$} (P);
+    \end{tikzpicture}
+}
+
+% Maximized work in a coupled system
+\newcommand{\tfigThermodynamicMaschine}{
+    \begin{tikzpicture}
+        [
+            system node/.style={rectangle,draw,inner sep=10pt}
+        ]
+        \node[system node, fill=blue!20!white,minimum width=3.5cm] (RWQ) at (5,1) {Kühlsystem, $T_\mathrm{k}$};
+        \node[system node, fill=black!10!white,minimum width=3.5cm] (RAQ) at (5,-1) {Maschinerie (RAQ)};
+        \node[system node] (P) at (0,0) {TS};
+        \draw[arr] (P) .. controls +(0:1.7) and +(180:.7) .. (RAQ.west) node[pos=.7,anchor=north east] {$\udiff Q_\mathrm{k}$};
+        \draw[arr] (P) .. controls +(0:1.7) and +(180:.7) .. (RWQ.west) node[pos=.7,anchor=south east] {$\udiff W^\mathrm{RAQ}$};
+        edge[arr] (RWQ) 
+        edge[arr] (RAQ);
+        \node[system node,align=center, fill=red!20!white] at (-4,0) {Energiequelle, $T_\mathrm{h}$} edge[arr] node[midway, above] {$-\udiff Q_\mathrm{h}$} (P);
+    \end{tikzpicture}
+}
+
+% Maximized work in a coupled system
+\newcommand{\tfigFridge}{
+    \begin{tikzpicture}
+        [
+            system node/.style={rectangle,draw,inner sep=10pt}
+        ]
+        \node[system node, fill=blue!20!white,minimum width=3.5cm] (RWQ) at (-5,1) {Kühlschrank, $T_\mathrm{k}$};
+        \node[system node, fill=black!10!white,minimum width=3.5cm] (RAQ) at (-5,-1) {Motor (RAQ)};
+        \node[system node] (P) at (0,0) {TS};
+        \draw[rarr] (P) .. controls +(180:1.7) and +(0:.7) .. (RWQ.east) node[pos=.7,anchor=south west] {$-\udiff W^\mathrm{RAQ}$};
+        \draw[rarr] (P) .. controls +(180:1.7) and +(0:.7) .. (RAQ.east) node[pos=.7,anchor=north west] {$-\udiff Q_\mathrm{k}$};
+        edge[rarr] (RWQ) 
+        edge[rarr] (RAQ);
+        \node[system node,align=center, fill=red!20!white] at (4,0) {Umgebung, $T_\mathrm{h}$} edge[rarr] node[midway, above] {$\udiff Q_\mathrm{h}$} (P);
     \end{tikzpicture}
 }

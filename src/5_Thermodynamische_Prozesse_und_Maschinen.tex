@@ -2,7 +2,7 @@
 
 \chapter{Thermodynamische Prozesse und Maschinen}
 Im Laufe dieses Kapitels wollen wir uns mit unterschiedlichen thermodynamischen Prozessen und Maschinen auseinandersetzen. Ein Beispiel für letztere sind Wärmekraft- und Carnot-Maschinen, welche deshalb für uns interessant sind, weil die Entwicklung des Entropiebegriffes historisch durch ihre Beschreibung begründet wurde.
-Die Realisierung thermodynamischer Maschinen baut auf zwei wesentlichen Prinzipien auf: Der Energieerhaltung (und den damit verbundenen Gesetzen der Mechanik) und der Monotonie der Entropiezunahme ($\Delta S \geq 0$) in abgeschlossenen Systemen.
+Die Realisierung thermodynamischer Maschinen baut auf zwei wesentlichen Prinzipien auf: der Energieerhaltung (und den damit verbundenen physikalischen Gesetzen der Mechanik) und der Monotonie der Entropiezunahme ($\Delta S \geq 0$) in abgeschlossenen Systemen.
 Wir wollen zunächst mit einigen Charakterisierungen thermodynamischer Prozesse anfangen.
 
 
@@ -109,7 +109,7 @@ Wir wollen einige weitere nützliche idealisierte Bausteine einführen, die uns 
     \item \textbf{Wärmereservoir:} Eine sehr große RWQ, deren Temperatur $T$ unabhängig von Änderungen der inneren Energie konstant bleibt, bezeichnen wir als \emph{Wärmereservoir}.\footnote{Analog zum Volumenreservoir beschreibt $(\partial T/\partial U)_{V,N_i}=0$ eine homogene Funktion $-1$-ten Grades.}
 \end{itemize}
 Ein Beispiel für ein Wärme- und Volumenreservoir ist die Atmosphäre (in bestimmten änderungsfreien Zeitabschnitten). Bedingt durch ihre Größenordnung wirken sich lokale Temperatur- und Druckänderungen auf der Erde nicht messbar auf sie aus.
-\subsection{Prozesse maximaler Arbeit}
+\section{Prozesse maximaler Arbeit}
 Welche Arbeitsleistung kann nun maximal von einem System verrichtet werden, wenn es von einem Zustand in einen anderen übergeht? 
 Um diese Frage zu beantworten nutzen wir die eingeführten, reversiblen Quellen und betrachten Arbeit- und Wärmefluss separat. 
 
@@ -199,60 +199,33 @@ Für reversible Prozesse ist die Wärmeaufnahme aus der RWQ also maximal und die
 
 
 
-\subsection{Reversible und irreversible Prozesse}
 
+% \section{Prozesse maximaler Arbeit}
 
-\paragraph*{Definition und Bemerkungen }
+% Wir wollen nun untersuchen, welche Prozesse die maximale Arbeit verrichten und wie sich diese verhalten. 
 
-Betrachte ein abgeschlossenes zusammengesetzes System. 
+% \paragraph*{Theorem maximaler Arbeit}
 
-Ist ein Prozess reversibel, so ist er auch quasistatisch. Allerdings sind nicht alle quasistatischen Prozesse reversibel. 
+% \begin{formal}
+%     Von allen Prozessen $A\rightarrow B$ ist der Arbeitsübertrag auf die reversible Arbeitsquelle maximal (und der Wärmefluss in die reversible Wärmequelle minimal), wenn der Ablauf reversibel ist. 
+% \end{formal}
 
-Immer wenn Gleichgewichtszustände verlassen werden \textendash{} also bei nicht-quasistatischer Prozessführung \textendash{} laufen irreversible Prozesse ab. 
+% Das entspricht einer Optimierung der mechanischen Energieausbeute durch Minimierung der Wärmeverluste. 
 
-
-Um von einem Zustand $B$ mit höherer Entropie $S(B)$ in einen Zustand $A$ mit niedrigerer Energie $S(A)<S(B)$ zurück zu gelangen, muss an ein zweites System angekoppelt werden, an welches Wärme abgegeben werden kann\footnote{oder Arbeit aufgenommen, aber meistens wird Wärme abgegeben. }. Insgesamt ist 
-\begin{align*}
-    \Delta S_\mathrm{ges} = \Delta  S^{(2)}- (S(B)-S(A)) \geq 0. 
-\end{align*}
-Während die Entropie in dem einen System abnimmt, nimmt sie im zweiten zu. 
-
-
-Beispielsweise ist die Erde insgesamt ein offenes System ... 
-
-
-Ein Beispiel für einen reversiblen Prozess ist die quasistatische und adiabatische Expansion 
-... 
-
-Betrachte als zweites Beispiel eine Kammer mit einer Abfolge von eng beinander liegenden Trennwänden, die nacheinander herausgezogen werden. Da die Volumenänderung stets nur gering ist, ist der Prozess näherungsweise quasistatisch. Dennoch nimmt insgesamt das Volumen zu (ohne dass sich die Energie verringert) und damit auch die Entropie. 
-
-
-... 
-
-
-\paragraph*{Reversible Quellen und Reservoire}
-
-
-\section{Prozesse maximaler Arbeit}
-
-\paragraph*{Theorem maximaler Arbeit}
-
-... 
 
 \paragraph*{Spezialfall}
 
-Für ein Teilsystem TS, das die Wärme $\Delta Q^{\mathrm{RWQ}}$ zugeführt bekommt ... 
-
-Im reversiblen Ablauf ändert sich die Entropie mit 
+Für ein Teilsystem TS, das die Wärme $\Delta Q^{\mathrm{RWQ}}$ aus der reversiblen Wärmequelle zugeführt bekommt und an das keine reversible Arbeitsquelle gekoppelt ist, lässt sich der zweite Hauptsatz der Thermodynamik ableiten. 
+Im reversiblen Ablauf ändert sich die Entropie nämlich mit 
 \begin{align*}
-    \Delta S^{\mathrm{TS}} = \int \diff S^\mathrm{TS} = -\int \diff S^\mathrm{RWQ} = - \int \frac{\udiff Q^\mathrm{RWQ}}{T} = \int \frac{\udiff Q^\mathrm{TS}_\mathrm{rev}}{T} 
+    \Delta S^{\mathrm{TS}} = \int \diff S^\mathrm{TS} = -\int \diff S^\mathrm{RWQ} = - \int \frac{\udiff Q^\mathrm{RWQ}}{T} = \int \frac{\udiff Q^\mathrm{TS}_\mathrm{rev}}{T} .
 \end{align*}
-ohne das Teilsystem ... ist dann 
+Ohne das Teilsystem TS ist dann 
 \begin{align}
     \label{eq:2.HS_teil1}
     \diff S = \frac{\udiff Q_\mathrm{rev}}{T},
 \end{align}
-was dem ersten Teil des zweiten Hauptsatzes der Thermodynamik entspricht. 
+was dem ersten Teil des zweiten Hauptsatzes der Thermodynamik entspricht (Gleichheit). 
 
 Im irreversiblen Ablauf ist dagegen 
 \begin{align*}
@@ -263,7 +236,7 @@ mit $\Delta S>0$. Insgesamt ist dann
     \label{eq:2.HS_teil2}
     \diff S > \frac{\udiff Q_\mathrm{irr}}{T},
 \end{align}
-was dem zweiten Teil des zweiten Hauptsatzes der Thermodynamik entspricht. 
+was dem zweiten Teil des zweiten Hauptsatzes der Thermodynamik entspricht (strenge Ungleichheit). 
 
 
 Kombiniert man die Gleichungen \eqref{eq:2.HS_teil1} und \eqref{eq:2.HS_teil2} und verwendet, dass $\udiff Q=\diff U-\udiff W_\mathrm{mech}-\udiff W_\mathrm{chem}$, so erhält man die Grundrelation der Thermodynamik:
@@ -294,18 +267,85 @@ Dabei ist natürlich $\udiff Q_\mathrm{h}=-\udiff Q_\mathrm{TS}$ u.s.w.
 
 \paragraph*{Thermodynamische Maschine}
 
-Bei einer thermodynamischen Maschine wird allgemein Wärme $\udiff Q_\mathrm{h}$ aus einer Energiequelle (z.B. ein Ofen oder Dampfkessel) mit hoher Temperatur $T_\mathrm{h}$ über das Teilsystem (z.B. ein Kolben) in Form von Arbeit $\udiff W^\mathrm{RAQ}$ an die Maschinerie und in Form von Wärme $\udiff Q_\mathrm{k}$ an ein Kühlsystem mit niedrigerer Temperatur abgegeben. 
+Bei einer thermodynamischen Maschine wird allgemein Wärme $\udiff Q_\mathrm{h}$ aus einer Energiequelle (z.B. ein Ofen oder Dampfkessel) mit hoher Temperatur $T_\mathrm{h}$ über das Teilsystem (z.B. ein Kolben) in Form von Arbeit $\udiff W^\mathrm{RAQ}$ an die Maschinerie und in Form von Wärme $\udiff Q_\mathrm{k}$ an ein Kühlsystem mit niedrigerer Temperatur abgegeben (siehe \Abbref{fig:ThermodynamicMaschine}). 
 
-Nach Gleichung \eqref{eq:maschine_HS2} gilt 
+\begin{figure}[htbp]
+    \centering
+    \tfigThermodynamicMaschine
+    \caption{Allgemeine thermodynamische Maschine: Eine Energiequelle (z.B. ein Ofen oder Dampfkessel) mit Temperatur $T_\mathrm{h}$ gibt Wärme an das Hilfssystem TS ab, welches die aufgenommene Energie in Form von Wärme an ein Kühlsystem mit der Temperatur $T_\mathrm{k}$ und in Form von mechanischer Arbeit an eine Maschinerie verteilt. }
+    \label{fig:ThermodynamicMaschine}
+\end{figure}
+
+Nach Gleichung \eqref{eq:maschine_HS2} gilt für den reversiblen Ablauf
 \begin{align*}
-    \udiff Q_\mathrm{k} = -\frac{T_\mathrm{k}}{T_\mathrm{h}} \udiff Q_\mathrm{h}
+    \udiff Q_\mathrm{k} = \frac{T_\mathrm{k}}{T_\mathrm{h}} (-\udiff Q_\mathrm{h})
 \end{align*}
 und nach Gleichung \eqref{eq:maschine_HS1}
-...
-Der Wirkungsgrad $\eta$ beschreibt das Verhältnis der Energie die in mechanische Arbeit umgesetzt wird:
-... 
+\begin{align*}
+    \udiff W^\mathrm{RAQ} = \left( 1-\frac{T_\mathrm{k}}{T_\mathrm{h}} \right) (-\udiff Q_\mathrm{h}).
+\end{align*}
+Der Wirkungsgrad $\eta$ beschreibt das Verhältnis der Energie, die in (i.~d.~R.mechanische) Arbeit umgesetzt wird:
+\begin{align*}
+    \eta = \frac{\udiff W^\mathrm{RAQ}}{-\udiff Q_\mathrm{h}} = 1-\frac{T_\mathrm{k}}{T_\mathrm{h}}=\frac{T_\mathrm{h}-T_\mathrm{k}}{T_\mathrm{h}}. 
+\end{align*}
+Dieser Wirkungsgrad ist unabhängig von dem genauen Ablauf des Prozess und daher universell gültig. 
 
+Der Wirkungsgrad wird verbessert, wenn die Temperatur $T_\mathrm{h}$ des heißen Wärmereservoirs hoch und die Temperatur $T_\mathrm{k}$ des kalten Reservoirs niedrig ist. Für $T_\mathrm{k}\rightarrow 0$ wird der Wirkungsgrad $1$. 
+Dann ist $\udiff W^\mathrm{RAQ}=-\udiff Q_\mathrm{h}$. 
+Betrachtet man sich die Gleichung \eqref{eq:maschine_HS2}, so sieht man, dass für Temperaturen nahe dem absoluten Nullpunkt nur wenig Wärme in das kalte Wärmereservoir fließen muss, damit die Entropieänderung des heißen Wärmereservoirs kompensiert wird (die gesamte Entropieänderung muss durch das kalte Wärmereservoir aufgenommen werden, da die Maschinerie als reversible Arbeitsquelle keine Wärme und damit auch keine Entropie aufnimmt). 
+
+Sind die Temperaturen $T_\mathrm{h}$ und $T_\mathrm{k}$ gleich, so ist der Wirkungsgrad $0$. 
+\begin{formal}
+    Ein Prozess, dessen einziges Resultat ist, dass Wärme aus eine Wärme aus einer Wärmequelle in mechanische Arbeit umgewandelt wird, ist nicht möglich. Es gibt folglich kein Perpetuum mobile zweiter Art. 
+\end{formal}
+
+
+Im irreversiblen Fall ist der Umsatz in mechanische Arbeit sogar noch schlechter, 
+\begin{align*}
+    \Delta W_\mathrm{rev}^\mathrm{RAQ} > \Delta W_\mathrm{irr}^\mathrm{RAQ}
+\end{align*}
+und damit der Wirkungsgrad kleiner als im reversiblen Fall,
+\begin{align*}
+    \eta_\mathrm{rev}>\eta_\mathrm{irr}. 
+\end{align*}
+
+
+
+\paragraph*{Kühlschrank}
+
+Beim Kühlschrank wird das oben beschriebene Prinzip der thermodynamischen Maschine umgekehrt. Mithilfe eines Motors wird über das Hilfssystem TS der Umgebung Wärme zugeführt. Dabei erhöht sich aber die Entropie der Umgebung. Für einen reversiblen Ablauf muss sich daher die Entropie und somit die Temperatur des ebenfalls an das Hilfssystem gekoppelten Kühlschranks verringern. 
+
+
+\begin{figure}[htbp]
+    \centering
+    \tfigFridge
+    \caption{Prinzip eines Kühlschranks: Einem Kühlschrank wird Wärme entzogen, indem ein Motor (reversible Arbeitsquelle) über ein Hilfssystem TS der Umgebung Wärme zuführt, deren Entropie sich dabei erhöht, sodass sich die Entropie des Kühlschranks verringern muss. }
+    \label{fig:fridge}
+\end{figure}
+
+Idealerweise wird $-\udiff Q_\mathrm{k}$ maximal und $-\udiff W^\mathrm{RAQ}$ minimal (wegen der Stromrechnung). Der Wirkungsgrad der Kühlleistung ist gegeben durch 
+\begin{align*}
+    \eta = \frac{-\udiff Q_\mathrm{k}}{-\udiff W^\mathrm{RAQ}} = \frac{T_\mathrm{k}}{T_\mathrm{h}-T_\mathrm{k}}. 
+\end{align*}
+Ist die Umgebungstemperatur gleich der Kühlschranktemperatur, so geht die Effizienz gegen unendlich, da überhaupt keine Kühlleistung nötig ist. Für $T_\mathrm{k}\rightarrow 0$ geht $\eta$ gegen $0$, sodass der absolute Nullpunkt $T_\mathrm{k}$ nicht erreicht werden kann. 
+
+Beim irreversiblen Ablauf ist wiederum
+\begin{align*}
+    \eta_\mathrm{rev}>\eta_\mathrm{irr}. 
+\end{align*}
+
+
+\paragraph*{Wärmepumpe}
+
+Eine Wärmepumpe hat genau die gleiche Funktionsweise wie ein Kühlschrank, nur dass hier statt dem kalten das heiße System betrachtet wird. Der Wärmeleistungskoeffizient ist analog zum vorigen Abschnitt durch 
+\begin{align*}
+    \eta = \frac{T_\mathrm{h}}{T_\mathrm{h}-T_\mathrm{k}}
+\end{align*}
+gegeben, wobei jetzt im Zähler aber $T_\mathrm{h}$ anstelle von $T_\mathrm{k}$ steht. 
 
 
 
 \section{Der Carnot-Zyklus}
+
+Wir haben gesehen, dass eine thermodynamische Maschine Energie in Form von Wärme und Arbeit zwischen verschiedenen Wärmereservoirs und Arbeitsquellen transportiert. Dazu ist i.~d.~R. ein Hilfssystem nötig, dessen Aufgabe es ist, eine reversible Verteilung von $\Delta Q_\mathrm{h}$ auf $\Delta W^\mathrm{RAQ}$ und $\Delta Q_\mathrm{k}$ zu verwirklichen. Dabei darf sich das Hilfssystem selbst aber netto nicht verändern. 
+
