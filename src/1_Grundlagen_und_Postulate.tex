@@ -18,14 +18,15 @@ So können z.~B. aus dem Hamiltonschen Prinzip die mechanischen Bewegungsgleichu
 
 \section{Was ist Thermodynamik?}
 
-Statt der mikroskopischen Beschreibung mit $10^{24}$ Koordinaten (Ort, Impuls, Molekülfreiheitsgrade) werden nur wenige makroskopische thermodynamische Variablen herangezogen, um ein System handhabbar zu beschreiben.
+Die meisten realen physikalischen Systeme bestehen aus einer sehr großen Zahl von Teilchen. Deren Behandlung mithilfe von mechanischen Bewegungsgleichungen ist allerdings mehr als unhandlich. 
+Statt der mikroskopischen Beschreibung mit \num[print-unity-mantissa=false]{1e24} Koordinaten (Ort, Impuls, Molekülfreiheitsgrade) werden nur wenige makroskopische thermodynamische Variablen herangezogen, um ein System handhabbar zu beschreiben.
 
 Dieser Ansatz ist auch physikalisch rechtfertigbar, denn bei realen Messungen findet automatisch eine intrinsische Mittelung statt.
-Zum einen findet eine zeitliche Mittelung statt, denn die mikroskopische Bewegung findet auf Zeitskalen von $10^{-15}\,\si{\s}$ bis $10^{-12}\,\si{\s}$ statt, während makroskopische Messungen im Allgemeinen nicht kürzer als $10^{-7}\,\si{\s}$ sind.
-Es findet also eine Messung in gewissen Maßstäben zeitunabhängiger Kombinationen der über \num{1e24} Koordinaten statt.
+Zum einen findet eine zeitliche Mittelung statt, denn die mikroskopische Bewegung findet auf Zeitskalen von \qty[print-unity-mantissa=false]{1e-15}{\s} bis \qty[print-unity-mantissa=false]{1e-12}{\s}statt, während makroskopische Messungen im Allgemeinen nicht kürzer als \qty[print-unity-mantissa=false]{1e-7}{\s} sind.
+Es findet also eine Messung in gewissen Maßstäben zeitunabhängiger Kombinationen der über \num[print-unity-mantissa=false]{1e24} Koordinaten statt.
 
-Zum anderen kommt es zu einer räumlichen Mittelung \textendash{} zum Vergleich: mikroskopische Abmessungen liegen bei $\approx\SI{0.1}{\nm}$ (Atomradius, Gitterkonstante), während makroskopische Messungen in der Regel bei über \SI{100}{\nm} liegen (Größenordnung der Wellenlänge von sichtbarem Licht).
-Also wird meist über weit mehr als $10^{9}$ Atome oder Moleküle gemittelt.
+Zum anderen kommt es zu einer räumlichen Mittelung \textendash{} zum Vergleich: mikroskopische Abmessungen liegen bei $\approx\qty{0.1}{\nm}$ (Atomradius, Gitterkonstante), während makroskopische Messungen in der Regel bei über \qty{100}{\nm} liegen (Größenordnung der Wellenlänge von sichtbarem Licht).
+Also wird meist über weit mehr als \num[print-unity-mantissa=false]{1e9} Atome oder Moleküle gemittelt.
 
 \begin{figure}[htbp]
     \centering
@@ -93,16 +94,16 @@ Für dieses System werden dann Parameter wie das Volumen $V$ und die Stoffmengen
 
 Zunächst werden einige Definitionen erläutert:
 \begin{enumerate}
-    \item Als \emph{Normalbedingungen} bzw. \emph{Standardbedingungen} wird ein Zustand bei \SI{0}{\degreeCelsius} und \SI{1013}{\milli\bar} bezeichnet.
-    \item \emph{Stoffmenge} (veraltet auch Molzahl) $\sm$: \SI{1}{\mole} einer Substanz entspricht einer Anzahl von Atomen oder Molekülen, die der Avogadro-Konstante/Loschmidt-Zahl $\avogadro \equiv \SI{6,02214076e23}{\per\mole}$ entspricht\footnote{
+    \item Als \emph{Normalbedingungen} bzw. \emph{Standardbedingungen} wird ein Zustand bei \qty{0}{\degreeCelsius} und \qty{1013}{\milli\bar} bezeichnet.
+    \item \emph{Stoffmenge} (veraltet auch Molzahl) $\sm$: \qty{1}{\mole} einer Substanz entspricht einer Anzahl von Atomen oder Molekülen, die der Avogadro-Konstante/Loschmidt-Zahl $\avogadro \equiv \qty{6,02214076e23}{\per\mole}$ entspricht\footnote{
           Die Avogadro-Konstante besitzt die Einheit \si{\per\mole} während die Avogadro-Zahl \num{6,02214076e23} dimensionslos ist.
 
-          Bei der Definition der Loschmidt-Zahl kann es aufgrund der historischen Entwicklung zu einiger Verwirrung kommen. Ursprünglich definierte Josef Loschmidt in seiner Arbeit \anf{Zur Grösse der Luftmoleküle} eine Zahl von in einer Volumeneinheit enthaltenen Luftmolekülen, war aber damals noch nicht sehr präzise mit seiner Definition. Als sogenannte Loschmidt-Konstante $N_\mathrm{L}$ wird heute der Wert \SI{2.686780111e25}{\per\cubic\m} definiert, welcher über das molare Volumen eines idealen Gases $V_{m0} = \SI{22,414}{\liter\per\mole}$ mit der Avogadro-Konstante $\avogadro=$ zusammenhängt: $N_\mathrm{L}=\avogadro/V_{m0}$.\cite{lit:loschmidt_constant,lit:loschmidt}
+          Bei der Definition der Loschmidt-Zahl kann es aufgrund der historischen Entwicklung zu einiger Verwirrung kommen. Ursprünglich definierte Josef Loschmidt in seiner Arbeit \anf{Zur Grösse der Luftmoleküle} eine Zahl von in einer Volumeneinheit enthaltenen Luftmolekülen, war aber damals noch nicht sehr präzise mit seiner Definition. Als sogenannte Loschmidt-Konstante $N_\mathrm{L}$ wird heute der Wert \qty{2.686780111e25}{\per\cubic\m} definiert, welcher über das molare Volumen eines idealen Gases $V_{m0} = \qty{22,414}{\liter\per\mole}$ mit der Avogadro-Konstante $\avogadro=$ zusammenhängt: $N_\mathrm{L}=\avogadro/V_{m0}$.\cite{lit:loschmidt_constant,lit:loschmidt}
 
           Im deutschsprachigen Raum wird gelegentlich der Begriff Loschmidt-Zahl aber auch synonym mit der (dimensionslosen) Avogadro-Zahl verwendet. Um Verwirrungen zu vermeiden, wird im Folgenden ausschließlich von der Avogadro-Konstante gesprochen.}.
 
-          Historisch wurde diese Definition gewählt, weil sie der Zahl der Atome in \SI{12}{\g} vom Isotop \isotope[12]{C} von Kohlenstoff entspricht.
-          Zur Referenz: \SI{1}{\mole} ist auch die Zahl der Moleküle eines idealen Gases unter Normalbedingungen in einem Volumen von $V=\SI{22,413}{\liter}$.
+          Historisch wurde diese Definition gewählt, weil sie der Zahl der Atome in \qty{12}{\g} vom Isotop \isotope[12]{C} von Kohlenstoff entspricht.
+          Zur Referenz: \qty{1}{\mole} ist auch die Zahl der Moleküle eines idealen Gases unter Normalbedingungen in einem Volumen von $V=\qty{22,413}{\liter}$.
 
           Die Stoffmenge wird aus einer Teilchenzahl $N_k$ der Molekülsorte $k$ folgendermaßen berechnet:
           \begin{align*}
@@ -264,7 +265,7 @@ Das sogenannte \emph{Wärmeäquivalent} besagt, dass Wärme als Energie quantifi
     \Delta Q = mc\Delta T
 \end{align*}
 mit spezifischer Wärmekapazität $c$.
-Die häufig verwendete Einheit Kalorie entspricht der Energie, um \SI{1}{\g} Wasser bei \SI{1013}{\milli\bar} von \SI{14,5}{\degreeCelsius} auf \SI{15,5}{\degreeCelsius} zu erwärmen. Es ist dabei $\SI{1}{cal} = \SI{4,1855}{\joule}$.
+Die häufig verwendete Einheit Kalorie entspricht der Energie, um \qty{1}{\g} Wasser bei \qty{1013}{\milli\bar} von \qty{14,5}{\degreeCelsius} auf \qty{15,5}{\degreeCelsius} zu erwärmen. Es ist dabei $\qty{1}{cal} = \qty{4,1855}{\joule}$.
 
 
 
