@@ -349,3 +349,23 @@ gegeben, wobei jetzt im Zähler aber $T_\mathrm{h}$ anstelle von $T_\mathrm{k}$ 
 
 Wir haben gesehen, dass eine thermodynamische Maschine Energie in Form von Wärme und Arbeit zwischen verschiedenen Wärmereservoirs und Arbeitsquellen transportiert. Dazu ist i.~d.~R. ein Hilfssystem nötig, dessen Aufgabe es ist, eine reversible Verteilung von $\Delta Q_\mathrm{h}$ auf $\Delta W^\mathrm{RAQ}$ und $\Delta Q_\mathrm{k}$ zu verwirklichen. Dabei darf sich das Hilfssystem selbst aber netto nicht verändern. 
 
+
+Dies wird durch Kreisprozesse wie den Carnot-Zyklus realisiert. In \Abbref{fig:CarnotCycleIndicatorDiagram} ist für diesen das Indikatordiagramm als Temperatur über die Entropie dargestellt. Im Schritt AB findet eine isotherme Expansion statt, in der sich die Wärme um $\Delta Q_{AB}=(S_B-S_A)T_\mathrm{h} = \Delta S T_\mathrm{h}$ ändert . Im Schritt BC wird isentrop expandiert. Es folgt eine isotherme Kompression von C nach D, bei der die Wärme $\Delta Q_{CD}=-\Delta S T_\mathrm{k}$ abgegeben wird und zuletzt eine isentrope Kompression von D zurück nach A. Dabei wird ständig an die reversible Arbeitsquelle gekoppelt (Volumenarbeit durch Expansion und Kompression). 
+
+Die verrichtete Arbeit ist nach dem ersten Hauptsatz der Thermodynamik durch 
+\begin{align*}
+    \Delta W^\mathrm{RAQ}=\Delta Q_{AB}+\Delta Q_{CD} = \Delta S(T_\mathrm{h}-T_\mathrm{k})
+\end{align*}
+und der Wirkungsgrad wie im vorigen Abschnitt beschrieben durch 
+\begin{align}
+    \nu = \frac{\Delta W^\mathrm{RAQ}}{\Delta Q_{AB}} = \frac{T_\mathrm{h}-T_\mathrm{k}}{T_\mathrm{h}}
+\end{align}
+gegeben. In der Realität wird aufgrund von mechanischer Reibung und durch Abweichung von quasistationären Zuständen jedoch meist nur ein Wirkungsgrad erzielt, der etwa einem Drittel des idealen Wirkungsgrades entspricht. 
+
+\begin{figure}[htbp]
+    \centering
+    \tfigCarnotCycleIndicatorDiagram
+    \caption{Der Carnot-Zyklus}
+    \label{fig:CarnotCycleIndicatorDiagram}
+\end{figure}
+
