@@ -88,7 +88,7 @@ mit Temperatur $T$ und Entropie $S$.
 
 \section{Modellsystem, Parameter und Begriffe}
 
-Um ein Grundkonzept zu entwickeln, wird zunächst ein einfaches, idealisiertes System vorausgesetzt, das makroskopisch homogen und isotrop sowie elektrisch neutral ist, in dem keine chemischen Reaktionen ablaufen und das keine elektrische, magnetische oder gravitative Felder besitzt. Auch Randeffekte werden zunächst vernachlässigt, indem angenommen wird, dass das System unendlich groß ist und damit keine Oberfläche hat.
+Um ein Grundkonzept zu entwickeln, wird zunächst ein einfaches, idealisiertes System vorausgesetzt, das makroskopisch homogen und isotrop sowie elektrisch neutral ist, in dem keine chemischen Reaktionen ablaufen und das keine elektrischen, magnetischen oder gravitativen Felder besitzt. Auch Randeffekte werden zunächst vernachlässigt, indem angenommen wird, dass das System unendlich groß ist und damit keine Oberfläche hat.
 
 Für dieses System werden dann Parameter wie das Volumen $V$ und die Stoffmengen der beteiligten chemischen Substanzen bestimmt.
 
@@ -97,12 +97,10 @@ Zunächst werden einige Definitionen erläutert:
     \item Als \emph{Normalbedingungen} bzw. \emph{Standardbedingungen} wird ein Zustand bei \qty{0}{\degreeCelsius} und \qty{1013}{\milli\bar} bezeichnet.
     \item \emph{Stoffmenge} (veraltet auch Molzahl) $\sm$: \qty{1}{\mole} einer Substanz entspricht einer Anzahl von Atomen oder Molekülen, die der Avogadro-Konstante/Loschmidt-Zahl $\avogadro \equiv \qty{6,02214076e23}{\per\mole}$ entspricht\footnote{
           Die Avogadro-Konstante besitzt die Einheit \si{\per\mole} während die Avogadro-Zahl \num{6,02214076e23} dimensionslos ist.
-
-          Bei der Definition der Loschmidt-Zahl kann es aufgrund der historischen Entwicklung zu einiger Verwirrung kommen. Ursprünglich definierte Josef Loschmidt in seiner Arbeit \anf{Zur Grösse der Luftmoleküle} eine Zahl von in einer Volumeneinheit enthaltenen Luftmolekülen, war aber damals noch nicht sehr präzise mit seiner Definition. Als sogenannte Loschmidt-Konstante $N_\mathrm{L}$ wird heute der Wert \qty{2.686780111e25}{\per\cubic\m} definiert, welcher über das molare Volumen eines idealen Gases $V_{m0} = \qty{22,414}{\liter\per\mole}$ mit der Avogadro-Konstante $\avogadro=$ zusammenhängt: $N_\mathrm{L}=\avogadro/V_{m0}$.\cite{lit:loschmidt_constant,lit:loschmidt}
-
+          Bei der Definition der Loschmidt-Zahl kann es aufgrund der historischen Entwicklung zu einiger Verwirrung kommen. Ursprünglich definierte Josef Loschmidt in seiner Arbeit \anf{Zur Grösse der Luftmoleküle} eine Zahl von in einer Volumeneinheit enthaltenen Luftmolekülen, war aber damals noch nicht sehr präzise mit seiner Definition. Als sogenannte Loschmidt-Konstante $N_\mathrm{L}$ wird heute der Wert \qty{2.686780111e25}{\per\cubic\m} definiert, welcher über das molare Volumen eines idealen Gases $V_{m0} = \qty{22,414}{\liter\per\mole}$ mit der Avogadro-Konstante $\avogadro=$ zusammenhängt: $N_\mathrm{L}=\avogadro/V_{m0}$. \cite{lit:loschmidt_constant,lit:loschmidt}
           Im deutschsprachigen Raum wird gelegentlich der Begriff Loschmidt-Zahl aber auch synonym mit der (dimensionslosen) Avogadro-Zahl verwendet. Um Verwirrungen zu vermeiden, wird im Folgenden ausschließlich von der Avogadro-Konstante gesprochen.}.
 
-          Historisch wurde diese Definition gewählt, weil sie der Zahl der Atome in \qty{12}{\g} vom Isotop \isotope[12]{C} von Kohlenstoff entspricht.
+          Historisch wurde diese Definition gewählt, weil sie der Zahl der Atome in \qty{12}{\g} des Isotops \isotope[12]{C} von Kohlenstoff entspricht.
           Zur Referenz: \qty{1}{\mole} ist auch die Zahl der Moleküle eines idealen Gases unter Normalbedingungen in einem Volumen von $V=\qty{22,413}{\liter}$.
 
           Die Stoffmenge wird aus einer Teilchenzahl $N_k$ der Molekülsorte $k$ folgendermaßen berechnet:
@@ -177,7 +175,7 @@ Betrachte ein System aus zwei Kammern (siehe \Abbref{fig:TwoChambersSeparatedByP
     \item Wärmeleitende Wände erlauben einen Wärmefluss, während thermisch isolierende Grenzen ein Angleichen der Temperatur verhindern. Durch Wände werden also thermisch abgeschlossene Systeme ermöglicht, was eine Definition des Wärmebegriffs erlaubt.
 \end{itemize}
 
-\begin{figure}[htb]
+\begin{figure}[b]
     \centering
     \tfigTwoChambersSeparatedByPiston
     \caption{Zwei Kammern 1 und 2 sind von einer Wand umgeben und durch einen Kolben voneinander getrennt. }
@@ -196,7 +194,7 @@ In einem thermisch isolierten System ändert sich die innere Energie genau mit d
 Auf diese Weise kann die Änderung der inneren Energie durch die mechanische Energie definiert werden, welche wir bereits kennen und messen bzw. berechnen können.
 Zum Beispiel erhöht sich die innere Energie, wenn das System mechanisch komprimiert wird (siehe \Abbref{fig:RectangularBoxWithPiston}).
 
-\begin{figure}[htbp]
+\begin{figure}[t]
     \centering
     \tfigRectangularBoxWithPiston
     \caption{Ein System kann mechanisch komprimiert werden, sodass sich die innere Energie erhöht. Es wird Arbeit an dem System verrichtet. Der Prozess ist in diesem Fall umkehrbar. }
@@ -228,11 +226,13 @@ Dieser Zusammenhang wird durch den 1. Hauptsatz der Thermodynamik zusammengefass
 \begin{formal}
     \textbf{1. Hauptsatz der Thermodynamik (Energieerhaltungssatz):}
     \label{hs:erster}
-    Die innere Energie eines Systems ändert sich mit der zugeführten Wärme und der am System verrichten Arbeit,
+    Die innere Energie eines Systems ändert sich mit der zugeführten Wärme und der am System verrichteten Arbeit\footnotemark,
     \begin{align*}
-        \Delta U = \Delta Q + \Delta W.
+        \diff U = \udiff Q + \udiff W.
     \end{align*}
 \end{formal}
+
+\footnotetext{Die hier verwendeteten Notationen mit vollständigem Differential $\diff$ und unvolllständigem Differential $\udiff$ werden im Anschluss erläutert.}
 
 Betrachte als Beispiel eine Volumenänderung, die aufgrund der resultierenden Druckänderung eine Arbeit am System darstellt\footnote{Diese Änderung muss ausreichend langsam erfolgen, damit es sich um eine quasistatische Prozessführung handelt. Bei einer schnellen Änderung entstehen Turbulenzen und das System befindet nicht über den ganzen Zeitraum im thermodynamischen Gleichgewicht.},
 \begin{align*}
@@ -271,7 +271,7 @@ Die häufig verwendete Einheit Kalorie entspricht der Energie, um \qty{1}{\g} Wa
 
 \section{Postulate zur Entropie}
 
-Aus der Experimentalphysik erinnern wir uns, dass die Entropie $S$ mit der Irreversibilität eines Prozesses zusammenhängt. Später werden wir sehen, dass $S=k_\mathrm{B}\ln{\Omega}$ mit Phasenraumvolumen $\Omega$ ist.
+Aus der Experimentalphysik erinnern wir uns, dass die Entropie $S$ mit der Irreversibilität eines Prozesses zusammenhängt. Später werden wir sehen, dass die Entropie durch $S=k_\mathrm{B}\ln{\Omega}$ mit Phasenraumvolumen $\Omega$ bestimmt ist.
 
 Zuerst betrachten wir ein abgeschlossenes System mit festgelegten Zwangsbedingungen, beispielsweise zwei Kammern, die durch einen anfangs undurchlässigen, festen und wärmeisolierenden Kolben getrennt sind. Diese Eigenschaften des Kolbens stellen die Zwangsbedingungen dar. Es stellt sich die Frage, welchen Gleichgewichtszustand das System beim Entfernen einer oder mehrerer dieser Zwangsbedingungen einnimmt. Erfahrungsgemäß wissen wir z.~B., dass sich die Temperaturen beider Kammern angleichen, wenn ein Wärmeaustausch erlaubt wird, der Kolben also wärmedurchlässig ist.
 
@@ -280,7 +280,7 @@ Eine allgemeine Antwort auf diese Frage kann mithilfe des Extremalprinzips gewon
 % Das bringt uns zum zweiten Postulat, dem Extremalprinzip zur Entropie:
 \begin{postulate}
     \label{post:entropie_maximierung}
-    Gegeben sei ein isoliertes System, das durch Zwangsbedingungen unterteilt ist. Dann existiert eine Funktion der extensiven Parameter ($U^{(1)},V^{(1)},\sm_k^{(1)};U^{(2)},V^{(2)},\sm_k^{(2)}; \ldots$), genannt \emph{Entropie} $S$, die für alle Gleichgewichtszustände wohldefiniert ist und folgende Eigenschaften besitzt: Lässt man die Zwangsbedingung fallen, so nehmen die extensiven Parameter Werte an, welche die Entropie maximieren. Der dann erreichte Endzustand heißt \emph{stabiles Gleichgewicht}.
+    Gegeben sei ein isoliertes System, das durch Zwangsbedingungen unterteilt ist. Dann existiert eine Funktion der extensiven Parameter ($U^{(1)},V^{(1)},\sm_k^{(1)};U^{(2)},V^{(2)},\sm_k^{(2)}; \ldots$), genannt \emph{Entropie} $S$, die für alle Gleichgewichtszustände wohldefiniert ist und folgende Eigenschaften besitzt: Lässt man die Zwangsbedingungen fallen, so nehmen die extensiven Parameter Werte an, welche die Entropie maximieren. Der dann erreichte Endzustand heißt \emph{stabiles Gleichgewicht}.
 
     $S=S(\{U^{(\alpha)},V^{(\alpha)},\sm_k^{(\alpha)}\})$ heißt \emph{entropische Fundamentalbeziehung}. Sie enthält die gesamte Information über das System.
 \end{postulate}
@@ -357,3 +357,37 @@ Bemerkungen:
 \end{itemize}
 
 
+
+
+\begin{summary}
+    Statt die unzähligen einzelnen Koordinaten und Impulse zu betrachten (mikroskopische Größen), werden makroskopische Kenngrößen betrachtet. Dies entspricht sowohl einer räumlichen als auch einer zeitlichen Mittelung. Zu diesen Kenngrößen gehören z.~B. Volumen, Druck, Temperatur und Energie. 
+
+    Wir definieren die Stoffmenge als $n = N/N_A$, also die Teilchenzahl $N$ geteilt durch die Avogadro-Konstante. Weiter wird der Stoffmengenanteil als $x=n/\sum_i n_i$ und das Molvolumen als $V_m = V/\sum_i n_i$ definiert. 
+
+    Zustandsgrößen beschreiben den Zustand eines Systems, unabhängig von dessen Vorgeschichte (z.~B. $V$, $n$, $T$, $p$). 
+    Einige Größen sind aber keine Zustandsgrößen, wie z.~B. die Wärme $Q$ und die Arbeit $W$, denn sie beschreiben nicht eindeutig den Zustand des Systems. Für solche sogenannte Prozessgrößen verwenden wir das unvollständige Differential $\delta$. 
+
+    Extensive Größen verhalten sich additiv mit dem Volumen des Systems. Dazu gehört neben dem Volumen z.~B. auch die Stoffmenge $n$. 
+    Intensive Größen erfahren keine Änderung mit dem Volumen, z.~B. $T$, $P$, $x$ und $V_m$.
+    Eine weitere extensive Kenngröße ist die innere Energie $U$. Sie ist eine Zustandsgröße. 
+
+    Wir haben ferner eine Reihe von Postulaten aufgestellt, die grob durch Erfahrungstatsachen motiviert sind. Nach dem Postulat~\ref{post:gleichgewichtszustaende} hat ein System sogenannte Gleichgewichtszustände, welche durch wenige Zustandsgrößen ($U$, $V$, $n$, \ldots) beschrieben werden können. 
+    Innerhalb dieser makroskopischen Beschreibung verhält sich das System mikroskopisch zufällig, denn im Allgemeinen führen viele mikroskopischen Zustände zum gleichen makroskopischen Zustand. 
+
+    Nach dem Postulat~\ref{post:entropie_maximierung} existiert eine weitere Zustandsfunktion $S$, die wir Entropie nennen. Entfernt man alle Zwangsbedingungen, so  entwickeln sich die extensiven Größen so, dass die Entropie maximiert wird. 
+
+    Die Entropie ist eine additive Größe und soll stetig, differenzierbar und eine streng monoton ansteigende Funktion der inneren Energie $U$ sein. Diese Eigenschaften werden im Postulat~\ref{post:eigenschaften_entropie} gefordert. 
+
+    Zuletzt beschreibt das Nernst-Postulat (Postulat~\ref{post:nernst}) einen Nullpunkt $S=0$ bei $T=0$, der aber nicht praktisch erreicht werden kann
+
+
+
+    Außerdem haben wir den ersten Hauptsatz der Thermodynamik kennengelernt, den Energieerhaltungssatz. Er besagt, dass sich die innere Energie eines Systems nach der Gleichung 
+    \begin{align}
+        \diff U = \udiff Q + \udiff W
+    \end{align}
+    mit der zu- oder abgeführten Wärme und der am System verrichteten Arbeit ändert. 
+
+
+    Verschiedene Zwangsbedingungen bestimmen die Entwicklung eines Systems. Hierbei kann es sich beispielsweise um feste Wände, thermisch isolierende Kolben oder Membranen handeln, die nur für eine Teilchensorte durchlässig sind, für eine andere aber nicht. 
+\end{summary}
