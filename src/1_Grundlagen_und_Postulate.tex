@@ -16,7 +16,7 @@ Diese Postulate sind die Essenz der Entwicklung der Theorie und sie helfen, die 
 So können z.~B. aus dem Hamiltonschen Prinzip die mechanischen Bewegungsgleichungen und aus den Maxwell-Gleichungen die elektrischen und magnetischen Gesetze hergeleitet werden.
 
 
-\section{Was ist Thermodynamik?}
+\section{Was ist Thermodynamik?\label{sec:was ist thermodynamik}}
 
 Die meisten realen physikalischen Systeme bestehen aus einer sehr großen Zahl von Teilchen. Deren Behandlung mithilfe von mechanischen Bewegungsgleichungen ist allerdings mehr als unhandlich. 
 Statt der mikroskopischen Beschreibung mit \num[print-unity-mantissa=false]{1e24} Koordinaten (Ort, Impuls, Molekülfreiheitsgrade) werden nur wenige makroskopische thermodynamische Variablen herangezogen, um ein System handhabbar zu beschreiben.
@@ -320,9 +320,10 @@ Aus dem Postulat \ref{post:eigenschaften_entropie} folgt ferner, dass für
     \left(\frac{\partial S}{\partial U}\right)_{V,\sm_1, \dots ,\sm_r} > 0
 \end{align*}
 die Beziehung $S(U)$ invertierbar ist,
-\begin{align*}
+\begin{align}
+    \label{eq:energetische fundamentalbeziehung}
     U = U(S,V,\sm_1, \dots,\sm_r).
-\end{align*}
+\end{align}
 Diese neue Beziehung ist als \emph{energetische Fundamentalbeziehung} bekannt und wir werden sehen, dass aus dem Postulat \ref{post:entropie_maximierung} auch eine Minimierung der Energie folgt.
 
 
@@ -362,30 +363,30 @@ Bemerkungen:
 \begin{summary}
     Statt die unzähligen einzelnen Koordinaten und Impulse zu betrachten (mikroskopische Größen), werden makroskopische Kenngrößen betrachtet. Dies entspricht sowohl einer räumlichen als auch einer zeitlichen Mittelung. Zu diesen Kenngrößen gehören z.~B. Volumen, Druck, Temperatur und Energie. 
 
-    Wir definieren die Stoffmenge als $n = N/N_A$, also die Teilchenzahl $N$ geteilt durch die Avogadro-Konstante. Weiter wird der Stoffmengenanteil als $x=n/\sum_i n_i$ und das Molvolumen als $V_m = V/\sum_i n_i$ definiert. 
+    Wir definieren die Stoffmenge als $\sm = N/N_A$, also die Teilchenzahl $N$ geteilt durch die Avogadro-Konstante. Weiter wird der Stoffmengenanteil als $x=\sm/\sum_i \sm_i$ und das Molvolumen als $V_m = V/\sum_i \sm_i$ definiert. 
 
-    Zustandsgrößen beschreiben den Zustand eines Systems, unabhängig von dessen Vorgeschichte (z.~B. $V$, $n$, $T$, $p$). 
+    Zustandsgrößen beschreiben den Zustand eines Systems, unabhängig von dessen Vorgeschichte (z.~B. $V$, $\sm$, $T$, $p$). 
     Einige Größen sind aber keine Zustandsgrößen, wie z.~B. die Wärme $Q$ und die Arbeit $W$, denn sie beschreiben nicht eindeutig den Zustand des Systems. Für solche sogenannte Prozessgrößen verwenden wir das unvollständige Differential $\delta$. 
 
-    Extensive Größen verhalten sich additiv mit dem Volumen des Systems. Dazu gehört neben dem Volumen z.~B. auch die Stoffmenge $n$. 
+    Extensive Größen verhalten sich additiv mit dem Volumen des Systems. Dazu gehört neben dem Volumen z.~B. auch die Stoffmenge $\sm$. 
     Intensive Größen erfahren keine Änderung mit dem Volumen, z.~B. $T$, $P$, $x$ und $V_m$.
     Eine weitere extensive Kenngröße ist die innere Energie $U$. Sie ist eine Zustandsgröße. 
 
-    Wir haben ferner eine Reihe von Postulaten aufgestellt, die grob durch Erfahrungstatsachen motiviert sind. Nach dem Postulat~\ref{post:gleichgewichtszustaende} hat ein System sogenannte Gleichgewichtszustände, welche durch wenige Zustandsgrößen ($U$, $V$, $n$, \ldots) beschrieben werden können. 
+    Wir haben ferner eine Reihe von Postulaten aufgestellt, die grob durch Erfahrungstatsachen motiviert sind. Nach dem Postulat~\ref{post:gleichgewichtszustaende} hat ein System sogenannte Gleichgewichtszustände, welche durch wenige Zustandsgrößen ($U$, $V$, $\sm$, \ldots) beschrieben werden können. 
     Innerhalb dieser makroskopischen Beschreibung verhält sich das System mikroskopisch zufällig, denn im Allgemeinen führen viele mikroskopischen Zustände zum gleichen makroskopischen Zustand. 
 
     Nach dem Postulat~\ref{post:entropie_maximierung} existiert eine weitere Zustandsfunktion $S$, die wir Entropie nennen. Entfernt man alle Zwangsbedingungen, so  entwickeln sich die extensiven Größen so, dass die Entropie maximiert wird. 
 
-    Die Entropie ist eine additive Größe und soll stetig, differenzierbar und eine streng monoton ansteigende Funktion der inneren Energie $U$ sein. Diese Eigenschaften werden im Postulat~\ref{post:eigenschaften_entropie} gefordert. 
+    Die Entropie ist eine additive Größe und soll stetig, differenzierbar und eine streng monoton ansteigende Funktion der inneren Energie $U$ sein. Diese Eigenschaften werden im Postulat~\ref{post:eigenschaften_entropie} gefordert. Man kann daraus folgern, dass $S$ eine extensive Größe ist. 
 
     Zuletzt beschreibt das Nernst-Postulat (Postulat~\ref{post:nernst}) einen Nullpunkt $S=0$ bei $T=0$, der aber nicht praktisch erreicht werden kann
 
 
 
-    Außerdem haben wir den ersten Hauptsatz der Thermodynamik kennengelernt, den Energieerhaltungssatz. Er besagt, dass sich die innere Energie eines Systems nach der Gleichung 
-    \begin{align}
+    Außerdem haben wir den ersten Hauptsatz der Thermodynamik kennengelernt: den Energieerhaltungssatz. Er besagt, dass sich die innere Energie eines Systems nach der Gleichung 
+    \begin{align*}
         \diff U = \udiff Q + \udiff W
-    \end{align}
+    \end{align*}
     mit der zu- oder abgeführten Wärme und der am System verrichteten Arbeit ändert. 
 
 
