@@ -7,9 +7,10 @@ In diesem Kapitel soll die Entwicklung der thermodynamischen Theorie sowie die A
 \section{Konjugierte Variablen (Energiedarstellung)}
 
 Zunächst wollen wir die innere Energie $U$ in der differentiellen Form aufschreiben:
-\begin{align*}
+\begin{align}
+    \label{eq:innere energie differentielle form}
     \diff U = \left(\frac{\partial U}{\partial S}\right) \diff S + \left(\frac{\partial U}{\partial V}\right) \diff V + \sum_{j = 1}^r \left(\frac{\partial U}{\partial \sm_j}\right) \diff \sm_j,
-\end{align*}
+\end{align}
 wobei für jedes Differential je alle anderen Größen festgehalten werden. 
 % \begin{align*}
 %     \diff U = \left(\frac{\partial U}{\partial S}\right)_{V,\sm_1,\ldots,\sm_r} \diff S + \left(\frac{\partial U}{\partial V}\right)_{S,\sm_1,\ldots,\sm_r} \diff V + \sum_{j = 1}^r \left(\frac{\partial U}{\partial \sm_j}\right)_{S,V,\sm_1,\ldots,\sm_{j - 1},\sm_{j + 1},\ldots,\sm_r} \diff \sm_j.
@@ -197,7 +198,7 @@ und
 \begin{align*}
     \left(\frac{\partial u}{\partial v}\right)_s   & = -P.       
 \end{align*}
-Das Konstanthalten des Molvolumens ist dabei äquivalent zum Konstanthalten des Volumens und der Molzahl (Stoffmenge). Die partielle Ableitung nach $s$ kann ferner nach $S$ umgeschrieben werden, womit wir die Temperatur $T$ erhalten.
+Das Konstanthalten des Molvolumens ist dabei äquivalent zum Konstanthalten des Volumens und der Stoffmenge. Die partielle Ableitung nach $s$ kann ferner nach $S$ umgeschrieben werden, womit wir die Temperatur $T$ erhalten.
 Analog betrachten wir die partielle Ableitung nach $v$ und erhalten den negativen Druck $P$.
 Insgesamt folgt das Differential
 \begin{align*}
@@ -230,19 +231,19 @@ Es wird folgen, dass sich $T$ so verhält, wie man es von einer Temperatur erwar
 
 \paragraph*{Temperatur}
 
-Wir starten wieder mit einem Modellsystem, das insgesamt abgeschlossen ist und aus zwei Untersystemen $(1)$ und $(2)$ besteht, wie in \Abbref{fig:DoppelsystemUSfesteWaermeleitendeWand} darstellt.
-Die beiden Untersysteme sind durch eine feste Wand getrennt, die zuerst isoliert ist und dann wärmeleitend wird. Die beiden Systeme werden also in thermischen Kontakt gebracht und tauschen Wärme aus.
+Wir starten wieder mit einem Modellsystem, das insgesamt abgeschlossen ist und aus zwei Untersystemen $(1)$ und $(2)$ besteht, wie in \Abbref{fig:DoppelsystemUSfesteWaermeleitendeWand} dargestellt.
+Die beiden Untersysteme sind durch eine feste Wand getrennt, die zuerst isoliert und dann wärmeleitend wird. Die beiden Systeme werden also in thermischen Kontakt gebracht und tauschen Wärme aus.
 
 \begin{figure}[htbp]
     \centering
     \tfigDoppelsystemUSfesteWaermeleitendeWand
-    \caption{Abgeschlossenes System aus zwei Untersystemen, die durch eine feste und materieundurchlässige Wand getrennt sind. Die Wand ist zunächst isolierend und wird dann wärmeleitend.}
+    \caption{Abgeschlossenes System aus zwei Untersystemen, die durch eine feste und materieundurchlässige Wand getrennt sind. Die Wand ist zunächst thermisch isolierend und wird dann wärmeleitend.}
     \label{fig:DoppelsystemUSfesteWaermeleitendeWand}
 \end{figure}
 
-Wir würden dabei erwarten, dass sich die Temperaturen angleichen, $T^{(1)}=T^{(2)}$.
+Wir erwarten dabei, dass sich die Temperaturen angleichen, $T^{(1)}=T^{(2)}$.
 
-Nach den Postulaten muss für ein abgeschlossenes System $U^{(1)}+U^{(2)} = \mathrm{const}$ bzw. $\diff U^{(1)} = -\diff U^{(2)}$ sein. Das Postulat \ref{post:entropie_maximierung} besagt jetzt, dass sich $U^{(1)}$ und $U^{(2)}$ so einstellen, dass $S$ ein Maximum annimmt, $\diff S=0$. Damit auch das Postulat \ref{post:eigenschaften_entropie} erfüllt ist, muss gelten, dass
+Für ein abgeschlossenes System muss $U^{(1)}+U^{(2)} = \mathrm{const}$ bzw. $\diff U^{(1)} = -\diff U^{(2)}$ sein. Das Postulat \ref{post:entropie_maximierung} besagt jetzt, dass sich $U^{(1)}$ und $U^{(2)}$ so einstellen, dass $S$ ein Maximum annimmt, $\diff S=0$. Damit auch das Postulat \ref{post:eigenschaften_entropie} erfüllt ist, muss gelten, dass
 \begin{align*}
     S=S^{(1)}\left(U^{(1)},V^{(1)},\sm^{(1)}_k\right) + S^{(2)}\left(U^{(2)},V^{(2)},\sm^{(2)}_k\right).
 \end{align*}
@@ -250,7 +251,7 @@ Es ist also
 \begin{align*}
     \diff S = \frac{\partial S^{(1)}}{\partial U^{(1)}}\diff U^{(1)}+ \frac{\partial S^{(2)}}{\partial U^{(2)}}\diff U^{(2)} = \frac{1}{T^{(1)}}\diff U^{(1)} + \frac{1}{T^{(2)}}\diff U^{(2)},
 \end{align*}
-da die Volumina und Stoffmengen konstant sind und wegen $\diff U^{(1)} = -\diff U^{(2)}$ ist
+da die Volumina und Stoffmengen konstant sind. Wegen $\diff U^{(1)} = -\diff U^{(2)}$ ist dann
 \begin{align*}
     \diff S = \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\diff U^{(1)} \overset{!}{=} 0.
 \end{align*}
@@ -259,9 +260,9 @@ Im thermischen Gleichgewicht gilt folglich
     \label{eq:thermisches_gg_temperatur}
     T^{(1)} = T^{(2)},
 \end{align}
-wie erwartet. Aus dem Postulat \ref{post:eigenschaften_entropie} folgt auch, dass die Temperatur positiv ist, denn $S$ soll eine monoton ansteigende Funktion von $U$ sein, sodass $\partial S/\partial U > 0$.
+ganz wie erwartet. Aus dem Postulat \ref{post:eigenschaften_entropie} folgt auch, dass die Temperatur positiv ist, denn $S$ soll eine monoton ansteigende Funktion von $U$ sein, sodass $\partial S/\partial U > 0$.
 
-Diese Definition der Temperatur als Inverse der Ableitung der Entropie nach der inneren Energie mag zwar ein wenig abstrakt erscheinen, doch gibt es auch andere gleichbedeutende Definitionen der Temperatur, die aber nicht weniger abstrakt sind\footnote{Ein anderer Ansatz wäre, als nullten Hauptsatz die Transitivität der Temperatur zu postulieren \cite{lit:nolting1},
+Diese Definition der Temperatur als Inverse der Ableitung der Entropie nach der inneren Energie mag zwar ein wenig abstrakt erscheinen, doch sind andere gleichbedeutende Definitionen der Temperatur nicht weniger abstrakt\footnote{Ein anderer Ansatz wäre, als nullten Hauptsatz die Transitivität der Temperatur zu postulieren \cite{lit:nolting1},
     \begin{align*}
         T^{(1)} = T^{(2)} \quad \text{und}\quad T^{(1)} = T^{(3)} \implication T^{(2)} = T^{(3)}.
     \end{align*}
@@ -270,14 +271,14 @@ Diese Definition der Temperatur als Inverse der Ableitung der Entropie nach der 
 }.
 
 \begin{formal}
-    Es existiert also eine absolute Temperaturskala. Eine solche ist die Kelvin-Skala, die so definiert ist, dass der Tripelpunkt, also die Koexistenz von Eis, flüssigem Wasser und Wasserdampf, bei \qty{271,16}{\kelvin} liegt.
+    Es existiert eine absolute Temperaturskala. Eine solche ist die Kelvin-Skala, die so definiert ist, dass der Tripelpunkt, also die Koexistenz von Eis, flüssigem Wasser und Wasserdampf, bei \qty{271,16}{\kelvin} liegt.
 \end{formal}
 
 Wir haben gesehen, dass die Entropie ein Maximum annimmt. Daraus kann man schließen, dass die zweite Ableitung der Entropie dort kleiner als $0$ ist.
 
 \paragraph*{Wärmefluss}
 
-Wir wissen intuitiv, dass die Wärme von Bereichen hoher Temperatur zu Bereichen niedrigerer Temperatur fließt. Startet man bei einem Anfangszustand mit $T^{(2)}> T^{(1)}$ und hebt dann die Zwangsbedingung auf, kommt es zu einem (quasistatischen) Wärmefluss.
+Wir wissen intuitiv, dass die Wärme von Bereichen höherer Temperatur zu Bereichen niedrigerer Temperatur fließt. Startet man bei einem Anfangszustand mit $T^{(2)}> T^{(1)}$ und hebt dann die Zwangsbedingung auf, kommt es zu einem (quasistatischen) Wärmefluss.
 Wegen des Postulats \ref{post:entropie_maximierung} ist
 \begin{align*}
     \Delta S= \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\Delta U^{(1)} > 0.
@@ -420,12 +421,12 @@ an.
 
 Bis jetzt haben wir globale Betrachtungen gemacht, die hauptsächlich extensive Variablen behandeln. Nun soll eine differentielle Behandlung folgen, die auch die intensiven Größen berücksichtigt.
 
-Aus der energetischen Fundamentalbeziehung erhält man durch Differenzieren nach den Parametern $(t+1)$ Gleichungen in $(t+1)$ Variablen.
+Aus der energetischen Fundamentalbeziehung erhält man durch Differenzieren nach den einzelnen Parametern insgesamt $(t+1)$ Gleichungen in $(t+1)$ Variablen:
 \begin{align*}
     \frac{\partial U}{\partial S} = T = T(S,X_1,\ldots ,X_t), \quad
-    \frac{\partial U}{\partial X_k} =P_k = P_k(S,X_1,\ldots ,X_t)
+    \frac{\partial U}{\partial X_k} =P_k = P_k(S,X_1,\ldots ,X_t),
 \end{align*}
-Die durch diesen Prozess gewonnenen Größen $T,P_1,\ldots,P_t$ sind intensiv, also homogen vom Grad $0$, z.~B.
+mit $k=1,\dots,t$. Die durch diesen Prozess gewonnenen Größen $T,P_1,\ldots,P_t$ sind intensiv, also homogen vom Grad $0$, z.~B.
 \begin{align*}
     T(S,X_1,\ldots ,X_t)=T(\lambda S,\lambda X_1,\ldots ,\lambda X_t).
 \end{align*}
@@ -441,7 +442,7 @@ Betrachte als Beispiel ein Einkomponentensystem mit $X_t=\sm$, molarer Entropie 
 \end{align*}
 Man kann jetzt zwei dieser Zusammenhänge invertieren (z.~B. $s=s(T,P)$ und $v=v(T,P)$) und in den dritten einsetzen ($\mu=\mu(T,P)$). Diese letzte Gleichung ist damit redundant für die Beschreibung des Systems.
 
-Durch Differenzieren der Euler-Gleichung erhalten wir
+Diese Erkenntnis können wir auch durch einen anderen Zugang erlangen. Durch Differenzieren der Euler-Gleichung erhalten wir
 \begin{align}
     U                    & =TS+ \sum_j P_jX_j                                                 \nonumber \\
     \label{eq:differential_innere_energie1}
@@ -456,16 +457,15 @@ Durch Vergleich von \eqref{eq:differential_innere_energie1} und \eqref{eq:differ
 \begin{align}
     \label{eq:gibbs_duhem}
     \boxed{
-        S\diff T + \sum X_j \diff P_j = 0
+        S\diff T + \sum_j X_j \diff P_j = 0
     }\:,
 \end{align}
 was als Gibbs-Duhem-Beziehung bekannt ist.
-
 Im Einkomponentensystem heißt das, dass
 \begin{align*}
     S\diff T - V\diff P + \sm \diff \mu = 0.
 \end{align*}
-Teilen durch $\sm$ liefert
+Teilen durch $\sm$ liefert z.~B.
 \begin{align*}
     \diff \mu = -s \diff T + v\diff P
 \end{align*}
@@ -484,3 +484,4 @@ und für ein einfaches System ist dann
 \begin{align*}
     U\diff\left(\frac{1}{T}\right) + V\diff\left(\frac{P}{T}\right)-\sum_{k=1}^r \sm_k\diff\left(\frac{\mu_k}{T}\right)=0.
 \end{align*}
+
