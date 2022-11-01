@@ -1,0 +1,124 @@
+% !TeX root = Theo_IV.tex
+\chapter{Das ideale Bose-Gas}
+Viele nicht-klassische Effekte können auf die Bose-Einstein-Kondensation zurückgeführt werden. Dazu gehören Suprafluidität von $^4He$ und Supraleitung durch Cooper-Paare.
+Das erste Bose-Einstein-Kondensat wurde jedoch erst 1995 realisiert. Der Nobelpreis dafür wurde 2001 an Cornell, Wiemann und Ketterle vergeben.
+\section{Chemisches Potential}
+Für das Kondensat gilt $\mu<0$, denn die gegensätzliche Annahme impliziert auf Grund des Ausdruck $N_k=..$ die Möglichkeit einer unphysikalischen unendlichen Besetzungszahl $N_k$.
+Die Fugazität $\xi$ liegt zwischen null und eins. Für $\xi$ gegen 1
+Wir nehmen eine Besetzungszahl des Grundzustandes an, welche viel größer als eins ist. Damit folgt für $N_1=-k_B T/\mu$ und 
+\begin{align*}
+    \mu(T)=-\frac{k_B T}{N_1}
+\end{align*}
+geht gegen null für $T\rightarrow 0$.
+\section{Bose-Einstein-Kondensation}
+Wir wollen eine mittlere Besetzungszahl berechnen und nutzen die Zustandsdichten mittels
+\begin{align*}
+    N_e=\int_0^\infty...
+\end{align*}
+Taylor-Entwickeln wir diesen Ausdruck in $\xi$ weiter erhalten wir 
+\begin{align*}
+    ...
+\end{align*}
+mit Potenzreihe
+\begin{align*}
+    ...
+\end{align*}
+...\dots
+Die Besetzung des Grundzustandes in Abhängigkeit der Temperatur sieht wie folgt aus: Ist die Temperatur $T$ größer $T_\mathrm{BE}$, so ist der Grundzustand näherungsweise unbesetzt. Für Temperaturen, welche $T_\mathrm{BE}$ untertreffen wird die Besetzungszahl durch 
+\begin{align*}
+    N_1&=N-N_e^\mathrm{max}\\
+    &=N\left[1-\left(\frac{T}{T_\mathrm{BE}}\right)^{3/2}\right]
+\end{align*}
+[Grafik]
+Für $T=T_\mathrm{BE}$ setzt die Kondensation in den Grundzustand an und ist für $T=0$ mit einer vollständigen Grundbesetzung abgeschlossen.
+Soll $T_\mathrm{BE}$ nach oben verschoben werden, kann dies durch Kompression des Bose-Gases Volumen mittels Abkühlung erreicht werden. Dies lässt sich darauf zurückführen, dass $T_\mathrm{BE}$ zur Dichte des Gases proportional ist.
+Die Abweichungen der theoretischen Vorhersage von $T_\mathrm{BE}$ für $^4He$ ist auf die Vernachlässigung der Ww zurückzuführen. Werte einfügen
+Die ($^4 He$-)Suprafluidität, ein Zustand verschwindender Viskosität, wird dadurch bedingt, dass die ($^4 He$-)Atome einen kohärenten Quantenzustand einnehmen.
+Bei der praktischen Kühlung eines $Rb^{87}$-Bose-Teilchen-Gases wurde eine sigknifikante Ansammlung der Teilchen im Grundzustandsenergiebereich ab $170nK$ beobachtet. 
+\chapter{Quantenstatistik mit Operatoren}
+Wir wollen uns abschließend mit der statistischen Mechanik der Quantenmechanik 
+\section{Dichtematrix}
+Die Energie von Zuständen können als Eigenwerte des Hamiltonoperators ermittelt werden.
+Wir betrachten nun ein Ensemble von quantenmechanischen Zuständen mit einer Entropie 
+\begin{align*}
+    ...,
+\end{align*}
+wobei die innere Energie und die mittlere Teilchenzahl kennzeichnet.
+Wir wollen eine kurze Gegenüberstellung der klassischen und Quanten-Mechanik vornehmen:
+[Tabelle]
+Die Zustandsbeschreibung erfolgt zum einen durch ein Systempunkt im Phasenraum zum anderen durch ein Zustandsvektor im Hilbert-Raum.
+Messungen erfolgen durch Funktionen über den Phasenraum oder Anwendung von Operatoren. Die Beschreibung der statistischen Gesamtheit folgt einer Wahrscheinlichkeitsdichte im Phasenraum oder einer Wahrscheinlichkeitsverteilung im Hilbert-Raum. Die Mittelwerte im Ensemble werden durch Phasenraum-Mittelung oder Zustandsmittelung gebildet.
+Wir definieren eine Dichtematrix 
+\begin{align*}
+    ...
+\end{align*}
+Es handelt sich dabei um einen statistischen Operator für (statistische) Ensemble. Die Zustandsvektoren dieses Ausdrucks bilden ein vollständiges Orthonormalsystem. 
+Wir berechnen den gesuchten Mittelwert nun durch eine Anwendung 
+\begin{align*}
+    ...
+\end{align*}
+der Dichtematrix. Dabei haben wir die grundlegenden Postulate der Quantenmechanik (Normiertheit/1 und Orthogonalität einfügen) genutzt.
+Dies entspricht der Spurbildung, auch trace genannt (Summieren über alle Diagonalelemente des Operators bezüglich der Basis s). Bildlich gesprochen wird der zur Observablen gehörige Operator und anschließend die Dichtematrix angewandt, welche die (zu den Zuständen gehörigen) Zustandswahrscheinlichkeiten ermittelt. Anschließend wird über alle zugehörigen Diagonalelemente (Eigenwerte) summiert. Aus der Normiertheit (...) des Operators folgt für die Spur wie im Klassischen:
+\begin{align*}
+    ...
+\end{align*}
+Es gilt für zweifache Anwendung der Dichtematrix??? umformulieren
+\begin{align*}
+    ...
+\end{align*}
+Jeder positive semi-definite Operator mit Spur gleich eins ist als Dichtematrix geeignet. Da er die Bedingungen, welche wir an die Zustandswahrscheinlichkeiten stellen (Normiertheit und Postivität) erfüllt.
+Reine Zustände bezeichnen Ensemble mit einem ausgezeichneten Zustand $m$, welcher mit absoluter Wahrscheinlichkeit ($P(s)=\delta_{sm}$ $\rightarrow P(m)=1$) vorliegt. Formal beschreiben wir derartige Zustände mit einem Dichteoperator der Form 
+\begin{align*}
+    ...
+\end{align*}
+Analog zum klassischen Nernst'schen Postulat beobachten wir für ein quantenmechanisches Ensemble: Geht $T$ gegen null, so geht das System in einen eindeutigen Grundzustand sdsad über, sodass dür die Dichtematrix und die mittlere Abweichung (?) ein Zustand minimaler Entropie vorliegt.
+\begin{align*}
+    ....
+\end{align*}
+folgt.
+\section{Satz von Liouville}
+Wir wollen die Zeitentwicklung der Dichtematrix außerhalb eines thermodynamischen Gleichgewichts beschreiben.
+Unter Zuhilfenahme der Schrödinger-Gleichung und ihrer Adjungierten:
+\begin{align*}
+    ...
+\end{align*}
+können wir für $\widehat{\rho}$ folgende Entwicklung beobachten:
+\begin{align*}
+    ...
+\end{align*}
+Diese Gleichung wird als von-Neumann Gleichung bezeichnet. Wir bemerken, dass der Kommutator-abhängige Ausdruck analog zu seinem klassischen Gegenstück (..), der Liouville-Gleichung formalisiert ist.
+\section{Thermodynamisches Ensemble}
+Ein mikrokanonisches Ensemble folgt der bekannten Wahrscheinlichkeitsverteilung $P(s)=1/g$, damit folgt für den quantenstatistischen Formalismus eine Dichtematrix 
+\begin{align*}
+    ...
+\end{align*}
+Ein kanonisches Ensemble folgt hingegen der Verteilung
+\begin{align*}
+    P(s)=
+\end{align*} 
+Die Zustandssumme lässt sich wie folgt schreibe:
+\begin{align*}
+    ...
+\end{align*}
+Dies entspricht der eingeführten Definition der Spurbildung.
+Die Anwendung des Ausdrucks erlaubt die Berechnung der freien Energie,
+\begin{align*}
+    ...
+\end{align*}
+Für das großkanonische Ensemble erinnern wir an die Wahrscheinlichkeit
+\begin{align*}
+    ...
+\end{align*}
+Analog zu vorigem Vorgehen können wir den quantenstatistischen Formalismus um 
+\begin{align*}
+    \rho
+\end{align*}
+und 
+\begin{align*}
+    Z_G
+\end{align*}
+erweitern. Dabei haben wir einen neuen Operator, den Teilchenzahloperator $\widehat{N}$ eingeführt. Dieser nimmt beispielsweise für den harmonischen Oszillator die Form 
+\begin{align*}
+    \widehat{N}=\sum_i a_i^\dagger a_i
+\end{align*}
+an. Die Summanden geben die Anzahl der Schwingungsquanten an.

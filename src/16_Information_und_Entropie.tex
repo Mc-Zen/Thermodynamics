@@ -1,0 +1,165 @@
+% !TeX root = Theo_IV.tex
+\chapter{Information und Entropie}
+Die \emph{Informationstheorie}, welche ursprünglich auf den Mathematiker Claude Shannon zurückgeht, behandelt unter anderem die Informationsübertragung, Datenkompression und Kodierung. Sie führt die Größen der Information und Entropie zusammen und bildet einen populären Zugang zur Ensembletheorie. Auch wir wollen im Verlauf dieses Kapitels durch sie eine neue Perspektive darauf eröffnen.
+
+
+\section{Begriffe}
+\paragraph*{Information} Wir können uns dem Begriff der \emph{Information} im Allgemeinen auf sehr unterschiedliche Weise nähern. Die Informationstheorie als mathematischer Teilbereich versucht dies durch eine quantitative Beantwortung der folgenden Frage: Wie groß ist der Informationsgehalt $I(s)$ eines Ereignisses $s$  mit Eintrittswahrscheinlichkeit $P(s)$? \footnote{Beispiel für ein Ereignis $s$ ist ein gedruckter Text, dessen Wahrscheinlichkeit $P(s)$ aus den Einzelwahrscheinlichkeiten der Wort- und Silbenkombinationen berechnet werden kann.}
+
+Wir können a priori folgende Postulate für die Information eines Ereignisses formulieren: 
+\begin{postulate}[Information sicherer Ereignisse]
+    Ein sicheres Ereignis $s$ mit Eintrittswahrscheinlichkeit $P(s)=1$ hat einen leeren Informationsgehalt $I(P(s)=1)=0$. 
+\end{postulate}
+\begin{postulate}[Antikorrelation von Information und Wahrscheinlichkeit]
+    Der Informationsgehalt $I(P(s))$ fällt monoton in $P(s)$. D.h., je unwahrscheinlicher ein Ereignis, desto mehr Information enthält es. 
+\end{postulate}
+\begin{postulate}[Additivität des Informationsgehaltes]
+    Für zwei unabhängige Ereignisse $s_1$ und $s_2$ gilt bekannterweise: $P(s_1 \land  s_2)=P(s_1)\cdot P(s_2)$. Für ihre Informationgehälter gilt Additivität: $I(s_1 \land s_2)=I(s_1)+I(s_2)$. 
+\end{postulate}
+Diese Postulate werden durch eine Größe der Form 
+\begin{align*}
+    I(P(s))=-C\ln P(s)
+\end{align*}
+mit $C>0$ erfüllt. Dabei wird die Einheit der Information durch die Konstante $C$ bestimmt. Zudem sei darauf hingewiesen, dass $I(s)\in [0,\infty ]$.
+
+Der Informationsbegriff findet sehr konkrete Anwendungen in Bereichen der Nachrichtenübertragung und Datenspeicherung, welche um eine Informationsmaximierung bemüht sind. 
+
+\paragraph*{Grad der Unbestimmtheit} Wir widmen uns nun der Anwendung des Informationsbegriffes auf die Ensembletheorie. Der \emph{Grad der Unbestimmtheit} definiert den mittleren Informationsgehalt (den Erwartungswert) eines Ensembles von $\{s\}$:
+\begin{align}
+    \label{eq:Unbestimmtheitsgrad}
+    \widetilde{S}=\langle I(s)\rangle=\sum_S I(s)P(s)=-C\sum_S P(s)\ln P(s).
+\end{align}
+Entsprechend ist der Grad der Unbestimmtheit für ein $s$ mit $P(s)=1$ gleich null.
+\paragraph*{Entropie der Thermodynamik} Setzen wir $C=k_B$, erhalten wir unter der Annahme, dass die Entropie dem maximalen Grad der Unbestimmtheit entspricht 
+\begin{align*}
+    S=\max \widetilde{S}=\max \left(-k_B \sum_S P(s)\ln P(s)\right).
+\end{align*}
+Dies impliziert eine Maximierung unter Nebenbedingung (die Entropie strebt stets unter normierten Wahrscheinlichkeiten $P(s)$ ihr Maximum an), welche wir im Folgenden für das mikrokanonische Ensemble überprüfen möchten.
+
+\section{Mikrokanonische Gesamtheit}
+Wir haben bereits erwähnt, dass die Normiertheit der Wahrscheinlichkeiten, $\sum_S P(s)=1$, eine Nebenbedingung darstellt.
+Wir erörtern nun unter welcher Wahrscheinlichkeit $\widetilde{S}$ maximiert wird und schreiben die Variation von $\widetilde{S}$ unter gegebener Nebenbedingung wie folgt:
+\begin{align*}
+    0&=\delta [\widetilde{S}-\lambda k_B \sum_S P(s)]\\
+    &=-k_B\sum_S \delta[P(s)\ln P(s)]-\lambda k_B \sum_S \delta P(s)=-k_B\sum_S (\ln P(s)\delta P(s)+\delta P(s))-\lambda k_B \sum_S \delta P(s)\\
+    &=-k_B\sum_S \delta P(s)[\ln P(s)+1+\lambda]=-k_B\sum_S \delta P(s)\cdot 0
+\end{align*}
+$\lambda k_B$ bezeichnet den Lagrange-Parameter. Die letzte Gleichheit folgt zwangsläufig aus der Beliebigkeit von $\delta P(s)$. Damit nehmen alle Einzelwahrscheinlichkeiten eine Konstante der Form $P(s)=\exp(-(1+\lambda))$ an. Da alle gleich sind, folgt ferner unter der Wahrscheinlichkeitsnormiertheit:
+\begin{align*}
+    P(s)=\frac{1}{g},
+\end{align*}
+wobei $g$ die Anzahl der Zustände bezeichnet. Dies deckt sich mit der Erdogenhypothese (Postulat \ref{post:Erdogenhypothese}). 
+Einsetzen der Wahrscheinlichkeit in \ref{eq:Unbestimmtheitsgrad} führt auf 
+\begin{align*}
+    S=k_B \ln g,
+\end{align*}
+das Grundpostulat der statistischen Mechanik.
+
+\section{Kanonische Gesamtheit}
+Bedingt durch das Wärmebad gilt für die kanonische Gesamtheit eine zusätzliche makroskopische Nebenbedingung:
+\begin{align*}
+    \boxed{U=\langle U_S \rangle=\sum_S P(s)U_S}\:.
+\end{align*}
+Die innere Energie ist von Fluktuationen betroffen, wodurch lediglich der Energieerwartungswert festgelegt ist. 
+Wir ergänzen diese Nebenbedingung in der Variationsrechnung:
+\begin{align*}
+    0=\delta [\widetilde{S}-\lambda k_B \sum_S P(s)-\beta k_B \sum_S P(s)U_S].
+\end{align*}
+Analog zur Rechnung für das mikrokanonische Ensemble führt diese Gleichung auf
+\begin{align*}
+    0=\ln P(s) +1+\lambda+\beta U_S
+\end{align*}
+und damit auch auf
+\begin{align*}
+    P(s)=\frac{1}{Z}e^{-\beta U_S},
+\end{align*}
+wobei $Z$ die Zustandssumme $Z:=\exp(1+\lambda)=\sum_S\exp(-\beta U_S)$ bezeichnet. Der Faktor $\beta=(k_B T)^{-1}$ ist uns aus der statistischen Mechanik bekannt.
+
+Wir wollen die Voraussagen dieser Zwischenergebnisse auf ihre Vereinbarkeit mit der statistischen Mechanik im Folgenden überprüfen. 
+\paragraph*{Entropie} Für die Entropie folgt:
+\begin{align*}
+    S&=-k_B\sum_S P(s)\ln P(s)\\
+    &=-k_B\sum_S \frac{1}{Z}e^{-\beta U_S}(-\ln Z-\beta U_S)\\
+    &=k_B \ln Z+k_B \beta U.
+\end{align*}
+Die Gleichheit der letzten beiden Zeilen folgt aus der Wahrscheinlichkeitsnormiertheit.
+\paragraph*{Temperatur} Unter Zuhilfenahme des Entropieausdrucks folgt für die Temperatur:
+\begin{align*}
+    \frac{1}{T}&=\frac{\partial S}{\partial U}\\
+    &=k_B\left(\frac{1}{Z}\frac{\partial Z}{\partial \beta}+U\right)\frac{\partial \beta}{\partial U}+\beta k_B\\
+    &=k_B\left(\sum_S (-U_S)P(s)+U\right)\frac{\partial \beta}{\partial U}+\beta k_B\\
+    &=k_B\cdot 0\cdot\frac{\partial \beta}{\partial U}+\beta k_B.
+\end{align*}
+Mittels Umstellung erhalten wir den erwarteten Faktor $\beta=(k_B T)^{-1}$.
+\paragraph*{Freie Energie} Auch die freie Energie,
+\begin{align*}
+    F=U-TS=-k_B T \ln Z,
+\end{align*}
+entspricht dem erwarteten Ausdruck.
+\section{Die großkanonische Gesamtheit}
+Wir wollen uns nun dem großkanonischen Ensemble zuwenden. Wir betrachten darin ein System, welches nicht nur an ein Wärmebad (Vergleich zum kanonischen Ensemble), sondern auch an ein sogenanntes Teilchenbad gekoppelt ist. Dadurch können Teilchen zwischen dem Teilchenbad und dem System ausgetauscht werden. Wir führen diesen Umstand formal durch eine neue makroskopische Nebenbedingung ein:
+\begin{align*}
+    \boxed{N=\langle N_s\rangle=\sum_s P(s)N_s}\:,
+\end{align*}
+welche die absolute Teilchenmenge durch eine mittlere Teilchenmenge ersetzt.
+Analog zu unserer vorherigen Variationsrechnung und unter Berücksichtigung des weiteren Lagrange-Parameters $\gamma k_B$ erhalten wir für die Einzelwahrscheinlichkeiten der Ensemblemitglieder den Ausdruck 
+\begin{align*}
+    P(s)=\frac{1}{Z_G}e^{-\beta U_s -\gamma N_s}.
+\end{align*}
+Dabei bezeichnet 
+\begin{align*}
+    Z_G:=e^{1+\lambda}=\sum_s e^{-\beta U_s -\gamma N_s}
+\end{align*}
+die groß(kanonisch)e Zustandssumme.
+Wir interessieren uns wieder für die Faktoren $\beta$ und $\gamma$ und untersuchen die relevanten Größen.
+\paragraph*{Entropie} Für die Entropie erhalten wir analog zu vorigem Ausdruck:
+\begin{align*}
+    S&=-k_B\sum_S P(s)\ln P(s)\\
+    &=k_B \ln Z_G+k_B \beta U+k_B\gamma N,
+\end{align*}
+wobei $\beta$ und $\gamma$ von $U$ und $N$ abhängen können.
+\paragraph*{Temperatur} Auch hier erhalten wir analog zum Vorgehen beim kanonischen Ensemble den Faktor $\beta=(k_B T)^{-1}$.
+\paragraph*{Chemisches Potential} Berechnen wir das chemische Potential über:
+\begin{align*}
+    -\frac{\mu}{T}&=\frac{\partial S}{\partial N},
+\end{align*}
+erhalten wir den zweiten Faktor 
+\begin{align*}
+    \gamma = -\frac{\mu}{k_B T}=-\beta \mu.
+\end{align*}
+\paragraph*{Großes Potential} Das großkanonische Potential können wir wie folgt schreiben:
+\begin{align*}
+    \Omega&=U-TS-\mu N\\
+    &=-k_B T\ln Z_G\\
+    &=-PV.
+\end{align*}
+Die letzte Zeile folgt bekanntermaßen mit der Euler-Gleichung. 
+Für die Einzelwahrscheinlichkeiten folgt damit:
+\begin{align}
+    \label{eq:Wahrscheinlichkeit}
+    \boxed{
+        \begin{aligned}
+         P(s)&=\frac{1}{Z_G}e^{-\beta(U_s-\mu N_s)}\\
+         &= e^{\beta(\Omega-U_s+\mu N_s)} 
+        \end{aligned}    
+    }
+\end{align}
+mit großer Zustandssumme 
+\begin{align}
+    \label{eq:grosse_Zustandssumme}
+    \boxed{
+        \begin{aligned}
+            Z_G(T,V,\mu)&=\sum_s e^{-\beta(U_s-\mu N_s)}\\
+            &=e^{-\Omega/k_B T} = e^{-\beta \Omega}=e^{\beta PV}
+        \end{aligned}    
+    }
+\end{align}
+und sogenanntem Gibbs-Faktor $\exp(-\beta(U_s-\mu N_s))$.
+
+Alternativ kann die Wahrscheinlichkeit auch mittels einer Taylorentwicklung von $S_R$, der Reservoirentropie, hergeleitet werden.
+
+
+
+
+
+

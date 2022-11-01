@@ -1,0 +1,106 @@
+% !TeX root = Theo_IV.tex
+\chapter{Das ideale Fermi-Gas}
+Betrachten identische, nicht-wechselwirkende Teilchen mit halbzahligem Spin 
+Bsp.:
+\section{Extensive thermodynamische Variable}
+\paragraph*{Zustandsdichte}
+Wir wollen ebene Wellen betrachten, welche eine Energie 
+\begin{align*}
+    .
+\end{align*}
+haben. Diese ist durch den Wellenvektor charakterisiert. Damit folgt für die Zustandsdichte:
+\begin{align*}
+    .
+\end{align*}
+\paragraph*{Großkanonisches Potential} Wir haben das große Potential bereits als Summe über diskrete Zustände formuliert.  Nun schreiben wir es als Integral über kontinuierliche Zustände als:
+\begin{align*}
+    \Omega&=-k_B T \int_0^\infty \ln \left[1+e^{\beta (\mu - \epsilon)}\right]D(\epsilon)d\epsilon\\
+    &=-k_B T D_0 \int_0^\infty \ln \left[1+e^{\beta (\mu - \epsilon)}\right]\sqrt{\epsilon}d\epsilon.
+\end{align*}
+\paragraph*{Mittlere Teilchenzahl} Wir erinnern an die mittlere Besetzungszahl eines Zustandes $k$ mit der Energie $\epsilon_k$:
+\begin{align*}
+    N_k^{FD}=\frac{1}{e^{\beta(\epsilon_k-\mu)}+1}.
+\end{align*}
+Wir charakterisieren die mittlere Besetzungszahl für eine kontinuierliche Energieverteilung mit Hilfer der Fermi-Verteilungsfunktion:
+\begin{align*}
+    f(\epsilon).
+\end{align*}
+Damit folgt für die Besetzungszahl
+\begin{align*}
+    beide Gleichungen .
+\end{align*}
+\paragraph*{Innere Energie} Für die mittlere innere Energie $U=\langle\epsilon\rangle$ ergibt sich mit der mittleren Besetzungszahl:
+\begin{align*}
+    .
+\end{align*}
+Wir wollen das große Potential ausgehend von der inneren Energie berechnen.
+Dazu integrieren wir partiell mit zugehörigen Faktoren 
+\begin{align*}
+   a(\epsilon)&=\epsilon^{3/2}\\
+   b'(\epsilon)&= \\
+   b(\epsilon)&=:
+\end{align*}
+\begin{align*}
+    U&=D_0 a(\epsilon)b(\epsilon)|_0^\infty+\frac{3}{2}D_0\int\sqrt{\epsilon}\frac{1}{\beta}\ln\left[e^{\beta(\mu-\epsilon)}+1\right]d\epsilon\\
+    &=0-\frac{3}{2}\Omega
+\end{align*}
+Nach dem großen Potential umgestellt erhalten wir 
+\begin{align*}
+    \Omega=-\frac{2}{3}U=-PV
+\end{align*}
+und damit 
+\begin{align*}
+    P=\frac{2}{3}\frac{U}{V},
+\end{align*}
+die Zustandsgleichung für das Fermigas.
+Wir vergleichen das Ergebnis mit den klassischen idealen Gasen, für welche 
+\begin{align*}
+    PV=N k_B T
+\end{align*}
+gilt. Diese Gleichung wird durch $N k_B T=2U/3$ eingeschlossen.
+\section{Klassischer Grenzfall}
+Im klassischen Grenzfall ist die Fugazität $e^{\beta \mu}$ sehr viel kleiner als eins. Die Erklärung dieses Tatbestandes folgt später. Damit folgt für die Verteilungsfunktion ein neuer Ausdruck:
+\begin{align*}
+    ,
+\end{align*}
+die korrigierte Boltzmann-Statistik. Arbeiten wir mit der korrigierten Boltzmann-Statistik folgt für die mittlere Teilchenzahl
+\begin{align*}
+    .
+\end{align*}
+mit der de-Broglie'schen Wellenlänge $\lambda_B$. Damit beschreibt $\lambda_B^3$ im übertragenen Sinne das Volumen, welches ein Teilchen einnimmt.
+Die Quantenkonzentration $n_Q=\lambda_B^{-3}$
+Kriterium für den klassischen Grenzfall: Wenn die Dichte $n$ sehr viel kleiner ist als $n_Q$ spüren die Teilchen ihren Quantencharakter nicht.???
+\section{Quanten-Grenzfall}
+Den Quanten-Grenzfall beispielsweise das entartete Elektronengas verhält sich anders als das ideale Gas.
+Für das Elektron gibt es zwei Einstellungsmöglichkeiten: [F] und eine Dichte:[F]
+Diese seien feste Parameter.
+Das Fermi-Gas bei $T=0$
+Für $T=0$ läuft $\beta$ gegen unendlich. Um die Verteilungsfunktion für diesen Fall auszuwerten nehmen wir eine Fallunterscheidung vor:
+\begin{align*}
+    .
+\end{align*} 
+Zustände mit $\mu>\epsilon$ sind vollständig besetzt, alle anderen Zustände mit $\epsilon>\mu$ sind nicht besetzt.
+Für $T=0$ sind also alle Zustände bis $\epsilon_F=\mu(T=0,N,V)$ mit maximal einem Teilchen pro Zustand besetzt. Alle Zustände darüber sind unbesetzt, weshalb $\epsilon_F=\mu$ auch als Fermienergie oder Fermikante bezeichnet wird.
+
+Wir wollen $\mu$ berechnen.
+Ausgehend von der Teilchenzahl erhalten wir:
+\begin{align*}
+    N=\int_0^{\mu_0} D(\epsilon)d\epsilon\\
+    =\frac{2V}{4\pi^2}\left(\frac{2m}{\hbar^2}\right)^{3/2}\int_0 ^{\mu_0} \sqrt{\epsilon}d\epsilon\\
+    =\frac{V}{3\pi^2}\left(\frac{2m}{\hbar^2}\right)^{3/2}\mu_0 ^{3/2}
+\end{align*}
+mit $n=N/V$ folgt damit für $\mu_0$:
+\begin{align*}
+    \mu_0=:\epsilon_F=:k_B T_F=\frac{\hbar^2}{2m}\left(3\pi^2 n\right)^{2/3}.
+\end{align*}
+Wir illustrieren dies durch folgendes Beispiel.
+Mit für Elektronen typischen Werten erhalten wir eine Fermi-Temperatur von $T_F\thickapprox 10^5 \si{K}$.
+
+Berechnen wir die Teilchenzahl in Abhängigkeit von $\mu$, so können wir $\mu$ in Abhängigkeit einer Teilchendichte ($n=N/V$) schreiben.
+\begin{align*}
+    N
+\end{align*}
+Entwickeln wir nach $T/T_F$ erhalten wir zwei neue Ausdrücke für $\mu$ und $U$:
+\begin{align*}
+    .
+\end{align*}
