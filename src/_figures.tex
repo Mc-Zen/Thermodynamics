@@ -490,3 +490,30 @@
         \node[system node,align=center, fill=red!20!white] at (4,0) {Umgebung, $T_\mathrm{h}$} edge[rarr] node[midway, above] {$\udiff Q_\mathrm{h}$} (P);
     \end{tikzpicture}
 }
+
+% Entropy-temperature diagram of the ideal carnot cycle
+\newcommand{\tfigCarnotCycleIndicatorDiagram}{
+    \begin{tikzpicture}
+        \draw[arr] (0,0) -- (0,5) node[ylabel] {$T$};
+        \draw[arr] (0,0) -- (7,0) node[xlabel] {$S$};
+        
+        \coordinate (A) at (1,4);
+        \coordinate (B) at (6,4);
+        \coordinate (C) at (6,1);
+        \coordinate (D) at (1,1);
+        
+        \draw[dashed] (A) -- (0,4) node[left] {$T_\mathrm{h}$};
+        \draw[dashed] (D) -- (0,1) node[left] {$T_\mathrm{k}$};
+        \draw[dashed] (D) -- (1,0) node[below] {$S_A$};
+        \draw[dashed] (C) -- (6,0) node[below] {$S_B$};
+        
+        \node[label={north west:A}] at (A) {};
+        \node[label={north east:B}] at (B) {};
+        \node[label={south east:C}] at (C) {};
+        \node[label={south west:D}] at (D) {};
+        
+        \draw[midarrow=.1,nice green,fill=green!10!white] (D) rectangle (B) node[midway] {$\Delta W^{\mathrm{RAQ}}$};
+        \node[label={north:$\Delta Q_{AB}=\Delta S T_\mathrm{h}$}] at ($(A)!.5!(B)$) {};
+        \node[label={south:$\Delta Q_{CD}=-\Delta S T_\mathrm{k}$}] at ($(C)!.5!(D)$) {};
+    \end{tikzpicture}
+}
