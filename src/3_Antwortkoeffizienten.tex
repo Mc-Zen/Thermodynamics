@@ -14,7 +14,7 @@ Der Begriff \emph{Isochore} bezeichnet Zustandsänderungen bei gleichbleibenden 
 \begin{align*}
     V=V_0=\mathrm{const}.
 \end{align*}
-Die Größen $T$ und $P$ sind damit nur noch Funktionen von $S$ und damit ist $T=T(P)_{V_0}$ bzw. $P=P(T)_{V_0}$ (dazu wird die Entropie $S$ durch Umkehren einer der Zustandsfunktionen $T$ und $P$ und Einsetzen in die andere eliminiert).
+Die Größen $T$ und $P$ sind damit nur noch Funktionen von $S$ und so ist $T=T(P)_{V_0}$ bzw. $P=P(T)_{V_0}$ (dazu wird die Entropie $S$ durch Umkehren einer der Zustandsfunktionen $T$ und $P$ und Einsetzen in die andere eliminiert).
 
 
 \paragraph*{Isentrope}
@@ -22,7 +22,7 @@ Analog gehen wir bei der Betrachtung der \emph{Isentrope} vor, welche Zustandsä
 \begin{align*}
     S=S_0=\mathrm{const}.%\quad\rightarrow\quad T=T(S_0,V) \quad\text{und}\quad P=(S_0,V) \quad\rightarrow\quad T=T(P)|_{S_0}.
 \end{align*}
-Wir motivieren diese Betrachtung durch den Verweis darauf, dass sie bei der Beschreibung der Schallausbreitung essentiell ist. Dies ist dadurch bedingt, dass die dort ablaufenden Kompressionsprozesse derartig schnell verlaufen, dass keine Wärmezufuhr oder -abfuhr stattfinden kann und diese somit isentropisch sind. Unter den allgemeineren, \emph{adiabatischen} Zustandsänderungen versteht man Prozesse, welche ohne Wärmeaustausch mit der Umgebung ablaufen. Isentrope Prozesse sind adiabatisch, der Umkehrschluss gilt jedoch nicht. 
+Wir motivieren diese Betrachtung durch den Verweis darauf, dass sie bei der Beschreibung der Schallausbreitung essentiell ist. Dies ist dadurch bedingt, dass die dort ablaufenden Kompressionsprozesse derartig schnell verlaufen, dass keine Wärmezufuhr oder -abfuhr stattfinden kann und die Prozesse somit isentropisch sind. Unter den allgemeineren, \emph{adiabatischen} Zustandsänderungen versteht man Prozesse, welche ohne Wärmeaustausch mit der Umgebung ablaufen, $\udiff Q=0$. Isentrope Prozesse sind adiabatisch, der Umkehrschluss gilt jedoch nicht. 
 
 
 Wir wollen uns auch weiterhin auf die Zustandsvariablen Temperatur und Druck konzentrieren, wobei wir im Allgemeinen kontrollierbare (bzw. im Experiment kontrollierte) Zustandsvariablen wie diese beiden nun auch als \emph{Koordinaten} bezeichnen werden. Es sei darauf verwiesen, dass die Entropie $S$ keine solche direkt kontrollierbare Größe ist.
@@ -88,7 +88,7 @@ Die insgesamt zugeführte Wärme lässt sich darüber nun leicht durch eine Aufi
 \end{align*}
 bestimmen.
 
-Es existiert eine weitere Herleitung der spezifischen Wärme, welche kurz skizziert werden soll. Ausgangspunkt bildet das uns inzwischen gut bekannte unvollständige Differential
+Es existiert eine weitere Herleitung der spezifischen Wärme, welche kurz skizziert werden soll. Ausgangspunkt bildet das uns inzwischen gut bekannte, unvollständige Differential
 \begin{align*}
     \udiff Q=\diff U +P\diff V= \diff(U+PV)|_{P=\mathrm{const}}.
 \end{align*}
@@ -117,7 +117,7 @@ Analog zu vorigem Vorgehen schreiben wir die Zustandsfunktionen
 \end{align*}
 in Abhängigkeit der gewählten Koordinaten und schreiben den sich daraus ergebenden Ausdruck für den molaren quasistatischen Wärmefluss
 \begin{align*}
-    \frac{T}{\sm}\diff S= \frac{\udiff Q}{\sm}=\frac{T}{\sm}\left(\frac{\partial S}{\partial T}\right)_V \diff T +\frac{T}{\sm}\left(\frac{\partial S}{\partial V}\right)_T \diff V\equiv c_v(T,V)\diff T+\ldots.
+    \frac{T}{\sm}\diff S= \frac{\udiff Q}{\sm}=\frac{T}{\sm}\left(\frac{\partial S}{\partial T}\right)_V \diff T +\frac{T}{\sm}\left(\frac{\partial S}{\partial V}\right)_T \diff V\equiv c_v(T,V)\diff T+\ldots
 \end{align*}
 Erneut erhalten wir damit einen Ausdruck für die molare spezifische Wärme, diesmal bei konstantem Volumen:
 \begin{align*}
@@ -160,9 +160,10 @@ Besonders nützlich  ist, dass die Koeffizienten experimentell sehr gut zugängl
 Wir wollen das bisher Erarbeitete nun im Rahmen des Modells der \emph{idealen Gase} anwenden. Ideal heißt in diesem Kontext, dass wir die Annahme machen, Moleküle verhalten sich wie Punktteilchen, ohne \textendash{} mit Ausnahme von Stößen \textendash{} miteinander zu wechselwirken. Die Realisierung eines solchen idealen Gases erfolgt durch ausreichende Verdünnung eines tatsächlichen Gases.
 Welche Zustandsgleichungen gelten nun für dieses ideale Gas?
 Die prominenteste Gleichung dürfte die \emph{ideale Gasgleichung} sein:
-\begin{align*}
+\begin{align}
+    \label{eq:ideale gasgleichung}
     \boxed{PV=\sm RT}\:.
-\end{align*}
+\end{align}
 Dabei bezeichnet $R$ die \emph{universelle Gaskonstante} und ist das Produkt der \emph{Avogadrokonstante} (welche die Anzahl der Teilchen in einem Mol angibt) und der \emph{Boltzmann-Konstante} (deren Bedeutung wir später noch erörtern werden):
 \begin{align*}
     R=\avogadro k_\mathrm{B}=\qty{ 8,314 462 618 153 24}{\joule\per\mole\per\kelvin}
@@ -179,9 +180,10 @@ und unter konstantgehaltenem Druck das \emph{Gay-Lussacsche Gesetz},
 \end{align*}
 welche beide bekannte Ergebnisse experimenteller Untersuchungen sind.
 Ferner gibt es die \emph{kalorische Zustandsgleichung}:
-\begin{align*}
+\begin{align}
+    \label{eq:kalorische Zustandsgleichung}
     \boxed{U=\frac{f}{2}\sm RT}\:.
-\end{align*}
+\end{align}
 $f$ bezeichnet dabei die Zahl der Freiheitsgrade. Die innere Energie ist also für einfache\footnote{Die Kennzeichnung als \anf{einfaches} Gas wird im Laufe der nächsten Kapitel näher erläutert. Wir wollen bereits vorgreifen und darauf verweisen, dass damit Zustände mit höheren Quantenzahlen beschrieben werden, welche sich entsprechend \anf{klassisch} verhalten.} ideale Gase proportional zur Temperatur des Systems.
 Die Gleichung ist ein direktes Ergebnis der statistischen Mechanik und ferner des dort genutzten \emph{Gleichverteilungssatzes}.
 \begin{formal}
@@ -203,19 +205,19 @@ Das dadurch eintretende \anf{Auftauen} der Freiheitsgrade kann ab entsprechenden
 Anfangs dominieren also translatorische Prozesse, während mit Zunahme der Temperatur langsam auch der Rotationsbereich und noch später der Schwingungsbereich \anf{auftaut} (siehe auch \Abbref{fig:ThawingOfDegreesOfFreedom}).
 Diese Freiheitsgradverteilungen in Abhängigkeit der Temperatur werden wir später mittels der Beschreibung des wärmeabhängigen Verlaufs der spezifischen Wärme illustrieren.
 
-Wir wollen zunächst das Gelernte nutzen, um sowohl das chemische Potential, als auch die Entropie aufzuschreiben. Aus den zwei eingeführten Zustandsgleichungen folgt
+Wir wollen zunächst das Gelernte nutzen, um sowohl das chemische Potential, als auch die Entropie aufzuschreiben. Aus den zwei eingeführten Zustandsgleichungen \eqref{eq:ideale gasgleichung} und \eqref{eq:kalorische Zustandsgleichung} folgt
 \begin{align}
     \label{eq:entropischeZustandsgleichungenIdealeGase}
     \boxed{\frac{P}{T}=\frac{R}{v} \quad\text{und}\quad \frac{1}{T}=\frac{f}{2}\frac{R}{u}}
 \end{align}
-in der Entropiedarstellung. %(??).
-Das chemische Potential bestimmen wir wie folgt über die \emph{Gibbs-Duhem-Gleichung}
+in der Entropiedarstellung. 
+Das chemische Potential bestimmen wir wie folgt über die \emph{Gibbs-Duhem-Gleichung} \eqref{eq:gibbs duhem einfaches system} für ein einfaches System
 \begin{align*}
     \diff \left(\frac{\mu}{T}\right) & =u\diff\left(\frac{1}{T}\right)+v\diff \left(\frac{P}{T}\right)                                    \\
                                      & =-\frac{f}{2}\frac{R}{u}\diff u-\frac{R}{v}\diff v                                                 \\
                                      & =\frac{\partial \frac{\mu}{T}}{\partial u}\diff u+\frac{\partial \frac{\mu}{T}}{\partial v}\diff v
 \end{align*}
-und anschließender Integration
+un erhalten mit anschließender Integration
 \begin{align*}
     \frac{\mu}{T}-\left(\frac{\mu}{T}\right)_0=-\frac{f}{2}R\ln\frac{u}{u_0}-R\ln\frac{v}{v_0}.
 \end{align*}
@@ -359,7 +361,7 @@ sodass der spezifische Wärmeverlauf in Abhängigkeit der Temperatur $T$ wie in 
 Die angekündigten, von der Besetzbarkeit der Zustände abhängigen, Auftaubereiche der Freiheitsgrade schlagen sich wie erwartet hier in der spezifischen Wärme nieder.
 Wir beobachten ferner, dass für Festkörper ein zu $T^3$ proportionaler Verlauf vorliegt, welcher durch die Anschauung von Phononen und ihren Schwingungen plausibilisiert werden kann \textendash{} darauf wollen wir im Rahmen der statistischen Mechanik erneut zu sprechen kommen.
 
-Wir wollen uns nun erweiterte Systeme vorstellen, in denen eine Mischung einfacher idealer Gase vorliegen. Es stellt sich uns die Frage, wie die Fundamentalgleichungen aussehen, die dieses neue System beschreiben. Für die innere Energie,
+Wir wollen uns nun erweiterte Systeme vorstellen, in denen eine Mischung einfacher idealer Gase vorliegt. Es stellt sich uns die Frage, wie die Fundamentalgleichungen aussehen, die dieses neue System beschreiben. Für die innere Energie,
 \begin{align*}
     \boxed{U=\left(\sum_j\frac{f_j}{2}\sm _j\right)RT}\:,
 \end{align*}
@@ -375,7 +377,7 @@ Dies ist eine Konsequenz des additiven Charakters der Entropie und wird durch da
 \begin{formal}
     Das \formalemph{Gibb'sche Theorem} besagt, dass sich die Gesamtentropie eines Systems gemischter idealer Gase als die Summe der Einzelentropien der Gase schreiben lässt.
 \end{formal}
-Veranschaulichen können wir es, indem wir uns einen sogenannten \emph{Mischapparat} vorstellen, welcher zwei unterschiedliche Gase und semipermeable Membranen, die für je eine Gassorte durchlässig sind, bei gleichem Druck $P=P_1=P_2$ und gleicher Temperatur $T=T_1=T_2$ beinhaltet. 
+Veranschaulichen können wir es, indem wir uns einen sogenannten \emph{Mischapparat} vorstellen, welcher zwei unterschiedliche Gase bei gleichem Druck $P=P_1=P_2$ und gleicher Temperatur $T=T_1=T_2$ und zwei semipermeable Membranen beinhaltet, die für je eine Gassorte durchlässig sind. 
 
 \begin{figure}[htbp]
     \centering
