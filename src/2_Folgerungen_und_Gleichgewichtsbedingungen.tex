@@ -185,7 +185,7 @@ Betrachtet man ein einkomponentiges System, so liegt die Einführung neuer Grö�
 \begin{align*}
     u=\frac{U}{\sm}=u\left(\frac{S}{\sm},\frac{V}{\sm},\frac{\sm}{\sm}\right)\equiv u(s,v).
 \end{align*}
-Sie hängt folglich von der molaren Entropie $s$ und dem Molvolumen $v$ ab.
+Sie hängt von der molaren Entropie $s$ und dem Molvolumen $v$ ab.
 Wir wollen nun das Differential dieser Größe berechnen. Formal schreiben wir
 \begin{align*}
     \diff u = \left(\frac{\partial u}{\partial s}\right)_v \diff s + \left(\frac{\partial u}{\partial v}\right)_s\diff v
@@ -278,14 +278,14 @@ Wir haben gesehen, dass die Entropie ein Maximum annimmt. Daraus kann man schlie
 
 \paragraph*{Wärmefluss}
 
-Wir wissen intuitiv, dass die Wärme von Bereichen höherer Temperatur zu Bereichen niedrigerer Temperatur fließt. Startet man bei einem Anfangszustand mit $T^{(2)}> T^{(1)}$ und hebt dann die Zwangsbedingung auf, kommt es zu einem (quasistatischen) Wärmefluss.
+Wir wissen intuitiv, dass die Wärme von Bereichen höherer Temperatur zu Bereichen niedrigerer Temperatur fließt. Startet man bei einem Anfangszustand mit $T^{(1)}> T^{(2)}$ und hebt dann die Zwangsbedingung auf, kommt es zu einem (quasistatischen) Wärmefluss.
 Wegen des Postulats \ref{post:entropie_maximierung} ist
 \begin{align*}
     \Delta S= \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\Delta U^{(1)} > 0.
 \end{align*}
 Da aber
 \begin{align*}
-    T^{(2)}> T^{(1)} \equivalence \frac{1}{T^{(1)}}-\frac{1}{T^{(2)}} < 0
+    T^{(1)}> T^{(2)} \equivalence \frac{1}{T^{(1)}}-\frac{1}{T^{(2)}} < 0
 \end{align*}
 ist, muss $\Delta U^{(1)} <0$ sein.
 \begin{formal}
@@ -337,8 +337,6 @@ Die hier diskutierten Gleichgewichtsbedingungen mögen trivial erscheinen, doch 
 
 \section{Gleichgewicht bei Materiefluss\label{sec:gleichgewicht_bei_materiefluss}}
 
-\paragraph*{Chemisches Potential}
-
 Analog zu den vorigen Beispielen wird ein abgeschlossenes System mit zwei Untersystemen betrachtet (siehe \Abbref{fig:DoppelsystemUVNbeweglicheIsolierendeWand}). Diesmal ist die Wand zwar fest, aber wärmeleitend und durchlässig für eine Molekülsorte.
 
 \begin{figure}[htbp]
@@ -356,7 +354,7 @@ Es gilt
 und damit
 \begin{align*}
     \diff S & = \frac{1}{T^{(1)}}\diff U^{(1)} - \frac{\mu_1^{(1)}}{T^{(1)}}\diff \sm^{(1)}+\frac{1}{T^{(2)}}\diff U^{(2)} - \frac{\mu_1^{(2)}}{T^{(2)}}\diff \sm^{(2)}   \\
-            & = \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\diff U^{(1)} + \left(\frac{\mu_1^{(1)}}{T^{(1)}}-\frac{\mu_1^{(2)}}{T^{(2)}}\right) \diff \sm^{(1)} = 0.
+            & = \left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right)\diff U^{(1)} - \left(\frac{\mu_1^{(1)}}{T^{(1)}}-\frac{\mu_1^{(2)}}{T^{(2)}}\right) \diff \sm^{(1)} = 0.
 \end{align*}
 Im Gleichgewicht gleichen sich also neben den Temperaturen auch die chemischen Potentiale durch Teilchenaustausch an,
 \begin{align*}
@@ -376,7 +374,7 @@ Da nach dem Postulat \ref{post:entropie_maximierung} die Änderung der Entropie 
     Ein Materiefluss findet von Gebieten hohen zu Gebieten tiefen chemischen Potentials statt, bis $\mu_1^{(1)} = \mu_1^{(2)}$.
 \end{formal}
 
-Das chemische Potential $\mu$ ist zentral bei Phasenumwandlungen und chemischen Reaktionen (siehe später) und spielt damit eine führende Rolle in der theoretischen Chemie.
+Das chemische Potential $\mu$ ist zentral bei Phasenumwandlungen und chemischen Reaktionen und spielt damit eine führende Rolle in der theoretischen Chemie. Dies wird im weiteren Verlauf des Skripts genauer ausgeführt.
 
 
 
@@ -492,7 +490,7 @@ und für ein einfaches System ist dann
     \begin{align*}
         \diff U = T \diff S - P \diff V + \sum_{j=1}^r \mu_j \diff n_j.
     \end{align*}
-    Alle Summanden beschreiben eine Form von Arbeit, die an dem System verrichtet werden kann und diese sind alle unvollständige Differentiale, da sie Prozessgrößen sind und keine Zustandsgrößen:
+    Alle Summanden beschreiben eine Form von Arbeit, die an dem System verrichtet werden kann und diese sind alle unvollständige Differentiale, da sie Prozessgrößen und keine Zustandsgrößen sind:
     \begin{align*}
         \diff U = \udiff Q + \udiff W_\mathrm{mech} + \udiff W_\mathrm{chem}.
     \end{align*}
@@ -508,7 +506,7 @@ und für ein einfaches System ist dann
     \begin{align*}
         U = TS + \sum_{j=1}^t P_j X_j, \qquad S = \sum_{j=0}^t F_j X_j
     \end{align*}
-    Sie folgt direkt aus der Fundamentalbeziehung $U=U(S, X_1,\dots,X_t)$ bzw. $S=S(U, X_1,\dots,X_t)$ und dessen Homogenität. 
+    Sie folgt direkt aus der Fundamentalbeziehung $U=U(S, X_1,\dots,X_t)$ bzw. $S=S(U, X_1,\dots,X_t)$ und deren Homogenität. 
 
     Zuletzt wurde aus der Euler-Gleichung und dem bereits bekannten Differential der inneren Energie die sogenannte Gibbs-Duhem-Beziehung
     \begin{align*}
