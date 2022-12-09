@@ -1,6 +1,6 @@
 % !TeX root = Theo_IV.tex
 \chapter{Antwortkoeffizienten und Beispielsysteme}
-Im Folgenden wollen wir uns mit der Anwendung des bislang erarbeiteten Formalismus der Wärmelehre beschäftigen. Dazu erarbeiten wir uns die Herleitungen verschiedener Antwortkoeffizienten wie der spezifischen Wärme, beleuchten die sogenannten Maxwellbeziehungen und beschreiben das einkomponentige, ideale Gas.
+Im Folgenden wollen wir uns mit der Anwendung des bislang hergeleiteten Formalismus der Wärmelehre beschäftigen. Dazu erarbeiten wir uns die Herleitungen verschiedener Antwortkoeffizienten wie der spezifischen Wärme, beleuchten die sogenannten Maxwellbeziehungen und beschreiben das einkomponentige, ideale Gas.
 \section{Antwortkoeffizienten: spezifische Wärme und andere Ableitungen}
 Die zugrunde liegende Frage, welche die Beschäftigung mit sogenannten \emph{Antwortkoeffizienten} motiviert, ist die Frage nach der Reaktivität eines Systems auf äußere Einflüsse. Dem entstammt auch die Benennung dieser \textendash{} im Folgenden genauer erörterten \textendash{} Materialkonstanten als Antwortkoeffizienten.
 Ein prominentes Beispiel einer solchen Materialkonstante ist die spezifische Wärme, die wir uns ebenfalls im Laufe dieses Unterkapitels näher anschauen wollen.
@@ -10,7 +10,7 @@ Ausgangspunkt unserer Betrachtungen bilden die Temperatur $T$ und der Druck $P$ 
 
 
 \paragraph*{Isochore}
-Der Begriff \emph{Isochore} bezeichnet Zustandsänderungen bei gleichbleibenden Volumina. Damit folgt für die Größen die Abhängigkeit:
+Der Begriff \emph{Isochore} bezeichnet Zustandsänderungen bei gleichbleibenden Volumina. Damit folgt:
 \begin{align*}
     V=V_0=\mathrm{const}.
 \end{align*}
@@ -22,12 +22,12 @@ Analog gehen wir bei der Betrachtung der \emph{Isentrope} vor, welche Zustandsä
 \begin{align*}
     S=S_0=\mathrm{const}.%\quad\rightarrow\quad T=T(S_0,V) \quad\text{und}\quad P=(S_0,V) \quad\rightarrow\quad T=T(P)|_{S_0}.
 \end{align*}
-Wir motivieren diese Betrachtung durch den Verweis darauf, dass sie bei der Beschreibung der Schallausbreitung essentiell ist. Dies ist dadurch bedingt, dass die dort ablaufenden Kompressionsprozesse derartig schnell verlaufen, dass keine Wärmezufuhr oder -abfuhr stattfinden kann und die Prozesse somit isentropisch sind. Unter den allgemeineren, \emph{adiabatischen} Zustandsänderungen versteht man Prozesse, welche ohne Wärmeaustausch mit der Umgebung ablaufen, $\udiff Q=0$. Isentrope Prozesse sind adiabatisch, der Umkehrschluss gilt jedoch nicht. 
+Wir motivieren diese Betrachtung durch den Verweis darauf, dass sie bei der Beschreibung der Schallausbreitung essentiell ist. Dies ist dadurch bedingt, dass die dort ablaufenden Kompressionsprozesse derartig schnell verlaufen, dass keine Wärmezufuhr oder -abfuhr stattfinden kann und die Prozesse desweiteren isentropisch sind. Unter den \emph{adiabatischen} Zustandsänderungen versteht man Prozesse, welche ohne Wärmeaustausch mit der Umgebung ablaufen, $\udiff Q=0$. Isentrope Prozesse sind adiabatisch, der Umkehrschluss gilt jedoch nicht. 
 
 
 Wir wollen uns auch weiterhin auf die Zustandsvariablen Temperatur und Druck konzentrieren, wobei wir im Allgemeinen kontrollierbare (bzw. im Experiment kontrollierte) Zustandsvariablen wie diese beiden nun auch als \emph{Koordinaten} bezeichnen werden. Es sei darauf verwiesen, dass die Entropie $S$ keine solche direkt kontrollierbare Größe ist.
 
-Durch Invertierung der energetischem Zustandsfunktionen erhalten wir die neuen Zustandsfunktionen
+Durch Invertierung der energetischen Zustandsfunktionen erhalten wir die neuen Zustandsfunktionen
 \begin{align*}
     \boxed{S=S(T,P) \quad\mathrm{und}\quad V=V(T,P)}\:.
 \end{align*}
@@ -59,9 +59,9 @@ und erhalten die \emph{relative Volumenänderung}
 \end{align*}
 Zum einen haben wir den neuen Koeffizienten
 \begin{align*}
-    \boxed{\alpha=\frac{1}{V}\left( \frac{\partial V}{\partial T}\right)_P}
+    \boxed{\alpha=\frac{1}{V}\left( \frac{\partial V}{\partial T}\right)_P}\:,
 \end{align*}
-als den \emph{thermischen Ausdehnungskoeffizienten} identifiziert, welcher das Maß der Systemausdehnung mit der Temperatur bei konstantem Druck beschreib. Zum anderen identifizieren wir die \emph{isotherme Kompressibilität}
+den \emph{thermischen Ausdehnungskoeffizienten} identifiziert, welcher das Maß der Systemausdehnung mit der Temperatur bei konstantem Druck beschreibt. Zum anderen identifizieren wir die \emph{isotherme Kompressibilität}
 \begin{align*}
     \boxed{\kappa_T=-\frac{1}{V}\left( \frac{\partial V}{\partial P}\right)_T}\:,
 \end{align*}
@@ -404,7 +404,7 @@ Wir wollen darauf verweisen, dass \emph{Mischentropien} sehr wohl existieren, d.
 \begin{figure}[htbp]
     \centering
     \tfigMixTwoGases
-    \caption{<caption>}
+    \caption{Versuchsaufbau mit Mischentropie}
     \label{fig:MixTwoGases}
 \end{figure}
 
@@ -472,7 +472,63 @@ Ferner folgt aus dieser Beziehung überraschenderweise, dass die spezifische Wä
 \end{align*} 
 
 \begin{summary}
-    In diesem Kapitel haben wir uns verschiedene Koeffizienten \textendash{} sogenannte Antwortkoeffizienten kennengelernt und untersucht. 
+    In diesem Kapitel haben wir sogenannte Antwortkoeffizienten, das einkomponentige und mehrkomponentige ideale Gas und das Van-der-Waals-Gas kennengelernt und untersucht. 
+    
+    Die \emph{Antwortkoeffizienten} beschreiben die Reaktion eines Systems unter festgelegten Zustandsänderungen.  Dabei unterscheidet man die \emph{isochoren} ($V=const$, $P/T=const$), \emph{isothermen} ($T=const$, $PV=const$), \emph{isobaren} ($P=const$, $V/T=const$) und \emph{isentropen} ($S=const$, $PV^{\gamma}=const$) Zustandsänderungen \textendash{} letztere umfassen auch adiabatische (ohne  Wärmeaustausch stattfindende) reversible ($\Delta S=0$) Prozesse. Nicht jeder adiabatischer Prozess ist jedoch isentrop.
 
+    Die Beschreibung der relativen Volumenänderung eines Systems mit Kontrolle über Temperatur und Druck führt auf den \emph{thermischen Ausdehnungskoeffizienten} $\alpha$ und die \emph{isotherme Kompressibilität} $\kappa_T$:
+    \begin{align*}
+        \alpha=\frac{1}{V}\left( \frac{\partial V}{\partial T}\right)_P, \; \kappa_T=-\frac{1}{V}\left( \frac{\partial V}{\partial P}\right)_T.
+    \end{align*} 
+    Die Beschreibung der Entropieänderung bzw. des molaren quasistatischen Wärmeflusses eines Systems lässt auf die isobare molare spezifische Wärme $c_p$,
+    \begin{align*}
+    c_p=\frac{T}{\sm} \left( \frac{\partial S}{\partial T} \right)_P= \frac{1}{\sm} \left( \frac{\udiff Q}{\diff T} \right)_P =\frac{1}{\sm}\left( \frac{\partial H}{\partial T}\right)_P,
+    \end{align*}
+    schließen. Analog lässt sich unter Kontrolle von Temperatur und Volumen die isochore molare spezifische Wärme $c_V$ definieren:
+    \begin{align*}
+    c_v=\frac{T}{\sm}\left(\frac{\partial S}{\partial T}\right)_V=\frac{1}{\sm}\left(\frac{\udiff Q}{\diff T}\right)_V.
+    \end{align*}
+    Dabei wurde die Enthalpie als thermodynamisches Potential wie folgt eingeführt:
+    \begin{align*}
+        H=U+PV=H(T,P).
+    \end{align*}
+    Die Antwortkoeffizienten werden über
+    \begin{align*}
+    c_p=c_v+\frac{TV\alpha^2}{\sm \kappa_T}
+    \end{align*}
+    verknüpft.
+    Der Adiabatenexponent $\gamma$ bildet das Verhältnis der spezifischen Wärmekapazitätskoeffizienten ab und geht für große Systeme mit entsprechend großen Freiheitsgraden $f$ gegen $1$:
+    \begin{align*}
+        \gamma=\frac{c_p}{c_v}=\frac{f+2}{f}.
+    \end{align*}
+    Die \emph{Maxwell-Beziehungen} beschreiben die Relationen zwischen den zweiten Ableitungen der inneren Energie (unter Nutzung der Integrabilitätsbedingung) mit:
+    \begin{align*}
+    \left(\frac{\partial T}{\partial V}\right)_{S,\sm }=-\left(\frac{\partial P}{\partial S}\right)_{V,\sm }=-T\left(\frac{\partial P}{\udiff Q}\right)_{V,\sm }.
+    \end{align*}
+    Wir haben ferner das \emph{ideale Gas} eingeführt. Dessen Idealisierung besteht dabei in der Vernachlässigung der räumlichen Ausdehnung der \textendash{} und Wechselwirkungen zwischen den \textendash{} Gasteilchen.
+    Das einkomponentige ideale Gas lässt sich mittels der \emph{idealen Gasgleichung} 
+    \begin{align*}
+        PV=\sm RT
+    \end{align*}
+    beschreiben. $R=8,3 mol^{-1}K^{-1}$ bezeichnet dabei die universelle Gaskonstante.
 
+    Aus diesem Gesetz kann für konstante Temperatur das Boyle-Mariottsche-Gesetz ($PV=const$), respektive das Gay-Lussacsche-Gesetz ($VT^{-1}=const$) für konstanten Druck, abgeleitet werden.
+    Ebenso grundlegend ist die \emph{kalorische Zustandsgleichung},
+    \begin{align*}
+        U=\frac{f}{2}\sm RT,
+    \end{align*}
+    welche sich aus dem Gleichverteilungssatz der statistischen Mechanik ergibt:
+    \begin{align*}
+        u=\frac{1}{2}RT.
+    \end{align*}
+    Die innere Energie eines Gases ist nur von dessen Temperatur abhängig. Dies kann mittels des Gay-Lussacschen-Überstromversuchs demonstriert werden, welcher in einem abgeschlossenen System einen Gasstrom unter konstantbleibender Temperatur erzeugt.
+    
+    Beim Übergang zu einem \emph{mehrkomponentigen} idealen Gas greift das \emph{Gibbs'sche Theorem}, welches besagt, dass die Gesamtentropie des Gasgemisches der Summe der Einzelgasentropien entspricht (Voraussetzung ist natürlich die Konstanz der Zustandsggrößen Temperatur, Volumen und Druck). Bleiben eine oder mehrere Größen über den Mischprozess hinweg nicht erhalten (ändert sich z.B. das Volumen der Einzelgase), so ergibt sich eine positive \emph{Mischentropie} $\Delta S_m>0$. Das \emph{Gibbs'sche Paradoxon} beschreibt den scheinbaren Widerspruch, der sich aus der Anwendung des Theorems auf gleiche Gaskomponenten ergibt. Hier entsteht jedoch \textendash{} entsprechend der physikalischen Intuition \textendash{} keine Mischentropie, da die Gasteilchen im quantenmechanischen Sinne als identisch betrachtet werden und somit keine neuen Systemkonfigurationen unter Mischung eingeführt werden.
+    
+    Das \emph{Van-der-Waals-Gas} ist eine Erweiterung des idealen Gases, da es die Wechselwirkungen zwischen den Gasteilchen (Kohäsion und Abstoßung) und das effektive Volumen (unter Einberechnung der räumlichen Ausdehnung der Gasteilchen), als auch den effektiven Druck (mittels Einberechnung der Kohäsion) berücksichtigt.
+    Es verhält sich entsprechend 
+    \begin{align*}
+        P=\frac{RT}{v-b}-\frac{a}{v^2},
+    \end{align*}
+    der sogenannten \emph{Van-der-Waals-Gleichung}.
 \end{summary}
