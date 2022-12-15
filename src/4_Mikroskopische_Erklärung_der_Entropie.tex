@@ -137,7 +137,7 @@ Dabei ist der Abstand zwischen zwei Niveaus äquidistant,
 \end{align*}
 Aus \eqref{eq:entartungsfunktion_naeherung} folgt, dass die Entartungsfunktion für $U$
 \begin{align*}
-    g(U,N) = g(0,N) e^{-\frac{U^2}{2m^2B^2N}} \quad \mathrm{mit}\quad g(0,N) = \sqrt{\frac{2}{N\pi }} 2^N
+    \boxed{g(U,N) = g(0,N) e^{-\frac{U^2}{2m^2B^2N}} \quad \mathrm{mit}\quad g(0,N) = \sqrt{\frac{2}{N\pi }} 2^N}\:
 \end{align*}
 ist.
 
@@ -199,7 +199,7 @@ gegeben. Das Ensemble besteht aus den möglichen Mikrozuständen
 
 \section{Spinsysteme im thermischen Kontakt}
 
-Wir betrachten nun zwei Spinsysteme mit den Kenngrößen $N_1,U_1\propto n_1$ bzw. $N_2,U_2\propto n_2$, die in thermischen Kontakt gebracht werden, also Energie austauschen können. Das Gesamtsystem ist insgesamt thermisch isoliert, sodass $U=U_1+U_2=\mathrm{const}$.
+Wir betrachten nun zwei Spinsysteme mit den Kenngrößen $N_1,U_1\propto n_1$ bzw. $N_2,U_2\propto n_2$, die in thermischen Kontakt gebracht werden (also Energie austauschen können). Das Gesamtsystem ist insgesamt thermisch isoliert, sodass $U=U_1+U_2=\mathrm{const}$.
 Wir wollen untersuchen, welche Aufteilung in $U_1$ und $U_2$ die wahrscheinlichste ist und welche Eigenschaften das gekoppelte System aufweist.
 
 
@@ -224,15 +224,15 @@ beträgt. Der wahrscheinlichste Spinüberschuss $n_1$ liegt beim Maximum dieser 
     \label{eq:maximum_spinueberschuss_notwendige_bedingung}
     \diff \left(g_1(n_1,N_1)g_2(n_2,N_2)\right) \overset{!}{=} 0. 
 \end{align}
-Da nun $g_1\cdot g_2$ strikt größer als $0$ ist und ferner $\diff n_1=-\diff n_2$, kann ein kleiner Trick angewandt werden, um \eqref{eq:maximum_spinueberschuss_notwendige_bedingung} zu 
+Da nun $g_1\cdot g_2$ strikt größer als $0$ ist und ferner $\diff n_1=-\diff n_2$, kann ein kleiner Trick angewandt werden, um \eqref{eq:maximum_spinueberschuss_notwendige_bedingung} als 
 \begin{align*}
     \frac{\diff(g_1\cdot g_2)}{g_1\cdot g_2}=\diff(\ln(g_1\cdot g_2)) \overset{!}{=} 0
 \end{align*}
-und weiter zu 
+und weiter als 
 \begin{align*}
     \diff(\ln g_1) + \diff(\ln g_2) = \frac{\partial \ln g_1}{\partial n_1} \diff n_1 + \frac{\partial \ln g_2}{\partial n_2} \diff n_2 = \left(\frac{\partial \ln g_1}{\partial n_1} - \frac{\partial \ln g_2}{\partial n_2}\right) \diff n_1  \overset{!}{=} 0
 \end{align*}
-umzuformulieren. Es ist also 
+zu schreiben. Es gilt also 
 \begin{align}
     \label{eq:bedingung_wahrscheinlichster_spinueberschuss}
     \boxed{\frac{\partial \ln g_1}{\partial n_1}  = \frac{\partial \ln g_2}{\partial n_2} }\:.
@@ -241,36 +241,180 @@ Setzen wir nun die bereits bestimmten Funktionen $g_i=g_i(0,N_i) e^{-2n_i^2/N_i}
 \begin{align*}
     \frac{\hat{n}_1}{N_1} = \frac{\hat{n}_2}{N_2} . 
 \end{align*}
-Am Maximum ist der relative Spinüberschuss demzufolge für beide Systeme gleich. Man kann sich überzeugen, dass es sich wirklich um ein Maximum der Funktion $P_n(n_1)$ handelt, denn die zweite Ableitung ist kleiner als $0$:
+Am Maximum ist der relative Spinüberschuss demzufolge für beide Systeme gleich. Man kann sich leicht überzeugen, dass es sich wirklich um ein Maximum der Funktion $P_n(n_1)$ handelt, denn die zweite Ableitung,
 \begin{align*}
-    \frac{\partial ^2\ln(g_1\cdot g_2)}{\partial ^2n_1} = -4\left( \frac{1}{N_1}+\frac{1}{N_2} \right) < 0.
+    \frac{\partial ^2\ln(g_1\cdot g_2)}{\partial ^2n_1} = -4\left( \frac{1}{N_1}+\frac{1}{N_2} \right) < 0,
 \end{align*}
-Mithilfe von $n_i= -U_i/(2mB)$ kann \eqref{eq:bedingung_wahrscheinlichster_spinueberschuss} umgeschrieben werden zu
+ist kleiner als $0$.
+Mithilfe von $n_i= -U_i/(2mB)$ kann \eqref{eq:bedingung_wahrscheinlichster_spinueberschuss} umgeschrieben werden:
 \begin{align}
     \label{eq:bedingung_wahrscheinlichster_spinueberschuss_U}
     \boxed{\frac{\partial \ln g_1}{\partial U_1}  = \frac{\partial \ln g_2}{\partial U_2} }\:.
 \end{align}
-Doch wohin führt uns diese Gleichung? In Kapitel \ref{sec:thermisches_gleichgewicht} haben wir gesehen, dass 
+Doch wohin führt uns diese Gleichung? In Kapitel \ref{sec:thermisches_gleichgewicht} haben wir gesehen, dass für Gleichgewichtszustände
 \begin{align*}
-    \diff S = \frac{\partial S^{(1)}}{\partial U^{(1)}}\diff U^{(1)}+ \frac{\partial S^{(2)}}{\partial U^{(2)}}\diff U^{(2)} \overset{!}{=}0. 
+    \diff S = \frac{\partial S^{(1)}}{\partial U^{(1)}}\diff U^{(1)}+ \frac{\partial S^{(2)}}{\partial U^{(2)}}\diff U^{(2)} \overset{!}{=}0 
 \end{align*}
-Wegen $\diff U^{(1)} = -\diff U^{(2)}$ ist also 
+gilt. Wegen $\diff U^{(1)} = -\diff U^{(2)}$ ist also 
 \begin{align*}
     \frac{\partial S^{(1)}}{\partial U^{(1)}} = \frac{\partial S^{(2)}}{\partial U^{(2)}}. 
 \end{align*}
-Diese Gleichung sieht aber \eqref{eq:bedingung_wahrscheinlichster_spinueberschuss_U} sehr ähnlich und es liegt nahe, die Identifizierung $S^{(i)}\propto \ln g_i$ zu machen. 
+Diese Gleichung sieht \eqref{eq:bedingung_wahrscheinlichster_spinueberschuss_U} sehr ähnlich und es liegt nahe, die Identifizierung $S^{(i)}\propto \ln g_i$ zu machen. 
 
 
 \paragraph*{Schärfe des Maximums}
 
 An dieser Stelle soll ein kurzer Einschub zu der Schärfe des soeben berechneten Maximums erfolgen. 
 
-Die maximale Zustandszahl wird wie im vorigen Abschnitt bestimmt bei $\hat{n}_1$ bzw. $\hat{n}_2$ erreicht und beträgt 
+Die maximale Zustandszahl wird \textendash{} wie im vorigen Abschnitt bestimmt \textendash{} bei $\hat{n}_1$ bzw. $\hat{n}_2$ erreicht und beträgt 
 \begin{align*}
     (g_1g_2)_\mathrm{max} = g_1(\hat{n}_1,N_1)g_2(n-\hat{n}_1,N_1) = g_1(0,N_1)g_2(0,N_2) e^{-\frac{2\hat{n}_1^2}{N_1}-\frac{2\hat{n}_2^2}{N_2}},
 \end{align*}
-bzw. mit $\hat{n}_1+\hat{n}_2=n$ und $N_1+N_2=N$
+bzw. mit $\hat{n}_1+\hat{n}_2=n$ und $N_1+N_2=N$:
 \begin{align*}
     (g_1g_2)_\mathrm{max} = g_1(0,N_1)g_2(0,N_2) e^{-\frac{2n^2}{N}}. 
 \end{align*}
-Die Breite dieser Kurve %??
+Schwankungen um $\hat{n}_i$ mit $n_i=\hat{n_i}+\delta$ führen wieder auf eine Gaußverteilung mit:
+\begin{align*}
+    g_1(\hat{n_1}+\delta,N_1)g_2(\hat{n_2}+\delta,N_2)=(g_1g_2)_\mathrm{max}e^{-2\delta^2 (\frac{1}{N_1}+\frac{1}{N_2})}. 
+\end{align*}
+Die Halbwertsbreite dieser Kurve beträgt:
+\begin{align*}
+    \frac{\delta_h}{N_1+N_2}=\frac{1}{N_1+N_2}\sqrt{\frac{N_1N_2}{2(N_1+N_2)}}. 
+\end{align*}
+Für große Systeme ergibt sich damit, wie bereits erläutert, eine sehr scharfe Verteilung mit kleiner Halbwertsbreite (für $N_1=N_2=10^{22}$ ist $\delta_h\approx 10^{11}$ und damit $\frac{\delta_h}{N_i}=10^{-11}$). Um ein noch besseres Gefühl für die Verteilungsfunktion in der genannten Größenordnung zu bekommen, schätzen wir die Zustandswahrscheinlichkeit eines Zustandes $g_1g_2$, welcher mit $\delta=10^{12}$ vom Maximum bei $\hat{n}_1$ abweicht ab:
+\begin{align*}
+    P_n(n_1)\propto\frac{g_1g_2}{(g_1g_2)_\mathrm{max}}&=e^{-2\delta^2(\frac{1}{N_1}+\frac{1}{N_2})}\\&=e^{-400}=10^{-174},
+\end{align*}
+er wird somit praktisch nicht realisiert. \\
+Die Anzahl aller möglichen Realisierungen eines Systemzustandes mit einem konstantem Spinüberschuss $n$ im gekoppelten System der Größe $N$ ergibt sich nach Integration über alle möglichen Terme,
+\begin{align*}
+    g(n,N)&=\int_{-\infty}^{\infty}g_1(\hat{n_1}+\delta,N_1)g_2(\hat{n_2}+\delta,N_2)\diff\delta\\&=
+    (g_1g_2)_\mathrm{max}\sqrt{\frac{\pi}{2}\frac{N_1N_2}{N_1+N_2}},
+\end{align*}
+und lässt sich in Abhängigkeit der maximalen Zustandszahl ausdrücken. Die letzte Gleichheit folgt aus der maximalen Zustandszahl mit Normierungsfaktor der Form:
+\begin{align*}
+    (g_1g_2)_\mathrm{max}=\frac{2}{\pi}\sqrt{\frac{1}{N_1N_2}}2^Ne^{-2n^2/N}.
+\end{align*}
+Die Wahrscheinlichkeit für den maximalen Spinüberschusszustand beträgt:
+\begin{align*}
+    P(\hat{n_1})=\frac{(g_1g_2)_\mathrm{max}}{g(n,N)}=\sqrt{\frac{2}{\pi}}\sqrt{\frac{1}{N_1}+\frac{1}{N_2}}\underset{N_i=N/2}{\approx}\frac{1}{\sqrt{N}}.
+\end{align*}
+Die letzte Näherung folgt aus der Annahme, $N_i$ entspräche $N/2$. Die Wahrscheinlichkeit ist also vergleichsweise sehr klein. Da die Verteilungsfunktion jedoch sehr stark gepeakt ist, folgt, dass in einer kleinen Umgebung $\delta_h$ um das Maximum herum die Wahrscheinlichkeitsnormierung,
+\begin{align*}
+    1=\int_\mathrm{\delta_h} P_n(\hat{n_1}+\delta)\diff \delta,
+\end{align*}
+erhalten ist.
+Betrachtet man das Verhältnis des Logarithmus des Maximums der Entartungsfunktion zum Logarithmus der Entartungsfunktion\footnote{Warum betrachten wir erneut den Logarithmus? Wir haben bereits einen Zusammenhang zwischen diesem und der Entropie motiviert und zeichnen weiter vor, wie sich dieser Vergleich bewähren kann.},
+\begin{align*}
+    \frac{\ln(g_1g_2)_\mathrm{max}}{\ln g(n,N)}\approx 1-\mathcal{O}\left(\frac{\ln N}{N}\right)\underset{N\rightarrow\infty}{\rightarrow}1,
+\end{align*}
+wird wieder ersichtlich, dass die wahrscheinlichste Konfiguration den Term dominiert, denn der Ausdruck geht für den thermodynamischen Limes gegen $1$. Das thermodynamische System wird folglich durch seine wahrscheinlichsten Mikrozustände, welche sich im Spinüberschuss nur leicht voneinander unterscheiden, dominiert. 
+\section{Thermisches Gleichgewicht und Entropie}
+\paragraph*{Grundpostulat der statistischen Mechanik}
+Wir wollen nun den verallgemeinerten Fall zweier Untersysteme im thermischen Kontakt betrachten. Die Zahl der Zustände der Untersysteme wird mit $g_i(U_i,N_i,...)$ gekennzeichnet und hängt von der inneren Energie und Teilchenzahl des Systems (sowie gegebenenfalls weiterer Variablen) ab. Die Entartungsfunktion des Gesamtsystems setzt sich (unter der Bedingung, dass die Gesamtenergie des Systems erhalten bleibt) als Summe über alle möglichen Produkte der Entartungsgrade der Untersysteme zusammen: 
+\begin{align*}
+    g(U,N)=\sum_{U_1+U_2=U}g_1(U_1,N)g_2(U_2,N_2).
+\end{align*}
+Der größte Summand kann analog zum Vorgehen mit Spinsystemen mittels des Differentials wie folgt ermittelt werden:
+\begin{align*}
+    \diff(g_1g_2)&=\diff(g_1)g_2+g_1\diff g_2\\
+    &=\left(\frac{\partial g_1}{\partial U_1}\right)_{N_1}g_2\diff U_1+\left(\frac{\partial g_2}{\partial U_2}\right)_{N_2}g_1\diff U_2=0.
+\end{align*}
+Aufgrund der Nebenbedingung, dass die Gesamtenergie des Systems erhalten bleibt, gilt für die Energieänderungen der Teilsysteme $\diff U_1=-\diff U_2$.
+Damit ergibt sich 
+\begin{align*}
+    \frac{1}{g_1}\left(\frac{\partial g_1}{\partial U_1}\right)_{N_1}=\frac{1}{g_2}\left(\frac{\partial g_2}{\partial U_2}\right)_{N_2}
+\end{align*}
+als thermische Gleichgewichtsbedingung, aus welcher ferner auch
+\begin{align*}
+    \boxed{\left(\frac{\partial \ln g_1}{\partial U_1}\right)_{N_1}=\left(\frac{\partial \ln g_2}{\partial U_2}\right)_{N_2}}\:
+\end{align*}
+folgt.
+\begin{postulate}[Grundpostulat der statistischen Mechanik]
+    \label{post:GrundpostulatStatMech}
+     Das Grundpostulat der statischen Mechanik ordnet einem System eine Entropie zu, welche mit der Zahl der erreichbaren Zustände, $g(U,N)$ zusammenhängt. Dabei sind jene Zustände erreichbar, welche für das System unter Einhaltung der makroskopischen Zustandsgrößen ($U,N$ und gegebenenfalls weitere) zugänglich sind.
+    \begin{align*}
+        \boxed{S(U,N)=k_\mathrm{B}\ln g(U,N)}
+    \end{align*}
+    Die auftretende Boltzmannsche Konstante, $k_\mathrm{B}=R/L$, kann durch die ideale Gasgleichung in der statistischen Mechanik hergeleitet werden.
+\end{postulate}
+\paragraph*{Mikroskopische Erklärung der Entropiezunahme}
+Wir wolllen nun auf mikroskopischer Ebene erörtern, weshalb die Entropie eines Systems bei Lösen seiner Zwangsbedingungen zunimmt (Postulat \ref{post:entropie_maximierung}).
+
+Vor dem thermischen Kontakt gilt für zwei Teilsysteme mit inneren Energien $U=U^0_1+U^0_2$:
+\begin{align*}
+    (g_1g_2)_\mathrm{Zwang}=g_1(U^0_1,N_1)g_2(U^0_2,N_2).
+\end{align*}
+Nach thermischem Kontakt hingegen folgt für den wahrscheinlichsten Zustand mit $\hat{U}_1$:
+\begin{align*}
+    (g_1g_2)_\mathrm{max}=g_1(\hat{U}_1,N_1)g_2(\hat{U}_2=U-\hat{U}_1,N_2)
+\end{align*}
+Die relativen Fluktuationen um diesen Zustand herum sind minimal:
+\begin{align*}
+    \frac{\Delta U_1}{U}=\frac{U_1-\hat{U}_1}{U}\propto \frac{1}{\sqrt{N}}.
+\end{align*}
+Das System hat nach Lösen der Zwangsbedingungen viel mehr Konfigurationsmöglichkeiten und befindet sich in jenen Zuständen, welche am wahrscheinlichsten sind \textendash{} also in denjenigen, welche den höchsten Entartungsgrad besitzen. Damit und aufrgund der Schärfe der Verteilungsfunktion (Fluktuationen sind minimal), folgt, dass die Zahl der Zustände vor thermischem Kontakt, $(g_1g_2)_\mathrm{Zwang}$, in der Regel wesentlich kleiner ist als die Zahl der Zustände $(g_1g_2)_\mathrm{max}$ nach thermischem Kontakt. Dies entspricht nach Postulat \ref{post:GrundpostulatStatMech} der Entropiemaximierung.
+
+Auch die Additivität der Entropie kann über die Zustandszahlen hergeleitet werden. Im thermodynamischen Limes wird das System durch die wahrscheinlichste Konfiguration eindeutig beschrieben, womit 
+\begin{align*}
+    S&=k_\mathrm{B}\ln (g_1g_2)_\mathrm{max}\\
+    &=k_\mathrm{B}\ln g_1(\hat{U}_1,N_1)+k_\mathrm{B}\ln g_2(\hat{U}_2,N_2)\\
+    &=S_1(\hat{U}_1,N_1)+S_2(\hat{U}_2,N_2)
+\end{align*}
+gilt und die Additivität der Entropie der Teilsysteme hergeleitet werden kann.
+
+\paragraph*{Irreversible Prozesse:} Betrachten wir zum Schluss dieses Kapitels noch die irreversiblen Vorgänge:
+Nach Newton sind Prozesse, welche zu einer Verringerung der Entropie führen aufgrund der Zeitumkehrinvarianz von $\pmb{F}(\pmb{r})=\diff\pmb{p}/\diff t$ prinzipiell erlaubt. Sie sind allerdings aufgrund der soeben erarbeiteten Zustandszahlen höchst unwahrscheinlich. Die Kombination dieser beiden Aussagen führt auf den Poincaréschen Wiederkehrsatz.
+\begin{formal}
+    \formalemph{Poincaréscher Wiederkehrsatz:} Jedes noch so große endliche System nimmt nach der Wiederkehrzeit $\tau$ seinen Anfangszustand in periodischen Abständen wieder ein. 
+\end{formal}
+Abschätzungen von $\tau$ für Systeme der Teilchengröße $N=10^{23}$ führen jedoch auf Zeiten, welche viel größer sind als das Erdzeitalter. Der Wiederkehrvorgang findet somit auf unvorstellbar großen Zeitskalen jenseits unserer Erfahrungsmöglichkeiten statt.
+\begin{summary}
+    Wir haben in diesem Kapitel die Zustandszahlen eines Systems kennengelernt und sie mit der Entropie in Relation gesetzt:
+
+    Ausgangspunkt bildete die Betrachtung eines großen binären Modellsystems mit hohem Entartungsgrad (beispielsweise ein Modell, welches einzelne Spinzustände beschreibt).
+    Ein solches System hat $2^N$ mögliche mikroskopische Konfigurationen, jedoch \textendash{} bezogen auf die makroskopische physikalische Größe \textendash{} nur $N+1$ unterscheidbare Zustände. Letzteres folgt aus der einfachen Beschreibung des magnetischen Gesamtmoments des Systems, 
+     \begin{align*}
+        M=(N_\uparrow-N_\downarrow)m=2nm,
+    \end{align*}
+    welches bei einer makroskopischen Messung ermittelt wird und lediglich Werte zwischen $Nm$ und $-Nm$ annehmen kann. ($2n$ entspricht dem eingeführten Spinüberschuss des Systems.)
+
+    Somit ist offensichtlich, dass sich viele mögliche mikroskopische Zustände auf wenige makroskopische Zustände des Systems verteilen. Die Anzahl der möglichen mikroskopischen Zustände eines makroskopischen Zustandes werden durch den Entartungsgrad 
+    \begin{align*}
+        g(n,N)&=\frac{N!}{N_\uparrow!-N_\downarrow!}\\&\approx g(0,N)e^{-\frac{2n^2}{N}}\\&=\sqrt{\frac{2}{N\pi}}2^Ne^{-\frac{2n^2}{N}}
+    \end{align*}
+    in Abhängigkeit von Spinüberschuss und Systemgröße beschrieben. Die beschriebene Entartungsfunktion entspricht einer Gauß-Verteilung mit Normierung $2^N$ und relativer Breite $n_n/N=1/\sqrt{2N}$. (Sie kann auch mittels der Relation $U=-MB=-2nmB$ in Abhängigkeit der inneren Energie angegeben werden.)
+
+    Diese Verteilung deckt sich auch mit dem zentralen Grenzwertsatz: Bei Summation vieler unabhängiger Zufallsvariablen ergibt sich eine Normalverteilung der Wahrscheinlichkeiten.
+
+    Die Verteilung der Entartungsfunktion besitzt folglich für große Systeme ein scharfes Maximum. Daraus folgt, dass diese einen eindeutigen makroskopischen Zustand mit gleichverteilten Spins und minimalen Fluktuationen (bei $n=0$ und $M=0$) annehmen und wohldefinierte physikalische Eigenschaften besitzen. Die wahrscheinlichste makroskopische Konfiguration (die Konfiguration mit dem größten Entartungsgrad) bestimmt die Mittelwerte aller physikalischen Größen des Systems vollkommen. 
+    Kleine Systeme hingegen haben große Fluktuationen und lassen sich nicht analog zu den großen Systemen durch die wahrscheinlichste makroskopische Konfiguration modellieren.
+    Im thermodynamischen Limes (unendliche Teilchenzahl bzw. Systemgröße) geht die Entartungsfunktion in eine scharfe Linie mit verschwindender Halbwertsbreite über. 
+      
+    Allgemein gilt die Ergodenhypothese. Diese besagt, dass sich ein abgeschlossenes System mit gleicher Wahrscheinlichkeit in jedem ihm zugänglichen mikroskopischen Zustand befindet.
+
+    Die statistische Mechanik führt in diesem Kontext das sogenannte Ensemble ein. Dabei wird das zeitliche Nacheinander von mikroskopischen Konfigurationen durch ein räumliches Nebeneinander an Systemkopien ersetzt. Jedes Ensemblemitglied entspricht dabei einer zugänglichen mikroskopischen Konfiguration des Systems. Der Zeitmittelwert einer physikalischen Messgröße eines ergodischen Systems entspricht damit seinem Ensemblemittelwert.
+   
+    Wir haben auch zwei große Spinsysteme im thermischen Kontakt (mit Energiefluss zwischen den Systemen) betrachtet. Die folgenden Einsichten lassen sich auch für beliebige abgeschlossene Systeme und ihre makroskopischen Größen im thermischen Kontakt verallgemeinern:
+
+    Vor Kontakt sind die einzelnen wahrscheinlichsten Spinüberschüsse der Teilsysteme festgelegt und die Zustandszahlen des Gesamtsystems ergeben sich als Produkt der einzelnen Zustandszahlen der Teilsysteme. Nach dem thermischen Kontakt sind die einzelnen Spinüberschüsse variabel und der Gesamtspinüberschuss fest. Die Entartungsfunktion ist dann über 
+    \begin{align*}
+        g(n,N) = \sum_{n_1=-\frac{N_1}{2}}^{\frac{N_1}{2}} g_1(n_1,N_1)g_2(n-n_1,N_2),
+    \end{align*}
+    die Summation über alle möglichen Spinüberschusskombinationskonfigurationen der Teilsysteme gegeben. 
+    Letztere nehmen dann die Teilzustände an, welche die wahrscheinlichste Konfiguration des Gesamtsystems konstituieren. Dies liegt vor, wenn die relativen Spinüberschüsse beider Teilsysteme gleich sind und kann auch durch folgende Bedingung zusammengefasst werden:
+    \begin{align}
+        \frac{\partial \ln g_1}{\partial U_1}  = \frac{\partial \ln g_2}{\partial U_2}.
+    \end{align}
+    Wir haben beobachtet, dass dieser Zusammenhang die Identifizierung von $\ln g_i$ mit der Entropie $S^{(i)}$ der Teilsysteme nahelegt.
+    
+    Das Grundpostulat der statistischen Mechanik beschreibt diese Relation zwischen Entropie und Entartungsfunktion über: 
+    \begin{align*}
+        S(U,N)=k_\mathrm{B}\ln g(U,N).
+    \end{align*}
+
+    Eben diese Relation liefert auch eine mikroskopische Erklärung für die Entropiezunahme von Systemen, deren Zwangsbedingungen gelöst werden. Das Lösen der Zwangsbedingungen führt zu einer Zunahme an Konfigurationsmöglichkeiten für das System. Es befindet sich dann in aller Regel in einem sehr wahrscheinlichen Zustand (also entsprechend der Zustandsverteilung in einem Zustand mit hohem Entartungsgrad), der den vorigen Entartungsgrad des eingenommenen Zustandes übersteigt.
+
+    Im Zusammenhang mit dieser Beobachtung steht auch die Begründung für die Unwahrscheinlichkeit irreversibler Prozesse. Obwohl diese nach Newton nicht ausgeschlossen werden können und dem Poincaréschen Wiederkehrsatz zu Folge nach einer Wiederkehrzeit $\tau$, welche ein System in periodischen Abständen in ihren Anfangszustand zurückführt, erfolgen, sind sie unvorstellbar unwahrscheinlich und $\tau$ jenseits der erfahrbaren Zeitskalen.
+\end{summary}
