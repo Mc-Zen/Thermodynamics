@@ -2,3 +2,178 @@
 
 \chapter{Phasenübergänge\label{sec:phasenuebergaenge}}
 
+Als Phasenübergang wird die Umwandlung einer Phase in eine andere bezeichnet. Ein typisches Beispiel ist der Wechsel zwischen Aggregatzuständen, z.~B. Verdampfung oder Kondensation. In \Abbref{fig:Phasendiagramme} sind zwei Phasendiagramme für die Phasen fest, flüssig und gasförmig dargestellt. Markiert sind jeweils der Tripelpunkt und der kritische Punkt. Kurven stellen Phasenkoexistenzlinien dar, bei der zwei Phasen (beispielsweise die feste und die flüssige) gleichzeitig vorhanden sind. Am Tripelpunkt treffen sich die Phasenkoexistenzlinien und alle drei Phasen liegen zugleich vor. Rechts wird das Phasendiagramm von Wasser gezeigt \textendash{} hier offenbart sich eine Anomalie: unter höheren Druck sinkt die Schmelztemperatur.
+
+Phasenübergänge werden in zwei Kategorien eingeteilt: Phasenübergänge erster und zweiter Ordnung.
+
+\begin{figure}[htbp]
+    \centering
+    \tfigPhaseDiagramNoAnomaly
+
+    \tfigPhaseDiagramWithAnomaly
+    \caption{Phasendiagramme ohne (oben) und mit Anomalie (unten). }
+    \label{fig:Phasendiagramme}
+\end{figure}
+
+
+
+
+\section{Übergänge erster Ordnung in Einkomponentensystemen}
+
+Beispiele für Phasenübergänge erster Ordnung sind Unstetigkeiten in der Dichte oder dem Molvolumen sowie latente Wärme.
+
+Wir wollen zuerst eine exemplarische Diskussion anhand der Van-der-Waals-Zustandsgleichung machen.
+
+
+\paragraph*{Van-der-Waals-Zustandsgleichung}
+
+Wir haben das Van-der-Waals-Gas bereits in Kapitel~\ref{sec:das van der waals gas}  kennengelernt und die Zustandsgleichung
+\begin{align}
+    \label{eq:van der waals 1}
+    \left( P+\frac{a}{v^2}  \right) (v-b) =RT \\
+    \label{eq:van der waals 2}
+    \equivalence P=\frac{NRT}{V-Nb}-\frac{N^2a}{V^2},
+\end{align}
+die es beschreibt. Für konstante Temperatur erhalten wir aus \eqref{eq:van der waals 1}
+\begin{align}
+    \label{eq:van der waals isotherme}
+    v^3-\left( b+\frac{RT}{P} \right)v^2+\frac{a}{P}v-\frac{ab}{p} = 0.
+\end{align}
+Die Gleichung hat entweder drei Lösungen (für kleinere $T$) oder eine (siehe \Abbref{fig:VanDerWaalsIsotherm}).
+
+Am kritischen Punkt $\{T_\mathrm{k},P_\mathrm{k},v_\mathrm{k}\}$ ist ${\partial P}/{\partial v} = 0$ und ${\partial^2 P}/{\partial v^2}=0$ und somit
+\begin{align*}
+    T_\mathrm{k}=\frac{8a}{27Rb}, \quad P_\mathrm{k}=\frac{a}{27b^2},\quad v_\mathrm{k}=3b.
+\end{align*}
+Diese Relationen verwenden wir, um die Van-der-Waals-Gleichung in reduzierten Größen $p=P/P_\mathrm{k}$, $t=T/T_\mathrm{k}$ und $\Tilde{v}=v/v_\mathrm{k}$ zu formulieren:
+\begin{align}
+    \label{eq:van der waals reduziert}
+    \left( p+\frac{3}{\Tilde{v}^2} \right)(3\Tilde{v}-1) = 8t.
+\end{align}
+Dies ist eine universelle Gleichung, denn sie hängt nicht von den Gasparametern $a$ und $b$ und damit dem Gas selbst ab. Folglich verhält sich der flüssig-gasförmig-Übergang bei allen Gasen ähnlich, was auch als Ähnlichkeitsgesetz bekannt ist und empirisch semi-quantitativ bestätigt wurde.
+
+\begin{figure}[htbp]
+    \centering
+    \tfigVanDerWaalsIsotherm
+    \caption{Verschiedene Isotherme bei unterschiedlichen Temperaturen $T$ im $v/v_\mathrm{k}$-$p/p_\mathrm{k}$-Diagramm nach der (universellen) Van-der-Waals-Gleichung. }
+    \label{fig:VanDerWaalsIsotherm}
+\end{figure}
+
+
+\paragraph*{Stabilität und Phasentrennung}
+
+Wir betrachten nun einzelne Isotherme $T<T_\mathrm{k}$, also solche mit drei Nullstellen, wie beispielhaft in \Abbref{fig:PhaseSeparation} (links) dargestellt. Rechts ist der Zusammenhang von $p$ und $v$ invertiert. Man sieht sofort, dass $v(P)$ im Bereich von B bis R nicht eindeutig ist und es stellt sich die Frage, welcher Wert dort nun wirklich angenommen wird.
+
+\begin{figure}[htbp]
+    \centering
+    \tfigPhaseSeparation
+    \tfigPhaseSeparationInverted
+    \caption{Links: Schematische Isotherme im $v$-$P$-Diagramm zur Darstellung eines Phasenübergangs unterhalb des kritischen Punktes. Rechts: Gleiche Isotherme im invertierten $P$-$v$-Diagramm.
+        Einzelne Punkte auf der Isotherme sind mit Buchstaben benannt. Die Lösungen der Gleichung \eqref{eq:van der waals isotherme} entsprechen den Punkten O, K und D. Die physikalische Isotherme ist in grün gekennzeichnet, während instabile Bereiche in rot und metastabile in blau markiert sind. }
+    \label{fig:PhaseSeparation}
+\end{figure}
+
+Auch ist bemerkenswert, dass im roten Bereich MLKJF die Stabilitätsbedingung
+\begin{align*}
+    \kappa_T=-\frac{1}{V}\frac{\partial V}{\partial P}_T>0 \equivalence \left( \frac{\partial P}{\partial v} \right)_T<0
+\end{align*}
+verletzt ist (positive Steigung). Ein Teil der Isotherme ist also unphysikalisch und das System nicht stabil. Hier findet die Phasentrennung in eine Phase mit kleinem Volumen (flüssige Phase) und großen Volumen (gasförmige Phase) statt.
+%??
+
+\paragraph*{Chemisches Potential}
+
+Wir wollen als nächstes die Gibbs-Duhem-Beziehung \eqref{eq:gibbs_duhem}
+\begin{align*}
+    \diff\mu=-s\diff T+v\diff P=\frac{1}{N}\diff G
+\end{align*}
+anwenden, um das chemische Potential zu untersuchen. Integration entlang der Isotherme ($\diff T=0$) liefert
+\begin{align*}
+    \mu(T=\mathrm{konst},P) = \int v\diff P +\phi(T)
+\end{align*}
+mit unbekannter aber hier nicht relevanter Integrationskonstante $\phi(T)$. Der Verlauf von $\mu$ ist in \Abbref{fig:PhaseSeparationChemPotential} abgebildet.
+
+\begin{figure}[htbp]
+    \centering
+    \tfigPhaseSeparationChemPotential
+    \caption{Schematische Isotherme aus \Abbref{fig:PhaseSeparation} im $p$-$\mu$-Diagramm. Wieder ist in grün die physikalisch realisierte Isotherme markiert. Im Punkt D,O weist diese einen Knick auf, da hier beide Phasen koexistieren und auf den anderen Zweig gewechselt wird. }
+    \label{fig:PhaseSeparationChemPotential}
+\end{figure}
+
+Das thermische Gleichgewicht wird durch das Minimum von $\mu=G/N$ bestimmt. Das sind dann die stabilen Zustände.  Damit gibt es einen Knick von $\mu(P)$ bei $\mu(D)=\mu(O)$ und auch eine Unstetigkeit in $v=(\partial\mu/\partial P)_T$. In dem fraglichen Bereich koexistieren zwei Phase (hier Gas und Flüssigkeit) mit unterschiedlicher Dichte und Molvolumen.
+
+
+\paragraph*{Phasenverhalten}
+
+Koppeln wir nun das System an ein Wärme- und ein Volumenreservoir, halten die Temperatur $T$ konstant und erlauben $P$ sich quasistatisch zu verändern.
+
+Im ersten Bereich $P<P_B$ ist das Molvolumen $v$ eindeutig. Im Bereich $P_B<P<P_D$ ist $v(C)>v(L)>v(N)$. Wir wissen, dass der Zustand L instabil ist, da $\partial v/\partial P>0$. Das Potential $\mu(C)$ ist kleiner als $\mu(N)$ und  ist C im thermischen Gleichgewicht der realisierte Zustand. N ist zwar ebenfalls nicht instabil, aber entspricht nicht dem Minimum von $G$ und ist daher metastabil.
+
+Für $P_D=P_K=P_O$ ist $\mu(D) = \mu(O)$. Hier wird der Zweig gewechselt und zwei Phasen koexistieren (jeweils mit $v(D)$ und $v(O)$). Die übrigen Bereiche werden analog zu den ersten beiden behandelt. Die physikalische Isotherme ist folglich die grüne Kurve in den Abbildungen \Abbref{fig:PhaseSeparation} und \Abbref{fig:PhaseSeparationChemPotential}.
+
+
+\paragraph*{Koexistenzpunkt}
+
+Die genaue Lage des Koexistenzpunktes lässt sich mithilfe der Bedingung $\mu(O)=\mu(D)$ bestimmen:
+\begin{align*}
+    \mu(O)-\mu(D) & = \int_D^Ov(P)\diff P \overset{!}{=}0                                       \\
+                  & = \int_D^F v\diff P+\int_F^K v\diff P+\int_K^M v\diff P+\int_M^O v\diff P=0 \\
+    \implication \int_D^F v\diff P-\int_K^F v\diff P=\int_M^K v\diff P-\int_M^O v\diff P.
+\end{align*}
+Die Fläche unterhalb der grünen Gerade in \Abbref{fig:PhaseSeparation} zu der Isothermen von O bis K entspricht also der Fläche oberhalb der grünen Geraden zur Isothermen von K bis D (sogenannte Maxwell-Konstruktion).
+
+
+Die Bedingung $\mu(O)=\mu(D)$ ist auch sinnvoll, denn an dem Phasenkoexistenzpunkt werden Teilchen zwischen zwei Phase/Systemen ausgetauscht. Damit dies aber im thermodynamischen Gleichgewicht geschieht, muss das chemische Potential gleich sein.
+
+
+\paragraph*{Diskussion des Phasenübergangs}
+
+Betrachten wir nun wieder das Molvolumen (siehe \Abbref{fig:PhaseSeparation}). Für $P<P_D=P_O$ ist $v(P)$ groß und für $P>P_O=P_D$ klein. Es kommt zu einem Volumensprung am Koexistenzpunkt, denn
+\begin{align*}
+    v=\frac{1}{N}\left( \frac{\partial G}{\partial P} \right)_T =\left( \frac{\partial \mu}{\partial P} \right)_T
+\end{align*}
+ist dort unstetig. Wir sehen, dass ein Volumensprung einer Unstetigkeit der ersten Ableitung von $\mu=G/N$ entspricht. Aus den gewonnenen Erkenntnissen leiten wir folgende Bezeichungen ab:
+\begin{itemize}
+    \item Ein unstetige Wechsel von Eigenschaften entspricht dem Übergang zwischen zwei Phasen
+    \item Ein Phasenübergang erster Ordnung entspricht einer Unstetigkeit in der ersten Ableitung eines geeigneten thermodynamischen Potentials (z.~B. $G=\mu N$).
+\end{itemize}
+
+Die Zweige im $\mu$-$P$-Diagramm stellen Phasen im Phasendiagramm dar. Der Schnittpunkt der Zweige ist ein Phasenübergang.
+
+Auch die isotherme Kompressibilität $|\partial v/\partial P|$ ist bei $P<P_D$ groß und bei $P<P_O$ klein (besser in \Abbref{fig:VanDerWaalsIsotherm} zu sehen, die Kurven verlaufen links vom Koexistenzpunkt steil und rechts flach), was unseren Vorstellungen von einem Gas (hohe Kompressibilität) und einer Flüssigkeit (geringe Kompressibilität) entspricht.
+
+
+Ab dem kritischen Punkt (bei Temperaturen $T>T_\mathrm{K}$ bzw. Drücken $P>P_\mathrm{k}$) liegt allerdings kein Volumensprung mehr vor (nur eine Lösung von Gleichung~\eqref{eq:van der waals isotherme}). Wird der Prozess so gewählt, dass der Übergang bei $T_\mathrm{k}$ stattfindet, so handelt es sich um einen Phasenübergang zweiter Ordnung, der im nächsten Kapitel behandelt wird. Es ist aber auch ein Weg denkbar, bei dem zuerst die Temperatur auf über $T_\mathrm{k}$ erhöht wird, dann das Volumen vergrößert oder verkleinert wird und die Temperatur anschließend wieder auf ihren Ursprungswert abgesenkt wird. In diesem Fall findet kein Phasenübergang statt, denn die Koexistenzlinie endet im kritischen Punkt.
+
+
+\paragraph*{Entropiesprung}
+
+Auch die Entropie muss bei einem Phasenübergang erster Ordnung einen Sprung aufweisen, da sie ebenfalls eine Ableitung des unstetigen chemischen Potentials ist: $s=-(\partial\mu/\partial T)_P$. Wir wollen diesen Entropiesprung berechnen:
+\begin{align*}
+    \Delta s = s_D-s_O = \int_D^O \left( \frac{\partial s}{\partial v} \right)_T\diff v = \int_{O\rightarrow D} \left( \frac{\partial P}{\partial T} \right)_T\diff v,
+\end{align*}
+wobei im ersten Schritt verwendet wurde, dass $\diff T=0$ und im zweiten Schritt die Maxwellbeziehungen angewandt wurden. Die Ableitung lässt sich herausziehen und als 
+\begin{align*}
+    \Delta s = \lim_{\Delta T\rightarrow 0} \frac{1}{\Delta T} \int_{O\rightarrow D}\left\{ P(T+\Delta T,v) - P(T,v) \right\}\diff v.
+\end{align*}
+schreiben. Wegen der Maxwellkonstruktion ist das Integral von $P$ entlang der realen Isotherme gleich dem entlang der van-der-Waals-Isotherme:
+\begin{align*}
+    \int_{O\rightarrow D} P\diff v = \int_{OMKFD} P\diff v.
+\end{align*}
+% und damit 
+% \begin{align*}
+%     \lim_{\Delta T\rightarrow 0} \frac{1}{\Delta T}.
+% \end{align*}
+Unter Zuhilfenahme der van-der-Waals-Zustandsgleichung \eqref{eq:van der waals 2} kann $\Delta s$ direkt berechnet werden:
+\begin{align}
+    \Delta s = \int_{v_O}^{v_D} \left(\frac{\partial P }{\partial T}\right)_v\diff v = \int_{v_O}^{v_D} \frac{R}{v-b}\diff v = R \ln\left( \frac{v_D-b}{v_O-b} \right) > 0. 
+\end{align}
+Wegen $\Delta s>0$ nimmt die Entropie beim Übergang von der flüssigen zur gasförmigen Phase sprunghaft zu. 
+
+
+\paragraph*{Latente Wärme}
+
+Bei dem Übergang von O nach D (flüssig nach gasförmig) muss Wärme aufgenommen werden. Dabei wird aber nicht die Temperatur erhöht, sondern der zuvor behandelte Entropiesprung erreicht. Dies wird als latente Wärme bezeichnet. Pro \unit{\mole} wird die Wärme
+\begin{align}
+    \Delta q = T\Delta s = T(s_D-s_O) = \Delta h
+\end{align}
+aufgenommen. Sie ist hier gleich der molaren freien Enthalpie $\Delta q = \Delta h = T\diff S+v\diff P$, da $P=\mathrm{const}$. 
