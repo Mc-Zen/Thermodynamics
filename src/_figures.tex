@@ -483,8 +483,8 @@
         \node[system node, fill=blue!20!white,minimum width=3.5cm] (RWQ) at (-5,1) {Kühlschrank, $T_\mathrm{k}$};
         \node[system node, fill=black!10!white,minimum width=3.5cm] (RAQ) at (-5,-1) {Motor (RAQ)};
         \node[system node] (P) at (0,0) {TS};
-        \draw[rarr] (P) .. controls +(180:1.7) and +(0:.7) .. (RWQ.east) node[pos=.7,anchor=south west] {$-\udiff W^\mathrm{RAQ}$};
-        \draw[rarr] (P) .. controls +(180:1.7) and +(0:.7) .. (RAQ.east) node[pos=.7,anchor=north west] {$-\udiff Q_\mathrm{k}$};
+        \draw[rarr] (P) .. controls +(180:1.7) and +(0:.7) .. (RWQ.east) node[pos=.7,anchor=south west] {$-\udiff Q_\mathrm{k}$};
+        \draw[rarr] (P) .. controls +(180:1.7) and +(0:.7) .. (RAQ.east) node[pos=.7,anchor=north west] {$-\udiff W^\mathrm{RAQ}$};
         edge[rarr] (RWQ) 
         edge[rarr] (RAQ);
         \node[system node,align=center, fill=red!20!white] at (4,0) {Umgebung, $T_\mathrm{h}$} edge[rarr] node[midway, above] {$\udiff Q_\mathrm{h}$} (P);

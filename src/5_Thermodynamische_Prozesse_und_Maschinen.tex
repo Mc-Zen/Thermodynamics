@@ -57,7 +57,7 @@ In \Abbref{fig:AdiabaticGasCompression} haben wir eine adiabatische Gaskompressi
 Wir wollen im Folgenden eine genaue Unterscheidung reversibler und irreversibler Prozesse geben. 
 Dazu betrachten wir ein abgeschlossenes, zusammengesetztes System, welches durch die Lockerung einer Zwangsbedingung von Zustand $A$
 in Zustand $B$ übergeht. Dem Postulat \ref{post:eigenschaften_entropie} zufolge ist die Entropie des Endzustandes größer als die Entropie des Anfangszustandes.
-Folglich ist der umgekehrte, spontane Übergang von $B$ nach $A$ verboten und wir bezeichnen den Zustandsübergang von $A$ nach $B$ als irreversibel. Nicht-quasistatische Prozesse sind im Folgeschluss immer irreversibel, der Umkehrschluss gilt nicht.
+Folglich ist der umgekehrte, spontane Übergang von $B$ nach $A$ \glqq verboten\grqq{} und wir bezeichnen den Zustandsübergang von $A$ nach $B$ als irreversibel. Nicht-quasistatische Prozesse sind im Folgeschluss immer irreversibel, der Umkehrschluss gilt nicht.
 Reversible Prozesse hingegen sind umkehrbare Prozesse, d.~h. die mit ihnen verknüpfte Entropieänderung ist gleich null.
 Sie sind quasistatisch, wobei der Umkehrschluss im Gegenzug wieder nicht immer gilt. %[Grafik??]
 \begin{formal}
@@ -284,7 +284,7 @@ und nach Gleichung \eqref{eq:maschine_HS1}
 \begin{align*}
     \udiff W^\mathrm{RAQ} = \left( 1-\frac{T_\mathrm{k}}{T_\mathrm{h}} \right) (-\udiff Q_\mathrm{h}).
 \end{align*}
-Der Wirkungsgrad $\eta$ beschreibt das Verhältnis der Energie, die in (i.~d.~R.mechanische) Arbeit umgesetzt wird:
+Der Wirkungsgrad $\eta$ beschreibt das Verhältnis der Energie, die in Arbeit (i.~d.~R. mechanische) umgesetzt wird:
 \begin{align*}
     \eta = \frac{\udiff W^\mathrm{RAQ}}{-\udiff Q_\mathrm{h}} = 1-\frac{T_\mathrm{k}}{T_\mathrm{h}}=\frac{T_\mathrm{h}-T_\mathrm{k}}{T_\mathrm{h}}. 
 \end{align*}
@@ -292,11 +292,11 @@ Dieser Wirkungsgrad ist unabhängig von dem genauen Ablauf des Prozess und daher
 
 Der Wirkungsgrad wird verbessert, wenn die Temperatur $T_\mathrm{h}$ des heißen Wärmereservoirs hoch und die Temperatur $T_\mathrm{k}$ des kalten Reservoirs niedrig ist. Für $T_\mathrm{k}\rightarrow 0$ wird der Wirkungsgrad $1$. 
 Dann ist $\udiff W^\mathrm{RAQ}=-\udiff Q_\mathrm{h}$. 
-Betrachtet man sich die Gleichung \eqref{eq:maschine_HS2}, so sieht man, dass für Temperaturen nahe dem absoluten Nullpunkt nur wenig Wärme in das kalte Wärmereservoir fließen muss, damit die Entropieänderung des heißen Wärmereservoirs kompensiert wird (die gesamte Entropieänderung muss durch das kalte Wärmereservoir aufgenommen werden, da die Maschinerie als reversible Arbeitsquelle keine Wärme und damit auch keine Entropie aufnimmt). 
+Betrachtet man die Gleichung \eqref{eq:maschine_HS2}, so sieht man, dass für Temperaturen nahe dem absoluten Nullpunkt nur wenig Wärme in das kalte Wärmereservoir fließen muss, damit die Entropieänderung des heißen Wärmereservoirs kompensiert wird (die gesamte Entropieänderung muss durch das kalte Wärmereservoir aufgenommen werden, da die Maschinerie als reversible Arbeitsquelle keine Wärme und damit auch keine Entropie aufnimmt). 
 
 Sind die Temperaturen $T_\mathrm{h}$ und $T_\mathrm{k}$ gleich, so ist der Wirkungsgrad $0$. 
 \begin{formal}
-    Ein Prozess, dessen einziges Resultat ist, dass Wärme aus eine Wärme aus einer Wärmequelle in mechanische Arbeit umgewandelt wird, ist nicht möglich. Es gibt folglich kein Perpetuum mobile zweiter Art. 
+    Ein Prozess, dessen einziges Resultat ist, dass Wärme aus einer Wärmequelle vollständig in mechanische Arbeit umgewandelt wird, ist nicht möglich. Es gibt folglich kein Perpetuum mobile zweiter Art. 
 \end{formal}
 
 
@@ -358,9 +358,9 @@ Die verrichtete Arbeit ist nach dem ersten Hauptsatz der Thermodynamik durch
 \end{align*}
 und der Wirkungsgrad wie im vorigen Abschnitt beschrieben durch 
 \begin{align}
-    \nu = \frac{\Delta W^\mathrm{RAQ}}{\Delta Q_{AB}} = \frac{T_\mathrm{h}-T_\mathrm{k}}{T_\mathrm{h}}
+    \eta_\mathrm{M} = \frac{\Delta W^\mathrm{RAQ}}{\Delta Q_{AB}} = \frac{T_\mathrm{h}-T_\mathrm{k}}{T_\mathrm{h}}
 \end{align}
-gegeben. In der Realität wird aufgrund von mechanischer Reibung und durch Abweichung von quasistationären Zuständen jedoch meist nur ein Wirkungsgrad erzielt, der etwa einem Drittel des idealen Wirkungsgrades entspricht. 
+gegeben. In der Realität wird aufgrund von mechanischer Reibung und durch Abweichung von quasistationären Zuständen jedoch meist nur ein Wirkungsgrad erzielt, der etwa der Hälfte des idealen Wirkungsgrades entspricht. 
 
 \begin{figure}[htbp]
     \centering
@@ -368,4 +368,23 @@ gegeben. In der Realität wird aufgrund von mechanischer Reibung und durch Abwei
     \caption{Der Carnot-Zyklus}
     \label{fig:CarnotCycleIndicatorDiagram}
 \end{figure}
+
+Die Carnot-Maschine kann mit Hilfe eines idealen Gases realisiert werden.
+Wir beschreiben den geschlossenen Prozess unter Zuhilfenahme eines PV-Diagrammes ([Abb][ref]):
+Im ersten Schritt (von A nach B) findet die isotherme Gasexpansion statt. Der Druck nimmt entsprechend der kennengelernten Gasgleichung mit $V^{-1}$ ab. Für die isentrope Expansion (von B nach C) folgt eine stärkere Druckabnahme, welche der Relation $P \propto V^{-\gamma}$ folgt. \footnote{$Es sei an \gamma=(f+2)/f>1$, den eingeführten Adiabatenexponenten erinnert.} Im Anschluss erfolgen wieder eine isotherme (unter Ankopplung der Wärmequelle) und isentrope (unter Abkopplung der Wärmequelle) Kompression. Die eingeschlossene Fläche entspricht erneut der Arbeit, die der Prozess leistet. 
+
+Zum Abschluss dieses Kapitels wollen wir einen kurzen Exkurs in die Geschichte machen und zwei interessante Nebenbemerkungen hinzufügen: 
+
+\begin{itemize}
+    \item Clausius erkannte, dass für geschilderte ideale Kreisprozesse das Kreisintegral über die Größe $\udiff Q/T$ null sein musste. Er entdeckte damit das totale Differential einer neuen Zustandsfunktion, einer bislang unbekannten Größe, die das System charakterisiert: die Entropie $S$.  
+    \item Interessant ist die Beobachtung, dass eine thermodynamische Maschine der Messung von Temperatur dienen kann. 
+    Über den Wirkungsgrad der Maschine kann nämlich das Verhältnis der absoluten Temperaturen des Systems bestimmt werden. Durch Festlegung eines Referenzpunktes (des Tripelpunktes von Wasser) kann die damit erhaltene Temperaturskala in die absolute Kelvinskala überführt werden.
+    \item Da die Entropieänderung dem Produkt aus Wärmeänderung und Temperatur entspricht, kann nach Messung der Temperatur auch die Entropie ermittelt werden. Der Referenzpunkt der Entropie liegt nach dem Nernst-Postulat beim absoluten Temperaturnullpunkt.
+\end{itemize}
+
+
+
+
+
+
 
