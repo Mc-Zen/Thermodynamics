@@ -3,30 +3,307 @@
 
 \chapter{Das Prinzip minimaler Energie und thermodynamische Potentiale}
 
-In diesem Kapitel wollen wir den Formalismus der Thermodynamik noch ein wenig weiter ausführen.
-Bisher haben wir stets entweder in der Energiedarstellung oder in der Entropiedarstellung gearbeitet. Technisch können beide aber nur schlecht kontrolliert werden. Dagegen lässt sich beispielsweise die Temperatur sehr gut kontrollieren. Zu diesem Zweck werden in diesem Kapitel neue thermodynamische Potentiale eingeführt, die an die physikalische Situation angepasst sind.
-
-Außerdem wird die Frage behandelt, wie sich das durch das Postulat \ref{post:entropie_maximierung} beschriebene Extremalprinzip für die Entropie auf andere thermodynamische Potentiale übertragen lässt.
+In diesem Kapitel wollen wir den Formalismus der Thermodynamik weiter ausführen.
+Bisher haben wir stets entweder in der Energie- oder in der Entropiedarstellung gearbeitet. Technisch können beide Größen allerdings nur schlecht kontrolliert oder gemessen werden. Dagegen lassen sich beispielsweise Temperatur und Druck sehr gut kontrollieren. Vor diesem Hintergrund werden nun neue thermodynamische Potentiale eingeführt, welche an die experimentell handhabbaren Situationen angepasst sind.
+Außerdem wird die Frage behandelt, wie sich das Extremalprinzip der Entropie (Postulat \ref{post:entropie_maximierung}) auf andere thermodynamische Potentiale übertragen lässt.
 
 
 \section{Das Prinzip der minimalen Energie}
 
-Zur Wiederholung soll zunächst erinnert werden, wie sich die Entropie nach dem Postulat~\ref{post:entropie_maximierung} maximiert:
+Zur Wiederholung soll zunächst daran erinnert werden, wie sich die Entropie nach dem Postulat~\ref{post:entropie_maximierung} maximiert:
 \begin{formal}
-    Bei konstanter innerer Energie eines System ist der Wert einer ungehemmten Variablen $X$ im Gleichgewichtszustand durch ein Maximum der Entropie ausgezeichnet:
-    \begin{align*}
+    Bei konstanter innerer Energie eines System ist der Wert einer ungehemmten (frei einstellbaren) Variablen $X$ im Gleichgewichtszustand durch ein Maximum der Entropie ausgezeichnet:
+    \begin{align}
+        \label{eq:Entropiemaximum}
         \left( \frac{\partial S}{\partial X}  \right)_U = 0, \qquad \left( \frac{\partial ^2S}{\partial X^2}  \right)_U < 0.
-    \end{align*}
+    \end{align}
 \end{formal}
-
-
-
 
 Alternativ können wir auch sagen:
 
 \begin{formal}
-    Bei konstanter Entropie eines Systems ist der Gleichgewichtswert einer ungehemmten (frei einstellbaren) internen Variable $X$ durch ein Minimum der inneren Energie ausgezeichnet:
+    Bei konstanter Entropie eines Systems ist der Gleichgewichtswert einer ungehemmten internen Variablen $X$ durch ein Minimum der inneren Energie ausgezeichnet:
     \begin{align*}
         \left( \frac{\partial U}{\partial X}  \right)_S = 0, \qquad \left( \frac{\partial ^2U}{\partial X^2}  \right)_S > 0.
     \end{align*}
 \end{formal}
+
+Wir wollen nun den Beweis für diese Energieminimierung liefern.
+Der Ausdruck \ref{eq:Entropiemaximum} bildet unseren Ausgangspunkt. Wir ziehen den naheliegenden Ausdruck für die Änderung der inneren Energie, 
+\begin{align*}
+    \diff U=\left( \frac{\partial U}{\partial S}  \right)_X \diff S + \left( \frac{\partial U}{\partial X}  \right)_S \diff X,
+\end{align*}
+sowie der Entropie,
+\begin{align*}
+    \diff S=\left( \frac{\partial S}{\partial U}  \right)_X \diff U + \left( \frac{\partial S}{\partial X}  \right)_U \diff X,
+\end{align*}
+zur Hilfe.
+Einsetzen führt auf den folgenden Ausdruck:
+\begin{align*}
+    0=\left[\left( \frac{\partial U}{\partial S}  \right)_X\left( \frac{\partial S}{\partial U}  \right)_X -1\right]\diff U + \left[\left( \frac{\partial U}{\partial X}  \right)_S+\left( \frac{\partial U}{\partial S}  \right)_X\left( \frac{\partial S}{\partial X}  \right)_U \right]\diff X,
+\end{align*}
+Da die Entropie- und Energieänderungen für die Beschreibung beliebiger Prozesse variabel (unabhängig) festgelegt werden können, sollen die einzelnen Terme vor den Differentialen null ergeben.
+Daraus ergeben sich die zwei nützlichen Relationen:
+\begin{align*}
+    \left( \frac{\partial U}{\partial S}  \right)_X=\left( \frac{\partial S}{\partial U}  \right)_X^{-1}
+\end{align*}
+und für die Änderung der inneren Energie unter konstanter Entropie und Variation von $X$
+\begin{align*}
+    P=\left( \frac{\partial U}{\partial X}  \right)_S=-\left( \frac{\partial U}{\partial S}  \right)_X\left( \frac{\partial S}{\partial X}  \right)_U=-T\left( \frac{\partial S}{\partial X}  \right)_U=-T\cdot0=0.
+\end{align*}
+Damit ist die zu zeigende Aussage, dass dieser Ausdruck ein Extremum der Energie beschreibt, bewiesen.
+Es bleibt zu beweisen, dass es sich dabei um ein Minimum handelt.
+Dieses wird leicht über die zweite Ableitung,
+\begin{align*}
+    \left( \frac{\partial ^2U}{\partial X^2}  \right)_S&=\left( \frac{\partial P}{\partial X}  \right)_S=\left( \frac{\partial P}{\partial U}  \right)_X\left( \frac{\partial U}{\partial X}  \right)_S+\left( \frac{\partial P}{\partial X}  \right)_U\\
+    &=\frac{\partial}{\partial X}\left[-T\left( \frac{\partial S}{\partial X}  \right)_U\right]_U =-T\left( \frac{\partial T}{\partial X}  \right)_U>0,
+\end{align*}
+nachgewiesen.
+
+Wir kennen also zwei Wege, die zu einem Gleichgewichtszustand führen: 
+\begin{itemize}
+    \item Die \emph{Entropiemaximierung}, welche beispielsweise bei einem Sytem stattfindet, welches thermisch isoliert ist und konstante innere Energie besitzt, in welchem jedoch durch Lösen von Zwangsbedingungen die Entropie zunimmt.
+    \item Die \emph{Energieminimierung}, welche beispielsweise bei einem System stattfindet, welches thermisch isoliert und an eine RAQ gekoppelt ist. Diese nimmt Energie in Form von geleisteter mechanischer Arbeit (beispielsweise durch einen Kolben) auf, wobei die Entropie des Systems konstant bleibt.
+\end{itemize}
+Wir wollen nun weitere thermodynamische Potentiale einführen.
+
+\section*{Legendre Transformationen}
+Bisher haben wir mit zwei Fundamentalbeziehungen extensiver Variablen gearbeitet: der Entropie und Energie. Zu diesen kanonisch konjugiert sind die intensiven Variablen (die über Ableitung erhalten werden und abhängig sind).
+In der Praxis sind die intensiven Variablen (Temperatur und Druck) wesentlich leichter zu kontrollieren und zu messen, weswegen die Fundamentalbeziehungen umformuliert werden sollen. Die neuen Beziehungen sollen von den intensiven Variablen abhängen und den gesamten Informationsgehalt erhalten. 
+
+Wir nähern uns dieser Aufgabe indem wir zu aller erst das Differential der inneren Energie aufschreiben:
+\begin{align}
+    \label{eq:DiffU}
+    \diff U(S,V,N)=T(S,V,N)\diff S+P(S,V,N)\diff V+\mu(S,V,N)\diff N
+\end{align}
+Die Idee besteht darin, die Entropie als unabhängige Variable in der energetischen Fundamentalgleichung durch die Temperatur auszutauschen, indem $S=S(T,V,N)$ in Abhängigkeit der Temperatur dargestellt wird. Damit folgt für die innere Energie:
+\begin{align*}
+    U(S(T,V,N),V,N)=U(T,V,N).
+\end{align*}  
+Es stellt sich jedoch die Frage, ob dieser Ausdruck den vollständigen Informationsgehalt enthält, also ob $S(T,V,N)$ beispielsweise über die Ableitung der Funktion zurückgewonnen werden kann.
+Das prüfen wir wie folgt: Wir bilden das Differential der Entropie und setzen es in \ref{eq:DiffU} ein.
+\begin{align*}
+    \diff S=\frac{\partial S}{\partial T}\diff T+\frac{\partial S}{\partial V}\diff V+\frac{\partial S}{\partial N}\diff N
+\end{align*}
+Aus
+\begin{align*}
+    \diff U &= T\left(\frac{\partial S}{\partial T}\right)_{V,N}\diff T-\left[P-T\left(\frac{\partial S}{\partial V}\right)_{T,N}\right]\diff V+\left[\mu+T\left(\frac{\partial S}{\partial N}\right)_{T,V}\right]\diff N\\
+    &=\left(\frac{\partial U}{\partial T}\right)_{V,N}\diff T-\left(\frac{\partial U}{\partial V}\right)_{T,N}\diff V+\left(\frac{\partial U}{\partial N}\right)_{T,V}\diff N
+\end{align*}
+folgt, dass ein Informationsverlust vorliegt, denn $S$ ist nicht eindeutig bestimmt.
+Der Ausweg bildet eine neue Fundamentalbeziehung, die \emph{freie Energie}:
+\begin{align*}
+    \boxed{F(T,V,N)=U(S(T,V,N),V,N)-TS(T,V,N)}.
+\end{align*}
+Bei näherer Betrachtung stellen wir nämlich fest, dass
+\begin{align*}
+    \frac{\partial  F}{\partial T}=\frac{\partial U}{\partial S}\frac{\partial S}{\partial T}-S-T\frac{\partial S}{\partial T}=-S,
+\end{align*}
+die Entropie also als Ableitung der freien Energie nach der Temperatur erhalten wird.
+Das Differential der freien Entropie lautet:
+\begin{align*}
+    \boxed{  
+        \begin{aligned}
+         \diff F = \frac{\partial F}{\partial T}\diff T +\frac{\partial F}{\partial V}\diff V+\frac{\partial F}{\partial N}\diff N=-S\diff T - P\diff V+\mu \diff N   
+        \end{aligned} 
+    }\;.
+\end{align*}
+Die Umkehrung der Beziehung erfolgt über
+\begin{align*}
+    \boxed{U(S,V,N)=F(T(S,V,N),V,N)+ST(S,V,N)}\;.
+\end{align*}
+\paragraph*{Geometrischer Hintergrund}
+Wir wollen kurz die geometrische Bedeutung der Legendre-Transformation betrachten. 
+
+Es sei für den  eindimensionalen Fall eine Funktion $y=y(x)$ gegeben, wobei $y$ als die innere Energie $U$ und $x$ als die Entropie $S$ gedeutet werden kann. $p(x)=\diff y/ \diff x$ bezeichnet die Ableitung von $y$ nach $x$ an der Stelle $x$ (und kann als unsere Temperatur interpretiert werden). Über die Umkehrung kann $x=x(p)$ in Abhängigkeit von $p$ dargestellt werden. Wird diese in die ursprüngliche Funktion eingesetzt erhalten wir $y=y(x(p))=y(p)$. 
+
+Charakterisiert diese Funktion ein eindeutiges $y(x)$? Nein! Der entstandene Informationsverlust wird besonders ersichtlich, wenn wir die Abb[Abb][ref] betrachten. Der Rückgewinn von $x(p)$ ist anhand der Steigung $p$ nicht eindeutig möglich, da $y(p)$ eine sogenannte Kurvenschar $y_i(x)$ als Lösung von $\diff y/\diff x=p(y)$ erzeugt. Eine Möglichkeit, den Informationsgehalt wieder herzustellen, ist die Angabe des Ordinatenabschnittes $\psi(p)$, denn die Angabe einer Tangentenschar entspricht der Charakterisierung von $y(x)$ über ihre Einhüllende. 
+
+Die Legendre-Transformation ergibt sich aus der formalen Beschreibung dieser Lösung: 
+\begin{align*}
+    p=\frac{y-\psi}{x}
+\end{align*}
+entspricht der Darstellung der Tangente.
+Die \emph{Legendre-Transformierte} zu $y(x)$ ist damit:
+\begin{align*}
+    \boxed{\psi(p)=y(p)-px(p)}.
+\end{align*}
+Ihr Differential $\diff \psi=\diff y-p\diff x-x\diff p$ führt ferner auf:
+\begin{align*}
+    \boxed{x=-\frac{\diff \psi}{\diff p}}
+\end{align*}
+und die Umkehrung erfolgt mittels $y(x)=\psi(p(x))+xp(x)$.
+
+Wir können eine Verallgemeinerung für beliebige Fundamentalbeziehungen $y(x_0,...,x_t)$ und ihre kanonisch konjugierten Variablen $p_k=(\partial y/\partial x_k)(x_0,...,x_t)$ vornehmen.
+Daraus folgt das allgemeine Differential $\diff y=\sum_\mathrm{i=0}^tp_i\diff x_i$. 
+\begin{formal}
+    Die Legendre-Transformation zu $p_k$ als unabhängige Variable mit $x_k=x_k(p_0,...,p_t)$ und vollem Informationsgehalt nimmt die Form 
+\begin{align*}
+    \boxed{\psi(p_0,...,p_t)=y(x_k(p_j))-\sum^t_{i=0}p_ix_i(p_j)}
+\end{align*}
+an. Das Differential lautet:
+\begin{align*}
+    \boxed{\diff \psi=\sum^t_{i=0}x_i\diff p_i \qquad \mathrm{mit}\qquad -x_i=\frac{\partial \psi}{\partial p_i}}\;.
+\end{align*}
+\end{formal}
+
+
+Kommentar: Eine teilweise Legendre-Transformation der Art $\psi=\psi(p_0,p_1,...,p_r;x_{r+1},...,x_t)$ ist ebenfalls möglich und wird uns auf weitere TD-Potentiale führen.
+
+Zur Verinnerlichung des Vorgehens wollen wir ein Beispiel aus der Mechanik betrachten: 
+
+Als Fundamentalbeziehung betrachten wir die Lagrangefunktion $L=L(q_i,v_i,t)$ mit generalisierter Geschwindigkeit $v_i=\dot{q}_i$.
+Der Impuls soll nun die generalisierte Geschwindigkeit ersetzen und entspricht der neuen unabhängigen konjugierten Variable:
+\begin{align*}
+    p_i=\frac{\partial L}{\partial v_i}
+\end{align*}
+Mit der Legendre-Transformation folgt:
+\begin{align*}
+    \boxed{-H=L-\sum_i p_iv_i},
+\end{align*}
+der Ausdruck für die Hamiltonfunktion.
+Die Rückgewinnung der Geschwindigkeit $v_i$ erfolgt über die Ableitung der Form
+\begin{align*}
+    \dot{q}_i=v_i=\frac{\partial H}{\partial p_i}
+\end{align*}
+und bildet mit 
+\begin{align*}
+    \dot{p}_i=\frac{\partial H}{\partial q_i}
+\end{align*}
+die Hamiltonschen Bewegungsgleichungen.
+
+\section*{Thermodynamische Potentiale}
+Wir beschränken uns im Folgenden auf einkomponentige Systeme und wollen die Legendre-Transformierten der energetischen Fundamentalbeziheung vorstellen. Die Anwendungen dieser Potentiale werden später genauer erörtert.
+
+Vorweg ein kurzer Kommentar zur Notation: Die eckigen Klammern kennzeichnen die ausgetauschte intensive Variable der Transformation. 
+\begin{formal}
+    \formalemph{(Helmholtzsche) Freie Energie: $F=U\left[T\right]$}
+
+    Die bereits kennengelernte freie Energie beschreibt die Legendre-Transformierte, welche die Entropie durch die Temperatur ersetzt und wird gegeben durch:
+    \begin{align*}
+        \boxed{F(T,V,N)=U-TS}\;.
+    \end{align*}
+\end{formal}
+Die Rückgewinnung der Entropie erfolgt mittels der Ableitung nach der Temperatur:
+    \begin{align*}
+        S=-\frac{\partial F}{\partial T}
+    \end{align*}
+    und ihr Differential ist gegeben durch 
+    \begin{align*}
+        \diff F=-S\diff T-P\diff V+\mu \diff N.
+    \end{align*}
+\begin{formal}
+    \formalemph{Enthalpie: $H=U\left[P\right]$}
+
+    Die Enthalpie beschreibt die Legendre-Transformierte, welche Volumen durch Druck ersetzt und wird beschrieben durch:
+    \begin{align*}
+        \boxed{H(S,P,N)=U+PV}\;.
+    \end{align*}
+\end{formal}
+Die Rückgewinnung des Volumens erfolgt mittels der Ableitung nach dem Druck:
+    \begin{align*}
+        V=\frac{\partial H}{\partial P}
+    \end{align*}
+    und ihr Differential lautet
+    \begin{align*}
+        \diff F=T\diff S+V\diff P+\mu \diff N.
+    \end{align*}
+\begin{formal}
+    \formalemph{Freie Enthalpie (Gibbs-Potential): $G=U\left[T,P\right]$}
+
+    Die freie Enthalpie beschreibt die Legendre-Transformierte, welche sowohl Entropie, als auch Volumen durch die zu ihnen konjugierten Variablen ersetzt und wird beschrieben durch:
+    \begin{align*}
+        \boxed{G(T,P,N)=U-TS+PV=\mu N}\;.
+    \end{align*}
+\end{formal}
+Die letzte Gleichheit folgt aus der wohlbekannten Euler-Gleichung. Die Rückgewinnung der Größen erfolgt mittels der Ableitungen:
+    \begin{align*}
+        S=-\frac{\partial G}{\partial T}\qquad \mathrm{und}\qquad V=\frac{\partial G}{\partial P}.
+    \end{align*}
+    Ihr Differential ist gegeben durch 
+    \begin{align*}
+        \diff G=-S\diff T+V\diff P+\mu \diff N.
+    \end{align*}
+
+Eine mögliche zusammenfassende Visualisierung dieser Potentiale liefert uns das Merkdiagramm in Abb. \ref{fig:TDPotentialeMerk}.
+\begin{figure}[htbp]
+    \centering
+    \tfigTDPotentialeMerk
+    \caption{Merkdiagramm der thermodynamischen Potentiale, ohne $N$}
+    \label{fig:TDPotentialeMerk}
+\end{figure}
+Die Potentiale liegen auf den Kanten und ihre zugehörigen unabhängigen Variablen an den inzidenten Ecken. Die kanonisch konjugierten intensiven Variablen sind jeweils auf der rechten Seite des Diagrammes und die Pfeile kennzeichnen das umgekehrte Vorzeichen des zusätzlichen Terms im entsprechenden Potential. 
+
+Wir haben bei den eingeführten Potentialen keine Rücksicht auf die Teilchenzahl genommen.
+Allerdings kann auch das chemische Potential experimentell über Teilchenreservoire oder Teilchenaustausch kontrolliert und gemessen werden, sodass entsprechende Transformationen unter Austausch dieser Variable im Folgenden ebenfalls betrachtet werden sollen:
+
+\begin{formal}
+    \formalemph{Großes Potential: $\Omega=U\left[T,\mu\right]$}
+
+    Diese Legendre-Transformierte ersetzt sowohl die Entropie, als auch die Teilchenzahl durch die zu ihnen konjugierten Variablen Temperatur und chemisches Potential und wird charakterisiert durch:
+    \begin{align*}
+        \boxed{\Omega (T,V,\mu)=U-TS-\mu N=-P(T,V,\mu)V}\;.
+    \end{align*}
+\end{formal}
+Die letzte Gleichheit folgt wieder aus der Euler-Gleichung. Das große Potential ist vor allem auch in der statistischen Mechanik bei der Beschreibung schwarzer Strahler relevant. Die Rückgewinnung der Größen erfolgt mittels der Ableitungen:
+    \begin{align*}
+        S=-\frac{\partial \Omega}{\partial T}\qquad \mathrm{und}\qquad N=-\frac{\partial \Omega}{\partial \mu}.
+    \end{align*}
+    Ihr Differential ist bestimmt durch:
+    \begin{align*}
+        \diff \Omega=-S\diff -P\diff V-N \diff \mu.
+    \end{align*}
+
+    \begin{formal}
+        \formalemph{Vollkommen Transformierte: $U\left[T,P,\mu\right]$}
+    
+        Diese Legendre-Transformierte ersetzt alle extensiven Variablen durch die zu ihnen konjugierten Variablen und wird gegeben durch:
+        \begin{align*}
+            \boxed{U\left(T,P,\mu\right)=U-TS+PV-\mu N=0}\;.
+        \end{align*}
+        Sie hat damit keinen vollständigen Informationsgehalt (z.B. geht die Information über die Größe des Systems verloren). Dies ist dadurch bedingt, dass die intensiven Variablen voneinander abhängig sind.
+    \end{formal}
+    \begin{summary}
+        Wir haben in diesem Kapitel zu allererst das \emph{Extremalprinzip der inneren Energie} aus dem Extremalprinzip der Entropie hergeleitet: Bei konstanter Entropie nimmt die innere Energie eines Systems mit Bezug auf die ungehemmten Variablen ein Minimum an. 
+
+        Im zweiten Teil haben wir die \emph{Legendre-Transformation} kennengelernt und mit ihr weitere thermodynamische Potentiale eingeführt. Letztere werden dadurch motiviert, dass sie von einfach kontrollierbaren und messbaren Systemgrößen (wie der Temperatur, dem Druck oder dem chemischen Potential) abhängen.
+
+        Die Legendre-Transformation ist dadurch gekennzeichnet, dass sie den Informationsgehalt der ursprünglichen Fundamentalbeziehung, die sie transformiert, erhält. Wie funktioniert sie? 
+        
+        Der einfache Austausch einer extensiven Größe durch die zu ihr konjugierte intensive Größe führt dazu, dass die neu erhaltene Relation keinen eindeutigen Rückschluß mehr auf die extensive Größe zulässt. 
+        
+        Geometrisch kann der Austauschvorgang wie folgt veranschaulicht werden: Die von der extensiven Variable abhängige intensive Variable entspricht einer Ableitung bzw. Steigung. Diese erlaubt lediglich die Charakterisierung einer Kurvenschar, nicht aber einer eindeutigen Kurve. Ein Ausweg bietet die Hinzunahme des Ordinatenabschnittes, welcher eine einzelne Kurve der Kurvenschar auszeichnet. Eine Kurve wird nun also nicht mehr in Abhängigkeit der extensiven Variable, sondern der Steigung (der intensiven Variable) und des Ordinatenabschnittes $\psi$ charakterisiert. Dies wird durch 
+        \begin{align*}
+            p=\frac{y-\psi}{x} \qquad \mathrm{bzw.} \qquad \psi(p) =x(p)p-y(p)
+        \end{align*} 
+        beschrieben und entspricht der Legendre-Transformation. 
+        Dass der Informationsgehalt dabei tatsächlich erhalten wird, kann leicht mittels des Differentials überprüft werden. Die extensive Größe wird über folgende Ableitung zurückgewonnen:
+        \begin{align*}
+            x=-\frac{\diff \psi}{\diff p}.
+        \end{align*} 
+
+        Wir haben nun diverse Potentiale mithilfe verschiedener Legendre-Transformationen eingeführt:
+        \begin{itemize}
+            \item \textbf{(Helmholtzsche) Freie Energie:} $F=U[T]$ \\
+            Diese wird charakterisiert durch:
+            \begin{align*}
+                F(T,V,N)=U-ST \qquad \mathrm{und} \qquad \diff F=-S\diff T-P\diff V+\mu \diff N.
+            \end{align*}
+            \item \textbf{Enthalpie:} $H=U[P]$ \\
+            Für diese gilt:
+            \begin{align*}
+                H(S,P,N)=U-PV \qquad \mathrm{und} \qquad \diff H=T\diff S+V\diff P+\mu \diff N.
+            \end{align*}
+            \item \textbf{Freie Enthalpie:} $G=U[T,P]$
+            Für diese gilt:
+            \begin{align*}
+                G(T,P,N)=U-ST+PV \qquad \mathrm{und} \qquad \diff G=-S\diff T+V\diff P+\mu \diff N.
+            \end{align*}
+            \item \textbf{Großes Potential:} $\Omega=U[T,\mu]$
+            \begin{align*}
+                \Omega (T,P,\mu)=U-TS-\mu N \qquad \mathrm{und} \qquad \diff \Omega=-S\diff T-P\diff V-N \diff \mu.
+            \end{align*}
+        \end{itemize}
+        Kommentar zur Notation: Die eckigen Klammern kennzeichnen die ausgetauschten intensiven Größen.
+        Es gibt auch die vollkommen Transformierte (alle extensiven Variablen werden durch ihr konjugierten intensiven Variablen ausgetauscht), jedoch hat diesen keinen vollständigen Informationsgehalt (beispielsweise geht die Systemgröße verloren), da die intensiven Variablen alle voneinander abhängig sind. Letzteres ist bereits durch die Gibbs-Duhem-Beziehung aufgezeigt worden. 
+    \end{summary}
