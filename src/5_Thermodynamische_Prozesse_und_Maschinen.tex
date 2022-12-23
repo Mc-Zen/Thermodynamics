@@ -349,6 +349,12 @@ gegeben, wobei jetzt im Zähler aber $T_\mathrm{h}$ anstelle von $T_\mathrm{k}$ 
 
 Wir haben gesehen, dass eine thermodynamische Maschine Energie in Form von Wärme und Arbeit zwischen verschiedenen Wärmereservoirs und Arbeitsquellen transportiert. Dazu ist i.~d.~R. ein Hilfssystem nötig, dessen Aufgabe es ist, eine reversible Verteilung von $\Delta Q_\mathrm{h}$ auf $\Delta W^\mathrm{RAQ}$ und $\Delta Q_\mathrm{k}$ zu verwirklichen. Dabei darf sich das Hilfssystem selbst aber netto nicht verändern. 
 
+\begin{figure}[htbp]
+    \centering
+    \tfigCarnotCycleIndicatorDiagram
+    \caption{T-S-Diagramm des Carnot-Zyklus}
+    \label{fig:CarnotCycleIndicatorDiagram}
+\end{figure}
 
 Dies wird durch Kreisprozesse wie den Carnot-Zyklus realisiert. In \Abbref{fig:CarnotCycleIndicatorDiagram} ist für diesen das Indikatordiagramm als Temperatur über die Entropie dargestellt. Im Schritt AB findet eine isotherme Expansion statt, in der sich die Wärme um $\Delta Q_{AB}=(S_B-S_A)T_\mathrm{h} = \Delta S T_\mathrm{h}$ ändert . Im Schritt BC wird isentrop expandiert. Es folgt eine isotherme Kompression von C nach D, bei der die Wärme $\Delta Q_{CD}=-\Delta S T_\mathrm{k}$ abgegeben wird und zuletzt eine isentrope Kompression von D zurück nach A. Dabei wird ständig an die reversible Arbeitsquelle gekoppelt (Volumenarbeit durch Expansion und Kompression). 
 
@@ -362,15 +368,14 @@ und der Wirkungsgrad wie im vorigen Abschnitt beschrieben durch
 \end{align}
 gegeben. In der Realität wird aufgrund von mechanischer Reibung und durch Abweichung von quasistationären Zuständen jedoch meist nur ein Wirkungsgrad erzielt, der etwa der Hälfte des idealen Wirkungsgrades entspricht. 
 
+Die Carnot-Maschine kann mit Hilfe eines idealen Gases realisiert werden.
+Wir beschreiben den geschlossenen Prozess unter Zuhilfenahme eines PV-Diagrammes (Abb. \ref{fig:CarnotCyclePVDiagram}):
 \begin{figure}[htbp]
     \centering
-    \tfigCarnotCycleIndicatorDiagram
-    \caption{Der Carnot-Zyklus}
-    \label{fig:CarnotCycleIndicatorDiagram}
+    \tfigPV
+    \caption{P-V-Diagramm des Carnot-Zyklus}
+    \label{fig:CarnotCyclePVDiagram}
 \end{figure}
-
-Die Carnot-Maschine kann mit Hilfe eines idealen Gases realisiert werden.
-Wir beschreiben den geschlossenen Prozess unter Zuhilfenahme eines PV-Diagrammes ([Abb][ref]):
 Im ersten Schritt (von A nach B) findet die isotherme Gasexpansion statt. Der Druck nimmt entsprechend der kennengelernten Gasgleichung mit $V^{-1}$ ab. Für die isentrope Expansion (von B nach C) folgt eine stärkere Druckabnahme, welche der Relation $P \propto V^{-\gamma}$ folgt. \footnote{$Es sei an \gamma=(f+2)/f>1$, den eingeführten Adiabatenexponenten erinnert.} Im Anschluss erfolgen wieder eine isotherme (unter Ankopplung der Wärmequelle) und isentrope (unter Abkopplung der Wärmequelle) Kompression. Die eingeschlossene Fläche entspricht erneut der Arbeit, die der Prozess leistet. 
 
 Zum Abschluss dieses Kapitels wollen wir einen kurzen Exkurs in die Geschichte machen und zwei interessante Nebenbemerkungen hinzufügen: 
