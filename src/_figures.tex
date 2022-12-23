@@ -518,7 +518,61 @@
     \end{tikzpicture}
 }
 
+%P-V diagram of the carnot cycle with ideal gas
+\newcommand{\tfigPV}{
+    \begin{tikzpicture}[scale=1.1, dot/.style={fill=black,circle},
+	    labsize/.style={font=\fontsize{6}{0}\selectfont}]
+    \draw[arr] (0,0) -- (0,5) node[ylabel] {$P$};
+    \draw[arr] (0,0) -- (7,0) node[xlabel] {$V$};
+    \coordinate (A) at (1,4);
+    \coordinate (B) at (4,3);
+    \coordinate (C) at (6,1);
+    \coordinate (D) at (2.6,1.7);
 
+    \draw[dashed] (A) -- (0,4) node[left] {$P_\mathrm{max}$};
+    \draw[dashed] (C) -- (0,1) node[left] {$P_\mathrm{min}$};
+    \draw[dashed] (A) -- (1,0) node[below] {$V_\mathrm{min}$};
+    \draw[dashed] (C) -- (6,0) node[below] {$V_\mathrm{max}$};
+
+    \node[label={[text=red]north west:A}] at (A) {};
+    \node[label={[red]north east:B}] at (B) {};
+    \node[label={[text=blue]south east:C}] at (C) {};
+    \node[label={[text=blue]south west:D}] at (D) {};
+    \node[label={[text=red]east:$T_h$}] at ($(A)!.5!(B)$) {};
+    \node[label={[text=blue]south:$T_k$}] at (3.2,1.6) {};
+
+    \draw[{midarrow=.1, midarrow=.35,midarrow=.65,midarrow=.9}][color=green!50!black,fill=green!10!white ] (A) ..controls (2.5,3.2) and (3,3.2) ..(B) ..controls (4.6,2) and (5,1.4) ..(C) ..controls (4,1.2) and (4,1.2) ..(D) ..controls (2,2.2) and (1.8,2.4) ..(A);
+    \node[label={[text=green!50!black]south:$\Delta W$}] at (3.2,2.7) {};
+     \end{tikzpicture}
+}
+%Thermodynamic potentials memorization diagram
+\newcommand{\tfigTDPotentialeMerk}{
+    \begin{tikzpicture}[scale=1.1, dot/.style={fill=black,circle},
+	    labsize/.style={font=\fontsize{6}{0}\selectfont}]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (0,4);
+    \coordinate (C) at (4,4);
+    \coordinate (D) at (4,0);
+    \coordinate (Q) at (4.2,2);
+    
+
+    \node[label={[text=black]south west:S}] at (A) {};
+    \node[label={[text=black]north west:V}] at (B) {};
+    \node[label={[text=red]north east:T}] at (C) {};
+    \node[label={[text=red]south east:P}] at (D) {};
+    \node[label={[text=blue!40!black]west:$U$}] at ($(A)!.5!(B)$) {};
+    \node[label={[text=blue!40!black]north:$F(T,V)=U-ST$}] at ($(C)!.5!(B)$) {};
+    %\node[label={[text=blue!30!black]east:$G(T,P)=U+PV-ST$}] at (Q) {};
+    %\node[text=blue,labsize,align=center] at (2,0.25) {$U^{2}_1$\\$=L^{2}_1$};
+    \node[right of= Q,blue!40!black, align=center]at (Q) {$G(T,P)$\\$=U+PV-ST$};
+    %\node[right=of (C), align=center](C){Hier rein soll auf\\ jeden Fall ein\\ Zeilenumbruch};
+    \node[label={[text=blue!40!black]south:$H(S,P)=U+PV$}] at ($(A)!.5!(D)$) {};
+    
+    \draw[fill=green!10!white] (D) rectangle (B);
+    \draw[arr][color=green!50!black] (A) -- (C);
+    \draw[arr][color=green!50!black] (D) -- (B);
+     \end{tikzpicture}
+    }
 \newcommand{\tfigPhaseDiagramNoAnomaly}{
     \begin{tikzpicture}[scale=1.5]
         \draw[arr] (0,0) -- (0,2.5) node[ylabel] {$P$};
