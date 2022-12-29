@@ -1,4 +1,209 @@
 % !TeX root = Theo_IV.tex
 
 \chapter{Extremalprinzipien und Bedeutung der thermodynamischen Potentiale\label{sec:Extremalprinzipien und Bedeutung der thermodynamischen Potentiale}}
+Wir wollen uns nun mit den jüngst eingeführten Potentialen beschäftigen und untersuchen, ob für diese ebenfalls ein Extremalprinzip gilt. Zudem werden wir chemische Prozesse aus thermodynamischer Sicht untersuchen.
+\section{Freie Energie}
+Es sei daran erinnert, dass die freie Energie das Potential ist, welches die Temperatur als Kontrollvariable besitzt: $F=U-TS$.
 
+Man betrachte ein abgeschlossenes System mit konstanter innerer Energie. Es ist aus zwei Teilsystemen, welche mechanisch isoliert sind, und einem Wärmereservoir zusammengesetzt. Bei thermischem Kontakt sind die Temperaturen aller Komponenten gleich. Man hemme nun eine Variable $X$ (beispielsweise $V_1$), sodass sich ein Gleichgewichtszustand des Systems in Bezug auf diese Variable bei $X_0$ einstellt und die Entropie maximal ist. Wird das System nun um $\Delta X$ ausgelenkt, so folgt, dass dies mit einer Änderung der Entropie $\Delta S$ einhergeht. Dieser Term setzt sich additiv aus den einzelnen Entropieänderungen aller Einzelkomponenten des Systems zusammen: $\Delta S_\mathrm{G}=\Delta S_1+\Delta S_2+\Delta S_\mathrm{R}$ und ist negativ, da die Entropie zuvor im Gleichgewicht ihr maximum angenommen hat. Für die innere Energie des Gesamtsystems gilt natürlich:
+\begin{align*}
+    \Delta U_\mathrm{G} &= \Delta U + \Delta U_\mathrm{R}= \Delta U + \Delta Q_\mathrm{R}\\
+    &=\Delta U + T\Delta S_\mathrm{R}=0.
+\end{align*}
+Damit folgt für die Entropiezunahme des Reservoirs die Relation: $\Delta S_\mathrm{R}=-\Delta U/T$. Das Einsetzen dieser Relation in die Entropierelation führt auf:
+\begin{align*}
+    \Delta U-T\Delta S=\Delta F>0.
+\end{align*}
+Die Gleichheit folgt aus dem Differential der freien Energie: $\diff F=\diff U-T\diff S-S\diff T$ und der Tatsache, dass die Temperatur des Gesamtsystems und aller Komponenten durch das Wärmereservoir konstant bleibt (damit fällt der letzte Term des Differntials weg).
+Das bedeutet, dass die freie Energie zunimmt, wenn eine Auslenkung aus dem Gleichgewichtszustand erfolgt. Dies lässt auf das Folgende schließen:
+\begin{formal}
+    Die freie Energie im Gleichgewichtszustand eines Systems konstanter Temperatur ist minimal. Der Gleichgewichtswert einer ungehemmten internen Variable wird also durch dieses Minimum gegeben.
+\end{formal}
+
+Wir betrachten nun eine einfache Anwendung dessen im beschriebenen System. Diesmal sind die zwei Teilsysteme über einen beweglichen Kolben verbunden. Wir werden zeigen, dass die Minimierung der freien Energie auf die erwartete Einstellung eines Druckgleichgewichts zwischen den zwei Teilsystemen führt. Wir beginnen wie so oft mit der formalen Beschreibung der Rahmenbedingungen: $\Delta V_1=-\Delta V_2$ mit $V_1+V_2=const$. Da lediglich das Volumen variiert wird und die freie Energie sich additiv verhält ($F=F_1+F_2$) gilt für das angestrebte Gleichgewicht: 
+\begin{align*}
+    \diff F(T,V,N)&=\diff F_1(T,V_1,N)+\diff F_2(T,V_2,N)\\
+    &=\frac{\partial F_1}{\partial V_1}\diff V_1+\frac{\partial F_2}{\partial V_2}\diff V_2\\
+    &=-P_1\diff V_1-P_2\diff V_2\\
+    &=-(P_1-P_2)\diff V_1=0.
+\end{align*}
+Daraus folgt das erwartete Druckgleichgewicht, welches den Rückschluss auf $V_1$ und $V_2$ ermöglicht.
+\paragraph*{Die freie Energie als Arbeitspotential}
+Wir betrachten ein System, welches wieder aus einem Wärmereservoir und zwei Teilsystemen, welche durch eine Zwangsbedingung voneinander getrennt sind, besteht. An die Zwangsbedingung ist nun eine reversible Arbeitsquelle angeschlossen. Welche Arbeit kann durch das Lösen der Zwangsbedingung von den beiden Teilsystemen an der Arbeitsquelle verrichtet werden? 
+\begin{itemize}
+    \item \textbf{Reversible Prozesse:} Für diese gilt, dass die Änderung der inneren Energie des Gesamtsystems exakt der Summe von Wärmefluss zu Wärmereservoir und an der Arbeitsquelle verrichteter mechanischer Arbeit entspricht ($-\Delta U=\Delta W_\mathrm{RAQ}+\Delta Q^\mathrm{R}$). 
+    Da die Wärmequelle reversibel ist, entspricht der Wärmefluss $-T\Delta S$. Damit folgt, dass die verrichtbare Arbeit, 
+    \begin{align*}
+        \Delta W_\mathrm{RAQ}=-(\Delta U-T\Delta S)=-\Delta F,
+    \end{align*}
+    der Abnahme der freien Energie entspricht.
+    \item \textbf{Irreversible Prozesse:} Für diese gilt, dass die verrichtbare Arbeit nur kleiner als die Abnahme der freien Energie sein kann, da Energieanteile dissipieren.
+\end{itemize}
+\begin{formal}
+    \formalemph{Arbeitspotential $F$:}
+    Die isotherme Abnahme der freien Energie entspricht der maximal möglichen thermischen Arbeitsleistung eines an ein Wärmereservoir gekoppeltes, abgeschlossenes Systems:
+    \begin{align*}
+        \Delta W_\mathrm{RAQ}\leq -\Delta F.
+    \end{align*}
+\end{formal}
+Eine Anwendung dessen bietet die osmotische Maschine. [Einfügen einer Versuchsbox?]
+Bei einem thermisch isolierten System entspricht die verrichtbare Arbeit natürlich exakt der Abnahme der inneren Energie, da kein Wärmefluss zu bzw. von einem Wärmereservoir vorliegt.
+
+\section{Enthalpie}
+Die Enthalpie ist das Potential, welches den Druck als Kontrollvariable besitzt: $H=U+PV$.
+
+Man betrachte ein abgeschlossenes System mit konstanter Entropie. Es ist aus zwei Teilsystemen und einem Volumenreservoir zusammengesetzt. Wieder wird eine Variable $X$ (beispielsweise $V_1$) gehemmt, sodass sich ein Gleichgewichtszustand des Systems mit minimaler innerer Energie in Bezug auf diese Variable einstellt. Wird das System nun um $\Delta X$ ausgelenkt, so folgt für die Änderung der inneren Energie des Gesamtsystems:
+\begin{align*}
+    \Delta U_\mathrm{G} &= \Delta U + \Delta U_\mathrm{R}= \Delta U - P\Delta V_\mathrm{R}\\
+    &=\Delta U + P\Delta V>0.
+\end{align*}
+Umstellen und identifizieren der Enthalpie führt auf die Relation:
+\begin{formal}
+    \begin{align*}
+        \boxed{\Delta H=\Delta U+P\Delta V>0}\;.
+    \end{align*}
+    Wird ein System konstanter Entropie mittels eines Volumenreservoirs auf konstantem Druck gehalten, so ist der Gleichgewichtswert einer ungehemmten Variable $X$ durch ein Minimum der Enthalpie ausgezeichnet.
+\end{formal}
+Es bleibt zu berücksichtigen, dass die Nebenbedingung der Entropiekonstanz schwer zu realisieren ist. Eine Anwendung besteht im Joule-Thomson-Versuch. [Einfügen einer Versuchsbox?]
+\paragraph*{Arbeits- und Wärmeeigenschaft}
+Wir betrachten ein System, welches wieder aus einem Volumenreservoir und zwei Teilsystemen, welche durch eine Zwangsbedingung voneinander getrennt sind, besteht. An die Zwangsbedingung ist nun eine reversible Arbeitsquelle angeschlossen. Welche Arbeit kann hier durch das Lösen der Zwangsbedingung von den beiden Teilsystemen an der Arbeitsquelle verrichtet werden? 
+Wieder setzt sich die Änderung der inneren Energie des Gesamtsystems aus der Summe von verrichteter Volumenarbeit am Reservoir und mechanischer Arbeit an der Arbeitsquelle zusammen. Damit folgt:
+\begin{align*}
+    \Delta W_\mathrm{RAQ}=-(\Delta U+P\Delta V)=-\Delta H.
+\end{align*}
+\begin{formal}
+    Allgemein gilt für Systeme in Kontakt mit Reservoiren der extensiven Variablen $X_1,X_2,...$ bei reversiblen Prozessen:
+    \begin{align*}
+        \Delta W_\mathrm{RAQ}= -\Delta U\left[P_1,P_2,...\right].
+    \end{align*}
+    $U\left[P_1,P_2,...\right]$ kennzeichnet die entsrechenden Legendre-Transformationen. 
+\end{formal}
+Wird ein System an ein Volumenreservoir und an eine reversible Wärmequelle gekoppelt, dann folgt mit $\diff H=\diff(U+PV)=\diff U+P\diff V+V\diff P$ und der Voraussetzung, dass Druck und Teilchenzahl nicht varriieren:
+\begin{align*}
+    \left(dH\right)_{P,N}=T\diff S= \udiff Q.
+\end{align*}
+\begin{formal}
+    Die Enthalpie entspricht dem Wärmeinhalt eines Systems, welches von konstantem Druck und weiteren konstanten extensiven Variablen charakterisiert wird.
+\end{formal}
+Ist statt des Drucks das Volumen konstant folgt die bereits bekannte und analoge Relation: $\udiff Q=\left(\diff U\right)_{V,N}$.
+
+\section{Freie Enthalpie}
+Die freie Enthalpie bezeichnet das Potential, welches sowohl Temperatur, als auch Druck als Kontrollvariablen besitzt: $G=U-TS+PV$.
+
+Diesmal betrachten wir also ein abgeschlossenes Gesamtsystem, welches aus zwei Teilsystemen, daran gekoppelt einem Volumenreservoir und einem Wärmereservoir besteht. Wieder beobachten wir, was mit dem System geschieht, wenn eine Auslenkung $\Delta X$ aus dem Gleichgewichtszustand erfolgt. Zum einen nimmt die Entropie mit $\Delta S_\mathrm{G}=\Delta S+\Delta S_\mathrm{R}$ ab, zum anderen führt die Erhaltung der inneren Energie ($\Delta U_\mathrm{G}=\Delta U+T\Delta S_\mathrm{R}-P\Delta V_\mathrm{R}=0$) auf:
+\begin{align*}
+    \Delta U-T\Delta S+P\Delta V=\Delta G>0.
+\end{align*}
+\begin{formal}
+    Die freie Enthalpie strebt bei isotherm-isobaren Prozessen einem Minimum zu.
+\end{formal}
+Analog charakterisiert das Potential wieder ein Arbeitspotential, diesmal für isotherm-isobare Prozesse und es gilt für beliebige Prozesse die naheliegende Relation:
+\begin{align*}
+    \Delta W_\mathrm{RAQ}\leq -\Delta G.
+\end{align*}
+Mit der Eulergleichung folgt zudem für einkomponentige Systeme der Zusammenhang $G=U-TS+PV=\mu N$ und damit ein Ausdruck für die \emph{molare freie Enthalpie}:
+\begin{align*}
+    \mu=\frac{G}{N}.
+\end{align*} 
+In vielkomponentigen Systemen hingegen gilt $G=\mu_1N_1+\mu_2N_2+...$ und unter Berücksichtigung von $N=N_1+N_2+...$ und mit dem Molbruch $x_i=N_i/N$:
+\begin{align*}
+    \frac{G}{N}=x_1\mu_1+x_2\mu_2+...
+\end{align*}
+
+\section{Chemische Reaktionen} 
+Abschluss dieses Kapitels sollen die Grundlagen zu chemischen Reaktionen aus thermodynamischer Sicht bilden.
+
+Wir betrachten ein bekanntes Beispiel - die Knallgasreaktion:
+\begin{align*}
+    \ce{2H2 + O2 <=> 2H2O}.
+\end{align*}
+Die Molzahländerungen einer Reaktion sind miteinander verknüpft und deren Verhältnis wird durch das Verhältnis der Stöchiometrie-Koeffizienten bestimmt: 
+\begin{align*}
+    \Delta N_{H_2}:\Delta N_{O_2}:\Delta N_{H_2O}=-2:-1:2.
+\end{align*}
+Die Reaktionsprodukte sind also durch positive stöchiometrische Koeffizienten und die Reaktanten durch negative Koeffizienten gekennzeichnet.
+Wir führen die sogenannte Reaktionsvariable $a$ ein, welche die Reaktion wie folgt formal charakterisiert:
+\begin{align*}
+    \diff N_{H_2}=-2\diff a\qquad \diff N_{O_2}=-\diff a \qquad \diff N_{H_2O}=2\diff a.
+\end{align*}
+Allgemein gilt mit dem Stöchiometrie-Koeffizienten $\nu_k$ (hier also jeweils $-2,-1$ und $2$):
+\begin{align*}
+    \ce{0 <=>} \sum_{k=1}^{r}\nu_k A_k.
+\end{align*}
+\begin{formal}
+   Die \emph{Molzahländerung} ist gegeben durch $\diff N_k=\nu_k \diff a$, sie ist also mit der Reaktions- bzw. Einstellvariable und dem stöchiometrischen Koeffizienten verknüpft. 
+\end{formal}
+
+Bei der betrachteten Reaktion handelt es sich um eine Gleichgewichtsreaktion, d.h. es finden zwar kontinuierlich Hin-und Rückreaktionen statt, doch diese bleiben gleichverteilt, sodass makroskopisch ein Gleichgewichtszustand vorliegt. Dieses makroskopische Gleichgewicht kann nun auch aus thermodynamischer Sicht beschrieben und das Prinzip der minimalen freien Enthalpie angewandt werden:
+\begin{align*}
+    \left(\diff G\right)_{T,P}=0=\sum_{k=1}^{r}\mu_k\diff N_k=\sum_{k=1}^{r}\left(\mu_k\nu_k\right)\diff a.
+\end{align*}
+Darüber lassen sich im chemischen Gleichgewicht auch die Molbrüche $x_k$ bestimmen.
+\begin{formal}
+    \formalemph{Massenwirkungsgesetz für ideale Gasgemische}
+    Das MWG für ideale Gasgemische chemischer Gleichgewichtsreaktionen beschreibt das Reaktionsgleichgewicht und lautet:
+    \begin{align*}
+        \prod_{k=1}^{r}x_k^{\nu_k}=\left(\frac{P}{P_0}\right)^{-\sum\nu_k}K(T),
+    \end{align*}
+    mit Gleichgewichts- bzw. Massenwirkungskonstante $K$. 
+\end{formal}
+\paragraph*{Reaktionswärme}
+Die Reaktionswärme beschreibt die bei einer Reaktion freiwerdende Energie.
+Wir wollen nun also die Enthalpie als eingeführten Wärmeinhalt betrachten um die Reaktionswärme im oder nahe dem chemischen Gleichgewicht zu bestimmen: Bereits bekannt ist das Differential,
+\begin{align*}
+    \diff H=\diff U + P\diff V +V \diff P= T\diff S+V\diff P+\sum_{k}\nu_k\diff N_k,
+\end{align*}
+welches mittels der geltenden Relationen im Gleichgewicht ($\diff P=0$ und $\sum_{k}\mu_k\nu_k=0$) auf die Reaktionswärme
+\begin{align*}
+    \boxed{\diff H=T\diff S=\udiff Q}
+\end{align*}
+im chemischen Gleichgewicht führt.
+Wir wollen nun auch die Reaktionswärme pro Mol Reaktionsschritte $a$ bestimmen. Dazu betrachten wir das Entropiedifferential:
+\begin{align*}
+    \diff S=-\frac{\partial}{\partial a}\left(\frac{\partial G}{\partial T}\right)\diff a=-\frac{\partial}{\partial T}\left(\frac{\partial G}{\partial a}\right)\diff a=-\frac{\partial}{\partial T}\left(\sum_{k}\mu_k\nu_k\right)\diff a
+\end{align*}
+wobei die Entropie als Ableitung der freien Enthalpie nach der Temperatur ausgedrückt wurde.
+Dies führt auf den gesuchten allgemeinen Ausdruck für die Reaktionswärme:
+\begin{align*}
+    \boxed{\left(\frac{\partial H}{\partial a}\right)_{T,P}=-T\frac{\partial}{\partial T}\left(\sum_{k}\mu_k\nu_k\right)}\;.
+\end{align*}
+Man unterscheidet mit Hilfe dieses Ausdrucks zwei Fälle, welche eine Reaktion genauer charakterisieren.
+\begin{itemize}
+    \item $\left(\frac{\partial H}{\partial a}\right)>0$ charakterisiert \emph{endotherme} Reaktionen, welche eine Wärme- oder Energiezufuhr benötigen.
+    \item $\left(\frac{\partial H}{\partial a}\right)<0$ charakterisiert \emph{exotherme} Reaktionen, welche eine Wärme- oder Energieabgabe verursachen.
+\end{itemize}
+Unser ursprünglich eingeführtes Beispiel, die Knallgasreaktion, ist exotherm.
+Wieder können die Reaktionen in idealen Gasgemischen betrachtet werden und eine entsprechende Reaktionswärme, 
+\begin{align*}
+    \left(\frac{\partial H}{\partial a}\right)_{T,P}=RT^2\frac{\diff}{\diff T}\ln K(T),
+\end{align*}
+die van t'Hoff-Beziehung formuliert werden.
+\begin{summary}
+    Wir haben festgestellt, dass für die neu eingeführten Potentiale ebenfalls Minimierungsprinzipien gelten.
+    \begin{itemize}
+        \item Die \emph{freie Energie} nimmt in einem System konstanter Temperatur (also für isotherme Prozesse) ihr Minimum an.\\
+        Die isotherme Abnahme der freien Energie entspricht der maximal möglichen Arbeitsleistung des Systems. Deswegen wird die freie Energie auch als \emph{Arbeitspotential} bezeichnet.
+        \item Die \emph{Enthalpie} nimmt in einem System konstanten Drucks (also für isobare Prozesse) ein Minimum an.\\
+        Sie bezeichnet den \emph{Wärmeinhalt} eines Systems, welches unter konstantem Druck steht.\\
+        Die \emph{molare freie Enthalpie} für einkomponentige Systeme entspricht $G/N=\mu$, für mehrkomponentige: $G/N=\sum_ix_i\mu_i$.
+        \item Die \emph{freie Enthalpie} strebt bei isotherm-isobaren Prozessen einem Minimum zu. 
+    \end{itemize}
+    Allgemein gilt für Systeme in Kontakt mit Reservoiren der extensiven Variablen $X_i$ bei reversiblen Prozessen: $\Delta W_\mathrm{RAQ}=-\Delta U\left[P_i\right]$, dass die Abnahme der entsprechenden Legendre-Transformierten der verrichtbaren Arbeit entspricht.
+    
+    Zu den Grundlagen chemischer Reaktionen: Grundlegend sind die \emph{stöchiometrischen Faktoren} $\nu_k$, welche über das selbe Verhältnis mit den Molzahländerungen, $\diff N_k$, einer Reaktion zusammenhängen. Die \emph{Reaktionsvariable} $a$ entspricht einem Reaktionsschritt und formalisiert die Molzahländerungen mittels der stöchiometrischen Koeffizienten ($\diff N_k=\nu_k A_k$). 
+    Eine Gleichgewichtsreaktion, ist eine Reaktion, welche einen dynamischen, makroskopischen Gleichgewichtszustand von Reaktanten und Produkten erzeugt. Dieser kann mittels der freien Enthalpie und ihrer Minimierung beschrieben werden: $\left(\diff G\right)_{T,P}=0=\sum_{k=1}^{r}(\mu_k\nu_k)\diff a$.
+    Wir haben das \emph{Massenwirkungsgesetz für ideale Gasgemische},
+    \begin{align*}
+        \prod_{k=1}^{r}x_k^{\nu_k}=\left(\frac{P}{P_0}\right)^{-\sum\nu_k}K(T),
+    \end{align*}
+    eingeführt.
+    Die Reaktionswärme einer Reaktion wird über die Enthalpie beschrieben.Da der Druck konstant und die Summe über die Produkte aller stöchiometrischen Koeffizienten und der zugehörigen chemischer Potentiale im Gleichgewichtszustand gleich null ist, folgt die Relation: $\diff H=T\diff S$. Wir können ferner die Reaktionswärme pro Mol Reaktionsschritte definieren:
+    \begin{align*}
+        \left(\frac{\partial H}{\partial a}\right)_{T,P}=-T\frac{\partial}{\partial T}\left(\sum_{k}\mu_k\nu_k\right).
+    \end{align*}
+    Diese Größe erlaubt es uns zwischen endothermen ($\frac{\partial H}{\partial a}>0$) und exothermen ($\frac{\partial H}{\partial a}<0$) Reaktionen zu unterscheiden. Erstere benötigen eine Energiezufuhr, letztere setzen Energie frei.
+    Die \emph{van t'Hoff-Beziehung} beschreibt die Größe für Reaktionen idealer Gasgemische:
+    \begin{align*}
+        \left(\frac{\partial H}{\partial a}\right)_{T,P}=RT^2\frac{\diff}{\diff T}\ln K(T).
+    \end{align*}
+\end{summary}
