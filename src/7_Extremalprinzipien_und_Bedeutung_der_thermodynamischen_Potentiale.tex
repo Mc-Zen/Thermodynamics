@@ -136,16 +136,20 @@ Allgemein gilt mit dem Stöchiometrie-Koeffizienten $\nu_k$ (hier also jeweils $
 
 Bei der betrachteten Reaktion handelt es sich um eine Gleichgewichtsreaktion, d.h. es finden zwar kontinuierlich Hin-und Rückreaktionen statt, doch diese bleiben gleichverteilt, sodass makroskopisch ein Gleichgewichtszustand vorliegt. Dieses makroskopische Gleichgewicht kann nun auch aus thermodynamischer Sicht beschrieben und das Prinzip der minimalen freien Enthalpie angewandt werden:
 \begin{align*}
-    \left(\diff G\right)_{T,P}=0=\sum_{k=1}^{r}\mu_k\diff N_k=\sum_{k=1}^{r}\left(\mu_k\nu_k\right)\diff a.
+    \left(\diff G\right)_{T,P}=0=\sum_{k=1}^{r}\mu_k\diff N_k=\sum_{k=1}^{r}\left(\mu_k\nu_k\right)\diff a,
+\end{align*} 
+woraus für das chemische Gleichgewicht 
+\begin{align*}
+    \boxed{\sum_{k=1}^{r}\mu_k\nu_k=0}
 \end{align*}
-Darüber lassen sich im chemischen Gleichgewicht auch die Molbrüche $x_k$ bestimmen.
+folgt. Darüber lassen sich im chemischen Gleichgewicht auch die Molbrüche $x_k$ bestimmen.
 \begin{formal}
     \formalemph{Massenwirkungsgesetz für ideale Gasgemische}
     Das MWG für ideale Gasgemische chemischer Gleichgewichtsreaktionen beschreibt das Reaktionsgleichgewicht und lautet:
     \begin{align*}
         \prod_{k=1}^{r}x_k^{\nu_k}=\left(\frac{P}{P_0}\right)^{-\sum\nu_k}K(T),
     \end{align*}
-    mit Gleichgewichts- bzw. Massenwirkungskonstante $K$. 
+    mit Gleichgewichts- bzw. Massenwirkungskonstante $K$. Es ist auch für verdünnte Lösungen anwendbar.
 \end{formal}
 \paragraph*{Reaktionswärme}
 Die Reaktionswärme beschreibt die bei einer Reaktion freiwerdende Energie.
