@@ -2,7 +2,7 @@
 
 \chapter{Phasenübergänge\label{sec:phasenuebergaenge}}
 
-Als Phasenübergang wird die Umwandlung einer Phase in eine andere bezeichnet. Ein typisches Beispiel ist der Wechsel zwischen Aggregatzuständen, z.~B. Verdampfung oder Kondensation. In \Abbref{fig:Phasendiagramme} sind zwei Phasendiagramme für die Phasen fest, flüssig und gasförmig dargestellt. Markiert sind jeweils der Tripelpunkt und der kritische Punkt. Kurven stellen Phasenkoexistenzlinien dar, bei der zwei Phasen (beispielsweise die feste und die flüssige) gleichzeitig vorhanden sind. Am Tripelpunkt treffen sich die Phasenkoexistenzlinien und alle drei Phasen liegen zugleich vor. Rechts wird das Phasendiagramm von Wasser gezeigt \textendash{} hier offenbart sich eine Anomalie: unter höheren Druck sinkt die Schmelztemperatur.
+Als Phasenübergang wird die Umwandlung einer Phase in eine andere bezeichnet. Ein typisches Beispiel ist der Wechsel zwischen Aggregatzuständen, z.~B. Verdampfung oder Kondensation. In \Abbref{fig:Phasendiagramme} sind zwei Phasendiagramme für die Phasen fest, flüssig und gasförmig dargestellt. Markiert sind jeweils der Tripelpunkt und der kritische Punkt. Kurven stellen Phasenkoexistenzlinien dar, bei der zwei Phasen (beispielsweise die feste und die flüssige) gleichzeitig vorhanden sind. Am Tripelpunkt treffen sich die Phasenkoexistenzlinien und alle drei Phasen liegen zugleich vor. Der kritische Punkt liegt am Ende der Koexistenzlinie von flüssiger und gasförmiger Phase. Hier geht der Dichteunterschied der beiden Phasen gegen null und Phasenübergänge zweiter Ordnung finden statt. Rechts wird das Phasendiagramm von Wasser gezeigt \textendash{} hier offenbart sich eine Anomalie: unter höheren Druck sinkt die Schmelztemperatur.
 
 Phasenübergänge werden in zwei Kategorien eingeteilt: Phasenübergänge erster und zweiter Ordnung.
 
@@ -99,14 +99,14 @@ mit unbekannter aber hier nicht relevanter Integrationskonstante $\phi(T)$. Der 
     \label{fig:PhaseSeparationChemPotential}
 \end{figure}
 
-Das thermische Gleichgewicht wird durch das Minimum von $\mu=G/N$ bestimmt. Das sind dann die stabilen Zustände.  Damit gibt es einen Knick von $\mu(P)$ bei $\mu(D)=\mu(O)$ und auch eine Unstetigkeit in $v=(\partial\mu/\partial P)_T$. In dem fraglichen Bereich koexistieren zwei Phase (hier Gas und Flüssigkeit) mit unterschiedlicher Dichte und Molvolumen.
+Das thermische Gleichgewicht wird durch das Minimum von $\mu=G/N$ bestimmt. Das sind dann die stabilen Zustände.  Damit gibt es einen Knick von $\mu(P)$ bei $\mu(D)=\mu(O)$ und auch eine Unstetigkeit in $v=(\partial\mu/\partial P)_T$. In dem fraglichen Bereich koexistieren zwei Phasen (hier Gas und Flüssigkeit) mit unterschiedlicher Dichte und Molvolumen.
 
 
 \paragraph*{Phasenverhalten}
 
 Koppeln wir nun das System an ein Wärme- und ein Volumenreservoir, halten die Temperatur $T$ konstant und erlauben $P$ sich quasistatisch zu verändern.
 
-Im ersten Bereich $P<P_B$ ist das Molvolumen $v$ eindeutig. Im Bereich $P_B<P<P_D$ ist $v(C)>v(L)>v(N)$. Wir wissen, dass der Zustand L instabil ist, da $\partial v/\partial P>0$. Das Potential $\mu(C)$ ist kleiner als $\mu(N)$ und  ist C im thermischen Gleichgewicht der realisierte Zustand. N ist zwar ebenfalls nicht instabil, aber entspricht nicht dem Minimum von $G$ und ist daher metastabil.
+Im ersten Bereich $P<P_B$ ist das Molvolumen $v$ eindeutig. Im Bereich $P_B<P<P_D$ ist $v(C)>v(L)>v(N)$. Wir wissen, dass der Zustand L instabil ist, da $\partial v/\partial P>0$. Das Potential $\mu(C)$ ist kleiner als $\mu(N)$ und C ist im thermischen Gleichgewicht der realisierte Zustand. N ist zwar ebenfalls nicht instabil, aber entspricht nicht dem Minimum von $G$ und ist daher metastabil.
 
 Für $P_D=P_K=P_O$ ist $\mu(D) = \mu(O)$. Hier wird der Zweig gewechselt und zwei Phasen koexistieren (jeweils mit $v(D)$ und $v(O)$). Die übrigen Bereiche werden analog zu den ersten beiden behandelt. Die physikalische Isotherme ist folglich die grüne Kurve in den Abbildungen \Abbref{fig:PhaseSeparation} und \Abbref{fig:PhaseSeparationChemPotential}.
 
@@ -133,13 +133,13 @@ Betrachten wir nun wieder das Molvolumen (siehe \Abbref{fig:PhaseSeparation}). F
 \end{align*}
 ist dort unstetig. Wir sehen, dass ein Volumensprung einer Unstetigkeit der ersten Ableitung von $\mu=G/N$ entspricht. Aus den gewonnenen Erkenntnissen leiten wir folgende Bezeichungen ab:
 \begin{itemize}
-    \item Ein unstetige Wechsel von Eigenschaften entspricht dem Übergang zwischen zwei Phasen
+    \item Ein unstetiger Wechsel von Eigenschaften entspricht dem Übergang zwischen zwei Phasen
     \item Ein Phasenübergang erster Ordnung entspricht einer Unstetigkeit in der ersten Ableitung eines geeigneten thermodynamischen Potentials (z.~B. $G=\mu N$).
 \end{itemize}
 
 Die Zweige im $\mu$-$P$-Diagramm stellen Phasen im Phasendiagramm dar. Der Schnittpunkt der Zweige ist ein Phasenübergang.
 
-Auch die isotherme Kompressibilität $|\partial v/\partial P|$ ist bei $P<P_D$ groß und bei $P<P_O$ klein (besser in \Abbref{fig:VanDerWaalsIsotherm} zu sehen, die Kurven verlaufen links vom Koexistenzpunkt steil und rechts flach), was unseren Vorstellungen von einem Gas (hohe Kompressibilität) und einer Flüssigkeit (geringe Kompressibilität) entspricht.
+Auch die isotherme Kompressibilität, welche proportional zu $|\partial v/\partial P|$ ist, ist bei $P<P_D$ groß und bei $P>P_O$ klein (besser in \Abbref{fig:VanDerWaalsIsotherm} zu sehen, die Kurven verlaufen links vom Koexistenzpunkt steil und rechts flach), was unseren Vorstellungen von einem Gas (hohe Kompressibilität) und einer Flüssigkeit (geringe Kompressibilität) entspricht.
 
 
 Ab dem kritischen Punkt (bei Temperaturen $T>T_\mathrm{K}$ bzw. Drücken $P>P_\mathrm{k}$) liegt allerdings kein Volumensprung mehr vor (nur eine Lösung von Gleichung~\eqref{eq:van der waals isotherme}). Wird der Prozess so gewählt, dass der Übergang bei $T_\mathrm{k}$ stattfindet, so handelt es sich um einen Phasenübergang zweiter Ordnung, der im nächsten Kapitel behandelt wird. Es ist aber auch ein Weg denkbar, bei dem zuerst die Temperatur auf über $T_\mathrm{k}$ erhöht wird, dann das Volumen vergrößert oder verkleinert wird und die Temperatur anschließend wieder auf ihren Ursprungswert abgesenkt wird. In diesem Fall findet kein Phasenübergang statt, denn die Koexistenzlinie endet im kritischen Punkt.
@@ -176,4 +176,67 @@ Bei dem Übergang von O nach D (flüssig nach gasförmig) muss Wärme aufgenomme
 \begin{align}
     \Delta q = T\Delta s = T(s_D-s_O) = \Delta h
 \end{align}
-aufgenommen. Sie ist hier gleich der molaren freien Enthalpie $\Delta q = \Delta h = T\diff S+v\diff P$, da $P=\mathrm{const}$. 
+aufgenommen. Sie ist hier gleich der molaren Enthalpie $\Delta q = \Delta h = T\diff S+v\diff P$, da $P=\mathrm{const}$. 
+
+\paragraph*{Innere Energie}
+Die molare innere Energieänderung, welche beim Phasenübergang vorliegt entspricht:
+\begin{align*}
+    \Delta u=T\Delta s+P\Delta v.
+\end{align*}
+
+\begin{summary}
+    Es gibt Phasenübergänge erster und zweiter Ordnung. Erstere werden zum Beispiel durch Unstetigkeiten in der Dichte oder dem Molvolumen oder durch latente Wärme gebildet.\\
+    \formalemph{Phasenübergänge erster Ordnung in Einkomponentensystemen}
+    In einem Van-der-Waals-Gas gilt die reduzierte, universelle Van-der-Waals-Zustandsgleichung:
+    \begin{align*}
+        \left(p+\frac{3}{\tilde{v}^2}\right)\left(3\tilde{v}-1\right)=8t
+    \end{align*}
+    mit den reduzierten Größen:
+    \begin{align*}
+        p=\frac{P}{P_k}, \qquad t=\frac{T}{T_k}, \qquad \tilde{v}=\frac{v}{v_k},
+    \end{align*}
+    wobei die Größen am kritischen Punkt mit $k$ denotiert sind.
+    Bedingt durch die Unabhängigkeit der Zustandsgleichung von den Gasparametern $a$ und $b$, verhalten sich alle Gase beim flüssig-gasförmig-Übergang gleich. Dies wird als das \emph{Ähnlichkeitsgesetz} bezeichnet.
+    Die Zustandsgleichung beschreibt verschiedene Isotherme. Jene für welche $T<T_k$ gilt, besitzen ein ausgezeichnetes Minimum und Maximum. Zwischen diesen ist die Stabilitätsbedingung,
+    \begin{align*}
+        \kappa_T=-\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T>0 \quad \leftrightarrow \quad \left(\frac{\partial P}{\partial v}\right)_T<0,
+    \end{align*}
+    allerdings verletzt. Damit ist ein Teil der Isotherme unphysikalisch und das System instabil. Es erfolgt dort eine Phasentrennung, bei der die zwei Zustände (flüssig und gasförmig, welche links und rechts der Extrema vorliegen) in verschiedenen Verhältnissen entlang einer Isobaren mit unerschiedlichen Dichten und Molvolumina koexistieren.
+    
+    Betrachtet man das chemische Potential, welches die Isotherme charakterisiert und das thermische Gleichgewicht durch ihr Minimum bestimmt, so beobachtet man eine Unstetigkeit im Molvolumen $v=\left(\partial \mu/\partial P\right)_T$ dort, wo die stabile Phase des Systems jeweils endet.
+
+    Für die Bereiche, in denen $v(P)$ nicht mehr eindeutig ist, gilt zusammenfassend:
+    \begin{itemize}
+        \item Der physikalische Zustand ist unstabil, sobald $\partial v/\partial P>0$ gilt.
+        \item Das Minimum des chemischen Potentials charakterisiert immer den realisierten Zustand. 
+        \item Nicht instabile Zustände, welche ein größeres chemisches Potential haben als stabile Zustände, nennt man metastabil.
+        \item An dem Punkt, an dem ein Knick im chemischen Potential der Isothermen vorliegt, findet ein Zweigwechsel statt und zwei Phasen koexistieren mit unterschiedlichen Molvolumina.
+    \end{itemize}
+Dieser Koexistenzpunkt lässt sich mittels der Gleichheit der chemischen Potentiale in diesem Punkt bestimmen. Die Gleichheit ist auch physikalisch gedeutet naheliegend, da an diesem Punkt ein Gleichgewichtszustand zweier koexistenter Phasen vorliegt. Diese Bedingung führt auf die sogenannte Maxwellkonstruktion,
+\begin{align*}
+    \int_D^F v\diff P-\int_K^F v\diff P=\int_M^K v\diff P-\int_M^O v\diff P.
+\end{align*}
+Sie besagt, dass die durch die Isotherme und die Isobare des Überganges von stabilem zu metastabilem Bereich eingeschlossenen Flächen gleich groß sind.
+Am Koexistenzpunkt findet nun bedingt durch die Unstetigkeit im Molvolumen auch ein Volumensprung statt.  
+Verallgemeinert gilt:
+\begin{itemize}
+    \item Ein unstetiger Wechsel von Eigenschaften entspricht dem Übergang zwischen zwei Phasen.
+    \item Ein Phasenübergang erster Ordnung entspricht einer Unstetigkeit in der ersten Ableitung eines
+    geeigneten thermodynamischen Potentials (z. B. $G = \mu N$ ).
+\end{itemize}
+Auch die Kompressibilität erfährt aufgrund ihrer Proportionalität zur Ableitung des Molvolumens einen Sprung. Entsprechend unserer Intuition, ist sie für Gase groß und für Flüssigkeiten klein. 
+
+Ab dem kritischen Punkt findet kein Volumensprung mehr statt. Findet ein Übergang bei der kritischen Temperatur $T_k$ statt, so ist dies ein Übergang zweiter Ordnung. 
+
+Auch die Entropie, $s(T,v)=-\left(\partial \mu/\partial T\right)_P$, weist durch ihre Abhängigkeit vom Molvolumen einen Sprung auf. Dies führt zu einer sprunghaften Zunahme der Entropie beim Phasenübergang von flüssig zu gasförmig.
+
+Als \emph{latente Wärme} wird die Wärme bezeichnet, welche aufgenommen wird und den Entropiesprung zu ermöglichen (diese Wärme erhöht die Temperatur nicht!). Pro Mol wird die Wärme
+\begin{align*}
+    \Delta q = T\Delta s = T(s_D-s_O) = \Delta h
+\end{align*}
+aufgenommen. Sie entspricht der molaren freien Enthalpie, da der Druck konst ist.
+Die Energieänderung entspricht:
+\begin{align*}
+    \Delta u=T\Delta s+P\Delta v.
+\end{align*}
+\end{summary}
