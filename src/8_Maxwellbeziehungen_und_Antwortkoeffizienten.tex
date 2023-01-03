@@ -1,4 +1,132 @@
 % !TeX root = Theo_IV.tex
 
-\chapter{Maxwellbeziehungen und Antwortkoeffizienten\label{sec:Maxwellbeziehungen und Antwortkoeffizienten}}
+\chapter{Maxwellbeziehungen und Antwortkoeffizienten}
+\label{sec:Maxwellbeziehungen und Antwortkoeffizienten}
+Wir haben die Maxwellbeziehungen bereits in Kapitel \ref{sec:Antwortkoeffizienten und Beispielsysteme} eingeführt. Sie beschreiben die Relationen zwischen den zweiten Ableitungen der inneren Energie. Die Vielzahl thermodynamischer Variablen führt natürlich dazu, dass es eine Vielzahl an bildbaren Ableitungen (welche voneinander abhängen) und mit ihnen charakterisierbare Antwortkoeffizienten gibt.
+Dass sie voneinander abhängen erleichtert wiederum ihren Zugang, da die Messung einiger Antwortkoeffizienten den Rückschluss auf andere erlauben. Zudem folgen sie einem Minimalsatz, den wir später noch kennenlernen werden.
 
+\section{Maxwell-Beziehungen}
+	Wir schreiben zur Erinnerung noch einmal alle vollständigen Differentiale der eingeführten Potentiale auf:
+	\begin{align*}
+			\diff U=T\diff S-P\diff V+\mu \diff N \qquad \diff F =-S\diff T-P\diff V+\mu \diff N\\
+			\diff H=T\diff S+V\diff P+\mu \diff N \qquad \diff G=-S\diff T+V\diff P+\mu \diff N
+	\end{align*}
+	\begin{formal}
+		Die Integrabilitätsbedingung gilt für alle Potentiale, d.h. die gemischten zweiten Ableitungen sind identisch und werden durch die Maxwell-Beziehungen beschrieben.
+	\end{formal}
+	Wir illustrieren dies anhand zweier Beispiel-Relationen:
+	\begin{align*}
+		-\left(\frac{\partial P}{\partial  S}\right)_{V,N}=\frac{\partial}{\partial S}\left(\frac{\partial U}{\partial V}\right)=\frac{\partial}{\partial V}\left(\frac{\partial U}{\partial S}\right)=\left(\frac{\partial T}{\partial V}\right)_{S,N}
+	\end{align*}
+	Die negative Druckänderung pro Wärmeeinheit entspricht damit der Temperaturänderung pro Volumeneinheit unter Konstanz der übrigen extensiven Variablen. 
+	Eine zweite Relation illustriert den Zusammenhang zwischen dem Inversen der isothermen Volumenzunahme pro Wärmeeinheit und der isochoren Druckänderung pro Temperatureinheit, wieder unter Voraussetzung der Konstanz der übrigen extensiven Größe, der Teilchenzahl:
+	\begin{align*}
+		\left(\frac{\partial S}{\partial  V}\right)_{T,N}=\frac{\partial}{\partial V}\left(-\frac{\partial F}{\partial T}\right)=\frac{\partial}{\partial T}\left(-\frac{\partial F}{\partial V}\right)=\left(\frac{\partial P}{\partial T}\right)_{V,N}.
+	\end{align*}
+
+\section{Ableitungen in einkomponentigen Systemen}
+	Wir wollen nun Ableitungen in einkomponentigen Systemen unter der Prämisse betrachten, dass die Teilchenzahl konstant bleibt ($N=const$).
+	Gegeben sind unterschiedliche extesnsive und intensive Größen, welche verschiedene Ableitungen erlauben. 
+	Einige dieser Ableitungen haben eine naheliegende experimentelle Relevanz, beispielsweise die Temperaturänderung pro Druckeinheit: $\diff T=(\partial T/\partial P)_V\diff P$. Andere wiederum haben eine weniger ersichtliche Bedeutung. So ist beispielsweise $(\partial P/\partial U)_G$ bildbar, doch dessen experimentelle Relevanz vorerst nicht ersichtlich.
+
+	Aus dieser Unterscheidung der Ableitungen heraus entsteht die Suche nach einem Ordnungsprinzip, welches die Bildung der Ableitungen und deren Zusammenhänge strukturiert.
+	\begin{formal}
+		\formalemph{Einführung eines Ordnungsprinzips}
+		Alle exemplarisch eingeführten Ableitungen können durch drei Basisableitungen ausgedrückt werden. 
+	\end{formal}
+	Wir wollen dies mittels der zweiten Ableitungen der molaren freien Enthalpie, $g=G/N$, und anhand der bereits eingeführten Antwortkoeffizienten illustrieren:
+	\begin{itemize}
+		\item Die isobare spezifische Wärme ist gegeben durch: 
+		\begin{align*}
+		c_P=\frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_P=-T\left(\frac{\partial^2g}{\partial T^2}\right)_P.
+		\end{align*}
+		\item Der isobare thermische Ausdehnungskoeffizient wird beschrieben durch:
+		\begin{align*}
+			\alpha=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P=\frac{1}{v}\frac{\partial^2g}{\partial T\partial P}.
+			\end{align*}
+		\item Die isotherme Kompressibilität wird charakterisiert durch:
+		\begin{align*}
+			\kappa_T=-\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T=-\frac{1}{v}\left(\frac{\partial^2g}{\partial P^2}\right)_T.
+			\end{align*}
+	\end{itemize}
+	Diese Koeffizienten sind allesamt experimentell leicht zugänglich und bestimmen die freie Enthalpie bis auf eine Konstante.
+
+	Das Postulat des Ordnungsprinzips, demzufolge nun alle Ableitungen mittels der drei beschriebenen Antwortkoeffizienten gebildet werden können, bleibt zu beweisen. Dieser Beweis soll nur abstrakt skizziert werden:
+	Im ersten Schritt ist zu zeigen, dass die Antwortkoeffizienten durch die Menge der zweiten Ableitungen $\left\{\partial^2U/\partial S^2,\partial^2U/\partial S\partial V, \partial^2U/\partial V^2\right\}$ ausgedrückt werden können (und umgekehrt). Anschließend wird gezeigt, dass jede bildbare Ableitung mittels dieser Menge zweiter Ableitungen dargestellt werden kann (und damit auch mittels der Antwortkoeffizienten). Tritt im Verlauf des Beweises $\mu$ auf, so wird dies mittels der Gibbs-Duhem-Beziehung ($\diff \mu =-s\diff T+v\diff P$) eliminiert.
+
+	\paragraph*{Beispiel einer Relation zwischen Ableitung und Antwortkoeffizienten} Wir werden diesem Vorgehen nun für ein Beispiel exemplarisch folgen.
+	Wir wollen 
+	\begin{align*}
+		\left(\frac{\partial T}{\partial P}\right)_V
+	\end{align*}
+	mittels der zweiten Ableitung der inneren Energie ausdrücken.
+
+	Zu allererst bilden wir das Differential der betrachteten Größe $T(P,V)$:
+	\begin{align}
+		\label{eq:DifferentialT}
+		\diff T=\left(\frac{\partial T}{\partial P}\right)_V\diff P+\left(\frac{\partial T}{\partial V}\right)_P \diff V.
+	\end{align}
+Wir identifizieren innerhalb dieser Gleichung die partielle Ableitung, welche betrachtet wird und ersetzen den Variablensatz der Größe, ($P,V$), mittels einer Transformation mit dem Variablensatz der inneren Energie, ($S,V$). Dazu bilden wir das einzusetzende Differential von $P(S,V)$,
+\begin{align*}
+	\diff P=\left(\frac{\partial P}{\partial S}\right)_V\diff S+\left(\frac{\partial P}{\partial V}\right)_S \diff V,
+\end{align*}
+und setzen es in Gleichung \ref{eq:DifferentialT} ein:
+\begin{align*}
+	\diff T=\left(\frac{\partial T}{\partial P}\right)_V\left(\frac{\partial P}{\partial S}\right)_V\diff S+...\diff V=\left(\frac{\partial T}{\partial S}\right)_V+...\diff V.
+\end{align*}
+Der zweite Term ist für uns jeweils unerheblich, da wir nur die Koeffizienten vor $\diff S$ vergleichen wollen.
+Mit den bekannten Relationen $T=\partial U/\partial S$ und $P=-\partial U/\partial V$ gelangen wir entsprechend zu der Gleichung:
+\begin{align*}
+	\left(\frac{\partial T}{\partial S}\right)_V=\frac{\left(\frac{\partial^2 U}{\partial S^2}\right)}{-\frac{\partial ^2U}{\partial V\partial S}.}
+\end{align*}
+Damit haben wir den zweiten Beweisschritt exemplarisch vollzogen und können nun im nächsten Schritt auch eine Beziehung zu den Antwortkoeffizienten herstellen.
+
+Alternativ können wir auch zeigen, dass die Ableitung über die Antwortkoeffizienten ausgedrückt werden kann.
+Dazu müssen die Variablen $P,V$ durch $T$ und $P$ ersetzt werden. 
+Wir überlegen uns also, wie $V$ in Abhängigkeit dieser Variablen ausgedrückt werden kann:
+\begin{align*}
+	\diff V=\left(\frac{\partial V}{\partial T}\right)_P \diff T+\left(\frac{\partial V}{\partial P}\right)_T \diff P.
+\end{align*}
+Das weitere Vorgehen ist uns natürlich bekannt, wir setzen wieder in Gleichung \ref{eq:DifferentialT} ein:
+\begin{align*}
+	0=\left\{\left(\frac{\partial T}{\partial P}\right)_V+\left(\frac{\partial T}{\partial V}\right)_P\left(\frac{\partial V}{\partial P}\right)_T\right\}\diff P+\left\{\left(\frac{\partial T}{\partial V}\right)_P\left(\frac{\partial V}{\partial T}\right)_P-1\right\}\diff T.
+\end{align*}
+ Beide Differential-Koeffizienten werden mit null gleichgesetzt und die erhaltenen Relationen ineinander eingesetzt. Dies führt abschließend auf die gesuchte Beziehung zu den Antwortkoeffizienten:
+\begin{align*}
+	\boxed{\left(\frac{\partial T}{\partial P}\right)_V=\frac{-\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T}{\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P}=\frac{\kappa_T}{\alpha}}\;.
+\end{align*}
+\paragraph*{Verallgemeinerung und Rechenregeln}
+Wir wollen abschließend die erarbeitete Vorgehensweise verallgemeinert darstellen. Dazu betrachten wir drei Variablen, welche voneinander abhängen (z.B. $P,T,V$):
+\begin{align*}
+	X=X(Y,Z) \leftrightarrow Y=Y(X,Z) \leftrightarrow Z=Z(X,Y).
+\end{align*}
+Als erstes wird das Differential der betrachteten Größe aufgeschrieben:
+\begin{align}
+	\label{eq:DifferentialX}
+	\diff X = \left(\frac{\partial X}{\partial Y}\right)_Z\diff Y+\left(\frac{\partial X}{\partial Z}\right)_Y\diff Z.
+\end{align}
+Dann soll eine Transformation des Variablensatzes von $Y,Z$ nach $X,Z$ erfolgen. Wir schreiben also das Differential der zu transformierenden Größe wie folgt:
+\begin{align*}
+	\diff Y=\left(\frac{\partial Y}{\partial X}\right)_Z\diff X+\left(\frac{\partial Y}{\partial Z}\right)_X\diff Z.
+\end{align*}
+Einsetzen des Differentiales in Gleichung \ref{eq:DifferentialX} führt auf die bekannte Form:
+\begin{align*}
+	0=\left\{-1+\left(\frac{\partial X}{\partial Y}\right)_Z\left(\frac{\partial Y}{\partial X}_Z\right)\right\}\diff X+\left\{\left(\frac{\partial X}{\partial Y}\right)_Z\left(\frac{\partial Y}{\partial Z}\right)_X+\left(\frac{\partial X}{\partial Z}\right)_Y\right\}\diff Z.
+\end{align*} 
+Dies führt bedingt durch die unabhängige Variation von von $X$ und $Z$ auf die zwei Relationen:
+\begin{align*}
+	\boxed{\left(\frac{\partial X}{\partial Y}\right)_Z=\left(\frac{\partial Y}{\partial X}_Z\right)^{-1}\qquad \qquad \left(\frac{\partial X}{\partial Y}\right)_Z=-\frac{\left(\frac{\partial X}{\partial Z}\right)_Y}{\left(\frac{\partial Y}{\partial Z}\right)_X}}\;.
+\end{align*}
+Erste beschreibt die Gleichheit zur Inversen der umgekehrten Ableitung und letztere beschreibt eine zur Kettenregel ähnliche Relation und illustriert, dass zweidimensionale Flächen lokal durch zwei Steigungen bzw. Ableitungen festgelegt werden.
+
+Als nächstes betrachten wir eine Situation, in welcher eine Variable $Y$ durch eine neue Variable $W(Y,Z)$ (beispielsweise $\mu$) ersetzt werden soll.
+Für diesen Fall gilt: $X=X(Y,Z)=X(W(Y,Z),Z)$. 	
+Die Ableitungen werden mit Hilfe der Kettenregel wie folgt berechnet:
+\begin{align*}
+	\boxed{\left(\frac{\partial X}{\partial Y}\right)_Z=\left(\frac{\partial X}{\partial W}\right)_Z\left(\frac{\partial W}{\partial Y}\right)_Z=\frac{\left(\frac{\partial X}{\partial W}\right)_Z}{\left(\frac{\partial Y}{\partial W}\right)_Z}}
+\end{align*}
+einerseits und andererseits
+\begin{align*}
+	\boxed{\left(\frac{\partial X}{\partial Z}\right)_Y=\left(\frac{\partial X}{\partial Z}\right)_W+\left(\frac{\partial X}{\partial W}\right)_Z\left(\frac{\partial W}{\partial Z}\right)_Y}\;.
+\end{align*}
+Ein wichtiges Beispiel für die Anwendung der letzteren Regel bildet die spezifische Wärme mit $c_P=c_V+\frac{TV\alpha^2}{N\kappa}$.
