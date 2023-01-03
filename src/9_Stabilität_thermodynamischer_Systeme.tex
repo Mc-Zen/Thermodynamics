@@ -1,4 +1,262 @@
 % !TeX root = Theo_IV.tex
 
 \chapter{Stabilität thermodynamischer Systeme\label{sec:Stabilitaet thermodynamischer Systeme}}
+Bislang haben wir die Gleichgewichtsbedingung im Sinne der Entropiemaximierung nur in Bezug auf die erste Ableitung betrachtet ($\diff S=0$), nun soll auch die zweite Ableitung, $\diff^2S<0$, genutzt werden, um Rücklschlüsse auf die Materialkonstanten zu ziehen. Es wird sich zeigen, dass beispielsweise die isochore spezifische Wärme größer als null ist, da die Temperaturzunahme proportional zur Wärmezufuhr ist. Auch die isotherme Kompressibilität ist größer null, da das negative Volumen sich proportional zum Druck verhält. Diese Zusammenhänge sind anschaulich erfassbar, folgen jedoch auch formal aus den aufgestellten Relationen. Die Entropiemaximierung wird uns darüber hinaus einen Zugang zur Beschreibung von Phasenübergängen liefern. Letztere sind ein sehr grundlegender Teilbereich der Thermodynamik.
 
+\section{Entropische Fundamentalbeziehung und intrinsische Stabilität}
+Wir beginnen mit einem einfachen Gedankexperiment: Es sei ein Gesamtsystem gegeben, welches aus zwei identischen, voneinander komplett getrennten Teilsystemen besteht. Der Entropieverlauf der identischen Teilsysteme soll nun, wie in Abb ([ref][Abb]) dargestellt, eine positive Krümmung aufweisen. Dies hat zur Folge, dass bei einem Energieübertrag von $\Delta U$ von einem Teilsystem ins andere die Gesamtentropie zunimmt. Dies ist graphisch ebenfalls leicht nachzuvollziehen, da ${1/2\left[S(U+\Delta U)+S(U-\Delta U)\right]>S(U)}$ gilt und damit offenkundig:
+\begin{align*}
+    S(U+\Delta U)+S(U-\Delta U)>2 S(U).
+\end{align*}
+
+Wird die Wand plötzlich wärmeleitend, so erfolgt ein spontaner Energiefluss von einem Teilsystem zum anderen, da dies der soeben festgestellten Entropiezunahme folgt. Da die Teilsysteme ursprünglich in jederlei Hinsicht identisch waren, hat dies zufolge, dass in jedem Teilsystem Inhomogenitäten ausgebildet werden. Die Inhomogenitäten spielen ferner für die sogenannten Phasenübergänge, welche wir später genauer betrachten wollen, eine wichtige Rolle. Zusammenfassend lässt sich feststellen, dass das System bei einem derartigen Entropieverlauf intrinsisch nicht stabil ist.
+
+\paragraph*{Stabilitätsbedingungen} Wir können aus diesen Betrachtungen sogenannte Stabilitätsbedingungen für thermodynamische Systeme ableiten.
+Es lässt sich zum einen die 
+\begin{itemize}
+    \item \emph{globale Stabilität} definieren. Für diese gilt konsequenterweise für alle Energieänderungen $\Delta U$:
+    \begin{align}
+        \label{eq:globaleStabilitaet}
+        \boxed{S(U+\Delta U,V,N)+S(U-\Delta U,V,N)\leq 2S(U,V,N)}\;.
+    \end{align}
+    Dies entspricht einem konkaven Verlauf der Entropie. Zum anderen lässt sich die 
+    \item \emph{lokale Stabilität} definieren. Hier betrachten wir den Grenzfall, in dem die Energieänderung infinitesimal klein wird ($\Delta U\rightarrow 0$), die Evaluation also lokal erfolgt.   
+    Die Taylorentwicklung der Form
+    \begin{align*}
+        S(U\pm\Delta U)=S(U)\pm \frac{\partial S}{\partial U}\Delta U+\frac{1}{2}\frac{\delta^2S}{\delta U^2}\Delta U^2
+    \end{align*}
+    führt bei Einsetzen in \ref{eq:globaleStabilitaet} auf die Krümmung:
+    \begin{align}
+		\label{eq:lokaleStabilitaet}
+        \boxed{\left(\frac{\partial^2S}{\partial U^2}\right)_{V,N}\leq 0}\;.
+    \end{align}
+    Dabei handelt es sich natürlich um eine schwächere Bedingung als bei der globalen Stabilität.
+\end{itemize}
+\paragraph*{Geometrische Deutung}
+Wir wollen dazu übergehen, dem Erörterten auch eine geometrische Deutung zu geben. Dazu legen wir eine allgemeine Variable $X_j$ als Kontrollvariable fest.
+Wir nehmen an, dass die Funktion $S(...,X_j,...)$ bekannt ist (beispielsweise wird sie mit Hilfe der statistischen Mechanik berechnet). Ein exemplarischer Funktionsverlauf ist in Abb.[Ref][Abb] dargestellt. Der Entropieverlauf, welcher zwischen $B$ und $F$ hat eine positive Krümmung, ist also konvex (und führt in der physikalischen Deutung zu einem instabilen System). Damit entspricht die Bedingung der globalen Stabilität (ein konkaver Funktionsverlauf) dem graphischen Äquivalent, dass die Tangenten an die Fundamentalbeziehung immer über der Kurve liegen. Offenkundig wird damit auch, dass die Bereiche zwischen $A$ und $B$ und zwischen $F$ und $G$ diese Bedingung erfüllen und folglich das System in diesen Bereichen stabil ist.
+
+Wir wollen uns nun der Frage widmen, was in den instabilen Bereichen passiert. 
+Dazu ersetzen wir den konvexen Funktionsverlauf zwischen $B$ und $F$ mit der Tangente $BHF$, welche die Gleichung 
+\begin{align*}
+	(1-c)S(...X_j^B...)+cS(...X_j^F...)>S(...X_j^0...)
+\end{align*}
+mit $0\leq c\leq 1$ erfüllt.
+Es folgt daraus, dass das System in diesem Bereich in Gebiete mit Zuständen $B$, respektive $F$ zerfällt. Dies entspricht der im nächsten Kapitel eingeführten, sogenannten Phasenseparation bzw. dem Phasenübergang. Während also der Bereich zwischen $B$ und $F$ global instabil ist, sind die Bereiche zwischen $B$ und $C$ und $E$ und $F$ lokal stabil (hier ist die Bedingung $\partial ^2S/\partial X_j^2\leq 0$) erfüllt. 
+
+\paragraph*{Verallgemeinerung der Stabilitätsbedingungen} Wir versuchen eine Verallgemeinerung vorzunehmen, welche für alle Energieänderungen $\Delta U$ und alle Volumenänderungen $\Delta V$ gültig ist.
+Wieder ergeben sich die zwei vorgestellten Stabilitätsbedingungen:
+\begin{itemize}
+	\item \emph{Globale Stabilität:} Es gilt die bekannte, diesmal allgemeinere, Bedingung für den konkaven Verlauf der Fundamentalbeziehung,
+	\begin{align}
+		\label{eq:globaleStabilitaetAllg}
+		\boxed{S(U+\Delta U, V+\Delta V,N)+S(U-\Delta U, V-\Delta V,N)\leq2S(U,V,N)}\;.
+	\end{align}
+	\item \emph{Lokale Stabilität:} Für den Fall, dass nur eine Energieänderung bzw. nur eine Volumenänderung vorliegt, führt auch hier eine Taylorentwicklung auf die jeweils geltenden lokalen Relationen:
+	\begin{align*}
+		\boxed{\left(\frac{\partial^2S}{\partial U^2}\right)\leq 0}\qquad\qquad \boxed{\left(\frac{\partial^2S}{\partial V^2}\right)\leq 0}\;.
+	\end{align*}
+	Die Form der Fundamentalbeziehung muss bezüglich beider Größen (innere Energie und Volumen) also konkav sein.
+	Weiterhin gilt für den Fall, dass sowohl $\Delta U$, als auch $\Delta V$ ungleich null sind die Gleichung:
+	\begin{align}
+		\label{eq:lokaleStabilitaetZwei}
+		\boxed{\frac{\partial ^2S}{\partial U^2}\cdot\frac{\partial ^2S}{\partial V^2}-\left(\frac{\partial ^2S}{\partial U\partial V}\right)^2\geq 0}\;.
+	\end{align}
+	Diese folgt aus Gleichung \ref{eq:globaleStabilitaetAllg} und den Taylorentwicklungstermen zweiter Ordnung nach dem Muster:
+	\begin{align*}
+		\begin{pmatrix}\Delta U\\\Delta V\end{pmatrix}\cdot\begin{pmatrix}S_{uu}&S_{uv}\\S_{vu}&S_{vv}\end{pmatrix}\cdot\begin{pmatrix}\Delta U\\\Delta V\end{pmatrix}\leq 0,
+	\end{align*}
+	wobei $S_{uu}=\partial^2U/\partial U^2$ usw. ist. (Die Terme nullter Ordnung gleichen sich mit dem Term auf der rechten Seite der Ungleichung aus und die Terme erster Ordnung heben sich gegenseitig auf.)
+	Diese Ungleichung gilt dann, wenn alle Eigenwerte der Matrix kleiner gleich null sind. Die notwendige Bedingung dafür wiederum ist eine positive Determinante der Matrix, welche letzlich dem Ausdruck in Gleichung \ref{eq:lokaleStabilitaetZwei} entspricht.
+\end{itemize}
+\begin{formal}
+	Geometrisch entspricht die globale Stabilitätsbedingung der Veranschaulichung, dass die Tangenten (nun als Tangentialebene) über der Fundamentalbeziehung, der Entropiefläche $S(U,V,...)$, liegen. 
+\end{formal}
+Dies lässt sich natürlich auch in höherdimensionale Konfigurationsräume mit Variablensatz $(S,X_0=U,X_1,...,X_r)$ verallgemeinern, für welche dann gilt, dass die Tangentialhyperebenen oberhalb der Entropiefläche $S(X_0,...,X_r)$ liegen.
+\paragraph*{Antwortkoeffizienten}
+Die Antwortkoeffizienten (auch Materialkonstanten) können ebenfalls innerhalb des Kontexts der Stabilitätsbedingungen näher charakterisiert werden.
+Da die Fundamentalbeziehung für stabile Systeme eine negative Krümmung aufweist, folgt:
+\begin{align*}
+	\left(\frac{\partial ^2 S}{\partial U^2}\right)_{V,N}=\frac{\partial}{\partial U}\left(\frac{1}{T}\right)_{V,N}=-\frac{1}{T^2}\left(\frac{\partial T}{\partial U}\right)_{V,N}=-\frac{1}{T^2}\left(\frac{\partial U}{\partial T}\right)^{-1}=-\frac{1}{T}\frac{1}{Nc_V}\leq0
+\end{align*}
+	und damit also die Relation:
+	\begin{align*}
+		\boxed{c_V\geq 0}\;.
+	\end{align*}
+Im anschaulichen Sinne bedeutet das, dass ein Wärmefluss ins System zu einer Temperaturerhöhung des Systems führt.
+\section{Stabilitätsbedingung für thermodynamische Potentiale}
+Wir wollen nun die Stabilitätsbedingung für thermodynamische Potentiale diskutieren. Wir fangen mit der inneren Energie an.
+\paragraph*{Innere Energie} Für diese gilt das Energieminimums-Postulat. Dieses führt auf eine formal analoge globale Stabilitätsbedingung bezüglich der inneren Energie, jedoch mit dem entscheidenden Unterschied, dass Konvexität (und nicht Konkavität) von der Frundamentalbeziehung gefordert wird. Wir beschreiben diese Bedingung mittels der Gleichung:
+\begin{align*}
+	\boxed{U(S+\Delta S, V+\Delta V,N)+U(S-\Delta S, V-\Delta V, N)\geq 2U(S,V,N)}\;.
+\end{align*}
+
+Für die lokale Stabilität gilt einerseits
+\begin{align*}
+	\frac{\partial^2U}{\partial S^2}=\frac{\partial T}{\partial S}=\frac{T}{N_{c_V}}\geq 0
+\end{align*}
+und andererseits
+\begin{align*}
+	\frac{\partial^2U}{\partial V^2}=-\frac{\partial P}{\partial V}=-\frac{\frac{1}{V}}{\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{S,N}}=\frac{1}{V\kappa_S}\geq 0,
+\end{align*}
+mit der adiabatischen Kompressibilität $\kappa_S$. Physikalisch bedeudet dies, dass die Druckzunahme in einem System eine Volumenabnahme zur Folge hat. Die Relation charakterisiert maßgeblich die Schallausbreitung.
+Ebenso gilt, wie für die entropische Fundamentalbeziehung eine Stabilitätsbedingung, welche Entropieänderungen und Volumenänderungen zur selben Zeit berücksichtigt:
+\begin{align*}
+	\frac{\partial ^2U}{\partial S^2}\cdot\frac{\partial ^2U}{\partial V^2}-\left(\frac{\partial ^2U}{\partial S\partial V}\right)^2\geq 0
+\end{align*}
+\paragraph*{Verallgemeinerung für beliebige thermodynamische Potentiale}
+Für ein thermodynamisches Potential $U\left[P\right]$ (welches einer Legendretransformierten der inneren Energie nach $P$ entspricht) gilt ein Minimumsprinzip bezüglich der extensiven Variable.
+Was gilt nun bezüglich einer intensiven Variable, $P=\partial U/\partial X$?
+Wir wissen, dass 
+\begin{align*}
+	X=-\frac{\partial U\left[P\right]}{\partial P},
+\end{align*}
+die kanonisch konjugierte extensive Variable der negativen Ableitung der Transformierten nach der konjugierten Variable entspricht.
+Damit folgt auch:
+\begin{align*}
+	\frac{\partial^2 U\left[P\right]}{\partial P^2}=-\frac{\partial X}{\partial P}=-\frac{1}{\frac{\partial P}{\partial X}}=-\frac{1}{\frac{\partial^2 U}{\partial X^2}}\leq 0.
+\end{align*}
+Die letzte Gleichheit folgt aus der eingeführten Bedingung, dass die innere Energie konvex bezüglich ihrer extensiven Variablen verläuft.
+\begin{formal}
+	Die innere Energie und ihr Legendretransformierten sind 
+	\begin{itemize}
+		\item \emph{konvex} bezüglich ihrer extensiven Variablen und
+		\item \emph{konkav} bezüglich ihrer intensiven Variablen.
+	\end{itemize}
+\end{formal}
+\paragraph*{Anwendung}
+Wenden wir diese Erkenntnisse zusammenfassend für die thermodynamischen Potentiale an, so gelten die Relationen:
+\begin{itemize}
+	\item Freie Energie: 
+	\begin{align*}
+		\left(\frac{\partial ^2F}{\partial T^2}\right)_{V,N}\leq 0,\qquad\qquad \left(\frac{\partial^2F}{\partial V^2}\right)_{T,N}\geq 0
+	\end{align*}
+	\item Enthalpie: 
+	\begin{align*}
+		\left(\frac{\partial ^2H}{\partial P^2}\right)_{S,N}\leq 0,\qquad\qquad \left(\frac{\partial^2H}{\partial S^2}\right)_{P,N}\geq 0
+	\end{align*}
+	\item freie Enthalpie: 
+	\begin{align*}
+		\left(\frac{\partial ^2G}{\partial T^2}\right)_{P,N}\leq 0,\qquad\qquad \left(\frac{\partial^2G}{\partial P^2}\right)_{T,N}\geq 0
+	\end{align*}	
+\end{itemize}
+
+\section{Physikalische Konsequenzen}
+Wieder haben die Relationen auch eine Bedeutung für die Antwortkoeffizienten, welche wir kurz darstellen werden. 
+\paragraph*{Isotherme Kompressibilität}
+Für die isotherme Kompressibilität folgt aus:
+\begin{align*}
+	\left(\frac{\partial^2F}{\partial V^2}\right)_{T,N}=-\left(\frac{\partial P}{\partial V}\right)_{T,N}=\frac{\frac{1}{V}}{-\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,N}}=\frac{1}{V\kappa_T}\geq 0
+\end{align*}
+die Relation: 
+\begin{align*}
+	\boxed{\kappa_T\geq 0}\;.
+\end{align*}
+\paragraph*{Spezfisiche Wärme} Damit folgt für die isobare spezifische Wärme:
+\begin{align*}
+	\boxed{c_P=c_V+\frac{TV\alpha^2}{N\kappa_T}\geq c_V\geq 0}\;.
+\end{align*}
+Die Relation zur isochoren spezifischen Wärme folgt aus der strikt positiven Größe des zweiten Summandes.
+Die Zufuhr von Wärme erhöht folglich die Temperatur eines stabilen Systems. 
+Es sei daran erinnert, dass die isobare spezifische Wärme größer als die iscochore spezifische Wärme ist, da sie noch die Volumenarbeit beinhaltet.
+\paragraph*{Kompressibilitäten} Die Kompressibilitäten und spezifischen Wärmen stehen im gleichen Verhältnis,
+\begin{align*}
+	\boxed{\frac{\kappa_S}{\kappa_T}=\frac{c_V}{c_P}}\;,
+\end{align*}
+zueinander. Da die isobare spezifische Wärme größer als die isochore ist, folgt auch für die Kompressibilitäten die Relation: 
+\begin{align*}
+	\boxed{\kappa_T\geq \kappa_S\geq 0}\;.
+\end{align*}
+Physikalisch bedeutet dies, dass eine Expansion (Volumenzunahme) den Druck in einem stabilen System senkt (denn es gilt die Relation: $\diff P=-1/V\kappa_{T,S}\diff V$). Die isotherme Kompressibilität ist größer als die isentrope, da sie eine Wärmezufuhr zum System voraussetzt.
+
+
+\section{Die Prinzipien von Le Châtelier und Braun}
+Wir widmen uns nun zum Abschluss des Kapitels phänomenologischen Sätzen, welche in Übereinstimmung mit der Intuition Folgerungen der Stabilitätsbedingungen beschreiben. Sie treffen Aussagen über die Antwort eines thermodynamischen Systems auf zufällige oder gezielte Störungen. 
+
+\begin{formal}
+	\formalemph{Le Châtelier:} Jede Fluktuation oder (lokale) Auslenkung aus dem Gleichgewicht führt zu einem spontanen Prozess, der dieses Gleichgewicht wiederherstellt.
+\end{formal}
+\paragraph*{Beispiel} Illustrieren wir dies mit einem Beispiel: Man betrachte ein System, welches an ein Wärmereservoir und über einen Kolben an ein Volumenreservoir gekoppelt ist. Der Druck des Wärmereservoirs wird mit $P_\mathrm{R}$ bezeichnet, die Temperatur des Reservoirs mit $T_\mathrm{R}$. Wir gehen davon aus, dass natürliche Fluktuationen von Druck und Temperatur im System vorliegen. Findet nun eine spontane isotherme Expansion des Kolbens um $\Delta V$ statt, so folgt daraus ein Druckabfall $\Delta P=-\frac{1}{V\kappa_T}\left(\Delta V\right)_T=P-P_\mathrm{R}<0$. Dieser neue (isotherme) Systemzustand kann mit Hilfe der inneren Energie charakterisiert werden, welche bei konstanter Temperatur ihr Minimum anstrebt. Die daraus folgende Änderung der inneren Energie, $\Delta F=-\left(P-P_\mathrm{R}\right)\Delta V_\mathrm{neu}<0$, muss also negativ sein, woraus folgt, dass die neue Volumenänderung $\Delta V_\mathrm{neu}$ ebenfalls negativ ist. Die Fluktuation wird also rückgängig gemacht. 
+\begin{formal}
+	\formalemph{Le Châtelier-Braun:} Durch eine Fluktuation ausgelöste Sekundärprozesse stellen ebenfalls das Gleichgewicht wieder her.
+\end{formal}
+\paragraph*{Beispiel} Wir wollen auch diesen Satz illustrieren: Wieder betrachten wir das beschriebene System. Diesmal findet jedoch eine adiabatische Eypansion statt, d.h., es liegt kein instantaner, kompensierender Wärmefluss vom Wärmereservoir vor. Damit folgt für die Druckänderung (nun mit adiabatischer Kompressibilität):
+\begin{align*}
+	\Delta P= -\frac{1}{V\kappa_S}\left(\Delta V\right)=P-P_\mathrm{R}<0.
+\end{align*}
+In dessen Folge ensteht eine Temperaturänderung der Form:
+\begin{align*}
+	\Delta T=\left(\frac{\partial T}{\partial V}\right)_S\Delta V=-\frac{T\alpha}{Nc_V\kappa_T}\Delta V
+\end{align*}
+Die zweite Gleichung folgt aus den für die Antwortkoeffizienten charakterisierenden Relationen. Der Ausdehnungskoeffizient $\alpha$ kann sowohl positiv als auch negativ (z.B. bei der Wasserschmelze, bei der das Volumen mit steigender Temperatur abnimmt) sein. 
+Wir wollen nun jedoch annehmen, dass $\alpha$ positiv ist. Dann folgt, dass die Temperaturänderung negativ ist. Dies hat wiederum zur Folge, dass ein isochorer, positiver Wärmefluss ($\Delta Q>0$) vom Reservoir die Temperaturabnahme kompensieren muss. Dieser Wärmefluss erhöht nun wiederum den Kolbendruck um:
+\begin{align*}
+	\Delta P_Q=\left(\frac{\diff P}{\udiff Q}\right)\left(\Delta Q\right)_V=\frac{1}{T}\left(\frac{\partial P}{\partial S}\right)_V=\frac{\alpha}{Nc_V\kappa_T}\left(\Delta Q\right)_V.
+\end{align*}
+Die letzte Gleichheit folgt aus den Maxwell-Beziehungen. Das bedeutet, dass ein Teil des Druckabfalles durch diese Sekundärreaktion des Systems teilweise kompensiert wird. 
+\begin{formal}
+	\formalemph{Prinzip vom kleinsten Zwang:} Übt man auf ein System im Gleichgewicht einen Zwang aus, so verschiebt sich das Gleichgewicht derart, dass es dem Zwang ausweicht.
+\end{formal} 
+Statt Fluktuationen werden nun äußere Kräfte betrachtet. Das Prinzip wurde  $1888$ von Le Châtelier und Braun formuliert.
+\paragraph*{Beispiel} Wir wollen mehrere Beispiele dieser Aussage betrachten:
+\begin{itemize}
+	\item Dies erfolgt zum einen bei mechanisch ausgeübten Druck auf Eis. Dieser führt dazu, dass das Eis oberflächlich schmilzt. Grund dafür ist die Druckreduktion, welche durch die vom Schmelzen verursachte Volumenreduktion erzielt wird. 
+	\item Wir können auch eine exotherme chemische Gleichgewichtsreaktion betrachten, bei welcher Wärme durch die Hinreaktion freigesetzt wird. Hier führt die, durch letztere bedingte, Temperaturerhöhung zu vermehrten Rückreaktionen und einer temperaturabhängigen Verschiebung des (Reaktions-)Gleichgewichts.
+\end{itemize}
+\begin{summary}
+	Wir haben in diesem Kapitel die \emph{Stabilität} thermodynamischer Systeme und ihre Bedingungen diskutiert.
+
+	Die Entropie unterliegt dem Maximumsprinzip. Daraus folgt bei näherer Betrachtung der Stabilitätsbedingungen thermodynamischer Systeme, dass die entropische Fundamentalbeziehung in einem stabilen System konkav ist. Dies wird durch die globale Stabilitätsbedingung beschrieben:
+	\begin{align*}
+		S(U+\Delta U, V+\Delta V,N)+S(U-\Delta U, V-\Delta V,N)\leq2S(U,V,N).
+	\end{align*}	
+	Geometrisch gedeutet ist der konkave Kurvenverlauf äquivalent zu der Beobachtung, dass alle Tangenten über der Kurve liegen.
+	Lokal gilt eine schwächere Bedingung: 
+	\begin{align*}
+		\left(\frac{\partial^2S}{\partial U^2}\right)\leq 0\qquad \mathrm{und} \qquad \left(\frac{\partial^2S}{\partial V^2}\right)\leq 0,
+	\end{align*}
+	der Entropieverlauf besitzt eine negative Krümmung. Im Falle unabhängiger Änderung von innerer Energie und Volumen gilt noch eine dritte Bedingung:
+	\begin{align*}
+		\frac{\partial ^2S}{\partial U^2}\cdot\frac{\partial ^2S}{\partial V^2}-\left(\frac{\partial ^2S}{\partial U\partial V}\right)^2\geq 0.
+	\end{align*}
+	Die Definition stabiler bzw. instabiler Systembereiche ist für Phasenseparation und Phasenübergänge von Bedeutung.
+	
+	Eine Konsequenz der Stabilitätsbedingungen, ist die folgende Relation für die isochore spezifische Wärme in stabilen Systemen:
+	\begin{align*}
+		c_V\geq 0.
+	\end{align*}
+	Ein  Wärmefluss ins System hinein führt also zu einer Temperaturerhöhung
+	des Systems.
+
+	Für die innere Energie und deren Legendretransformierten gelten analoge Stabilitätsbedingungen. Jedoch unterliegen diese einem Minimumsprinzip, weshalb sich hier die Relationen folgendermaßen umkehren:
+	\begin{itemize}
+		\item Globale Stabilitätsbedingung: 
+		\begin{align*}
+			U(S+\Delta S, V+\Delta V,N)+U(S-\Delta S, V-\Delta V,N)\geq2U(S,V,N).
+		\end{align*}
+		\item Lokale Stabilitätsbedingung:
+		\begin{align*}
+			\left(\frac{\partial^2U}{\partial S^2}\right)\geq 0\qquad \mathrm{und} \qquad \left(\frac{\partial^2U}{\partial V^2}\right)\geq 0.
+		\end{align*}
+		Die dritte Bedingung bleibt jedoch identisch:
+		\begin{align*}
+			\frac{\partial ^2U}{\partial S^2}\cdot\frac{\partial ^2U}{\partial V^2}-\left(\frac{\partial ^2U}{\partial S\partial V}\right)^2\geq 0.
+		\end{align*}
+	\end{itemize} 
+	Die innere Energie und ihre Legendretransformierten sind demnach konvex bezüglich ihrer extensiven Variablen und konkav bezüglich ihrer intensiven Variablen.
+
+	Wieder lassen sich für stabile Systeme daraus Schlussfolgerungen auf die Antwortkoeffizienten ziehen:
+	\begin{align*}
+		\kappa_T\geq 0, \qquad c_P>c_V>0, \qquad \frac{\kappa_S}{\kappa_T}=\frac{c_V}{c_P}, \qquad \mathrm{und} \qquad \kappa_T\geq\kappa_S\geq 0.
+	\end{align*}
+	Eine Systemexpansion führt also zu einer Druckabnahme im System und die spezifischen Wärmen stehen im selben Verhältnis zueinander wie die Kompressibilitäten.
+
+	Zuletzt wurden phänomenologische Prinzipien eingeführt, welche die Reaktion eines Systemes im Gleichgewicht auf Störungen beschreiben.
+	\begin{itemize}
+		\item \emph{Le Châtelier}: Jede Fluktuation oder (lokale) Auslenkung aus dem Gleichgewicht führt zu einem
+		spontanen Prozess, der dieses Gleichgewicht wiederherstellt.
+		\item \emph{Le Châtelier-Braun}: Durch eine Fluktuation ausgelöste Sekundärprozesse stellen ebenfalls das
+		Gleichgewicht wieder her.
+		\item \emph{Prinzip vom kleinsten Zwang}: Übt man auf ein System im Gleichgewicht einen Zwang aus, so verschiebt sich das Gleichgewicht derart, dass es dem Zwang ausweicht.
+	\end{itemize}
+\end{summary}
