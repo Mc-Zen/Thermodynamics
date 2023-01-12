@@ -271,7 +271,7 @@ Die häufig verwendete Einheit Kalorie entspricht der Energie, um \qty{1}{\g} Wa
 
 \section{Postulate zur Entropie}
 
-Aus der Experimentalphysik erinnern wir uns, dass die Entropie $S$ mit der Irreversibilität eines Prozesses zusammenhängt. Später werden wir sehen, dass die Entropie durch $S=k_\mathrm{B}\ln{\Omega}$ mit Phasenraumvolumen $\Omega$ bestimmt ist.
+Aus der Experimentalphysik erinnern wir uns, dass die Entropie $S$ mit der Irreversibilität eines Prozesses zusammenhängt. Später werden wir sehen, dass die Entropie durch $S=k_\mathrm{B}\ln{\Omega}$ mit dem Phasenraumvolumen $\Omega$ bestimmt ist.
 
 Zuerst betrachten wir ein abgeschlossenes System mit festgelegten Zwangsbedingungen, beispielsweise zwei Kammern, die durch einen anfangs undurchlässigen, festen und wärmeisolierenden Kolben getrennt sind. Diese Eigenschaften des Kolbens stellen die Zwangsbedingungen dar. Es stellt sich die Frage, welchen Gleichgewichtszustand das System beim Entfernen einer oder mehrerer dieser Zwangsbedingungen einnimmt. Erfahrungsgemäß wissen wir z.~B., dass sich die Temperaturen beider Kammern angleichen, wenn ein Wärmeaustausch erlaubt wird, der Kolben also wärmedurchlässig ist.
 
@@ -328,7 +328,7 @@ Diese neue Beziehung ist als \emph{energetische Fundamentalbeziehung} bekannt un
 
 
 
-\section{Das Nernst-Postulat (3. Hauptsatz)}
+\section{Das Nernst-Postulat (3. Hauptsatz)\label{sec:Nernst}}
 
 
 
@@ -361,32 +361,37 @@ Bemerkungen:
 
 
 \begin{summary}
-    Statt die unzähligen einzelnen Koordinaten und Impulse zu betrachten (mikroskopische Größen), werden makroskopische Kenngrößen betrachtet. Dies entspricht sowohl einer räumlichen als auch einer zeitlichen Mittelung. Zu diesen Kenngrößen gehören z.~B. Volumen, Druck, Temperatur und Energie. 
+    \formalemph{Was zeichnet die Thermodynamik aus?}
+    Statt unzähliger, einzelner mikroskopischen Größen (wie Koordinaten und Impulse), werden in der Thermodynamik makroskopische Kenngrößen betrachtet. Dies entspricht sowohl einer räumlichen als auch einer zeitlichen Mittelung über die mikroskopischen Größen. Zu den makroskopischen Kenngrößen gehören beispielsweise Volumen, Druck, Temperatur und Energie. 
 
-    Wir definieren die Stoffmenge als $\sm = N/N_A$, also die Teilchenzahl $N$ geteilt durch die Avogadro-Konstante. Weiter wird der Stoffmengenanteil als $x=\sm/\sum_i \sm_i$ und das Molvolumen als $V_m = V/\sum_i \sm_i$ definiert. 
+    \formalemph{Wesentliche Größen}
+    Wir definieren die 
+    \begin{itemize}
+        \item \emph{Stoffmenge} als $\sm = N/N_A$, also die Teilchenzahl $N$ geteilt durch die \emph{Avogadro-Konstante}, 
+        \item den \emph{Stoffmengenanteil} als $x_k=\sm_k/\sum_i \sm_i$ und
+        \item das \emph{Molvolumen} als $V_m = V/\sum_i \sm_i$ (alternativ auch mit $v$ gekennzeichnet).
+    \end{itemize}
 
-    Zustandsgrößen beschreiben den Zustand eines Systems, unabhängig von dessen Vorgeschichte (z.~B. $V$, $\sm$, $T$, $p$). 
-    Einige Größen sind aber keine Zustandsgrößen, wie z.~B. die Wärme $Q$ und die Arbeit $W$, denn sie beschreiben nicht eindeutig den Zustand des Systems. Für solche sogenannte Prozessgrößen verwenden wir das unvollständige Differential $\delta$. 
+    \emph{Zustandsgrößen} beschreiben den Zustand eines Systems, unabhängig von dessen Vorgeschichte (z.~B. $V$, $\sm$, $T$, $P$). 
+    Einige Größen sind keine Zustandsgrößen, wie z.~B. die Wärme $Q$ und die Arbeit $W$, denn sie beschreiben keinen eindeutigen Zustand des Systems. Für diese sogenannten \emph{Prozessgrößen} wir das \emph{unvollständige Differential} $\delta$ verwendet. 
 
-    Extensive Größen verhalten sich additiv mit dem Volumen des Systems. Dazu gehört neben dem Volumen z.~B. auch die Stoffmenge $\sm$. 
-    Intensive Größen erfahren keine Änderung mit dem Volumen, z.~B. $T$, $P$, $x$ und $V_m$.
-    Eine weitere extensive Kenngröße ist die innere Energie $U$. Sie ist eine Zustandsgröße. 
+    \emph{Extensive} Größen verhalten sich additiv mit dem Volumen des Systems. Dazu gehört neben dem Volumen z.~B. auch die Stoffmenge $\sm$. 
+    \emph{Intensive} Größen erfahren keine Änderung mit dem Volumen, z.~B. $T$, $P$, $x$ und $V_m$.
+    Eine weitere extensive Kenngröße ist die innere Energie $U$, sie ist ebenfalls eine Zustandsgröße. 
 
-    Wir haben ferner eine Reihe von Postulaten aufgestellt, die grob durch Erfahrungstatsachen motiviert sind. Nach dem Postulat~\ref{post:gleichgewichtszustaende} hat ein System sogenannte Gleichgewichtszustände, welche durch wenige Zustandsgrößen ($U$, $V$, $\sm$, \ldots) beschrieben werden können. 
-    Innerhalb dieser makroskopischen Beschreibung verhält sich das System mikroskopisch zufällig, denn im Allgemeinen führen viele mikroskopischen Zustände zum gleichen makroskopischen Zustand. 
+    \formalemph{Postulate und Hauptsätze der Thermodynamik}
+    Wir haben ferner eine Reihe von Postulaten aufgestellt, die grob durch Erfahrungstatsachen motiviert sind. Nach dem \formalemph{Postulat~\ref{post:gleichgewichtszustaende}} hat ein System sogenannte Gleichgewichtszustände, welche durch wenige Zustandsgrößen ~($U$, $V$, $\sm$, \ldots) beschrieben werden können. 
+    Innerhalb dieser makroskopischen Beschreibung verhält sich das System mikroskopisch zufällig. Im Allgemeinen führen viele mikroskopische Zustände zum gleichen makroskopischen Zustand. 
 
-    Nach dem Postulat~\ref{post:entropie_maximierung} existiert eine weitere Zustandsfunktion $S$, die wir Entropie nennen. Entfernt man alle Zwangsbedingungen, so  entwickeln sich die extensiven Größen so, dass die Entropie maximiert wird. 
+    Nach dem \formalemph{Postulat~\ref{post:entropie_maximierung}} existiert eine weitere Zustandsfunktion $S$ (welche von den extensiven Größen abhängt und die gesamte Information des Systems enthält), die wir Entropie nennen. Entfernt man Zwangsbedingungen eines Systems, so nehmen dessen extensiven Größen in Folge die Werte an, welche die Entropie maximieren. 
 
-    Die Entropie ist eine additive Größe und soll stetig, differenzierbar und eine streng monoton ansteigende Funktion der inneren Energie $U$ sein. Diese Eigenschaften werden im Postulat~\ref{post:eigenschaften_entropie} gefordert. Man kann daraus folgern, dass $S$ eine extensive Größe ist. 
+    Die Entropie ist nach \formalemph{Postulat~\ref{post:eigenschaften_entropie}} eine additive Größe und soll stetig, differenzierbar und eine streng monoton ansteigende Funktion der inneren Energie $U$ sein. Damit gilt auch, dass $S$ eine extensive Größe ist. 
 
-    Zuletzt beschreibt das Nernst-Postulat, der dritte Hauptsatz der Thermodynamik (Postulat~\ref{post:nernst}), einen Nullpunkt $S=0$ bei $T=0$, der aber nicht praktisch erreicht werden kann. 
+    Zuletzt beschreibt das \formalemph{Nernst-Postulat}, der \formalemph{dritte Hauptsatz der Thermodynamik} (Postulat~\ref{post:nernst}), einen Entropie- und Temperaturnullpunkt $S=0$ bei $T=0$, der aber praktisch nicht erreicht werden kann. 
 
-    Außerdem haben wir den ersten Hauptsatz der Thermodynamik kennengelernt: den Energieerhaltungssatz. Er besagt, dass sich die innere Energie eines Systems nach der Gleichung 
+    Außerdem haben wir den \formalemph{ersten Hauptsatz der Thermodynamik} kennengelernt: den \emph{Energieerhaltungssatz}. Er besagt, dass sich die innere Energie eines abgeschlossenen Systems nach der Gleichung 
     \begin{align*}
         \diff U = \udiff Q + \udiff W
     \end{align*}
     mit der zu- oder abgeführten Wärme und der am System verrichteten Arbeit ändert. 
-
-
-    Verschiedene Zwangsbedingungen bestimmen die Entwicklung eines Systems. Hierbei kann es sich beispielsweise um feste Wände, thermisch isolierende Kolben oder Membranen handeln, die nur für eine Teilchensorte durchlässig sind, für eine andere aber nicht. 
 \end{summary}
