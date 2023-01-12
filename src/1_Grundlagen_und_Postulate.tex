@@ -362,28 +362,34 @@ Bemerkungen:
 
 \begin{summary}
     \formalemph{Was zeichnet die Thermodynamik aus?}
-    Statt unzähliger, einzelner mikroskopischen Größen (wie Koordinaten und Impulse), werden in der Thermodynamik makroskopische Kenngrößen betrachtet. Dies entspricht sowohl einer räumlichen als auch einer zeitlichen Mittelung über die mikroskopischen Größen. Zu den makroskopischen Kenngrößen gehören beispielsweise Volumen, Druck, Temperatur und Energie. 
+    Statt unzähliger, einzelner mikroskopischen Größen (wie Koordinaten und Impulse), werden in der Thermodynamik makroskopische Kenngrößen betrachtet. Dies entspricht sowohl einer räumlichen als auch einer zeitlichen Mittelung über die mikroskopischen Größen. Zu den makroskopischen Kenngrößen gehören beispielsweise Volumen, Druck, Temperatur und Energie.
+    
+    Mit der \emph{Standard- oder Normalbedingung} wird die Prozessbedingung von $1013$ \si{\milli \bar} und $0$\si{\celsius} bezeichnet.
 
-    \formalemph{Wesentliche Größen}
+    \formalemph{Wesentliche Größen und Begriffe}
     Wir definieren die 
     \begin{itemize}
         \item \emph{Stoffmenge} als $\sm = N/N_A$, also die Teilchenzahl $N$ geteilt durch die \emph{Avogadro-Konstante}, 
-        \item den \emph{Stoffmengenanteil} als $x_k=\sm_k/\sum_i \sm_i$ und
-        \item das \emph{Molvolumen} als $V_m = V/\sum_i \sm_i$ (alternativ auch mit $v$ gekennzeichnet).
+        \item den \emph{Stoffmengenanteil} als $x_k=\sm_k/\sum_i \sm_i$,
+        \item das \emph{Molvolumen} als $V_m = V/\sum_i \sm_i$ (alternativ auch mit $v$ gekennzeichnet) und
+        \item das Wärmeequivalent $\Delta Q= mc\Delta T$.
     \end{itemize}
 
     \emph{Zustandsgrößen} beschreiben den Zustand eines Systems, unabhängig von dessen Vorgeschichte (z.~B. $V$, $\sm$, $T$, $P$). 
     Einige Größen sind keine Zustandsgrößen, wie z.~B. die Wärme $Q$ und die Arbeit $W$, denn sie beschreiben keinen eindeutigen Zustand des Systems. Für diese sogenannten \emph{Prozessgrößen} wir das \emph{unvollständige Differential} $\delta$ verwendet. 
 
-    \emph{Extensive} Größen verhalten sich additiv mit dem Volumen des Systems. Dazu gehört neben dem Volumen z.~B. auch die Stoffmenge $\sm$. 
+    \emph{Extensive} Größen verhalten sich additiv mit dem Volumen des Systems. Dazu gehört neben dem Volumen z.~B. auch die Stoffmenge $\sm$.\\ 
     \emph{Intensive} Größen erfahren keine Änderung mit dem Volumen, z.~B. $T$, $P$, $x$ und $V_m$.
-    Eine weitere extensive Kenngröße ist die innere Energie $U$, sie ist ebenfalls eine Zustandsgröße. 
+    Eine weitere extensive Kenngröße ist die innere Energie $U$, welche durch die entropische Fundamentalbeziehung gegeben ist; sie ist ebenfalls eine Zustandsgröße. 
+
+    Die \emph{quasistatische} Prozessführung beschreibt eine langsame Prozessführung, welche dazu führt, dass das System sich zu jedem Zeitpunkt im Gleichgewichtszustand befindet. \\
+    \emph{Nicht-quasistatische} Prozesse, sind Prozesse, welche bedingt durch eine schnelle Prozessführung Störungen (wie z.~B. Turbulenzen) erfahren und damit Wärme dissipieren. Dies führt dazu, dass sich das System nicht durchgehend in Gleichgewichtszuständen befindet. 
 
     \formalemph{Postulate und Hauptsätze der Thermodynamik}
     Wir haben ferner eine Reihe von Postulaten aufgestellt, die grob durch Erfahrungstatsachen motiviert sind. Nach dem \formalemph{Postulat~\ref{post:gleichgewichtszustaende}} hat ein System sogenannte Gleichgewichtszustände, welche durch wenige Zustandsgrößen ~($U$, $V$, $\sm$, \ldots) beschrieben werden können. 
     Innerhalb dieser makroskopischen Beschreibung verhält sich das System mikroskopisch zufällig. Im Allgemeinen führen viele mikroskopische Zustände zum gleichen makroskopischen Zustand. 
 
-    Nach dem \formalemph{Postulat~\ref{post:entropie_maximierung}} existiert eine weitere Zustandsfunktion $S$ (welche von den extensiven Größen abhängt und die gesamte Information des Systems enthält), die wir Entropie nennen. Entfernt man Zwangsbedingungen eines Systems, so nehmen dessen extensiven Größen in Folge die Werte an, welche die Entropie maximieren. 
+    Nach dem \formalemph{Postulat~\ref{post:entropie_maximierung}} existiert eine weitere Zustandsfunktion $S$ (welche von den extensiven Größen abhängt, die gesamte Information des Systems enthält und durch die entropische Fundamentalbeziehung beschrieben wird), die wir Entropie nennen. Entfernt man Zwangsbedingungen eines Systems, so nehmen dessen extensiven Größen in Folge die Werte an, welche die Entropie maximieren. 
 
     Die Entropie ist nach \formalemph{Postulat~\ref{post:eigenschaften_entropie}} eine additive Größe und soll stetig, differenzierbar und eine streng monoton ansteigende Funktion der inneren Energie $U$ sein. Damit gilt auch, dass $S$ eine extensive Größe ist. 
 
