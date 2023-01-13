@@ -1,7 +1,7 @@
 % !TeX root = Theo_IV.tex
 
 \chapter{Mikroskopische Erklärung der Entropie}
-
+Wir wollen in diesem Kapitel die Bedeutung der Entropie und ihrer Zunahme im mikroskopischen Kontext nachvollziehen und modellisieren.
 \section{Quantenmechanische Zustände}
 
 Die Systeme, die in der Thermodynamik und der statistischen Physik betrachtet werden, bestehen i.d.R. aus einer großen Zahl von Teilchen. Aus quantenmechanischer Sicht bedeutet das auch einen hohen Entartungsgrad der Energie. Dieser lässt sich mit der Entropie ins Verhältnis setzen, was in diesem Kapitel erfolgen soll.
@@ -312,7 +312,7 @@ Betrachtet man das Verhältnis des Logarithmus des Maximums der Entartungsfunkti
 wird wieder ersichtlich, dass die wahrscheinlichste Konfiguration den Term dominiert, denn der Ausdruck geht für den thermodynamischen Limes gegen $1$. Das thermodynamische System wird folglich durch seine wahrscheinlichsten Mikrozustände, welche sich im Spinüberschuss nur leicht voneinander unterscheiden, dominiert. 
 \section{Thermisches Gleichgewicht und Entropie}
 \paragraph*{Grundpostulat der statistischen Mechanik}
-Wir wollen nun den verallgemeinerten Fall zweier Untersysteme im thermischen Kontakt betrachten. Die Zahl der Zustände der Untersysteme wird mit $g_i(U_i,N_i,...)$ gekennzeichnet und hängt von der inneren Energie und Teilchenzahl des Systems (sowie gegebenenfalls weiterer Variablen) ab. Die Entartungsfunktion des Gesamtsystems setzt sich (unter der Bedingung, dass die Gesamtenergie des Systems erhalten bleibt) als Summe über alle möglichen Produkte der Entartungsgrade der Untersysteme zusammen: 
+Wir wollen nun den verallgemeinerten Fall zweier Untersysteme im thermischen Kontakt betrachten. Die Zahl der Zustände der Untersysteme wird mit $g_i(U_i,N_i,...)$ gekennzeichnet und hängt von der inneren Energie und Teilchenzahl des Systems (sowie gegebenenfalls weiteren Variablen) ab. Die Entartungsfunktion des Gesamtsystems setzt sich (unter der Bedingung, dass die Gesamtenergie des Systems erhalten bleibt) als Summe über alle möglichen Produkte der Entartungsgrade der Untersysteme zusammen: 
 \begin{align*}
     g(U,N)=\sum_{U_1+U_2=U}g_1(U_1,N)g_2(U_2,N_2).
 \end{align*}
@@ -378,43 +378,43 @@ Abschätzungen von $\tau$ für Systeme der Teilchengröße $N=10^{23}$ führen j
      \begin{align*}
         M=(N_\uparrow-N_\downarrow)m=2nm,
     \end{align*}
-    welches bei einer makroskopischen Messung ermittelt wird und lediglich Werte zwischen $Nm$ und $-Nm$ annehmen kann. ($2n$ entspricht dem eingeführten Spinüberschuss des Systems.)
+    welches bei einer makroskopischen Messung ermittelt wird und lediglich Werte zwischen $Nm$ und $-Nm$ annehmen kann. $2n$ entspricht dem eingeführten Spinüberschuss des Systems.
 
-    Somit ist offensichtlich, dass sich viele mögliche mikroskopische Zustände auf wenige makroskopische Zustände des Systems verteilen. Die Anzahl der möglichen mikroskopischen Zustände eines makroskopischen Zustandes werden durch den Entartungsgrad 
+    Somit ist offensichtlich, dass sich viele mögliche mikroskopische Zustände auf wenige makroskopische Zustände des Systems verteilen. Die Anzahl der möglichen mikroskopischen Zustände eines makroskopischen Zustandes werden durch den \formalemph{Entartungsgrad} 
     \begin{align*}
         g(n,N)&=\frac{N!}{N_\uparrow!-N_\downarrow!}\\&\approx g(0,N)e^{-\frac{2n^2}{N}}\\&=\sqrt{\frac{2}{N\pi}}2^Ne^{-\frac{2n^2}{N}}
     \end{align*}
     in Abhängigkeit von Spinüberschuss und Systemgröße beschrieben. Die beschriebene Entartungsfunktion entspricht einer Gauß-Verteilung mit Normierung $2^N$ und relativer Breite $n_n/N=1/\sqrt{2N}$. (Sie kann auch mittels der Relation $U=-MB=-2nmB$ in Abhängigkeit der inneren Energie angegeben werden.)
 
-    Diese Verteilung deckt sich auch mit dem zentralen Grenzwertsatz: Bei Summation vieler unabhängiger Zufallsvariablen ergibt sich eine Normalverteilung der Wahrscheinlichkeiten.
+    Diese Verteilung deckt sich auch mit dem \formalemph{zentralen Grenzwertsatz}: Bei Summation vieler unabhängiger Zufallsvariablen ergibt sich eine Normalverteilung der Wahrscheinlichkeiten.
 
     Die Verteilung der Entartungsfunktion besitzt folglich für große Systeme ein scharfes Maximum. Daraus folgt, dass diese einen eindeutigen makroskopischen Zustand mit gleichverteilten Spins und minimalen Fluktuationen (bei $n=0$ und $M=0$) annehmen und wohldefinierte physikalische Eigenschaften besitzen. Die wahrscheinlichste makroskopische Konfiguration (die Konfiguration mit dem größten Entartungsgrad) bestimmt die Mittelwerte aller physikalischen Größen des Systems vollkommen. 
     Kleine Systeme hingegen haben große Fluktuationen und lassen sich nicht analog zu den großen Systemen durch die wahrscheinlichste makroskopische Konfiguration modellieren.
     Im thermodynamischen Limes (unendliche Teilchenzahl bzw. Systemgröße) geht die Entartungsfunktion in eine scharfe Linie mit verschwindender Halbwertsbreite über. 
       
-    Allgemein gilt die Ergodenhypothese. Diese besagt, dass sich ein abgeschlossenes System mit gleicher Wahrscheinlichkeit in jedem ihm zugänglichen mikroskopischen Zustand befindet.
+    Allgemein gilt die \formalemph{Ergodenhypothese}. Diese besagt, dass sich ein abgeschlossenes System mit gleicher Wahrscheinlichkeit in jedem ihm zugänglichen (sich mit den makroskopischen Größen deckenden) mikroskopischen Zustand befindet.
 
-    Die statistische Mechanik führt in diesem Kontext das sogenannte Ensemble ein. Dabei wird das zeitliche Nacheinander von mikroskopischen Konfigurationen durch ein räumliches Nebeneinander an Systemkopien ersetzt. Jedes Ensemblemitglied entspricht dabei einer zugänglichen mikroskopischen Konfiguration des Systems. Der Zeitmittelwert einer physikalischen Messgröße eines ergodischen Systems entspricht damit seinem Ensemblemittelwert.
+    Die statistische Mechanik führt in diesem Kontext das sogenannte \formalemph{Ensemble} ein. Dabei wird das zeitliche Nacheinander von mikroskopischen Konfigurationen durch ein räumliches Nebeneinander an Systemkopien ersetzt. Jedes Ensemblemitglied entspricht dabei einer zugänglichen mikroskopischen Konfiguration des Systems. Der Zeitmittelwert einer physikalischen Messgröße eines ergodischen Systems entspricht damit seinem Ensemblemittelwert.
    
-    Wir haben auch zwei große Spinsysteme im thermischen Kontakt (mit Energiefluss zwischen den Systemen) betrachtet. Die folgenden Einsichten lassen sich auch für beliebige abgeschlossene Systeme und ihre makroskopischen Größen im thermischen Kontakt verallgemeinern:
+    Wir haben auch \formalemph{zwei große Spinsysteme im thermischen Kontakt} (mit Energiefluss zwischen den Systemen) betrachtet. Die folgenden Einsichten lassen sich auch für beliebige abgeschlossene Systeme und ihre makroskopischen Größen im thermischen Kontakt verallgemeinern:
 
-    Vor Kontakt sind die einzelnen wahrscheinlichsten Spinüberschüsse der Teilsysteme festgelegt und die Zustandszahlen des Gesamtsystems ergeben sich als Produkt der einzelnen Zustandszahlen der Teilsysteme. Nach dem thermischen Kontakt sind die einzelnen Spinüberschüsse variabel und der Gesamtspinüberschuss fest. Die Entartungsfunktion ist dann über 
+    Vor Kontakt sind die einzelnen wahrscheinlichsten Spinüberschüsse der Teilsysteme festgelegt und die Zustandszahlen des Gesamtsystems ergeben sich als Produkt der einzelnen Zustandszahlen der Teilsysteme. Nach dem thermischen Kontakt sind die einzelnen Spinüberschüsse variabel und der Gesamtspinüberschuss fest. Die \formalemph{Entartungsfunktion des zusammengesetzten Systems} ist dann über 
     \begin{align*}
         g(n,N) = \sum_{n_1=-\frac{N_1}{2}}^{\frac{N_1}{2}} g_1(n_1,N_1)g_2(n-n_1,N_2),
     \end{align*}
     die Summation über alle möglichen Spinüberschusskombinationskonfigurationen der Teilsysteme gegeben. 
-    Letztere nehmen dann die Teilzustände an, welche die wahrscheinlichste Konfiguration des Gesamtsystems konstituieren. Dies liegt vor, wenn die relativen Spinüberschüsse beider Teilsysteme gleich sind und kann auch durch folgende Bedingung zusammengefasst werden:
+    Letztere nehmen dann die Teilzustände an, welche die wahrscheinlichste Konfiguration des Gesamtsystems konstituieren. Dies liegt vor, wenn die relativen Spinüberschüsse beider Teilsysteme gleich sind und kann auch durch folgende \formalemph{Gleichgewichtsbedingung} zusammengefasst werden:
     \begin{align}
         \frac{\partial \ln g_1}{\partial U_1}  = \frac{\partial \ln g_2}{\partial U_2}.
     \end{align}
     Wir haben beobachtet, dass dieser Zusammenhang die Identifizierung von $\ln g_i$ mit der Entropie $S^{(i)}$ der Teilsysteme nahelegt.
     
-    Das Grundpostulat der statistischen Mechanik beschreibt diese Relation zwischen Entropie und Entartungsfunktion über: 
+    Das \formalemph{Grundpostulat der statistischen Mechanik} beschreibt diese Relation zwischen Entropie und Entartungsfunktion über: 
     \begin{align*}
         S(U,N)=k_\mathrm{B}\ln g(U,N).
     \end{align*}
 
-    Eben diese Relation liefert auch eine mikroskopische Erklärung für die Entropiezunahme von Systemen, deren Zwangsbedingungen gelöst werden. Das Lösen der Zwangsbedingungen führt zu einer Zunahme an Konfigurationsmöglichkeiten für das System. Es befindet sich dann in aller Regel in einem sehr wahrscheinlichen Zustand (also entsprechend der Zustandsverteilung in einem Zustand mit hohem Entartungsgrad), der den vorigen Entartungsgrad des eingenommenen Zustandes übersteigt.
+    Eben diese Relation liefert auch eine mikroskopische Erklärung für die Entropiezunahme von Systemen, deren Zwangsbedingungen gelöst werden. Das Lösen der Zwangsbedingungen führt zu einer Zunahme an Konfigurationsmöglichkeiten für das System. Es befindet sich dann in aller Regel in einem sehr wahrscheinlichen Zustand (also entsprechend der Zustandsverteilung in einem Zustand mit hohem Entartungsgrad), der den vorigen Entartungsgrad des eingenommenen Zustandes und damit dessen Entropie übersteigt.
 
-    Im Zusammenhang mit dieser Beobachtung steht auch die Begründung für die Unwahrscheinlichkeit irreversibler Prozesse. Obwohl diese nach Newton nicht ausgeschlossen werden können und dem Poincaréschen Wiederkehrsatz zu Folge nach einer Wiederkehrzeit $\tau$, welche ein System in periodischen Abständen in ihren Anfangszustand zurückführt, erfolgen, sind sie unvorstellbar unwahrscheinlich und $\tau$ jenseits der erfahrbaren Zeitskalen.
+    Im Zusammenhang mit dieser Beobachtung steht auch die Begründung für die Unwahrscheinlichkeit irreversibler Prozesse. Obwohl diese nach Newton nicht ausgeschlossen werden können und dem \formalemph{Poincaréschen Wiederkehrsatz} zu Folge nach einer Wiederkehrzeit $\tau$, welche ein System in periodischen Abständen in ihren Anfangszustand zurückführt, erfolgen, sind sie unvorstellbar unwahrscheinlich und $\tau$ jenseits der erfahrbaren Zeitskalen.
 \end{summary}
