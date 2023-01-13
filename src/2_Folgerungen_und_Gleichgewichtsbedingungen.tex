@@ -75,19 +75,24 @@ Dabei ist zu beachten, dass die Prozessgrößen ($Q$,$W_\mathrm{mech}$ und $W_\m
 
 Zuletzt wollen wir noch einige Aussagen zur Wärmezufuhr $\udiff Q$ zusammenfassen:
 \begin{itemize}
-    \item Für quasistatische Prozesse gilt $\udiff Q=T\diff S$ und damit insbesondere $\udiff Q>0$ und ferner $T\diff S>0$. Eine Zufuhr von Wärme führt also zu einem Zuwachs der Entropie.
     \item Durch Umstellen erhält man
           \begin{align*}
               \diff S = \frac{1}{T}\udiff Q.
           \end{align*}
           Da das unvollständige Differential $\udiff Q$ mittels des Faktors $1/T$ das vollständige Differential $\diff S$ charakterisiert, nennt man diesen Faktor einen \emph{integrierenden Faktor}.
-    \item Betrachten wir die Wärmezufuhr für nicht-quasistatische Prozesse, so heißt das, dass das System keine Gleichgewichtszustände durchläuft, sondern sich im Nichtgleichgewicht entwickelt. Die Entropie nach Postulat \ref{post:entropie_maximierung} ist für Nichtgleichgewichtszustände kleiner als für Gleichgewichtszustände, sodass $\diff S > 0$ sein muss, damit ein Gleichgewichtszustand erreicht werden kann.
-          Für ein abgeschlossenes System liegt keine Wärmezufuhr vor. Mit $\udiff Q=0$ folgt dann, dass  $\diff S >0$. Die Entropie nimmt für sogenannte irreversible\footnote{Irreversibel heißt hier, dass das System nicht mehr spontan in den Ausgangszustand übergeht, also die Entropie nicht abnimmt.} Prozesse zu. In nicht abgeschlossenen Systemen, also in Systemen, in denen eine Wärmezufuhr stattfinden kann, nimmt die Entropie für irreversible Prozesse entsprechend
-          \begin{align*}
-              \diff S\geq \frac{\udiff Q}{T}
-          \end{align*}
-          zu.
-          Gleichheit gilt dabei ausschließlich für reversible Prozesse. Es sei angemerkt, dass damit ferner folgt, dass die Entropiezunahme auch auf Anteile zurückzuführen ist, die nicht mit der Wärmezufuhr $\udiff Q$ zusammenhängen.
+    \item Für \emph{quasistatische Prozesse} gilt: $\udiff Q=T\diff S$ und damit insbesondere, dass eine Wärmezufuhr (${\udiff Q>0}$) zu einem Entropiezuwachs (${T\diff S>0}$), führt. 
+    \item Für \emph{nicht-quasistatische Prozesse}, bei denen das System keine Gleichgewichtszustände durchläuft und sich im Nichtgleichgewicht entwickelt, gilt: Da die Entropie nach Postulat \ref{post:entropie_maximierung} für Nichtgleichgewichtszustände kleiner als für Gleichgewichtszustände ist, folgt $\diff S > 0$, eine Entropiezunahme (zur Erreichung eines Gleichgewichtszustandes).
+    
+    (i) Für ein abgeschlossenes System liegt keine Wärmezufuhr vor. Mit $\udiff Q=0$ folgt dann, dass $\diff S >T^{-1}\udiff Q =0$, die Entropie also unabhänig von der Wärmezufuhr zunimmt. Es sei angemerkt, dass damit ferner folgt, dass die Entropiezunahme auch auf Anteile zurückzuführen ist, die nicht mit der Wärmezufuhr $\udiff Q$ zusammenhängen.
+          
+    Prozesse, bei denen die Entropie zunimmt, bezeichnet man als sogenannte irreversible \footnote{Irreversibel heißt hier, dass das System nicht mehr spontan in den Ausgangszustand übergeht, also die Entropie nicht abnimmt.}Prozesse. 
+          
+    (ii) In nicht abgeschlossenen Systemen, also in Systemen, in denen eine Wärmezufuhr stattfinden kann, nimmt die Entropie für entsprechend
+        \begin{align*}
+            \diff S\geq \frac{\udiff Q}{T}
+        \end{align*}
+    zu.
+    Gleichheit gilt dabei ausschließlich für reversible Prozesse und Ungleichheit für irreversible Prozesse.
 \end{itemize}
 
 \section{Unvollständige Differentiale}
@@ -486,31 +491,55 @@ und für ein einfaches System ist dann
 
 
 \begin{summary}
-    Das Differential der inneren Energie setzt sich aus den Differentialen der anderen extensiven Größen zusammen, die jeweils eine intensive Größe als Vorfaktor haben:
+    \begin{itemize}
+        \item \formalemph{Quasistatische} Prozesse beschreiben Prozesse, welche über Gleichgewichtszustände ablaufen. In der Regel wird mit ihnen eine langsame Prozessführung assoziiert, welche dies ermöglicht.
+        \item Laufen Prozesse higegen schnell genug ab, so kann dies zu induzierten Störungen (wie Turbulenzen) führen, welche eine Wärmedissipation verursachen. Bei diesen sogenannten \formalemph{nicht-quasistatischen} Prozessen befindet sich das System nicht mehr in einer Abfolge von Gleichgewichtszuständen.
+    \end{itemize}
+
+    \formalemph{Das unvollständige Differential} ist mathematisch dadurch definiert, dass es ein Differential beschreibt, welches der Integrabilitätsbedingung auf einem einfach zusammenhängenden Definitionsbereich nicht genügt.
+    Ein physikalisches Beispiel dafür sind die Prozessgrößen, wie die...
+    
+    ...quasistatische \formalemph{Wärmezufuhr} $\udiff Q=T\diff S$. Die Temperatur $T$ wird als sogenannter integrierender Faktor bezeichnet, da er gemeinsam mit dem unvollständigen Differential ein vollständiges Differential definiert. Die Betrachtung der Wärmezufuhr bei quasistatischen und nicht-quasistatischen Prozessen führte zum einen zu der Einsicht, dass die quasistatische Wärmezufuhr, $\udiff Q=T\diff S$, eine Entropiezunahme bei vorliegender Wärmezufuhr zur Folge hat, zum anderen dazu, dass bei nicht-quasistatischen Prozessen
+    \begin{align*}
+        \diff S\geq \frac{1}{T}\udiff Q
+    \end{align*}
+    gilt. Die Ungleichheit gilt bei irreversiblen Prozessen (in abgeschlossenen und nicht abgeschlossenen Systemen). Die Gleichheit nur bei nicht abgeschlossenen Systemen und reversiblen Prozessen.
+
+    \formalemph{Das Energiedifferential}
+    der inneren Energie setzt sich aus den Produkten der Differentiale der anderen extensiven Größen und den zu ihnen \emph{konjugierten} intensiven Größen zusammen:
     \begin{align*}
         \diff U = T \diff S - P \diff V + \sum_{j=1}^r \mu_j \diff n_j.
     \end{align*}
-    Alle Summanden beschreiben eine Form von Arbeit, die an dem System verrichtet werden kann und diese sind alle unvollständige Differentiale, da sie Prozessgrößen und keine Zustandsgrößen sind:
+    In allgemeinster Form auch:
+    \begin{align*}
+        \diff U = T\diff S+\sum_{j=1}^{t}P_j\diff X_j.
+    \end{align*}
+    Alle Terme beschreiben eine Form von Arbeit, welche am System verrichtet werden kann und sind damit Prozessgrößen:
     \begin{align*}
         \diff U = \udiff Q + \udiff W_\mathrm{mech} + \udiff W_\mathrm{chem}.
     \end{align*}
-    Wichtig ist dabei, dass dieser Zusammenhang nur für quasistatische Prozesse gilt, also für Prozesse, die so ablaufen, dass sich das System die gesamte Zeit in einem Gleichgewichtszustand befindet (zum Beispiel durch langsame Prozesse realisierbar). 
+    Wichtig ist dabei, dass dieser Zusammenhang nur für quasistatische Prozesse gilt. Dabei haben wir nun auch zum ersten mal die quasistatische chemische Arbeit explizit eingeführt.
 
-    Das Differential $\udiff Q$ ist zwar unvollständig, entspricht aber $T\diff S$, wobei $\diff S$ ein vollständiges Differential ist. Daher nennt man $T$ hier einen integrierenden Faktor.
+    Für ein einkomponentiges System kann die \formalemph{molare Energie}, ${\diff u(s,v)=T\diff s-P\diff v}$, eingeführt werden, welche in diesem Fall ausreicht, um das System vollständig zu beschreiben.
 
+    \formalemph{Das Entropiedifferential}
+    lässt sich ebenfalls verallgemeinern:
+    \begin{align*}
+        \diff S=\sum_{j=0}^{t}F_j\diff X_j\quad \mathrm{mit}\quad F_0=\frac{1}{T}, \quad F_1=\frac{P}{T}, \quad F_i=-\frac{P_i}{T},\quad F_t=-\frac{\mu_t}{T}.
+    \end{align*}
+
+    \formalemph{Gleichgewichtszustände:}
     Als Nächstes haben wir die in Kapitel~\ref{sec:grundlagen und postulate} entwickelten Postulate an einfachen Beispielen getestet und mit Erfahrungswerten verglichen. In einem abgeschlossenen Doppelsystem gleichen sich die Temperaturen bei thermischem Kontakt aneinander an. Stehen zwei durch einen beweglichen Kolben getrennte Kammern unter verschiedenen Drücken, so erfordert die Gleichgewichtsbedingung eine Angleichung des Drucks und dasselbe gilt für ungleiche chemische Potentiale, wenn die Zwangsbedingung aufgehoben wird, die einen Teilchenfluss verhindert. 
 
-    Und so haben wir auch gesehen, dass sich die auf abstrakte Weise definierte Temperatur so verhält, wie wir es erwartet haben. 
-
-    Wir haben dann die Euler-Gleichung in Energie- und Entropiedarstellung kennengelernt:
+    \formalemph{Die Euler-Gleichung} in Energie- und Entropiedarstellung,
     \begin{align*}
-        U = TS + \sum_{j=1}^t P_j X_j, \qquad S = \sum_{j=0}^t F_j X_j
+        U = TS + \sum_{j=1}^t P_j X_j, \qquad S = \sum_{j=0}^t F_j X_j,
     \end{align*}
-    Sie folgt direkt aus der Fundamentalbeziehung $U=U(S, X_1,\dots,X_t)$ bzw. $S=S(U, X_1,\dots,X_t)$ und deren Homogenität. 
-
-    Zuletzt wurde aus der Euler-Gleichung und dem bereits bekannten Differential der inneren Energie die sogenannte Gibbs-Duhem-Beziehung
+    wurde eingeführt. Sie folgt direkt aus der Fundamentalbeziehung $U=U(S, X_1,\dots,X_t)$ (bzw. $S=S(U, X_1,\dots,X_t)$) und deren Homogenität und charakterisiert die Abhängigkeit der intensiven Variablen.
+    
+    Zuletzt wurde aus der Euler-Gleichung und dem bereits bekannten Differential der inneren Energie die sogenannte \formalemph{Gibbs-Duhem-Beziehung}
     \begin{align*}
-        S\diff T + \sum_{j=1}^t X_j \diff P_j = 0
+        S\diff T + \sum_{j=1}^t X_j \diff P_j = 0 \quad\mathrm{bzw.}\quad \sum_{j=0}^{t}X_j\diff F_j=0
     \end{align*}
-    hergeleitet. Daraus sehen wir, dass die intensiven Größen eines Systems nicht alle unabhängig sind, sondern dass eine von den anderen abhängt. Die Anzahl der unabhängigen intensiven Parameter definiert die Zahl der thermodynamischen Freiheitsgrade. 
+    hergeleitet. Diese illustriert, dass die intensiven Größen eines Systems nicht alle unabhängig sind, sondern dass eine von den anderen abhängt. Die Anzahl der unabhängigen intensiven Parameter definiert die Zahl der \formalemph{thermodynamischen Freiheitsgrade}. 
 \end{summary}
