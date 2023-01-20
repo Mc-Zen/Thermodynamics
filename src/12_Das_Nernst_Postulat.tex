@@ -1,4 +1,107 @@
 % !TeX root = Theo_IV.tex
 
 \chapter{Das Nernst-Postulat\label{sec:nernst_postulat}}
+Das Nernst-Postulat \ref{post:GrundpostulatStatMech} ist uns bereits in Kapitel \ref{sec:Nernst} in der Formulierung nach Planck begegnet. Wir wollen es nun etwas weiter vertiefen und die sich daraus ergebenden Folgerungen ausarbeiten.
+\section{Formulierung und Interpretation}
+Wir rekapituleren die Formulierung nach Planck:
+\begin{formal}
+    \formalemph{Nernst-Postulat nach Planck} Für jeden Variablensatz $\{V,N_1,...,N_k\}$ existiert genau ein Punkt, für welchen gilt:
+    \begin{align*}
+        T=\left(\frac{\partial U}{\partial S}\right)_{V,N_1,...,N_k}=0\quad \mathrm{und}\quad S=0.
+    \end{align*}
+\end{formal}
+Mit der eingeführten Definition der Entropie, $S=k_B\ln g(U,V,N_k)\geq 0$, folgt: \begin{formal}
+    Es existiert eine Grundzustandsenergie $U_0$ mit Besetzungszahl $g(U,V,N_k)=1$, der bei $T=0$ angenommen wird. Die Entropie dieses nicht entarteten Grundzustandes ist null.
+\end{formal}
+Diese Aussage wird in der Quantenmechanik etwas abgeschwächt, 
 
+\section{Folgerungen für zweite Ableitungen} Wir wollen nun die Konsequenzen dieser Aussage anhand verschiedener zweiter Ableitungen diskutieren:
+\paragraph*{Spezifische Wärme:} Für diese gilt aufgrund des Nernst-Postulates und dessen Konsequenz, dass die Entropie proportional mit $T^\alpha$ wächst (wobei $\alpha>0$ gilt) mit abnehmender Temperatur $T\rightarrow 0$:
+    \begin{align*}
+        \boxed{c_V=T\left(\frac{\partial s}{\partial T}\right)_V\rightarrow 0 \quad\mathrm{und}\quad c_P=T\left(\frac{\partial s}{\partial T}\right)_P\rightarrow 0 }\;.
+    \end{align*}
+\paragraph*{Weitere zweite Ableitungen:} 
+Wir werden nun unter anderem neue Koeffizienten einführen, welche in Relation mit den bereits eingeführten Antwortkoeffizienten stehen.
+\begin{itemize}
+    \item \formalemph{Isochorer Spannungskoeffizient:} Mit der Maxwellbeziehung der freien Energie,
+    \begin{align*}
+        \left(\frac{\partial S}{\partial V}\right)_T=\left(\frac{\partial P}{\partial T}\right)_V \rightarrow 0, \quad T\rightarrow 0,
+    \end{align*}
+    führen wir einen neuen Koeffizienten ein:
+    \begin{align*}
+        \boxed{\beta(T,V)=\frac{1}{P}\left(\frac{\partial P}{\partial T}\right)_V=\frac{\alpha}{P\kappa_T}\rightarrow 0, \quad T\rightarrow 0}\;.
+    \end{align*}
+    Für $T\rightarrow 0$ folgt auch $\beta\rightarrow 0$.
+    \item \formalemph{Thermischer Ausdehnungskoeffizient:} Analog folgt aus der Betrachtung der Maxwellbeziehung der freien Enthalpie,
+    \begin{align*}
+        \left(\frac{\partial S}{\partial P}\right)_T=\left(\frac{\partial V}{\partial T}\right)_P,
+    \end{align*}
+    für den thermischen Ausdehnungskoeffizienten,
+    \begin{align*}
+        \boxed{\alpha(T,P)=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P\rightarrow 0, \quad T\rightarrow 0}\;,
+    \end{align*}
+    dass dieser für $T\rightarrow 0$ gegen null geht.
+    \item Daraus folgt nunmehr, dass auch der Term
+    \begin{align*}
+        \boxed{\frac{c_P-c_V}{T}=\frac{v\alpha^2}{\kappa_T}\rightarrow 0, \quad T\rightarrow 0}
+    \end{align*}
+    gegen null geht für $T\rightarrow 0$. Ausnahme bildet natürlich das ideale Gas, für welches $c_P-c_V=R$ gilt.
+\end{itemize}
+\paragraph*{Weitere Folgerungen}
+Im Limes $T\rightarrow 0$ sind die freie und die innere Energie natürlich gleich.
+Für die Ableitungen gilt:
+\begin{align*}
+    \lim_{T\rightarrow 0}\left(\frac{\partial F}{\partial T} \right)_V&=-\lim_{T\rightarrow 0}S=0\\
+    &=\lim_{T\rightarrow 0}\left(\frac{\partial U}{\partial T}\right)-\lim_{T\rightarrow 0}\left(T\frac{\partial S}{\partial T}\right)-\lim_{T\rightarrow 0} S=0
+\end{align*}
+Die zwei letzten Terme der letzten Zeile sind gleich null, da der erste proportional zur spezifischen Wärme ist und für den zweiten dies offensichtlich folgt. Damit gilt:
+\begin{align*}
+    \lim_{T\rightarrow 0}\left(\frac{\partial F}{\partial T}\right)_V=\lim_{T\rightarrow 0}\left(\frac{\partial U}{\partial T}\right)_V=0.
+\end{align*}
+Schematisch sehen die Kurvenverläufe der freien und inneren Energie wie in Abb. [Abb][Ref] dargestellt aus.
+\section{Zur Unerreichbarkeit des absoluten Nullpunkts}
+Aus dem Nernst-Postulat folgt auch:
+\begin{formal}
+    Die $\left(T=0\right)$-Isotherme fällt mit der $\left(S=0\right)$-Adiabate zusammen. Das führt dazu, dass der absolute Temperatur- und Entropienullpunkt mit reversiblen, adiabatischen Prozessen nicht erreicht wird.
+\end{formal}
+Startet man nämlich bei einem Punkt für den $T\neq 0\neq S$ gilt, so findet man keinen Schnittpunkt entlang dessen Adiabate oder Isentrope mit der $\left(T=0\right)$-Isotherme.  
+
+Die Abkühlung eines Systems durch Wärmeentzug scheitert aufgrund der Abhängigkeit des Wärmeentzugs von der spezifischen Wärme, welche im Laufe der Abkühlung immer stärker gegen null geht. 
+Eine alternative Kühlmethode bietet die \emph{adiabatische Entmagnetisierung}. Bei dieser werden Spins entlang eines Feldes ausgerichtet und das Feld im Anschluss adiabatisch wieder so gesenkt, dass eine Abkühlung des Systems zur Erhaltung der Ausrichtungsordnung erzeugt wird. Dieser Ansatz wird durch das innere Feld selbst, also die Wechselwirkung zwischen den einzelnen magnetischen Momenten begrenzt, hat allerdings Temperaturen von $15$ $\mu K$ realisieren können.
+
+Eine weitere Alternative ist die \emph{Laserkühlung}. Diese hat 2003 eine Temperatur von $0,5$ n$K$ erzeugt. Dabei bremst ein Laserstrahl ein Atom welches sich auf diesen zubewegt mittels Impulsübertrag ab. Gesteuert wird die Abbremmsung mit Hilfe des Dopplereffektes, welcher eine kontrollierte Absorption durch die Atome ermöglicht, welche sich auf den Strahl zubewegen, sodass insgesamt die miksokopische kinetische Energie des Mediums und damit dessen Temperatur abnehmen kann.
+
+\begin{summary}
+    Das \formalemph{Nernst-Postulat} nach Planck besagt, dass für jeden Variablensatz genau ein Punkt existiert für welchen 
+    \begin{align*}
+        T=\left(\frac{\partial U}{\partial S}\right)_{V,N_1,...,N_k}=0\quad \mathrm{und}\quad S=0.
+    \end{align*}
+    gilt. Dieser Grundzustand ist folglich nicht entartet. 
+    
+    Das Postulat impliziert auch das Verhalten der Antwortkoeffizienten bei abnehmender Temperatur $T\rightarrow 0$: 
+    \begin{itemize}
+        \item Die spezifische Wärme geht entsprechend 
+        \begin{align*}
+            c_V=T\left(\frac{\partial s}{\partial T}\right)_V\rightarrow 0 \quad\mathrm{und}\quad c_P=T\left(\frac{\partial s}{\partial T}\right)_P\rightarrow 0 
+        \end{align*}
+        gegen null.
+        \item Der thermische Ausdehnungskoeffizient gegen ebenfalls gegen null:
+        \begin{align*}
+            \alpha(T,P)=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P\rightarrow 0, \quad T\rightarrow 0.
+        \end{align*}
+        \item Der neu eingeführte \formalemph{isochore Spannungskoeffizient} geht ebenfalls mit
+        \begin{align*}
+          \beta(T,V)=\frac{1}{P}\left(\frac{\partial P}{\partial T}\right)_V=\frac{\alpha}{P\kappa_T}\rightarrow 0  
+        \end{align*}
+        gegen null.
+        \item Dies gilt auch für den Term:
+        \begin{align*}
+            \frac{c_P-c_V}{T}=\frac{v\alpha^2}{\kappa_T}\rightarrow 0.
+        \end{align*}
+    \end{itemize}
+    Der absolute Nullpunkt wird in der Realität nicht erreicht. Wird zum Beispiel ein System durch Wärmeabfuhr gekühlt, welche proportional zur spezifischen Wärme ist, so nimmt entsprechend der beobachteten Abnahme der spezifischen Wärme mit abnehmender Temperatur auch der Wärmefluss ab, sodass eine absolute Kühlung zum Grundzustand nicht erreicht wird. Alternative Kühlmethoden (welche den absoluten Nullpunkt ebenfalls nicht erreichen, doch näher an ihn rankommen) sind:
+    \begin{itemize}
+        \item Die \formalemph{adiabatische Entmagnetisierung}
+        \item und die \formalemph{Laserkühlung}.
+    \end{itemize}
+\end{summary}
