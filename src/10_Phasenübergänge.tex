@@ -68,14 +68,14 @@ Wir betrachten nun einzelne Isotherme $T<T_\mathrm{k}$, also solche mit drei Nul
     \centering
     \tfigPhaseSeparation
     \tfigPhaseSeparationInverted
-    \caption{Links: Schematische Isotherme im $v$-$P$-Diagramm zur Darstellung eines Phasenübergangs unterhalb des kritischen Punktes. Rechts: Gleiche Isotherme im invertierten $P$-$v$-Diagramm.
+    \caption{Links: Schematische Isotherme im $P$-$v$-Diagramm zur Darstellung eines Phasenübergangs unterhalb des kritischen Punktes. Rechts: Gleiche Isotherme im invertierten $v$-$P$-Diagramm.
         Einzelne Punkte auf der Isotherme sind mit Buchstaben benannt. Die Lösungen der Gleichung \eqref{eq:van der waals isotherme} entsprechen den Punkten O, K und D. Die physikalische Isotherme ist in grün gekennzeichnet, während instabile Bereiche in rot und metastabile in blau markiert sind. }
     \label{fig:PhaseSeparation}
 \end{figure}
 
 Auch ist bemerkenswert, dass im roten Bereich MLKJF die Stabilitätsbedingung
 \begin{align*}
-    \kappa_T=-\frac{1}{V}\frac{\partial V}{\partial P}_T>0 \equivalence \left( \frac{\partial P}{\partial v} \right)_T<0
+    \kappa_T=-\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T>0 \equivalence \left( \frac{\partial P}{\partial v} \right)_T<0
 \end{align*}
 verletzt ist (positive Steigung). Ein Teil der Isotherme ist also unphysikalisch und das System nicht stabil. Hier findet die Phasentrennung in eine Phase mit kleinem Volumen (flüssige Phase) und großen Volumen (gasförmige Phase) statt.
 %??
@@ -119,7 +119,10 @@ Die genaue Lage des Koexistenzpunktes lässt sich mithilfe der Bedingung $\mu(O)
                   & = \int_D^F v\diff P+\int_F^K v\diff P+\int_K^M v\diff P+\int_M^O v\diff P=0 \\
     \implication \int_D^F v\diff P-\int_K^F v\diff P=\int_M^K v\diff P-\int_M^O v\diff P.
 \end{align*}
-Die Fläche unterhalb der grünen Gerade in \Abbref{fig:PhaseSeparation} zu der Isothermen von O bis K entspricht also der Fläche oberhalb der grünen Geraden zur Isothermen von K bis D (sogenannte Maxwell-Konstruktion).
+\begin{formal}
+   \formalemph{Maxwell-Konstruktion:} Die Fläche unterhalb der grünen Gerade in \Abbref{fig:PhaseSeparation} zu der Isothermen von O bis K entspricht der Fläche oberhalb der grünen Geraden zur Isothermen von K bis D. 
+\end{formal}
+
 
 
 Die Bedingung $\mu(O)=\mu(D)$ ist auch sinnvoll, denn an dem Phasenkoexistenzpunkt werden Teilchen zwischen zwei Phase/Systemen ausgetauscht. Damit dies aber im thermodynamischen Gleichgewicht geschieht, muss das chemische Potential gleich sein.
@@ -183,6 +186,214 @@ Die molare innere Energieänderung, welche beim Phasenübergang vorliegt entspri
 \begin{align*}
     \Delta u=T\Delta s+P\Delta v.
 \end{align*}
+
+\paragraph*{Hebelgesetz}
+%\begin{figure}[htbp]
+%    \centering
+%    \tfiguglyHebelgesetz
+%    \caption{Schematische Isotherme mit gekennzeichnetem instabilen Zustand Y.}
+%    \label{fig:uglyHebelgesetz}
+%\end{figure}
+Das Molvolumen der koexistierenden Phasen an einem beliebigen Punkt Y des instabilen Bereiches %(siehe Abb. \ref{fig:uglyHebelgesetz}) 
+setzt sich wie folgt zusammen:
+\begin{align*}
+    v_Y=x_Ov_O+x_Dv_D
+\end{align*}
+mit den jeweiligen Molbrüchen der Phasen:
+\begin{align*}
+    x_O=\frac{N_O}{N_O+N_D}, \quad x_O=\frac{N_O}{N_O+N_D} \quad \mathrm{wobei} \quad N_O+N_D=1.
+\end{align*}
+\begin{formal}
+  Das sogenannte \formalemph{Hebelgesetz} beschreibt die daraus folgende Gleichheit zwischen dem umgekehrt proportionalem Verhältnis der Molbruchphasenanteile und der Isothermenstrecken $|YD|$ und $|OY|$. Die Relation wird auch als Hebelgleichgewicht bezeichnet:
+    \begin{align*}
+        \boxed{\frac{x_O}{x_D}=\frac{v_D-v_Y}{v_Y-v_O}=\frac{|YD|}{|OY|}}\;.
+    \end{align*}
+\end{formal}
+
+
+\paragraph*{Zusammenfassung}
+Durch die Integration des chemischen Potentials entlang der Isothermen, haben wir die Phasenübergänge näher charakterisiert. Alternativ kann auch die freie Energie betrachtet werden:
+\begin{align*}
+    \diff f=-s\diff T-P\diff v.
+\end{align*}
+Die Isotherme führt auf:
+\begin{align*}
+    f(T=const,v)=-\int P\diff v+\phi_2(T).
+\end{align*}
+Die Extrema von $-P(v)$ sind in dieser Darstellung Wendepunkte der freien Energie, denn es gilt:
+\begin{align*}
+    \frac{\partial(-P)}{\partial v}=0=\frac{\partial^2f}{\partial v^2}.
+\end{align*}
+Der instabile und metastabile Bereich nimmt damit eine konkave Form an (siehe Abb.[Abb][[Ref]]), welche physikalisch durch die anliegende Sekante (ebenfalls Tangente der Isothermen) ersetzt wird und die freie Energie minimiert. Die mestastabilen Zustände sind dadurch gekennzeichnet, dass sie lokal stabil sind. Die Beschreibung über die freie Energie ist konsistent mit dem vorherigen Zugang, da sie auf dieselben Koexistenzpunkte wie das chemische Potential führt.
+\paragraph*{Spinodale und Binodale}
+Weitere grundlegende Begriffe bilden die Spinodale und Binodale. 
+Sie sind in Abb. [Abb][Ref] abgebildet. 
+Die \emph{Spinodale} beschreibt die Fläche, welche von der Kurve eingeschlossenen wird, welche durch alle Extrema der Isothermen im $P$-$v$-Diagramm verläuft. Damit beschreibt die Spinodale alle instabilen Bereiche.
+
+Die \emph{Binodale} beschreibt die Fläche, welche von der Kurve eingeschlossen wird, die durch alle Koexistenzpunkte der Isothermen im $P$-$v$-Diagramm verläuft, abzüglich der Spinodalen. Diese Fläche umfasst also alle mestastabilen Bereiche.
+
+\paragraph*{Metastabilität}
+Metastabile Bereiche können durch vorsichtige Kompression (Übersättigung) eines Gases oder durch Expansion einer Flüssigkeit (entlang der Isothermen) erreicht werden. Dann führen Störungen in aller Regel dazu, dass Phasenübergänge in Form von Kondensation oder Verdampfung stattfinden.
+Gewöhnlich bilden lokale Dichteschwankungen (oder allgemeiner: Inhomogenitäten)  Keime für Phasenübergänge. Diese können durch Druckvariationen im Medium verursacht werden. Derartige Keime können natürlich auch durch äußere Einflüsse induziert werden, beispielsweise durch Schall, welcher als Dichtewelle propagierend Dichteschwankungen im Medium verursacht. Ein weiteres Beispiel sind ionisierende Teilchen in der Nebelkammer, welche Kondensation induzieren.
+
+Betrachten wir nicht nur Isotherme, so ist auch die Temperatur natürlich eine wesentliche Kontrollvariable der Phasenübergänge. Überhitzung kann jedoch unter Umständen zu Siedeverzug (oder Unterkühlung zum Kondensationsverzug) führen, falls keine phasenübergangsinduzierende Störungen auftreten.
+
+\section{Thermodynamische Beschreibung des Phasenüberganges 1. Ordnung im einkomponentigen System}
+Wir wollen die Phasenübergänge wieder etwas allgemeiner, unabhängig vom Kontext der Van-der-Waals-Gleichung betrachten.
+\paragraph*{Modellvorstellung}
+Wir betrachten ein System, welches Untersysteme verschiedener Phasen beinhaltet, welche wiederum an ein Volum- und Wärmereservoir angeschlossen sind. 
+Die Phasen sind durch wärmeleitende, bewegliche und materiedurchlässige Flächen getrennt (beispielsweise einer Flüssigkeitsoberfläche).
+
+\paragraph*{Zwei-Phasen-Koexistenz}
+Nehmen wir an, es gäbe nur zwei Untersysteme, also zwei zu betrachtende Phasen.
+Betrachten wir die freie Enthalpie des Gesamtsystems (da $T$ und $P$ die Kontrollgrößen des Systems sind, ist dies naheliegend), so setzt diese sich additiv aus der freien Enthalpie der einzelnen Teilsysteme zusammen:
+\begin{align*}
+    G(T,P,N_1,N_2)=G_1(T,P,N_1)+G_2(T,P,N_2)=N_1\mu_1(T,P)+N_2\mu_2(T,P).
+\end{align*}
+Da Druck und Temperatur dank der Reservoire konstant gehalten sind, nimmt die freie Enthalpie ein Minimum an, sodass ihre Ableitung gleich null ist und unter Zuhilfenahme der Relation $N_2=N-N_1$ gilt:
+\begin{align*}
+    \diff G=\frac{\partial G}{\partial N_1}\diff N_1+\frac{\partial G}{\partial N_2}\diff N_2=\left[\mu_1(T,P)-\mu_2(T,P)\right]\diff N_1=0.
+\end{align*}
+Daraus folgt die Gleichheit der chemischen Potentiale.
+Die durch $\mu_1(T,P)=\mu_2(T,P)$ beschriebene Phasenkoexistenz entspricht dem Schnitt zweier (Hyper-)Flächen. Dieser Schnitt charakterisiert die Koexistenzlinie $P=P(T)$.
+\paragraph*{Drei-Phasen-Koexistenz}
+Analog können wir ein Modellsystem mit drei Untersystemen verschiedener Phasen betrachten, dann folgt:
+\begin{align*}
+    G(T,P,N_1,N_2,N_3)=N_1\mu_1(T,P)+N_2\mu_2(T,P)+N_3\mu_3(T,P)
+\end{align*}
+und ferner wieder mit $N_1+N_2+N_3=N=const$ und der Konstanz von Temperatur und Druck:
+\begin{align*}
+    \diff G=\mu_1(-\diff N_2-\diff N_3)+\mu_2\diff N_2+\mu_3\diff N_3=0.
+\end{align*}
+Auch hier folgt wieder die erwartete Gleichheit der chemischen Potentiale ${\mu_1(T,P)=\mu_2(T,P)=\mu_3(T,P)}$ als Schnitt dreier Flächen. Dieser charakterisiert entsprechend keine Koexistenzlinie, sondern einen Koexistenzpunkt, den bereits eingeführten Tripelpunkt. 
+\paragraph*{Beispiel}
+Der Tripelpunkt von Wasser liegt beispielsweise bei $273,16$ Kelvin und $0.006$ atm.
+
+Im Allgemeinen gibt es keine Quadrupelpunkte für einkomponentige Systeme, da für diese (drei Gleichungen und zwei Unbekannte) keine Lösung bestimmt werden kann. 
+
+\section{Phasendiagramme einkomponentiger Systeme}
+Wir wollen zu der Van-der-Waals-Beschreibung zurückkehren und mit ihr die weiteren Phasenübergänge diskutieren.
+Wieder dienen die Isothermen als Ausgangspunkt und das Vorgehen nach der Maxwellkonstruktion führt auf die Koexistenzpunkte $P_\mathrm{Koex}(T)$ der unterschiedlichen Phasen.
+Es ergibt sich ein $P$-$v$-Diagramm der Form: [Abb].
+Erkennbar sind die Isothermen und ihre Phasenübergangsbereiche. Der Tripelpunkt ist eingezeichnet und durch eine Isobare repräsentiert, welche einen Berührungspunkt mit jeder Phase hat. 
+Eine weitere Darstellungsform bietet das klassische ($P$-$T$-) Phasendiagramm ([Abb][Ref]). Es stellt alle Koexistenzkurven in Abhängigkeit der Temperatur dar. Wir fassen die wichtigsten Begriffe zusammen, welche hier zur Beschreibung der Kurven notwendig sind:
+\begin{itemize}
+    \item Die \emph{Sublimation} stellt die Koexistenzdrücke des \emph{fest-gasförmigen} Phasenübergangs dar.
+    \item Das \emph{Schmelzen}, welches durch die \emph{Gefrierdruckkurve} repräsentiert wird, beinhaltet alle Koexistenzdrücke des \emph{fest-flüssigen} Phasenübergangs.
+    \item Das \emph{Sieden}, welches durch die \emph{Dampfdruckkurve} repräsentiert wird, beinhaltet alle Koexistenzdrücke des \emph{flüssig-gasförmigen} Phasenübergangs. Die Kurve endet im \emph{kritischen Punkt}, ab welchem die Dichte des Gases und der Flüssigkeit nicht mehr unterscheidbar sind.
+    \item Alle drei Kurven treffen sich im \emph{Tripelpunkt}.
+\end{itemize}
+\paragraph*{Clausius-Clapeyron-Gleichung}
+Gegeben sei nun eine Zwei-Phasen-Koexistenzkurve $P(T)$.
+Entlang dieser gilt:
+\begin{itemize}
+    \item Es liegen Entropiesprünge $\Delta s=s_2-s_1$ vor, welche durch die latente Wärme (Sublimations-, Schmelz- oder Verdampfungswärme) induziert werden.
+    \item Es liegen Volumensprünge $\Delta v=v_2-v_1$ vor.
+    \item Es liegen allerdings keine Sprünge im chemischen Potential vor: $\Delta \mu=\mu_2-\mu_1=0$.
+\end{itemize}
+Für jede Phase $i$ gilt die Gibbs-Duhem-Gleichung der Form:
+\begin{align*}
+    \diff \mu_i=-s_i\diff T+v_i\diff P.
+\end{align*}
+Da entlang der Koexistenzkurve keine Änderung des chemischen Potentials erfolgt, gilt auch:
+\begin{align*}
+    \diff \Delta \mu=0=-\Delta s\diff T+\Delta v\diff P=\left(-\Delta s+\Delta v\frac{\diff P}{\diff T}\right)\diff T.
+\end{align*}
+Da beliebige Temperaturänderungen physikalisch erlaubt sind folgt ferner:
+\begin{align*}
+    \frac{\diff P}{\diff T}=\frac{\Delta s}{\Delta v}.
+\end{align*}
+Mit Einsetzen der Relation für die Wärmezufuhr erhalten wir schließlich die Clausius-Clapeyron-Gleichung:
+\begin{align*}
+    \boxed{\frac{\diff P}{\diff T}=\frac{\Delta q}{T\Delta v}=\frac{\Delta Q}{T\Delta V}}\;.
+\end{align*}
+Die Gleichung ermöglicht folglich mittels der Kenntnis der Wärmezufuhr und der Volumenänderung die Koexistenzkurve zu erschließen und gilt für alle Koexistenzkurven.
+Im Allgemeinen nimmt beim fest-flüssig-Phasenübergang die Entropie und das Volumen zu, sodass auch die Koexistenzkurve eine positive Steigung hat. Ausnahme zu dieser Regel bildet Wasser, dessen Kristallstruktur im festen Zustand für ein größeres Volumen sorgt als im flüssigen Zustand (die höchste Dichte liegt bei $4°$ C). Die praktischen Folgen dieser Anomalie sind nicht unerheblich - zum einen führt dies dazu, dass Eis und damit ganze Eisberge schwimmen, dass Seen von oben nach unten gefrieren, dass Eis eine enorme Sprengkraft besitzt, usw.
+\section{Phasenübergänge 1. Ordnung in Mischungen}
+Natürlich können wir auch mehrkomponentige Systeme betrachten. Zum Beispiel können wir Salz oder Ammoniak in Wasser lösen oder Alkohol-Wasser-Mischungen herstellen, deren Gefrierpunkt niedriger ist als bei reinem Wasser.
+Wir wollen derartige Systeme auch aus thermodynamischer Sicht modellisieren.
+\paragraph*{Modellvorstellung}
+Wieder betrachten wir ein aus mehreren Untersystemen bestehendes System, welches an Wärme- und Volumenreservoir gekoppelt ist. Betrachten wir $M$ Phasen im Gleichgewicht, so werden diese mit $M$ Untersystemen repräsentiert. Jedes Untersystem hat wiederum unterschiedliche Komponenten ($r$ Stück), sodass jede Phase $\alpha$ die Einstellkomponenten $N_1^\alpha,...,N_r^\alpha$ besitzt.
+
+Die in einer Phase vorliegende Gesamtmolzahl entspricht natürlich der Summe über alle Einzelmolzahlen, $N^\alpha=\sum_{k=1}^{r}N_k^\alpha$. Die Gesamtmolzahl einer einzelnen Komponente im Gesamtsystem entspricht natürlich der Summe über alle Untersysteme: $N_k=\sum_{\alpha=1}^{M}N_k^\alpha$.
+Ein einzelner Molbruch einer chemischen Komponente entspricht:
+\begin{align*}
+    x_k^\alpha=\frac{N_k^\alpha}{N^\alpha}\quad \mathrm{mit}\quad \sum_{k=1}^{r}x_k^\alpha=1.
+\end{align*}
+Liegen insgesamt keine chemischen Reaktionen vor, so sind die Gesamtmolzahlen konstant. Damit folgt für die einzelnen Molzahländerungen einer Komponente:
+\begin{align*}
+    \sum_{\alpha=1}^{M}N_k^\alpha=0.
+\end{align*}
+
+Da Temperatur und Druck die Kontrollvariablen des Systems sind, betrachten wir die freie Enthalpie:
+\begin{align*}
+    G=\sum_{\alpha=1}^{M}G^\alpha \quad \mathrm{mit} \quad G^\alpha(T,P,N_1^\alpha,...,N_r^\alpha)=\sum_{k=1}^{r}\mu_k^\alpha N_k^\alpha.
+\end{align*}
+Die letzte Gleichheit folgt aus der Euler-Gleichung. Es stellt sich die Frage, welche die relevanten Variablen sind.
+Zwar gilt
+\begin{align*}
+    \mu_k^\alpha=\mu_k^\alpha(T,P,N_1^\alpha,...,N_r^\alpha),
+\end{align*}
+jedoch kann durch Rausziehen der Gesamtmolzahl $N^\alpha$ eine Darstellung in Abhängigkeit der Molbrüche erzeugt werden:
+\begin{align*}
+    \mu_k^\alpha=\mu_k^\alpha(T,P,x_1^\alpha,...,x_{r-1}^\alpha, N_r^\alpha).
+\end{align*}
+Nun kann die letzte Variable, $N_r^\alpha$, durch $1-\sum_{k=1}^{r-1}x_k^\alpha$ ersetzt werden.
+
+Diese Darstellung ist damit nur noch von $(r-1)M+2$ \emph{inneren} intensiven Variablen abhängig und ermöglicht eine vollständige qualitative Beschreibung der Phasenübergänge.
+
+Die quantitativ exakte Beschreibung erfordert $rM+2$ \emph{äußere} Variablen.
+\paragraph*{Phasen-Gleichgewicht}
+Im Gleichgewicht nimmt das System ein Minimum bezüglich der freien Enthalpie an ($\left(\diff G\right)_{T,P}=0$), also gilt:
+\begin{align*}
+    \left(\diff G\right)_{T,P}=\sum_{\alpha=1}^{M}\sum_{k=1}^{r}\mu_k^\alpha\diff N_k^\alpha=\sum_{k=1}^{r}\sum_{\alpha=2}^{M}\left(\mu_k^\alpha-\mu_k^1\right)\diff N_k^\alpha=0.
+\end{align*} 
+Die zweite Gleichheit folgt aus der Stoffmengenkonstanz des Gesamtsystems. Aus dieser Relation folgt letztlich wieder die Gleichheit der chemischen Potentiale einer Komponente:
+\begin{align}
+    \label{eq:chemPotGG}
+    \boxed{\mu_k^1=\mu_k^2=...=\mu_k^M}\;.
+\end{align}
+Dies gilt jeweils für alle Komponenten $k=1,...,r$ und ist dadurch physikalisch begründbar, dass die Stoffe zwischen den Phasen übertreten können.
+
+Wir wollen uns nun der Frage widmen, wie viele Freiheitsgrade $f$ im Phasen-Gleichgewicht vorliegen. Dazu müssen wir die Frage beantworten, wie viele Parameter notwendig sind, um die Phasen und ihre Phasenkoexistenz zu beschreiben.
+\paragraph*{Gibbs'sche Phasenregel} Diese Motivation führt uns zur Betrachtung einkomponentiger und mehrkomponentiger Systeme unter diesem Gesichtspunkt:
+\begin{itemize}
+    \item \emph{Einkomponentige Systeme} haben nur eine Komponente ($r=1$) und damit zwei ($\left(r-1\right)M+2$) innere intensive Variablen, nämlich $P$ und $T$.
+    Im Phasendiagramm lassen sich die Freiheitsgrade sehr leicht ablesen. Für alle Phasenbereiche sind die zwei Variablen unabhängig voneinander wählbar, es folgt der Freiheitsgrad $f=2$. Auf den Koexistenzlinien ($P(T)$) beschränkt sich der Freiheitsgrad auf eine Variable. Im Drei-Phasenkoexistenzpunkt ist der Freiheitsgrad natürlich: $f=0$.
+    \item \emph{Mehrkomponentige Systeme} haben $r$ Komponenten und damit ganz allgemein $\left(r-1\right)M+2$ innere Variablen. Der Freiheitsgrad ergibt sich hier mittels der Verallgemeinerung der Beobachtung am einkomponentigen System als Differenz der Zahl der inneren Variablen und der vorliegenden Bestimmungsgleichungen $r\left(M-1\right)$: 
+    \begin{align*}
+        f=\left[\left(r-1\right)M+2\right]-\left[r\left(M-1\right)\right].
+    \end{align*}
+    Der zweite Term folgt daraus, dass pro betrachtete Komponente im System exakt $M-1$ Gleichungen für die chemischen Potentiale der Komponente in den $M$ unterschiedlichen Phasen vorliegen (Vergleich Gleichung \ref{eq:chemPotGG}).
+\end{itemize}
+Aus dieser Verallgemeinerung folgt die 
+\begin{formal}
+    \formalemph{Gibbs'sche Phasenregel:}
+    \begin{align*}
+        \boxed{f=r-M+2}\;.
+    \end{align*}
+    Sie beschreibt die Zahl der thermodynamischen Freiheitsgrade eines Systems im Phasen-Gleichgewicht und entspricht der Zahl der frei wählbaren intensiven Variablen. Es lässt sich daraus folgern, dass maximal $M\leq r+2$ Phasen koexistieren können. 
+\end{formal}
+Ein einfacher Weg sich die Phasenregel zu merken besteht in der Varanschaulichung, dass $r+2$ die intensiven Variablen $T,P,\mu_1,...,\mu_r$ beschreibt und die Gibbs-Duhem-Gleichung für jede Phase zu einer Reduktion um eine Variable beiträgt. 
+
+\section{Phasendiagramme binärer Mischungen}
+Wir betrachten nun ein System mit zwei Komponenten ($r=2$). Dabei kann es sich zum Beispiel um Metalllegierungen, Flüssigkristalle oder Flüssigkeitsgemische handeln.
+\paragraph*{Ein- und Zweiphasengebiete} Wir üben zuerst die Anwendung der Phasenregel. Betrachten wir das System  
+\begin{itemize}
+    \item im Einphasenraum mit $M=1$, so folgt mit der Gibbs'schen Phasenregel ein Freiheitsgrad $f=3$. Die frei wählbaren Größen sind $T,P,x_1$. 
+    \item Entlang der Phasenkoexistenzebene ($M=2$) existiert ein Freiheitsgrad $f=2$ mittels der Größen $T$ und $P$. Die dritte Variable $x_1$ ist hier durch die geltende Gleicheit der chemischen Potentiale ($\mu_i^1=\mu_i^2$) festgelegt. 
+    \item Koexistieren drei Phasen eintlang einer Kurve ($M=3$), so reduziert sich der Freiheitsgrad wieder auf $f=1$ mit der freien Variable $T$.
+    \item Der Quadrupelpunkt mit $M=4$ hat einen Freiheitsgrad $f=0$.
+\end{itemize}
+\paragraph*{Phasendiagramm}
+Wir wollen uns nun zwei exemplarische Phasenübergänge genauer ansehen.
+
+Im $T$-$x_1$-Diagramm [Abb][ref] ist der gas-flüssig-Übergang eines binären Gemisches bei konstantem Druck dargestellt. Wieder wird ein Koexistenzbereich charakterisiert, der die Phasenübergänge vorgibt. Betrachtet man einen Destillationsprozess, so beobachtet man, dass die Temperaturerhöhung bis zum Koexistenzbereich und der anschließende Phasenübergang in die gasförmige Phase dazu führen, dass die Stoffmengenkonzentration $x_1$ abnimmt. Auf diese Phasenübergangseigenschaft beruht der Destillationsprozess.
+
+Im nächsten $T$-$x_1$-Diagramm ([abb][ref]) ist ein fest-flüssig-Übergang schematisch dargestellt. Wieder definieren die markierten Bereiche die Koexistenzbereiche verschiedener Phasen; diesmal gibt es auch einen Koexistenzbereich zweier fester Phasen unterschiedlicher Stoffmengenzusammensetzungen ($\alpha, \beta$). 
+
+Wird beispielsweise der feste Zustand $\beta$ erhitzt und in den flüssigen Zustand überführt, so hat sowohl der flüssige Zustand, als auch das ursprünglich erhitzte feste Medium eine andere stoffliche Zusammensetzung, sodass der Verflüssigungsprozess entlang der Koexistenzkurven nach unten abrutscht - Ausnahme bildet der eutektische Punkt. Dieser verbindet alle drei Phasen über eine Isotherme und ist im eigentlichen Sinne eine Kurve (wenn die Abhängigkeit vom Druck mitberücksichtigt wird). Der fest-flüssig-Phasenübergang am eutektischen Punkt stellt sicher, dass die Zusammensetzungen der flüssigen und festen Phasen an diesem Punkt gleich bleiben und kontrollierbarer ist.
+
 
 \begin{summary}
     Es gibt Phasenübergänge erster und zweiter Ordnung. Erstere werden zum Beispiel durch Unstetigkeiten in der Dichte oder dem Molvolumen oder durch latente Wärme gebildet.\\
