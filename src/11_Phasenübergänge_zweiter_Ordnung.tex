@@ -1,4 +1,234 @@
 % !TeX root = Theo_IV.tex
 
 \chapter{Phasenübergänge zweiter Ordnung\label{sec:phasenuebergaenge zweiter ordnung}}
+Wir wollen uns nun weiter mit den Phasenübergängen zweiter Ordnung auseinandersetzen. 
+\section{Klassifikation}
+Die Einteilung in Übergänge erster und zweiter Ordnung wird nach Ehrenfest wie folgt definiert:
+\begin{formal}
+    \formalemph{Phasenübergänge erster Ordnung} sind dadurch ausgezeichnet, dass sie eine Unstestigkeit in der \emph{ersten} Ableitung eines geeigneten Potentials aufweisen. So haben wir im vorherigen Kapitel Sprünge in der Entropie oder im Molvolumen konstatiert.\\
+    \formalemph{Phasenübergänge zweiter Ordnung} sind hingegen dadurch gekennzeichnet, dass sie eine Unstestigkeit in der \emph{zweiten} Ableitung des thermodynamischen Potentials besitzen. Das heißt, dass diese Übergänge keine latente Wärme aufnehmen (oder abgeben).
+\end{formal}
+Die zweiten Ableitungen sind mit verallgemeinerten Suszeptibilitäten (wie der spezifischen Wärme) verknüpft. Deren Divergenzen werden mit kritischen Exponenten beschrieben, welche wiederum kritische Phänomene charakterisieren. 
 
+Die Unstestigkeiten haben zur Folge, dass das thermodynamische Potential keine analytische Funktion eines Kontrollparameters des Phasenübergangs ist, also keine Potenzreihenentwicklung für das Potential existiert.
+
+Wir wollen die Phasenübergänge zweiter Ordnung nun an einem einführenden Beispiel illustrieren.
+\section{Flüssig-Gas-Übergang}
+Wir fangen mit der Betrachtung eines Systems an, welches von einem Volumen- und Wärmereservoir umgeben ist. Dieses beinhaltet ein Mol eines Stoffes mit Molvolumen $v$. Diese soll in unserem Gedankenexperiment die Zwangsvariable, bzw. den sogenannten Ordnungsparameter des Systems darstellen. Ferner unterliegt es möglichen Fluktuationen. 
+Die molare freie Enthalpie wird somit ebenfalls von der Zwangsvariablen abhängen: $g(T,P,v)$. Stellt sich ein ungehemmtes Gleichgewicht ein, so nimmt die molare freie Enthalpie ihr Minimum an:
+\begin{align*}
+    \frac{\partial g}{\partial v}=-\Delta P=-\left(P_\mathrm{S}-P\right)=0.
+\end{align*}
+Wobei $P_\mathrm{S}$ den Systemdruck bezeichnet. Daraus folgt die erwartete Druckgleichheit $P_\mathrm{S}=P$ und ferner gilt: $\partial^2g/\partial v^2>0$.
+
+Es stellt sich nun die Frage, wie der Verlauf der molaren freien Enthalpie in Abhängigkeit des eingeführten Kontrollparameters aussieht. [Abb][ref]
+Wir betrachten verschiedene Punkte des bekannten $P$-$T$-Diagrammes und skizzieren den Verlauf von $g$ in Abhängigkeit von $v$:
+Nahe der Koexistenzkurve zeichnen sich die Minima der Molvolumina der flüssigen und gasförmigen Phase ab. Global minimal ist dasjenige, welches die Phase des betrachteten Punktes beschreibt und durch das chemische Potential festgelegt wird (das andere Minimum kennzeichnet den metastabilen Zustand). Auf der Koexistenzlinie selbst, sind beide Minima gleich groß. Nähert man sich dem kritischen Punkt entlang der Koexistenzkurve, so nimmt sowohl die Barriere zwischen den zwei Minima, als auch deren Molvolumendifferenz ab.
+Im kritischen Punkt selbst liegt nur noch ein breites Minimum vor. Die Breite des Minimums folgt aus der zweiten Ableitung $\partial^2 g/\partial v^2=-\partial\Delta P/\partial v$, welche (aufgrund von natürlichen Fluktuationen nur ungefähr) null ist. 
+Daraus folgt wiederum die Divergenz der isothermen Kompressibilität:
+\begin{align*}
+    \kappa_T=-\frac{1}{v}\frac{\partial v}{\partial\Delta P} \rightarrow \infty.
+\end{align*}
+Wir haben dies bereits bei der Van-der-Waals-Zustandsgleichung beobachtet, deren Isotherme im kritischen Punkt einen Sattelpunkt hat.
+Diese Divergenz führt dazu, dass bereits kleinste Druckänderungen zu großen Volumenänderungen innerhalb des Mediums führen, insgesamt also starke Volumenfluktuationen vorliegen. Dieses Phänomen wird auch als \emph{kritische Opaleszenz} bezeichnet, bei welcher Flüssigkeit aufgrund der Lichtstreuungen an Dichtefluktuationen trüb erscheint. 
+
+\section{Landautheorie}
+Wir wollen nun eine sehr grundlegende klassische Theorie zur Beschreibung von Phasenübergängen zweiter Ordnung einführen: die \emph{Landautheorie}. Sie ist zwar unvollständig und nur beschränkt gültig, ist jedoch ein wertvolles Werkzeug in der Auseinandersetzung mit den Phasenübergängen.
+\paragraph*{Para-Feromagnetischer-Übergang}
+Wir beginnen mit einem generischen Beispiel und führen eine neue Variable ein:
+Das molare magnetische Moment $m$, welches eine verallgemeinerte Wegvariable beschreibt.
+Mit der neu eingeführten Kontrollvariable folgt für die molare freie Enthalpie:
+\begin{align*}
+    \diff g=-s\diff T+v\diff P+\mu_0H\diff m.
+\end{align*}
+Der letzte Term beschreibt das magnetische Arbeitsdifferential, dessen verallgemeinerte Kraft durch das (äußere) Magnetfeld gegeben ist. 
+
+Wir können nun das Magnetfeld über die Temperatur auftragen und das Verhalten der neuen Kontrollvariable beobachten: [Abb] [ref].
+Das Vorzeichen des wirkenden Magnetfelds bestimmt das Vorzeichen des magnetischen Moments. Die Koexistenzlinie dieser dadurch unterschiedenen Phasen liegt auf der $T$-Achse und endet im kritischen Punkt. Analog zum kritischen Punkt im $P$-$T$-Diagramm, beschreibt dieser Punkt den Ort, ab welchem das magnetische Moment null ist und die zwei Phasen damit nicht mehr unterscheidbar sind.
+
+Das molare magnetische Moment $m$ wirkt hier als sogenannter \emph{Ordnungsparameter}, welcher in der Hochtemperaturphase den Wert null annimmt und in der Tieftemperaturphase ungleich null ist.
+
+Betrachten wir genauer, was in der Nähe des kritischen Punktes passiert:
+Das Magnetfeld ist gleich null. Da $m$ nun klein ist, nehmen wir eine Taylornäherung vor:
+\begin{align*}
+    g(T,P,m)=g_0(T,P)+am^2+bm^4.
+\end{align*}
+Die Form folgt aus den folgenden Kriterien: 
+1. Es gilt offenkundig eine Symmetrie der Form $g(m)=g(-m)$, dies lässt darauf schließen, dass $m^n$ mit $n=2,4,...$ gilt. \\
+2. Ferner gilt für $m$ gegen $\pm \infty$ Stabilität, denn $g$ hat bei endlichem $m$ sein Minimum, sodass $b>0$ folgt. 
+
+Mit der Taylornäherung um $T_\mathrm{kr}$ folgt $a=a_0(T-T_\mathrm{kr})$ und damit ferner:
+\begin{formal}
+    \begin{align*}
+    g=g_0(T,P) +a_0(T-T_\mathrm{kr})m^2+bm^4.
+\end{align*}
+Dies ist die \formalemph{generische Form der freien molaren Enthalpie} und sie reicht für wesentliche Aussagen über die Phasenübergänge.
+\end{formal}
+
+Wir wollen den Verlauf der Funktion anhand dreier Beispiele diskutieren:
+\begin{itemize}
+    \item $T>T_\mathrm{kr}$: Für diesen Fall ist $a>0$, sodass das Minimum von $g$ nicht sehr breit ist.
+    \item $T=T_\mathrm{kr}$: Für diesen Fall ist $a=0$, sodass  das Minimum von $g$ sehr breit ist.
+    \item $T<T_\mathrm{kr}$: Für diesen Fall ist $a<0$, sodass $g$ zwei Minima und ein Maximum besitzt.
+\end{itemize}
+
+Für ein Minimum von $g$ (im Gleichgewichtszustand) gilt:
+\begin{align*}
+    \frac{\partial g}{\partial m}=0 \quad \mathrm{und} \quad \frac{\partial ^g}{\partial m^2}>0.
+\end{align*}
+Die Minimierung der freien Enthalpie führt damit auf den realisierten Verlauf des magnetischen Moments:
+\begin{align*}
+    \boxed{m(T)=\left\{
+    \begin{aligned}
+        0, \quad T>T_\mathrm{kr}\\
+        \pm \sqrt{\frac{a_0}{2b}}\left(T_\mathrm{kr}-T\right)^\beta\quad \mathrm{mit} \quad \beta=\frac{1}{2}, \quad T\leq T_\mathrm{kr}
+    \end{aligned}
+    \right.}\;.
+\end{align*}
+Wobei $\beta$ den kritischen Exponenten bezeichnet und das Minimum für $T=T_\mathrm{kr}$ auch bei null liegt. In Abb. [Ref][Abb] ist der Verlauf vom Ordnungsparameter $m$ skizziert - er ist kontinuierlich und verläuft ohne Sprung.
+
+Wir wollen uns nun den kritischen Exponenten widmen und ihre Bedeutung untersuchen.
+\paragraph*{Kritische Exponenten und zweite Ableitungen}
+Die kritischen Exponenten sind in der Regel mit den zweiten Ableitungen nahe dem bzw. am kritischen Punkt verknüpft. 
+\paragraph*{Die spezifische Wärme und $\alpha$}
+Ein Beispiel dafür bildet die spezifische Wärme, $c_P=-T\left(\partial^2g/\partial T^2\right)_P$, für welche bei Einsetzen der erarbeiteten generischen Formen von $g$ und $m(T)$ folgt:
+\begin{align}
+    \label{eq:LandauSpezifWaermeSprung}
+    \boxed{
+        \Delta c_P=c_P-c_P^0 = \left\{
+            \begin{aligned}
+                0, \quad T>T_\mathrm{kr}\\
+                -T_\mathrm{kr}\frac{a_0^2}{b},\quad T<T_\mathrm{kr}
+            \end{aligned}
+        \right.}\;.
+\end{align}
+Es liegt also ein Sprung der zweiten Ableitung bei der kritischen Temperatur vor. Die Entropie selbst (als erste Ableitung) hingegen ist stetig.
+
+Eine wichtige Verallgemeinerung für die Änderung der spezifischen Wärmekapazität bildet die folgende Form:
+\begin{align}
+    \label{eq:AllgSpezifWaermeSprung}
+    \boxed{
+        \Delta c_P \propto \left\{ 
+            \begin{aligned}
+                \left(T-T_\mathrm{kr}\right)^{-\alpha'}, \quad T>T_\mathrm{kr}\\
+                \left(T_\mathrm{kr}-T\right)^{-\alpha}, \quad T<T_\mathrm{kr}
+            \end{aligned}
+        \right.
+    }\;.
+\end{align}
+Für die Landautheorie sind die kritischen Exponenten $\alpha$ und $\alpha'$ gleich null, da für diese die zuvor in Gleichung \ref{eq:LandauSpezifWaermeSprung} eingeführte Unstestigkeit mit den konstanten Beträgen gilt.
+Im allgemeinen - in realen Systemen - sind diese Exponenten jedoch ungleich null.
+
+\paragraph*{Die molare Suszeptibilität und $\gamma$}
+Ein weiteres Beispiel ist die molare Suszeptibilität $\chi$ mit ${\chi^{-1}=\left(\partial H/\partial m\right)_{T,P}}$, welche sich wie folgt als zweite Ableitung schreiben lässt:
+\begin{align*}
+    \chi^{-1}=\left(\frac{\partial^2g}{\partial m^2}\right)_{T,P}.
+\end{align*}
+Dabei wird vorausgesetzt, dass das Differential der molaren freien Enthalpie mit dem magnetischen Arbeitsdifferential ergänzt wird und $\mu_0=1$ gilt. Für Temperaturen $T>T_\mathrm{kr}$ gilt $m=\chi H$.
+
+Wieder kann eine verallgemeinerte Form für die Suszeptibilität aufgestellt werden:
+\begin{align*}
+    \boxed{\chi^{-1}=\left\{ 
+        \begin{aligned}
+            2a_0\left(T-T_\mathrm{kr}\right)^{\gamma'}, \quad T>T_\mathrm{kr}\\
+            4a_0\left(T_\mathrm{kr}-T\right)^{\gamma}, \quad T<T_\mathrm{kr}
+        \end{aligned}
+    \right.}\;.
+\end{align*}
+Im Rahmen der Landautheorie gilt: $\gamma=\gamma'=1$. Das heißt, dass die Suszeptibilität für Temperaturen $T\rightarrow T_\mathrm{kr}$ divergiert. Das System reagiert damit sehr sensibel auf das Magnetfeld (analog zur Divergenz der isothermen Kompressibilität, welche zu großer Sensibilität des Systems bezüglich Druckänderungen führt). 
+
+\paragraph*{Ableitung des Magnetfelds und $\delta$ am kritischen Punkt}
+Der letzte kritische Exponent, den wir nun einführen wollen hängt mit dem Magnetfeld am kritischen Punkt, $H=\left(\frac{\partial g}{\partial m}\right)_{T_\mathrm{kr},P}$, zusammen. Für den Ordnungsparameter folgt damit die Form:
+\begin{align*}
+    \boxed{m=\pm \left(\frac{1}{4b}\right)^{1/3}|H|^{1/\delta}}\;.
+\end{align*}
+Aus der Landautheorie folgt $\delta=3$. Die Terme erster und zweiter Ordnung in $m$ treten nicht auf, da am kritischen Punkt $a=0$ gilt. Für die Temperatur $T_\mathrm{kr}$ ist $m$ also nicht proportional zum Magnetfeld.
+
+Wir wollen zum Abschluss des Kapitels noch ein paar kontextualisierende Bemerkungen machen und den Kreis schließen, indem wir einen Vergleich des soeben Erarbeiteten mit einem Phasenübergang einer Van-der-Waals-Flüssigkeit nahe dem kritischen Punkt machen:
+\begin{itemize}
+    \item Die Landautheorie stimmt mit den experimentellen Werten nicht überein. Dies liegt daran, dass es sich bei der Theorie um eine sogenannte Mean-Field-Theorie handelt, welche die einzelnen mikroskopischen Freiheitsgrade und Wechselwirkungen zwischen den beteiligten Molekülen nicht berücksichtigt. Über Mittelungen Aussagen treffend, kann sie auch die Fluktuationen der Ordnungsparameter nicht beschreiben, doch eben jene Fluktuationen können aufgrund kritischer Phänomene eine wichtige Rolle in der Nähe des kritischen Punktes spielen. Die Theorie betrachtet zudem ausschließlich Bereiche nahe des Phasenüberganges und ist begrenzt oder nicht gültig für andere Bereiche.
+    \item  Die kritischen Exponenten weisen eine Universalität auf. Sie sind ausschließlich von der Dimension des Raumes und des Ordnungsparameters abhängig. Der Ursprung ihrer Universalität bildet der Umstand, dass sie eine Mittelung über atomare Details dadurch rechtfertigen, dass weitreichende Korrelationen zwischen Fluktuationen der Ordnungsparameter vorliegen.
+    \item Eine genauere Berechnung der Exponenten erlaubt die Therorie der Renormierungsgruppen nach Wilson, Kadanoff und Fischer.
+\end{itemize}
+\paragraph*{Van-der-Waals-Fküssigkeit nahe dem $T_\mathrm{kr}$} Wir ersetzen jetzt den Ordnungsparameter $m$ wieder durch den Dichteunterschied der Phasen, $\Delta v$ und das Magnetfeld durch den Druck. 
+Für den Dichteunterschied folgt entlang der Phasenkoexistenzkurve hin zum kritischen Punkt:
+\begin{align*}
+    \Delta v=v_\mathrm{g}-v_\mathrm{fl}\propto \left(T_\mathrm{kr}-T\right)^{1/2}
+\end{align*}
+mit kritischem Exponenten $\beta=1/2$.
+Für die isotherme Kompressibilität gilt:
+\begin{align*}
+    \Delta \kappa_T^{-1}=-v\frac{\partial P}{\partial v}\propto \left(T_\mathrm{kr}-T\right)
+\end{align*}
+mit kritischem Exponenten $\gamma=\gamma '=1$.
+Am kritischen Punkt selbst gilt:
+\begin{align*}
+    v-v_\mathrm{kr}\propto \left(P_\mathrm{kr}\right)^{1/3}
+\end{align*}
+mit kritischem Exponenten $\delta=3$. 
+
+Es ergeben sich also die selben Exponenten der Landautheorie wie für den Ordnungsparameter $m$.  
+\begin{summary}
+    Die \formalemph{Klassifikation von Phasenübergängen} unterteilt sich in die
+    \begin{itemize}
+        \item \formalemph{Phasenübergänge erster Ordnung}, welche durch eine Unstestigkeit in der ersten Ableitung eines thermodynamischen Potentials gekennzeichnet sind, und die
+        \item \formalemph{Phasenübergänge zweiter Ordnung}, welche durch eine Unstestigkeit in der zweiten Ableitung eines thermodynamischen Potentials charakterisiert werden. Diese Übergänge verursachen bzw. nehmen im Gegensatz zu ersteren keine latente Wärme auf.
+    \end{itemize}
+Zur Charakterisierung eines Phasenüberganges wurde der \formalemph{Ordnungsparameter} eingeführt. Dieser ändert sich in Abhängigkeit der Phase und des Phasenüberganges und kann ferner ein Maß für die Ordnung eines Systems sein. Ein Beispiel dafür ist das magnetische Moment, welches bei einem para-feromagnetischen Phasenübergang ab kritischer (Curie-)Temperatur gleich null ist.
+
+Wir haben die \formalemph{freie molare Enthalpie} - genauer gesagt ihre \formalemph{generische Form}
+\begin{align*}
+    g(T,P)=g_0(T,P)+a(T-T_\mathrm{kr})m^2+bm^4
+\end{align*}
+und ihren Verlauf an bestimmten Punkten des Phasendiagramms und bei verschiedenen Temperaturen betrachtet.
+
+Im kritischen Punkt nimmt sie ein breites Minimum an, d.h. die zweite Ableitung $\partial^2 g/\partial v^2=-\partial P/\partial v$ ist gleich null, das Inverse ist proportional zur Kompressibilität, sodass diese am kritischen Punkt divergiert. 
+
+Ein daraus folgendes physikalisches Phänomen ist die \formalemph{kritische Opaleszenz}: Da durch kleine Druckänderungen bereits große Volumenänderungen erzeugt werden, wird Licht an den daraus resultierenden Dichtefluktuationen gestreut und die Flüssigkeit erscheint trüb.
+
+Der realisierte Verlauf des magnetischen Moments folgt aus dem Minimum der freien Enthalpie mit:
+\begin{align*}
+    m(T)=\left\{
+    \begin{aligned}
+        0, \quad T>T_\mathrm{kr}\\
+        \pm \sqrt{\frac{a_0}{2b}}\left(T_\mathrm{kr}-T\right)^\beta\quad \mathrm{mit} \quad \beta=\frac{1}{2}, \quad T\leq T_\mathrm{kr}
+    \end{aligned}
+    \right.
+\end{align*}
+und \formalemph{kritischem Exponenten} $\beta$.
+
+Analog kann ein kritischer Exponent $\alpha$ für die Änderung der spezifischen Wärme, ${c_P=-T(\partial^2g/\partial T^2)_P}$, hergeleitet werden:
+\begin{align*}
+        \Delta c_P \propto \left\{ 
+            \begin{aligned}
+                \left(T-T_\mathrm{kr}\right)^{-\alpha'}, \quad T>T_\mathrm{kr}\\
+                \left(T_\mathrm{kr}-T\right)^{-\alpha}, \quad T<T_\mathrm{kr}
+            \end{aligned}
+        \right.\;.
+\end{align*}
+
+Auch die Beschreibung der molaren Suszeptibilität mit ${\chi^{-1}=\left(\partial H/\partial m\right)_{T,P}}=(\partial^2g/\partial m^2)_{T,P}$ führt auf einen kritischen Exponenten $\gamma$:
+\begin{align*}
+    \chi^{-1}=\left\{ 
+        \begin{aligned}
+            2a_0\left(T-T_\mathrm{kr}\right)^{\gamma'}, \quad T>T_\mathrm{kr}\\
+            4a_0\left(T_\mathrm{kr}-T\right)^{\gamma}, \quad T<T_\mathrm{kr}
+        \end{aligned}
+    \right.\;.
+\end{align*}
+
+Ein weiterer kritischer Exponent, $\delta$, folgt aus der Betrachtung des Magnetfelds am kritischen Punkt:
+\begin{align*}
+    m=\pm \left(\frac{1}{4b}\right)^{1/3}|H|^{1/\delta}.
+\end{align*}
+
+Die \formalemph{Landautheorie} zur Beschreibung der Phasenübergänge zweiter Ordnung wurde eingeführt.  
+In dieser sind $\alpha$ und $\alpha'$ gleich null, $\gamma=\gamma'=1$ und $\delta=3$.
+
+Dieselben kritischen Exponenten ergeben sich auch aus der Betrachtung des Dichteunterschieds der Phasen, $\Delta v$, und des Drucks $P$. Es gelten die Relationen:
+\begin{itemize}
+    \item $\Delta v=v_\mathrm{g}-v_\mathrm{fl}\propto \left(T_\mathrm{kr}-T\right)^{1/2}$ mit $\beta=1/2$.
+    \item $\Delta \kappa_T^{-1}=-v\frac{\partial P}{\partial v}\propto \left(T_\mathrm{kr}-T\right)$ mit $\gamma=\gamma'=1$.
+    \item $v-v_\mathrm{kr}\propto \left(P_\mathrm{kr}\right)^{1/3}$ mit $\delta=3$.
+\end{itemize} 
+\end{summary}
