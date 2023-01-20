@@ -800,3 +800,43 @@
         
     \end{tikzpicture}
 }
+
+\newcommand{\tfiguglyHebelgesetz}{
+    \begin{tikzpicture}[scale=1.5]
+        \draw[arr] (0,0) -- (0,2) node[ylabel] {$p$};
+        \draw[arr] (0,0) -- (4.2,0) node[xlabel] {$v$};
+        
+        \coordinate (A) at (3.8, 0.1);
+        \coordinate (B) at (3.3, 0.25);
+        \coordinate (C) at (3.0, 0.4);
+        \coordinate (D) at (2.65, 0.7);
+        \coordinate (E) at (2.45, 0.9);
+        \coordinate (F) at (2.2, 1.0);
+        
+        \coordinate (J) at (1.95, 0.9);
+        \coordinate (K) at (1.75, 0.7);
+        \coordinate (L) at (1.6, 0.55);
+        \coordinate (M) at (1.3, 0.45);
+        \coordinate (N) at (1.0, 0.55);
+        \coordinate (O) at (0.8, 0.7);
+        \coordinate (Q) at (0.65, 0.9);
+        \coordinate (R) at (0.5, 1.2);
+        \coordinate (W) at (0.4, 1.7);
+        \coordinate (Y) at (2.1,0.7);
+        \draw[nice green,thick] (D)--(O);
+        
+        %\draw plot[smooth,tension=.7] coordinates {(A) (B) (C) (D) (E) (F) (J) (K) (L) (M) (N) (O) (Q) (R) (W)};
+        \draw[thick, nice green] plot[smooth,tension=.7] coordinates {(A) (B) (C) (D)};
+        \draw[thick, nice light blue] plot[smooth,tension=.7] coordinates {(D) (E) (F)};
+        \draw[red laser,thick] plot[smooth,tension=.7] coordinates {(F) (J) (K) (L) (M)};
+        \draw[thick, nice light blue] plot[smooth,tension=.7] coordinates {(M) (N) (O) };
+        \draw[thick, nice green] plot[smooth,tension=.7] coordinates {(O) (Q) (R) (W)};
+        \draw[dashed] (D) -- (2.65,0) node[below] {$v_D$};
+        \draw[dashed] (Y) -- (2.1,0) node[below] {$v_D$};
+        \draw[dashed] (O) -- (0.8,0) node[below] {$v_D$};
+        \node[point, label={north east:D}] at (D) {};
+        \node[point, label={south west:O}] at (O) {};
+        \node[label={south west:Y}] at (Y) {};
+        
+    \end{tikzpicture}
+}

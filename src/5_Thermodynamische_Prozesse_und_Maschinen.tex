@@ -356,11 +356,11 @@ Wir haben gesehen, dass eine thermodynamische Maschine Energie in Form von Wärm
     \label{fig:CarnotCycleIndicatorDiagram}
 \end{figure}
 
-Dies wird durch Kreisprozesse wie den Carnot-Zyklus realisiert. In \Abbref{fig:CarnotCycleIndicatorDiagram} ist für diesen das Indikatordiagramm als Temperatur über die Entropie dargestellt. Im Schritt AB findet eine isotherme Expansion statt, in der sich die Wärme um $\Delta Q_{AB}=(S_B-S_A)T_\mathrm{h} = \Delta S T_\mathrm{h}$ ändert . Im Schritt BC wird isentrop expandiert. Es folgt eine isotherme Kompression von C nach D, bei der die Wärme $\Delta Q_{CD}=-\Delta S T_\mathrm{k}$ abgegeben wird und zuletzt eine isentrope Kompression von D zurück nach A. Dabei wird ständig an die reversible Arbeitsquelle gekoppelt (Volumenarbeit durch Expansion und Kompression). 
+Dies wird durch Kreisprozesse wie den Carnot-Zyklus realisiert. In \Abbref{fig:CarnotCycleIndicatorDiagram} ist für diesen das Indikatordiagramm als Temperatur über die Entropie dargestellt. Im Schritt AB findet eine isotherme Expansion statt, in der sich die Wärme um $\Delta Q_{AB}=T_\mathrm{h}(S_B-S_A) = T_\mathrm{h} \Delta S$ ändert. Im Schritt BC wird isentrop expandiert. Es folgt eine isotherme Kompression von C nach D, bei der die Wärme $\Delta Q_{CD}=-T_\mathrm{k}\Delta S$ abgegeben wird und zuletzt eine isentrope Kompression von D zurück nach A. Dabei wird ständig an die reversible Arbeitsquelle gekoppelt (Volumenarbeit durch Expansion und Kompression). 
 
 Die verrichtete Arbeit ist nach dem ersten Hauptsatz der Thermodynamik durch 
 \begin{align*}
-    \Delta W^\mathrm{RAQ}=\Delta Q_{AB}+\Delta Q_{CD} = \Delta S(T_\mathrm{h}-T_\mathrm{k})
+    \Delta W^\mathrm{RAQ}=\Delta Q_{AB}+\Delta Q_{CD} = (T_\mathrm{h}-T_\mathrm{k})\Delta S
 \end{align*}
 und der Wirkungsgrad wie im vorigen Abschnitt beschrieben durch 
 \begin{align}
@@ -376,9 +376,9 @@ Wir beschreiben den geschlossenen Prozess unter Zuhilfenahme eines PV-Diagrammes
     \caption{P-V-Diagramm des Carnot-Zyklus}
     \label{fig:CarnotCyclePVDiagram}
 \end{figure}
-Im ersten Schritt (von A nach B) findet die isotherme Gasexpansion statt. Der Druck nimmt entsprechend der kennengelernten Gasgleichung mit $V^{-1}$ ab. Für die isentrope Expansion (von B nach C) folgt eine stärkere Druckabnahme, welche der Relation $P \propto V^{-\gamma}$ folgt. \footnote{$Es sei an \gamma=(f+2)/f>1$, den eingeführten Adiabatenexponenten erinnert.} Im Anschluss erfolgen wieder eine isotherme (unter Ankopplung der Wärmequelle) und isentrope (unter Abkopplung der Wärmequelle) Kompression. Die eingeschlossene Fläche entspricht erneut der Arbeit, die der Prozess leistet. 
+Im ersten Schritt (von A nach B) findet die isotherme Gasexpansion statt. Der Druck nimmt entsprechend der kennengelernten Gasgleichung mit $V^{-1}$ ab. Für die isentrope Expansion (von B nach C) folgt eine stärkere Druckabnahme, welche der Relation $P \propto V^{-\gamma}$ folgt. \footnote{Es sei an $\gamma=(f+2)/f>1$, den eingeführten Adiabatenexponenten erinnert.} Im Anschluss erfolgen wieder eine isotherme (unter Ankopplung der Wärmequelle) und isentrope (unter Abkopplung der Wärmequelle) Kompression. Die eingeschlossene Fläche entspricht erneut der Arbeit, die der Prozess leistet. 
 
-Zum Abschluss dieses Kapitels wollen wir einen kurzen Exkurs in die Geschichte machen und zwei interessante Nebenbemerkungen hinzufügen: 
+Zum Abschluss dieses Kapitels wollen wir einen kurzen Exkurs in die Geschichte machen und zusätzlich zwei interessante Nebenbemerkungen hinzufügen: 
 
 \begin{itemize}
     \item Clausius erkannte, dass für geschilderte ideale Kreisprozesse das Kreisintegral über die Größe $\udiff Q/T$ null sein musste. Er entdeckte damit das totale Differential einer neuen Zustandsfunktion, einer bislang unbekannten Größe, die das System charakterisiert: die Entropie $S$.  
@@ -386,7 +386,38 @@ Zum Abschluss dieses Kapitels wollen wir einen kurzen Exkurs in die Geschichte m
     Über den Wirkungsgrad der Maschine kann nämlich das Verhältnis der absoluten Temperaturen des Systems bestimmt werden. Durch Festlegung eines Referenzpunktes (des Tripelpunktes von Wasser) kann die damit erhaltene Temperaturskala in die absolute Kelvinskala überführt werden.
     \item Da die Entropieänderung dem Produkt aus Wärmeänderung und Temperatur entspricht, kann nach Messung der Temperatur auch die Entropie ermittelt werden. Der Referenzpunkt der Entropie liegt nach dem Nernst-Postulat beim absoluten Temperaturnullpunkt.
 \end{itemize}
+\begin{summary}
+    \formalemph{Begriffe und Konzepte}
+    \begin{itemize}
+        \item Der \formalemph{thermodynamische Konfigurationsraum} erlaubt es Prozessführungen in Abhängigkeit der beteiligten extensiven Größen zu charakterisieren und zu veranschaulichen. Gleichgewichtszustände liegen in ihm auf einer Hyperfläche $S(U,X_i)$. Während quasistatische Prozesse derart eingeführt wurden, dass sie Wege auf dieser Hyperfläche beschreiben, sind \formalemph{reale Prozesse} oftmals dadurch charakterisiert, dass ihr Anfangs- und Endpunkt auf der Hyperfläche liegen und der Weg zwischen ihnen beliebig im Konfigurationsraum verläuft. Die Beschreibung realer Prozesse über eine dichte Abfolge von Gleichgewichtszuständen, welche durch beliebige Wege im Konfigurationsraum miteinander verbunden sind, überbrückt diese Diskrepanz und wird als quasistatisch bzw. quasistationär bezeichnet.
+        \item  Der entscheidende \formalemph{Unterschied zwischen quasistatischen und nicht-quasistatischen Prozessen} wird quantitativ durch das Verhältnis der \formalemph{Relaxationszeit} $\tau$ zur Prozesszeit $\Delta t$ beschrieben: Ist $\Delta t\gg \tau$, so handelt es sich um einen quasistatischen Prozess. 
+        \item \formalemph{Reversible Prozesse} beschreiben Prozesse, welche keine Entropieänderung verursachen: $\Delta S=0$. Ist ein Prozess reversibel, so ist er auch quasistatisch - der Umkehrschluss gilt nicht.
+        \item \formalemph{Irreversible Prozesse} beschreiben Prozesse, welche eine Entropiezunahme verursachen: $\Delta S>0$. Ist ein Prozess nicht-quasistatisch, so ist er auch irreversibel - der Umkehrschluss gilt wieder nicht. (Es gibt auch irreversible quasistatische Prozesse.)
+        \item Eine \formalemph{reversible Arbeitsquelle (RAQ)} ist ein thermisch isoliertes System, welches Arbeit reversibel verrichtet (oder an welchem Arbeit reversibel verrichtet werden kann). Ihre Entropie ist konstant.
+        \item Eine \formalemph{reversible Wärmequelle (RWQ)} ist ein mechanisch isoliertes System, zu oder von welchem Wärmeflüsse reversibel fließen können. Die Änderung der inneren Energie der RWQ entspricht also den Wärmeflüssen.
+        \item Das \formalemph{Volumenreservoir} ist eine sehr große RAQ, deren Druck folglich konstant bleibt.
+        \item Das \formalemph{Wärmereservoir} ist eine sehr große RWQ, deren Temperatur folglich konstant bleibt.
+    \end{itemize}
+    
+    \formalemph{Wann generieren thermodynamische Prozesse maximale Arbeit?}
+   In einem Teilsystem, welches an eine RAQ und eine RWQ gekoppelt ist gilt das
+   \formalemph{Theorem maximaler Arbeit} Der Arbeitsübertrag auf die RAQ ist für reversible Zustandsänderungen maximal, der Wärmefluss in die RWQ zugleich minimal. 
 
+    Eine \formalemph{thermodynamische Maschine} besteht in der Regel aus einem Hilfssystem, zwei reversiblen Wärmereservoirs (ein heißes und ein kaltes) und einer RAQ.
+    In einem Arbeitszyklus wird Wärme des heißen Reservoirs in mechanische Arbeit umgesetzt und das System durch das kalte Reservoir gekühlt. Das Hilfssystem ist am Ende des Zyklus wieder in seinem Anfangszustand.
+    Sie hat einen \formalemph{Wirkungsgrad} $\eta=\frac{T_h-T_k}{T_h}$.
+
+    Ein \formalemph{Kühlschrank} beschreibt die Umkehrung dieses Prinzips mit \formalemph{Wirkungsgrad} $\eta=\frac{T_k}{T_h-T_k}$.
+
+    Eine \formalemph{Wärmepumpe} ist eine zum Kühlschrank analoge Maschinerie, wobei der Wärmefluss vom warmen ins kalte Reservoir erfolgt. Sie hat einen \formalemph{Wirkungsgrad} $\eta=\frac{T_h}{T_h-T_k}$.
+
+    Der \formalemph{Carnot-Zyklus} beschreibt eine abstrakte Realisierung einer thermodynamischen Maschine, welche auf der Grundlage eines Kreisprozesses fundiert ist: Ein Hilfssystem wird zuerst an ein Wärmereservoir gekoppelt, sodass dieses isotherm expandiert, anschließend wird das Reservoir abgekoppelt, sodass das System nunmehr isentrop expandiert und abkühlt. Nun findet eine isotherme Kompression durch Ankopplung eines anderen Wärmereservoirs statt und im Anschluss nach dessen Abkopplung wieder eine isentrope Kompression. Die durch das System verrichtete Arbeit entpsricht: $\Delta W^\mathrm{RAQ}=(T_h-T_k)\Delta S$. Der \formalemph{Wirkungsgrad} entspricht $\eta=\frac{\Delta W^\mathrm{RAQ}}{\Delta Q_\mathrm{AB}}=\frac{T_h-T_k}{T_h}$.
+
+   
+    
+
+
+\end{summary}
 
 
 

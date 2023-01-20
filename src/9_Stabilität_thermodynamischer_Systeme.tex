@@ -23,7 +23,7 @@ Es lässt sich zum einen die
     \item \emph{lokale Stabilität} definieren. Hier betrachten wir den Grenzfall, in dem die Energieänderung infinitesimal klein wird ($\Delta U\rightarrow 0$), die Evaluation also lokal erfolgt.   
     Die Taylorentwicklung der Form
     \begin{align*}
-        S(U\pm\Delta U)=S(U)\pm \frac{\partial S}{\partial U}\Delta U+\frac{1}{2}\frac{\delta^2S}{\delta U^2}\Delta U^2
+        S(U\pm\Delta U)=S(U)\pm \frac{\partial S}{\partial U}\Delta U+\frac{1}{2}\frac{\partial^2S}{\partial U^2}\Delta U^2
     \end{align*}
     führt bei Einsetzen in \ref{eq:globaleStabilitaet} auf die Krümmung:
     \begin{align}
@@ -34,7 +34,7 @@ Es lässt sich zum einen die
 \end{itemize}
 \paragraph*{Geometrische Deutung}
 Wir wollen dazu übergehen, dem Erörterten auch eine geometrische Deutung zu geben. Dazu legen wir eine allgemeine Variable $X_j$ als Kontrollvariable fest.
-Wir nehmen an, dass die Funktion $S(...,X_j,...)$ bekannt ist (beispielsweise wird sie mit Hilfe der statistischen Mechanik berechnet). Ein exemplarischer Funktionsverlauf ist in Abb.[Ref][Abb] dargestellt. Der Entropieverlauf, welcher zwischen $B$ und $F$ hat eine positive Krümmung, ist also konvex (und führt in der physikalischen Deutung zu einem instabilen System). Damit entspricht die Bedingung der globalen Stabilität (ein konkaver Funktionsverlauf) dem graphischen Äquivalent, dass die Tangenten an die Fundamentalbeziehung immer über der Kurve liegen. Offenkundig wird damit auch, dass die Bereiche zwischen $A$ und $B$ und zwischen $F$ und $G$ diese Bedingung erfüllen und folglich das System in diesen Bereichen stabil ist.
+Wir nehmen an, dass die Funktion $S(...,X_j,...)$ bekannt ist (beispielsweise wird sie mit Hilfe der statistischen Mechanik berechnet). Ein exemplarischer Funktionsverlauf ist in Abb.[Ref][Abb] dargestellt. Der Entropieverlauf, welcher zwischen $B$ und $F$ vorliegt, hat eine positive Krümmung, ist also konvex (und führt in der physikalischen Deutung zu einem instabilen System). Damit entspricht die Bedingung der globalen Stabilität (ein konkaver Funktionsverlauf) dem graphischen Äquivalent, dass die Tangenten an die Fundamentalbeziehung immer über der Kurve liegen. Offenkundig wird damit auch, dass die Bereiche zwischen $A$ und $B$ und zwischen $F$ und $G$ diese Bedingung erfüllen und folglich das System in diesen Bereichen stabil ist.
 
 Wir wollen uns nun der Frage widmen, was in den instabilen Bereichen passiert. 
 Dazu ersetzen wir den konvexen Funktionsverlauf zwischen $B$ und $F$ mit der Tangente $BHF$, welche die Gleichung 
@@ -180,7 +180,7 @@ Wir widmen uns nun zum Abschluss des Kapitels phänomenologischen Sätzen, welch
 \begin{formal}
 	\formalemph{Le Châtelier-Braun:} Durch eine Fluktuation ausgelöste Sekundärprozesse stellen ebenfalls das Gleichgewicht wieder her.
 \end{formal}
-\paragraph*{Beispiel} Wir wollen auch diesen Satz illustrieren: Wieder betrachten wir das beschriebene System. Diesmal findet jedoch eine adiabatische Eypansion statt, d.h., es liegt kein instantaner, kompensierender Wärmefluss vom Wärmereservoir vor. Damit folgt für die Druckänderung (nun mit adiabatischer Kompressibilität):
+\paragraph*{Beispiel} Wir wollen auch diesen Satz illustrieren: Wieder betrachten wir das beschriebene System. Diesmal findet jedoch eine adiabatische Expansion statt, d.h., es liegt kein instantaner, kompensierender Wärmefluss vom Wärmereservoir vor. Damit folgt für die Druckänderung (nun mit adiabatischer Kompressibilität):
 \begin{align*}
 	\Delta P= -\frac{1}{V\kappa_S}\left(\Delta V\right)=P-P_\mathrm{R}<0.
 \end{align*}
@@ -191,7 +191,7 @@ In dessen Folge ensteht eine Temperaturänderung der Form:
 Die zweite Gleichung folgt aus den für die Antwortkoeffizienten charakterisierenden Relationen. Der Ausdehnungskoeffizient $\alpha$ kann sowohl positiv als auch negativ (z.B. bei der Wasserschmelze, bei der das Volumen mit steigender Temperatur abnimmt) sein. 
 Wir wollen nun jedoch annehmen, dass $\alpha$ positiv ist. Dann folgt, dass die Temperaturänderung negativ ist. Dies hat wiederum zur Folge, dass ein isochorer, positiver Wärmefluss ($\Delta Q>0$) vom Reservoir die Temperaturabnahme kompensieren muss. Dieser Wärmefluss erhöht nun wiederum den Kolbendruck um:
 \begin{align*}
-	\Delta P_Q=\left(\frac{\diff P}{\udiff Q}\right)\left(\Delta Q\right)_V=\frac{1}{T}\left(\frac{\partial P}{\partial S}\right)_V=\frac{\alpha}{Nc_V\kappa_T}\left(\Delta Q\right)_V.
+	\Delta P_Q=\left(\frac{\diff P}{\udiff Q}\right)\left(\Delta Q\right)_V=\frac{1}{T}\left(\frac{\partial P}{\partial S}\right)_V\left(\Delta Q\right)_V=\frac{\alpha}{Nc_V\kappa_T}\left(\Delta Q\right)_V.
 \end{align*}
 Die letzte Gleichheit folgt aus den Maxwell-Beziehungen. Das bedeutet, dass ein Teil des Druckabfalles durch diese Sekundärreaktion des Systems teilweise kompensiert wird. 
 \begin{formal}
@@ -238,7 +238,7 @@ Statt Fluktuationen werden nun äußere Kräfte betrachtet. Das Prinzip wurde  $
 		\begin{align*}
 			\left(\frac{\partial^2U}{\partial S^2}\right)\geq 0\qquad \mathrm{und} \qquad \left(\frac{\partial^2U}{\partial V^2}\right)\geq 0.
 		\end{align*}
-		Die dritte Bedingung bleibt jedoch identisch:
+		\item Die dritte Bedingung bleibt jedoch identisch:
 		\begin{align*}
 			\frac{\partial ^2U}{\partial S^2}\cdot\frac{\partial ^2U}{\partial V^2}-\left(\frac{\partial ^2U}{\partial S\partial V}\right)^2\geq 0.
 		\end{align*}
