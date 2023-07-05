@@ -85,7 +85,7 @@ Zuletzt wollen wir noch einige Aussagen zur Wärmezufuhr $\udiff Q$ zusammenfass
     
     (i) Für ein abgeschlossenes System liegt keine Wärmezufuhr vor. Mit $\udiff Q=0$ folgt dann, dass $\diff S >T^{-1}\udiff Q =0$, die Entropie also unabhänig von der Wärmezufuhr zunimmt. Es sei angemerkt, dass damit ferner folgt, dass die Entropiezunahme auch auf Anteile zurückzuführen ist, die nicht mit der Wärmezufuhr $\udiff Q$ zusammenhängen.
           
-    Prozesse, bei denen die Entropie zunimmt, bezeichnet man als sogenannte irreversible \footnote{Irreversibel heißt hier, dass das System nicht mehr spontan in den Ausgangszustand übergeht, also die Entropie nicht abnimmt.}Prozesse. 
+    Prozesse, bei denen die Entropie zunimmt, bezeichnet man als sogenannte irreversible\footnote{Irreversibel heißt hier, dass das System nicht mehr spontan in den Ausgangszustand übergeht, also die Entropie nicht abnimmt.} Prozesse. 
           
     (ii) In nicht abgeschlossenen Systemen, also in Systemen, in denen eine Wärmezufuhr stattfinden kann, nimmt die Entropie für entsprechend
         \begin{align*}
@@ -225,7 +225,7 @@ und mit den entropischen, intensiven Parametern
     F_0 & =\frac{1}{T}(U,X_1,\ldots,X_t)                                      \\
     F_1 & =\frac{P}{T}(U,X_1,\ldots,X_t) \quad\text{ (für $X_1=V$)}           \\
     F_k & =-\frac{P_k}{T}(U,X_1,\ldots,X_t)                                   \\
-    F_r & =-\frac{\mu_r}{T}(U,X_1,\ldots,X_t) \quad\text{ (für $X_r=\sm_r$)}.
+    F_r & =-\frac{P_r}{T}(U,X_1,\ldots,X_t) \quad\text{ (für $X_r=\sm_r$)}.
 \end{align*}
 Die energetische und entropische Beschreibung der Thermodynamik sind äquivalent, jedoch werden wir bei Gleichgewichtsbetrachtungen, die aus dem zweiten Postulat folgen, mit der entropischen Fundamentalbeziehung arbeiten.
 
@@ -396,8 +396,8 @@ Die innere Energie $U$ ist eine extensive Größe und damit eine homogene Funkti
 Ableiten nach $\lambda$ liefert
 \begin{align*}
     \frac{\partial U}{\partial\lambda} & = \frac{\partial U}{\partial\lambda S}(\lambda S,\lambda X_1,\ldots,\lambda X_t) \frac{\partial\lambda S}{\partial\lambda} + \frac{\partial U}{\partial\lambda X_1}(\lambda S,\lambda X_1,\ldots,\lambda X_t) \frac{\partial\lambda X_1}{\partial\lambda} + \ldots \\
-                                       & = T(\lambda S,\lambda X_1,\ldots,\lambda X_t)S + P_1 (\lambda S,\lambda X_1,\ldots,\lambda X_t) X_1 + \ldots                                                                                                                                                       \\
-                                       & = \lambda TS + \lambda P_1X_1 + \ldots
+                                       & = T(\lambda S,\lambda X_1,\ldots,\lambda X_t)S + P_1 (\lambda S,\lambda X_1,\ldots,\lambda X_t) X_1 + \ldots                                                                                                                                                       
+                                    %    & = TS + P_1X_1 + \ldots
 \end{align*}
 Lässt man nun $\lambda$ gegen 1 gehen, so erhält man die Euler-Gleichung in Energiedarstellung:
 \begin{align}
