@@ -28,7 +28,7 @@ Bei einer makroskopischen Messung werden nicht die einzelnen Spins, sondern ein 
 \end{align*}
 gebildet. Dabei bezeichnet $N_\uparrow$ die Anzahl der Spins mit Zustand $\uparrow$, $N_\downarrow$ die Anzahl der Spins mit Zustand $\downarrow$ und $m$ das elementare magnetische Moment. Das Gesamtmoment $M$ hat, wie man sich leicht überzeugen kann, einen Wertebereich von
 \begin{align*}
-    M\in\{Nm,(N-1)m,(N-4)m,\ldots ,-Nm\},
+    M\in\{Nm,(N-2)m,(N-4)m,\ldots ,-Nm\},
 \end{align*}
 kann also $(N+1)$ Werte annehmen. Dabei können aber $2^N$ mikroskopische Zustände angenommen werden. Für ein großes System $N \gg 1$ ist $2^N \gg N+1$, die Anzahl der möglichen makroskopischen Zustände ist damit wesentlich geringer. Folglich gibt es i.d.R. mehrere mikroskopische Zustände, die zum gleichen makroskopischen Zustand führen. Wie viele das sind, wird durch die Entartungsfunktion beschrieben.
 
@@ -59,7 +59,7 @@ $n$ liegt im Wertebereich $n\in\{-\frac{1}{2}N,-\frac{1}{2}N+1,\dots,\frac{1}{2}
 Wir wollen nun untersuchen, wie viele Zustände auf den gleichen Spinüberschuss $n$ führen \textendash{} das entspricht genau der Entartungsfunktion $g(n,N)$. Die exakte Lösung liefert die Kombinatorik:
 \begin{align}
     \label{eq:entartungsfunktion_exakt}
-    g(n,N) = \frac{N!}{N_\uparrow!\cdot N_\downarrow!} = \frac{N!}{\left(\frac{1}{2}N+n\right)!\cdot \left( \frac{1}{2}N-n \right)!}\,.
+    g(n,N) = \binom{N}{N_\uparrow} = \binom{N}{N_\downarrow} = \frac{N!}{N_\uparrow!\cdot N_\downarrow!} = \frac{N!}{\left(\frac{1}{2}N+n\right)!\cdot \left( \frac{1}{2}N-n \right)!}\,.
 \end{align}
 
 Summiert man über alle Zustände, so findet man für die Normierung 
@@ -74,7 +74,7 @@ Für die Thermodynamik und statistische Physik sind vor allem Systeme mit $N\gg 
 
 Wir nehmen zunächst den natürlichen Logarithmus von \eqref{eq:entartungsfunktion_exakt}
 \begin{align*}
-    \ln g(n,N) = \ln \left( \frac{N!}{\left(\frac{1}{2}N+n\right)!\cdot \left( \frac{1}{2}N-n \right)!} \right) = \ln N! - \ln\left( \frac{N}{2}+n \right)!- \ln\left( \frac{N}{2}-n \right)!
+    \ln g(n,N) = \ln \left( \frac{N!}{\left(\frac{1}{2}N+n\right)!\cdot \left( \frac{1}{2}N-n \right)!} \right) = \ln (N!) - \ln\left( \frac{N}{2}+n \right)!- \ln\left( \frac{N}{2}-n \right)!
 \end{align*}
 und wenden die Stirling-Näherung für große Argumente $N$
 \begin{align*}
@@ -286,7 +286,8 @@ Für große Systeme ergibt sich damit, wie bereits erläutert, eine sehr scharfe
 \begin{align*}
     P_n(n_1)\propto\frac{g_1g_2}{(g_1g_2)_\mathrm{max}}&=e^{-2\delta^2(\frac{1}{N_1}+\frac{1}{N_2})}\\&=e^{-400}=10^{-174},
 \end{align*}
-er wird somit praktisch nicht realisiert. \\
+er wird somit praktisch nicht realisiert. 
+
 Die Anzahl aller möglichen Realisierungen eines Systemzustandes mit einem konstantem Spinüberschuss $n$ im gekoppelten System der Größe $N$ ergibt sich nach Integration über alle möglichen Terme,
 \begin{align*}
     g(n,N)&=\int_{-\infty}^{\infty}g_1(\hat{n_1}+\delta,N_1)g_2(\hat{n_2}+\delta,N_2)\diff\delta\\&=
@@ -298,11 +299,11 @@ und lässt sich in Abhängigkeit der maximalen Zustandszahl ausdrücken. Die let
 \end{align*}
 Die Wahrscheinlichkeit für den maximalen Spinüberschusszustand beträgt:
 \begin{align*}
-    P(\hat{n_1})=\frac{(g_1g_2)_\mathrm{max}}{g(n,N)}=\sqrt{\frac{2}{\pi}}\sqrt{\frac{1}{N_1}+\frac{1}{N_2}}\underset{N_i=N/2}{\approx}\frac{1}{\sqrt{N}}.
+    P(\hat{n}_1)=\frac{(g_1g_2)_\mathrm{max}}{g(n,N)}=\sqrt{\frac{2}{\pi}}\sqrt{\frac{1}{N_1}+\frac{1}{N_2}}\:\overset{N_i=N/2}{\approx}\:\frac{1}{\sqrt{N}}.
 \end{align*}
 Die letzte Näherung folgt aus der Annahme, $N_i$ entspräche $N/2$. Die Wahrscheinlichkeit ist also vergleichsweise sehr klein. Da die Verteilungsfunktion jedoch sehr stark gepeakt ist, folgt, dass in einer kleinen Umgebung $\delta_h$ um das Maximum herum die Wahrscheinlichkeitsnormierung,
 \begin{align*}
-    1=\int_\mathrm{\delta_h} P_n(\hat{n_1}+\delta)\diff \delta,
+    1=\int_\mathrm{\delta_h} P_n(\hat{n}_1+\delta)\diff \delta,
 \end{align*}
 erhalten ist.
 Betrachtet man das Verhältnis des Logarithmus des Maximums der Entartungsfunktion zum Logarithmus der Entartungsfunktion\footnote{Warum betrachten wir erneut den Logarithmus? Wir haben bereits einen Zusammenhang zwischen diesem und der Entropie motiviert und zeichnen weiter vor, wie sich dieser Vergleich bewähren kann.},
@@ -314,11 +315,11 @@ wird wieder ersichtlich, dass die wahrscheinlichste Konfiguration den Term domin
 \paragraph*{Grundpostulat der statistischen Mechanik}
 Wir wollen nun den verallgemeinerten Fall zweier Untersysteme im thermischen Kontakt betrachten. Die Zahl der Zustände der Untersysteme wird mit $g_i(U_i,N_i,...)$ gekennzeichnet und hängt von der inneren Energie und Teilchenzahl des Systems (sowie gegebenenfalls weiteren Variablen) ab. Die Entartungsfunktion des Gesamtsystems setzt sich (unter der Bedingung, dass die Gesamtenergie des Systems erhalten bleibt) als Summe über alle möglichen Produkte der Entartungsgrade der Untersysteme zusammen: 
 \begin{align*}
-    g(U,N)=\sum_{U_1+U_2=U}g_1(U_1,N)g_2(U_2,N_2).
+    g(U,N)=\sum_{U_1+U_2=U}g_1(U_1,N_1)g_2(U_2,N_2).
 \end{align*}
 Der größte Summand kann analog zum Vorgehen mit Spinsystemen mittels des Differentials wie folgt ermittelt werden:
 \begin{align*}
-    \diff(g_1g_2)&=\diff(g_1)g_2+g_1\diff g_2\\
+    \diff(g_1g_2)&=g_2 \diff g_1 +g_1\diff g_2\\
     &=\left(\frac{\partial g_1}{\partial U_1}\right)_{N_1}g_2\diff U_1+\left(\frac{\partial g_2}{\partial U_2}\right)_{N_2}g_1\diff U_2=0.
 \end{align*}
 Aufgrund der Nebenbedingung, dass die Gesamtenergie des Systems erhalten bleibt, gilt für die Energieänderungen der Teilsysteme $\diff U_1=-\diff U_2$.
@@ -333,7 +334,7 @@ als thermische Gleichgewichtsbedingung, aus welcher ferner auch
 folgt.
 \begin{postulate}[Grundpostulat der statistischen Mechanik]
     \label{post:GrundpostulatStatMech}
-     Das Grundpostulat der statischen Mechanik ordnet einem System eine Entropie zu, welche mit der Zahl der erreichbaren Zustände, $g(U,N)$ zusammenhängt. Dabei sind jene Zustände erreichbar, welche für das System unter Einhaltung der makroskopischen Zustandsgrößen ($U,N$ und gegebenenfalls weitere) zugänglich sind.
+     Das Grundpostulat der statistischen Mechanik ordnet einem System eine Entropie zu, welche mit der Zahl der erreichbaren Zustände, $g(U,N)$ zusammenhängt. Dabei sind jene Zustände erreichbar, welche für das System unter Einhaltung der makroskopischen Zustandsgrößen ($U$, $N$ und gegebenenfalls weitere) zugänglich sind.
     \begin{align*}
         \boxed{S(U,N)=k_\mathrm{B}\ln g(U,N)}
     \end{align*}
@@ -354,7 +355,7 @@ Die relativen Fluktuationen um diesen Zustand herum sind minimal:
 \begin{align*}
     \frac{\Delta U_1}{U}=\frac{U_1-\hat{U}_1}{U}\propto \frac{1}{\sqrt{N}}.
 \end{align*}
-Das System hat nach Lösen der Zwangsbedingungen viel mehr Konfigurationsmöglichkeiten und befindet sich in jenen Zuständen, welche am wahrscheinlichsten sind \textendash{} also in denjenigen, welche den höchsten Entartungsgrad besitzen. Damit und aufrgund der Schärfe der Verteilungsfunktion (Fluktuationen sind minimal), folgt, dass die Zahl der Zustände vor thermischem Kontakt, $(g_1g_2)_\mathrm{Zwang}$, in der Regel wesentlich kleiner ist als die Zahl der Zustände $(g_1g_2)_\mathrm{max}$ nach thermischem Kontakt. Dies entspricht nach Postulat \ref{post:GrundpostulatStatMech} der Entropiemaximierung.
+Das System hat nach Lösen der Zwangsbedingungen viel mehr Konfigurationsmöglichkeiten und befindet sich in jenen Zuständen, welche am wahrscheinlichsten sind \textendash{} also in denjenigen, welche den höchsten Entartungsgrad besitzen. Damit und aufgrund der Schärfe der Verteilungsfunktion (Fluktuationen sind minimal), folgt, dass die Zahl der Zustände vor thermischem Kontakt, $(g_1g_2)_\mathrm{Zwang}$, in der Regel wesentlich kleiner ist als die Zahl der Zustände $(g_1g_2)_\mathrm{max}$ nach thermischem Kontakt. Dies entspricht nach Postulat \ref{post:GrundpostulatStatMech} der Entropiemaximierung.
 
 Auch die Additivität der Entropie kann über die Zustandszahlen hergeleitet werden. Im thermodynamischen Limes wird das System durch die wahrscheinlichste Konfiguration eindeutig beschrieben, womit 
 \begin{align*}
@@ -365,7 +366,7 @@ Auch die Additivität der Entropie kann über die Zustandszahlen hergeleitet wer
 gilt und die Additivität der Entropie der Teilsysteme hergeleitet werden kann.
 
 \paragraph*{Irreversible Prozesse:} Betrachten wir zum Schluss dieses Kapitels noch die irreversiblen Vorgänge:
-Nach Newton sind Prozesse, welche zu einer Verringerung der Entropie führen aufgrund der Zeitumkehrinvarianz von $\pmb{F}(\pmb{r})=\diff\pmb{p}/\diff t$ prinzipiell erlaubt. Sie sind allerdings aufgrund der soeben erarbeiteten Zustandszahlen höchst unwahrscheinlich. Die Kombination dieser beiden Aussagen führt auf den Poincaréschen Wiederkehrsatz.
+Nach Newton sind Prozesse, welche zu einer Verringerung der Entropie führen, aufgrund der Zeitumkehrinvarianz von $\vec{F}(\vec{r})=\diff\vec{p}/\diff t$ prinzipiell erlaubt. Sie sind allerdings aufgrund der soeben erarbeiteten Zustandszahlen höchst unwahrscheinlich. Die Kombination dieser beiden Aussagen führt auf den Poincaréschen Wiederkehrsatz.
 \begin{formal}
     \formalemph{Poincaréscher Wiederkehrsatz:} Jedes noch so große endliche System nimmt nach der Wiederkehrzeit $\tau$ seinen Anfangszustand in periodischen Abständen wieder ein. 
 \end{formal}
@@ -413,8 +414,7 @@ Abschätzungen von $\tau$ für Systeme der Teilchengröße $N=10^{23}$ führen j
     \begin{align*}
         S(U,N)=k_\mathrm{B}\ln g(U,N).
     \end{align*}
-
     Eben diese Relation liefert auch eine mikroskopische Erklärung für die Entropiezunahme von Systemen, deren Zwangsbedingungen gelöst werden. Das Lösen der Zwangsbedingungen führt zu einer Zunahme an Konfigurationsmöglichkeiten für das System. Es befindet sich dann in aller Regel in einem sehr wahrscheinlichen Zustand (also entsprechend der Zustandsverteilung in einem Zustand mit hohem Entartungsgrad), der den vorigen Entartungsgrad des eingenommenen Zustandes und damit dessen Entropie übersteigt.
 
-    Im Zusammenhang mit dieser Beobachtung steht auch die Begründung für die Unwahrscheinlichkeit irreversibler Prozesse. Obwohl diese nach Newton nicht ausgeschlossen werden können und dem \formalemph{Poincaréschen Wiederkehrsatz} zu Folge nach einer Wiederkehrzeit $\tau$, welche ein System in periodischen Abständen in ihren Anfangszustand zurückführt, erfolgen, sind sie unvorstellbar unwahrscheinlich und $\tau$ jenseits der erfahrbaren Zeitskalen.
+    Im Zusammenhang mit dieser Beobachtung steht auch die Begründung für die Unwahrscheinlichkeit irreversibler Prozesse. Obwohl diese nach Newton nicht ausgeschlossen werden können und dem \formalemph{Poincaréschen Wiederkehrsatz} zufolge nach einer Wiederkehrzeit $\tau$, welche ein System in periodischen Abständen in ihren Anfangszustand zurückführt, erfolgen, sind sie unvorstellbar unwahrscheinlich und $\tau$ jenseits der erfahrbaren Zeitskalen.
 \end{summary}
